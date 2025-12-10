@@ -1,0 +1,22 @@
+{
+  "name": "themcgennisfamily",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": ["mcgennis", "family", "jefferson-city", "missouri"],
+  "author": "Caleb Michael McGennis",
+  "license": "ISC",
+  "description": "The McGennis Family - Jefferson City's Most Notable Family",
+  "dependencies": {
+    "@astrojs/rss": "^4.0.14",
+    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.16.5",
+    "tailwindcss": "^3.4.18"
+  }
+}

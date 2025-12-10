@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Raphael Corwyn McGennis - McGennis Family"
+  description="Meet Raphael Corwyn McGennis, youngest son of Caleb and Stephanie McGennis in Jefferson City, Missouri."
+  type="profile"
+>
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Raphael Corwyn McGennis
+      </h1>
+      <div class="h-1 w-24 bg-mcgennis-gold mx-auto mb-8"></div>
+      <p class="text-2xl md:text-3xl text-gray-600 mb-4 font-medium">McGennis Family - Youngest Son</p>
+      <p class="text-xl text-gray-500 font-light">Future Leader</p>
+    </div>
+  </section>
+
+  <section class="py-24 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">About Raphael</h2>
+      <div class="h-1 w-24 bg-mcgennis-gold mb-8"></div>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-xl text-gray-500 leading-relaxed mb-6 font-light">
+          Raphael Corwyn McGennis is the youngest son of <a href="/family/caleb" class="text-mcgennis-navy font-medium hover:text-mcgennis-gold transition">Caleb Michael McGennis</a> and
+          <a href="/family/stephanie" class="text-mcgennis-navy font-medium hover:text-mcgennis-gold transition">Stephanie Kay McGennis</a>,
+          growing up in Jefferson City, Missouri as part of one of the city's most notable families.
+        </p>
+        <p class="text-lg text-gray-500 leading-relaxed font-light">
+          Raphael is being raised with strong family values, entrepreneurial spirit, and community engagement that
+          defines the McGennis family legacy in Central Missouri.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Family</h2>
+      <div class="h-1 w-24 bg-mcgennis-gold mb-12"></div>
+      <div class="space-y-6">
+        <div class="bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200">
+          <h3 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">Parents</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="/family/caleb" class="group p-6 bg-gray-50 hover:bg-white transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy hover:shadow-md">
+              <p class="font-bold text-gray-900 tracking-tight mb-1">Caleb Michael McGennis</p>
+              <p class="text-sm text-gray-500 mb-3 font-light">Father</p>
+              <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
+                View Profile →
+              </div>
+            </a>
+            <a href="/family/stephanie" class="group p-6 bg-gray-50 hover:bg-white transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon hover:shadow-md">
+              <p class="font-bold text-gray-900 tracking-tight mb-1">Stephanie Kay McGennis</p>
+              <p class="text-sm text-gray-500 mb-3 font-light">Mother</p>
+              <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+                View Profile →
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200">
+          <h3 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">Brother</h3>
+          <a href="/family/leonardo" class="group p-6 bg-gray-50 hover:bg-white transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest hover:shadow-md block">
+            <p class="font-bold text-gray-900 tracking-tight mb-1">Leonardo Bryton McGennis</p>
+            <p class="text-sm text-gray-500 mb-3 font-light">Older Brother</p>
+            <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+              View Profile →
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto text-center max-w-3xl">
+      <h2 class="text-5xl font-display font-bold mb-4 text-gray-900 tracking-tight">The McGennis Family</h2>
+      <div class="h-1 w-24 bg-mcgennis-gold mx-auto mb-8"></div>
+      <p class="text-xl mb-12 text-gray-500 font-light">
+        Learn more about Jefferson City's most notable family
+      </p>
+      <a href="/family" class="group inline-flex items-center justify-center px-8 py-4 bg-mcgennis-gold text-white font-medium tracking-wide hover:bg-opacity-90 transition-all duration-300 shadow-sm hover:shadow-md">
+        View All Family Members
+        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
