@@ -11,7 +11,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
         McGennis Family Blog
       </h1>
-      <div class="h-1 w-24 bg-mcgennis-gold mx-auto mb-8"></div>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
       <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-500 font-light">
         Stories, insights, and updates from Jefferson City's most notable family
       </p>
@@ -27,62 +27,74 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
       </div>
 
-      <!-- Coming Soon Message -->
-      <div class="bg-white p-12 text-center max-w-3xl mx-auto hover:shadow-lg transition-all duration-300 border border-gray-200">
-        <div class="flex justify-center mb-6">
-          <svg class="w-20 h-20 text-mcgennis-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
-          </svg>
-        </div>
-        <h2 class="text-4xl font-display font-bold mb-4 text-gray-900 tracking-tight">
-          Blog Posts Coming Soon!
-        </h2>
-        <p class="text-xl text-gray-500 mb-8 font-light">
-          We're working on bringing you great content about our businesses, family adventures, and life in Jefferson City.
-          Check back soon for exciting updates!
-        </p>
-        <div class="space-y-4">
-          <h3 class="text-xl font-bold text-gray-800">Upcoming Topics:</h3>
-          <ul class="text-left max-w-md mx-auto space-y-2 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-mcgennis-gold mr-2">•</span>
-              <span>Building Businesses in Jefferson City</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-mcgennis-gold mr-2">•</span>
-              <span>Balancing Entrepreneurship and Family Life</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-mcgennis-gold mr-2">•</span>
-              <span>Ministry Work with Sports Crusaders</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-mcgennis-gold mr-2">•</span>
-              <span>Jefferson City Community Events</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-mcgennis-gold mr-2">•</span>
-              <span>Behind the Scenes of Our Ventures</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-mcgennis-gold mr-2">•</span>
-              <span>Tech Tips from dr4g0nbyt3</span>
-            </li>
-          </ul>
-        </div>
+      <!-- Blog Authors -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Stephanie's Blog -->
+        <a href="/blog/alattetodomama" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
+          <div class="h-64 overflow-hidden relative">
+            <img
+              src="/images/stephanie-caleb-mcgennis-couple-jefferson-city.jpg"
+              alt="Stephanie Kay McGennis - A Latte to Do Mama blog"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">A Latte to Do Mama</h3>
+              <p class="text-lg font-medium">by Stephanie Kay McGennis</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-gray-500 mb-6 leading-relaxed font-light">
+              Real stories about motherhood, faith, and the beautiful chaos of family life. Join Stephanie as she navigates the adventures of being a mom in Jefferson City.
+            </p>
+            <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+              Read Stephanie's Blog
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Caleb's Blog -->
+        <a href="/blog/entrepreneur-ai" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
+          <div class="h-64 overflow-hidden relative">
+            <img
+              src="/images/caleb-blog-card.png"
+              alt="Caleb Michael McGennis - An Entrepreneur in a World of AI blog"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">An Entrepreneur in a World of AI</h3>
+              <p class="text-lg font-medium">by Caleb Michael McGennis</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-gray-500 mb-6 leading-relaxed font-light">
+              Tech insights, entrepreneurship tips, and ministry reflections from a Jefferson City business owner and developer. Coming soon!
+            </p>
+            <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
+              Read Caleb's Blog
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
 
       <!-- Newsletter Signup -->
-      <div class="mt-16 bg-gray-50 p-10 text-center border border-gray-200 hover:shadow-lg transition-all duration-300">
+      <div class="mt-16 bg-gray-50 p-10 text-center border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300">
         <h3 class="text-3xl font-bold mb-4 text-gray-900 tracking-tight">Stay Updated!</h3>
         <p class="text-lg mb-8 text-gray-500 font-light">
           Want to be notified when we publish new blog posts? Follow us on social media!
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://www.facebook.com/calebmichaelmcgennis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-mcgennis-navy text-white font-medium tracking-wide hover:bg-opacity-90 transition-all duration-300 shadow-sm hover:shadow-md">
+          <a href="https://www.facebook.com/calebmichaelmcgennis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-mcgennis-navy text-white font-medium tracking-wide hover:bg-opacity-90 transition-all duration-300 shadow-sm hover:shadow-md">
             Follow Caleb on Facebook
           </a>
-          <a href="https://www.facebook.com/stephanie.davis.900388" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+          <a href="https://www.facebook.com/stephanie.davis.900388" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
             Follow Stephanie on Facebook
           </a>
         </div>
@@ -97,10 +109,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">
           What We'll Be Writing About
         </h2>
-        <div class="h-1 w-24 bg-mcgennis-gold mx-auto"></div>
+        <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
+        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-navy">
           <div class="flex justify-center mb-6">
             <svg class="w-14 h-14 text-mcgennis-navy group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -113,7 +125,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </p>
         </div>
 
-        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-gold">
+        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-gold">
           <div class="flex justify-center mb-6">
             <svg class="w-14 h-14 text-mcgennis-gold group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -126,7 +138,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </p>
         </div>
 
-        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
+        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-maroon">
           <div class="flex justify-center mb-6">
             <svg class="w-14 h-14 text-mcgennis-maroon group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>

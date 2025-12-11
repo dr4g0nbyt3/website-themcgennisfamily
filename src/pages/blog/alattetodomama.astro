@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPosts = [
+  {
+    title: "Lists, Goals, and Changed Plans",
+    slug: "lists-goals-changed-plans",
+    date: "2024",
+    excerpt: "That sound is my soul cringing at the phrase \"changed plans.\"",
+  },
+  {
+    title: "Fall Allergies and Prayer",
+    slug: "fall-allergies-and-prayer",
+    date: "2024",
+    excerpt: "The literal bane of my existence when I'm trying to live my best pumpkin spice life.",
+  },
+  {
+    title: "MOPS Morning",
+    slug: "mops-morning",
+    date: "2024",
+    excerpt: "The excitement and hope in my heart as I prepared for my first MOPS meeting of the Fall.",
+  },
+  {
+    title: "A Latte to Do - Introduction",
+    slug: "a-latte-to-do",
+    date: "2024",
+    excerpt: "Do people still blog? If they do, do other people still read it? I guess we'll see.",
+  },
+];
+---
+
+<BaseLayout
+  title="A Latte to Do Mama - Stephanie McGennis Blog"
+  description="Real stories about motherhood, faith, and family life from Stephanie Kay McGennis in Jefferson City, Missouri."
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        A Latte to Do Mama
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-500 font-light">
+        Real stories about motherhood, faith, and the beautiful chaos of family life
+      </p>
+      <p class="text-lg mt-4 text-gray-400">by Stephanie Kay McGennis</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="py-24 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <div class="space-y-8">
+        {blogPosts.map((post) => (
+          <a href={`/blog/alattetodomama/${post.slug}`} class="group block bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
+            <div class="flex justify-between items-start mb-4">
+              <h2 class="text-3xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors">
+                {post.title}
+              </h2>
+              <span class="text-sm text-gray-400 font-light">{post.date}</span>
+            </div>
+            <p class="text-lg text-gray-500 mb-4 font-light leading-relaxed">
+              {post.excerpt}
+            </p>
+            <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+              Read More
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <a href="/blog" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-maroon hover:text-mcgennis-maroon transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to All Blogs
+      </a>
+    </div>
+  </section>
+</BaseLayout>
