@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages (Highest Priority) -->
+  <url>
+    <loc>https://www.themcgennisfamily.com/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/about</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/family</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/businesses</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/contact</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Family Member Pages -->
+  <url>
+    <loc>https://www.themcgennisfamily.com/family/caleb</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/family/stephanie</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/family/leonardo</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/family/raphael</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Category Pages -->
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/alattetodomama</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Stephanie's Blog Posts (A Latte to Do Mama) -->
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/alattetodomama/a-latte-to-do</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/alattetodomama/mops-morning</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/alattetodomama/fall-allergies-and-prayer</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/alattetodomama/lists-goals-changed-plans</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Caleb's Blog Posts (An Entrepreneur in a World of AI) -->
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/theres-no-place-like-home</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/the-mountain-mover</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/im-your-guy</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/peaks-and-valleys</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
