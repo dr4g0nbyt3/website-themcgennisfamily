@@ -13,7 +13,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </h1>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
       <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-500 font-light">
-        Stories, insights, and updates from Jefferson City's most notable family
+        Stories, insights, and updates from a Jefferson City family building businesses and serving communities
       </p>
     </div>
   </section>
@@ -27,55 +27,83 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
       </div>
 
-      <!-- Blog Authors -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <!-- Stephanie's Blog -->
-        <a href="/blog/alattetodomama" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
-          <div class="h-64 overflow-hidden relative">
-            <img
-              src="/images/stephanie-caleb-mcgennis-couple-jefferson-city.jpg"
-              alt="Stephanie Kay McGennis - A Latte to Do Mama blog"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">A Latte to Do Mama</h3>
-              <p class="text-lg font-medium">by Stephanie Kay McGennis</p>
+      <!-- Blog Categories -->
+      <div class="max-w-7xl mx-auto">
+        <!-- First Row: Stephanie & Caleb's Blogs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- Stephanie's Blog -->
+          <a href="/blog/alattetodomama" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="/images/stephanie-caleb-mcgennis-couple-jefferson-city.jpg"
+                alt="Stephanie Kay McGennis - A Latte to Do Mama blog"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">A Latte to Do Mama</h3>
+                <p class="text-lg font-medium">by Stephanie Kay McGennis</p>
+              </div>
             </div>
-          </div>
-          <div class="p-8">
-            <p class="text-gray-500 mb-6 leading-relaxed font-light">
-              Real stories about motherhood, faith, and the beautiful chaos of family life. Join Stephanie as she navigates the adventures of being a mom in Jefferson City.
-            </p>
-            <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
-              Read Stephanie's Blog
-              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
+            <div class="p-8">
+              <p class="text-gray-500 mb-6 leading-relaxed font-light">
+                Real stories about motherhood, faith, and the beautiful chaos of family life. Join Stephanie as she navigates the adventures of being a mom in Jefferson City.
+              </p>
+              <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read Stephanie's Blog
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <!-- Caleb's Blog -->
-        <a href="/blog/entrepreneur-ai" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
-          <div class="h-64 overflow-hidden relative">
-            <img
-              src="/images/caleb-blog-card.png"
-              alt="Caleb Michael McGennis - An Entrepreneur in a World of AI blog"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <!-- Caleb's Blog -->
+          <a href="/blog/entrepreneur-ai" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="/images/caleb-blog-card.png"
+                alt="Caleb Michael McGennis - An Entrepreneur in a World of AI blog"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">An Entrepreneur in a World of AI</h3>
+                <p class="text-lg font-medium">by Caleb Michael McGennis</p>
+              </div>
+            </div>
+            <div class="p-8">
+              <p class="text-gray-500 mb-6 leading-relaxed font-light">
+                Tech insights, entrepreneurship tips, and ministry reflections from a Jefferson City business owner and developer.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read Caleb's Blog
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Second Row: Family Heritage Blog (Full Width) -->
+        <a href="/blog/family-heritage" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest block">
+          <div class="h-64 overflow-hidden relative bg-brass-button brightness-110 flex items-center justify-center">
+            <div class="text-center text-white p-8">
+              <p class="text-4xl font-display font-bold mb-2">Mag Aonghusa</p>
+              <p class="text-xl italic">1150 - Present</p>
+            </div>
             <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">An Entrepreneur in a World of AI</h3>
+              <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">McGennis Family Heritage</h3>
               <p class="text-lg font-medium">by Caleb Michael McGennis</p>
             </div>
           </div>
           <div class="p-8">
             <p class="text-gray-500 mb-6 leading-relaxed font-light">
-              Tech insights, entrepreneurship tips, and ministry reflections from a Jefferson City business owner and developer. Coming soon!
+              Exploring 875 years of family history from the Lords of Iveagh in County Down, Ireland to Jefferson City, Missouri today.
             </p>
-            <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
-              Read Caleb's Blog
+            <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+              Explore Our Heritage
               <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
@@ -85,7 +113,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <!-- Newsletter Signup -->
-      <div class="mt-16 bg-gray-50 p-10 text-center border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300">
+      <div class="mt-16 bg-white p-10 text-center border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300">
         <h3 class="text-3xl font-bold mb-4 text-gray-900 tracking-tight">Stay Updated!</h3>
         <p class="text-lg mb-8 text-gray-500 font-light">
           Want to be notified when we publish new blog posts? Follow us on social media!
@@ -103,7 +131,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <!-- Featured Topics -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-7xl">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">

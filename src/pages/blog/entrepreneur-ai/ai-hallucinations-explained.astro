@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="AI Hallucinations Explained by a Software Engineer at Google - Caleb McGennis"
+  description="A Google Senior Developer explains AI hallucinations, LLM testing, and how to trust AI helpers. Simple explanations of complex AI concepts from a family BBQ conversation."
+  type="article"
+  publishedTime="2025-12-13"
+  author="Caleb Michael McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        AI Hallucinations Explained by a Software Engineer at Google
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex items-center gap-4 text-gray-500">
+        <span>By Caleb Michael McGennis</span>
+        <span>•</span>
+        <time datetime="2025-12-13">December 13, 2025</time>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Last weekend, I was hanging out with my cousin Jake at a family BBQ. Jake works as a Senior Developer at Google, which makes him super smart about computers and robots. We started talking about these new AI helpers called LLMs—that's like ChatGPT and other smart computer programs.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "Hey Jake," I said, "everyone's talking about these AI things. Are they good or bad?"
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Jake smiled and grabbed another burger. "Well Caleb, it's like having a really smart friend who sometimes makes stuff up. Let me tell you about the good and bad parts."
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Good Stuff About AI Helpers</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Jake explained that <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">LLMs</a> can do amazing things. They can write stories, answer questions, and help with homework. It's like having a super-fast research helper that never gets tired.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "The cool thing," Jake said, "is that we can test how well they work. We check things like how accurate they are and how fast they respond." He told me about special tests that measure if the AI gives correct answers about 45-60% of the time for coding tasks.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Not-So-Good Parts</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But then Jake got serious. "The biggest problem is something called <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">hallucination</a>. No, not seeing pink elephants! It's when the AI makes up facts that sound real but aren't true."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        He gave me an example: "If you ask an AI 'What's the capital of Australia?' it might confidently say 'Sydney is the capital of Australia.' That sounds right because Sydney is famous, but it's completely wrong—the real capital is Canberra!"
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">How We Test These AI Helpers</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Jake explained that smart people test AI programs using special methods. They check if the AI:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2">
+        <li>Gives correct answers</li>
+        <li>Admits when it doesn't know something</li>
+        <li>Stays consistent in its responses</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "We use something called the Hallucinations Leaderboard to rank which AI helpers make the fewest mistakes," Jake said. "It's like a report card for robots!"
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Making AI Better</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The good news is that developers like Jake are working hard to fix these problems. They use fancy testing methods to catch when AI makes mistakes. They also teach the AI to say "I don't know" when it's not sure about something.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "We're getting better at this every day," Jake promised. "Soon these AI helpers will be much more reliable."
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What This Means for You</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        As we finished our burgers, Jake gave me some advice: "Always double-check important information from AI. Think of it as a starting point, not the final answer. And remember—even smart computers can be wrong sometimes."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The future looks bright for AI helpers, but we need to be smart about how we use them. With proper testing and evaluation, they'll keep getting better at helping us learn and solve problems.
+      </p>
+
+      <div class="bg-gray-50 border-l-4 border-mcgennis-navy p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">Want to dive deeper?</p>
+        <p class="text-gray-600 mb-4">
+          Check out this detailed guide on evaluating LLM quality:
+        </p>
+        <a href="https://whatstheprocessfor.com/process/evaluating-the-quality-of-an-llm-agent/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors font-medium">
+          Evaluating the Quality of an LLM Agent
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from An Entrepreneur in a World of AI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            The AI Renaissance: When History Echoes Into Tomorrow
+          </h3>
+          <p class="text-gray-500 text-sm">Drawing parallels between the historical Renaissance and today's AI revolution</p>
+        </a>
+        <a href="/blog/entrepreneur-ai/im-your-guy" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            I'm Your Guy
+          </h3>
+          <p class="text-gray-500 text-sm">How God orchestrates divine appointments for esports ministry</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>
