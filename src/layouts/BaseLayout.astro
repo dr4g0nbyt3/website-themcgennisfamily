@@ -30,6 +30,7 @@ const currentPath = Astro.url.pathname;
       publishedTime={publishedTime}
       author={author}
     />
+    <slot name="head" />
     <!-- Google Analytics (Replace with your actual GA4 ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
@@ -198,6 +199,9 @@ const currentPath = Astro.url.pathname;
         <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} The McGennis Family. All rights reserved.</p>
           <p class="mt-2 text-sm">Proudly serving Jefferson City, Missouri</p>
+          <p class="mt-2 text-sm">
+            <a href="/privacy-policy" class="hover:text-mcgennis-gold transition">Privacy Policy</a>
+          </p>
           <p class="mt-2 text-sm"><a href="https://www.aibexp.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">Website Designed and Managed by <span class="text-mcgennis-gold">BXP</span> - Custom Software & Business Growth Solutions</a></p>
         </div>
       </div>

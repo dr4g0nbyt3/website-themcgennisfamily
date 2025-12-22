@@ -7,6 +7,7 @@ export interface Props {
   publishedTime?: string;
   author?: string;
   canonical?: string;
+  breadcrumbs?: Array<{name: string; url: string}>;
 }
 
 const {
@@ -16,7 +17,8 @@ const {
   type = 'website',
   publishedTime,
   author,
-  canonical
+  canonical,
+  breadcrumbs
 } = Astro.props;
 
 const siteUrl = 'https://themcgennisfamily.com';
@@ -68,6 +70,37 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+
+<!-- WebSite Schema with Search Action -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "The McGennis Family",
+  "url": "https://themcgennisfamily.com",
+  "description": "Family website featuring entrepreneurship, ministry, and family heritage. Based in Jefferson City, Missouri.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "The McGennis Family",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themcgennisfamily.com/images/mcgennis-logo.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://themcgennisfamily.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": "en-US",
+  "copyrightYear": 2025,
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "The McGennis Family"
+  }
+})} />
 
 <!-- Local Business Schema.org -->
 <script type="application/ld+json" set:html={JSON.stringify({
@@ -123,6 +156,36 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
   }
 })} />
 
+<!-- BlogPosting Schema for Articles -->
+{type === 'article' && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "image": imageUrl,
+    "author": {
+      "@type": "Person",
+      "name": author || 'Caleb Michael McGennis',
+      "url": `https://themcgennisfamily.com/family/${author === 'Stephanie Kay McGennis' ? 'stephanie' : 'caleb'}`
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The McGennis Family",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://themcgennisfamily.com/images/mcgennis-logo.png"
+      }
+    },
+    "datePublished": publishedTime,
+    "dateModified": publishedTime,
+    "description": description,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalURL
+    }
+  })} />
+)}
+
 <!-- Person Schema for Caleb -->
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
@@ -172,3 +235,63 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
     }
   ]
 })} />
+
+<!-- Person Schema - Stephanie Kay McGennis -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Stephanie Kay McGennis",
+  "url": "https://themcgennisfamily.com/family/stephanie",
+  "image": "https://themcgennisfamily.com/images/stephanie-mcgennis.jpg",
+  "jobTitle": "Co-Founder & Family Leader",
+  "worksFor": [
+    {
+      "@type": "Organization",
+      "name": "The Honey Homestead"
+    },
+    {
+      "@type": "Organization",
+      "name": "The McGennis Family"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jefferson City",
+    "addressRegion": "MO",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.facebook.com/stephanie.davis.900388"
+  ],
+  "familyName": "McGennis",
+  "givenName": "Stephanie Kay",
+  "spouse": {
+    "@type": "Person",
+    "name": "Caleb Michael McGennis",
+    "url": "https://themcgennisfamily.com/family/caleb"
+  },
+  "children": [
+    {
+      "@type": "Person",
+      "name": "Leonardo Bryton McGennis"
+    },
+    {
+      "@type": "Person",
+      "name": "Raphael Corwyn McGennis"
+    }
+  ]
+})} />
+
+<!-- BreadcrumbList Schema -->
+{breadcrumbs && breadcrumbs.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  })} />
+)}

@@ -2,6 +2,108 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import NewsletterSignup from '../../../../components/NewsletterSignup.astro';
 import Comments from '../../../../components/Comments.astro';
+
+const recipeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Classic Pot Roast - A Family Sunday Dinner",
+  "image": [
+    "https://themcgennisfamily.com/images/recipes/pot-roast/step6-meat-on-veggies.png",
+    "https://themcgennisfamily.com/images/recipes/pot-roast/step8-covered-pot-ready-oven.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Stephanie Kay McGennis",
+    "url": "https://themcgennisfamily.com/family/stephanie"
+  },
+  "datePublished": "2024-12-18",
+  "description": "A comforting family dinner that's perfect for Sunday meals. This classic pot roast recipe creates tender, flavorful meat with delicious vegetables.",
+  "prepTime": "PT20M",
+  "cookTime": "PT3H",
+  "totalTime": "PT3H20M",
+  "recipeYield": "6 servings",
+  "recipeCategory": "Main Course",
+  "recipeCuisine": "American",
+  "keywords": "pot roast, comfort food, family dinner, Sunday roast, beef recipe",
+  "recipeIngredient": [
+    "3-4 lb chuck roast",
+    "2 lbs potatoes, quartered",
+    "1 lb carrots, cut into chunks",
+    "1 large onion, quartered",
+    "4 cups beef broth",
+    "Salt and pepper to taste",
+    "2 tablespoons olive oil",
+    "3 cloves garlic, minced",
+    "2 bay leaves",
+    "1 teaspoon dried thyme"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Season the meat",
+      "text": "Season the chuck roast generously with salt and pepper on all sides.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step1",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step1-meat-seasoned.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Brown the meat",
+      "text": "Heat olive oil in a large Dutch oven over medium-high heat. Brown the meat on all sides, about 3-4 minutes per side.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step2",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step2-meat-browned.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Remove meat",
+      "text": "Remove the browned meat from the pot and set aside.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step3",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step3-meat-removed.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Prepare vegetables",
+      "text": "Add vegetables (potatoes, carrots, onions) to the pot.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step4",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step4-veggies-in-pot.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add broth",
+      "text": "Pour beef broth into the pot. Add garlic, bay leaves, and thyme.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step5",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step5-broth-poured.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add meat back",
+      "text": "Place the browned meat on top of the vegetables.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step6",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step6-meat-on-veggies.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Heat to simmer",
+      "text": "Bring to a simmer on the stovetop.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step7",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step7-pot-simmering.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cover and bake",
+      "text": "Cover the pot with lid and transfer to a preheated 325°F oven. Bake for 3 hours until meat is fork-tender.",
+      "url": "https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast#step8",
+      "image": "https://themcgennisfamily.com/images/recipes/pot-roast/step8-covered-pot-ready-oven.png"
+    }
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "1 serving (approximately 1/6 of recipe)",
+    "calories": "450 calories",
+    "proteinContent": "35g",
+    "fatContent": "22g",
+    "carbohydrateContent": "28g"
+  }
+};
 ---
 
 <BaseLayout
@@ -10,6 +112,10 @@ import Comments from '../../../../components/Comments.astro';
   type="article"
   author="Stephanie Kay McGennis"
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(recipeSchema)} />
+  </Fragment>
+
   <!-- Header -->
   <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
     <div class="container mx-auto max-w-4xl text-center">
@@ -117,7 +223,7 @@ import Comments from '../../../../components/Comments.astro';
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">1</span>
             <h3 class="text-2xl font-bold text-gray-900">Season the Meat</h3>
           </div>
-          <img src="/images/recipes/pot-roast/step1-meat-seasoned.png" alt="Seasoned pot roast" class="w-full rounded-xl shadow-md mb-4" />
+          <img src="/images/recipes/pot-roast/step1-meat-seasoned.png" alt="Seasoned pot roast" class="w-full rounded-xl shadow-md mb-4" loading="lazy" />
           <p class="text-gray-700 leading-relaxed">
             Start by generously seasoning your roast with your favorite spices and seasonings.
           </p>
@@ -129,7 +235,7 @@ import Comments from '../../../../components/Comments.astro';
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">2</span>
             <h3 class="text-2xl font-bold text-gray-900">Brown the Roast</h3>
           </div>
-          <img src="/images/recipes/pot-roast/step2-meat-browned.png" alt="Browned pot roast" class="w-full rounded-xl shadow-md mb-4" />
+          <img src="/images/recipes/pot-roast/step2-meat-browned.png" alt="Browned pot roast" class="w-full rounded-xl shadow-md mb-4" loading="lazy" />
           <p class="text-gray-700 leading-relaxed">
             Brown the roast on all sides in your Dutch oven to seal in the juices and create a beautiful crust.
           </p>
@@ -141,7 +247,7 @@ import Comments from '../../../../components/Comments.astro';
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">3</span>
             <h3 class="text-2xl font-bold text-gray-900">Prep the Vegetables</h3>
           </div>
-          <img src="/images/recipes/pot-roast/step3-veggies-prepped.png" alt="Chopped vegetables - potatoes, carrots, onions" class="w-full rounded-xl shadow-md mb-4" />
+          <img src="/images/recipes/pot-roast/step3-veggies-prepped.png" alt="Chopped vegetables - potatoes, carrots, onions" class="w-full rounded-xl shadow-md mb-4" loading="lazy" />
           <p class="text-gray-700 leading-relaxed">
             Chop your vegetables into hearty chunks. I used potatoes, carrots, and onions for this pot roast.
           </p>
@@ -153,7 +259,7 @@ import Comments from '../../../../components/Comments.astro';
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">4</span>
             <h3 class="text-2xl font-bold text-gray-900">Start with Carrots and Onions</h3>
           </div>
-          <img src="/images/recipes/pot-roast/step4-carrots-cooking.png" alt="Carrots and onions cooking in pot" class="w-full rounded-xl shadow-md mb-4" />
+          <img src="/images/recipes/pot-roast/step4-carrots-cooking.png" alt="Carrots and onions cooking in pot" class="w-full rounded-xl shadow-md mb-4" loading="lazy" />
           <p class="text-gray-700 leading-relaxed">
             Add the carrots and onions to the pot first, letting them start to soften and release their flavors.
           </p>
@@ -165,7 +271,7 @@ import Comments from '../../../../components/Comments.astro';
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">5</span>
             <h3 class="text-2xl font-bold text-gray-900">Add the Potatoes</h3>
           </div>
-          <img src="/images/recipes/pot-roast/step5-potatoes-added.png" alt="Potatoes added to pot" class="w-full rounded-xl shadow-md mb-4" />
+          <img src="/images/recipes/pot-roast/step5-potatoes-added.png" alt="Potatoes added to pot" class="w-full rounded-xl shadow-md mb-4" loading="lazy" />
           <p class="text-gray-700 leading-relaxed">
             Layer in the potatoes to create a bed for the roast.
           </p>
@@ -177,7 +283,7 @@ import Comments from '../../../../components/Comments.astro';
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">6</span>
             <h3 class="text-2xl font-bold text-gray-900">Place the Meat on Top</h3>
           </div>
-          <img src="/images/recipes/pot-roast/step6-meat-on-veggies.png" alt="Roast placed on top of vegetables" class="w-full rounded-xl shadow-md mb-4" />
+          <img src="/images/recipes/pot-roast/step6-meat-on-veggies.png" alt="Roast placed on top of vegetables" class="w-full rounded-xl shadow-md mb-4" loading="lazy" />
           <p class="text-gray-700 leading-relaxed">
             Nestle the browned roast on top of the vegetables. This allows the meat juices to flavor everything as it cooks.
           </p>
@@ -189,7 +295,7 @@ import Comments from '../../../../components/Comments.astro';
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">7</span>
             <h3 class="text-2xl font-bold text-gray-900">Into the Oven!</h3>
           </div>
-          <img src="/images/recipes/pot-roast/step7-into-oven.png" alt="Dutch oven going into the oven" class="w-full rounded-xl shadow-md mb-4" />
+          <img src="/images/recipes/pot-roast/step7-into-oven.png" alt="Dutch oven going into the oven" class="w-full rounded-xl shadow-md mb-4" loading="lazy" />
           <p class="text-gray-700 leading-relaxed">
             Cover your Dutch oven and let it work its magic in the oven until the meat is fall-apart tender!
           </p>
@@ -247,6 +353,7 @@ import Comments from '../../../../components/Comments.astro';
               src="/images/blog/leo-yard.png"
               alt="Fall Allergies and Prayer"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
             />
           </div>
           <div class="p-6">
@@ -271,6 +378,7 @@ import Comments from '../../../../components/Comments.astro';
               src="/images/blog/mops-prep.png"
               alt="MOPS Morning"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
             />
           </div>
           <div class="p-6">
