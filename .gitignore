@@ -47,3 +47,6 @@ credentials.json
 
 # OS generated files
 Thumbs.db
+
+# SOP files (internal documentation)
+sop-*.md
