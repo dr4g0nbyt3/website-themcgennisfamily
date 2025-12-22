@@ -235,4 +235,4 @@ This website is already optimized with:
 
 ---
 
-Built with ❤️ for the McGennis Family - Jefferson City's Most Notable Family
+Built with ❤️ for the McGennis Family - Building Businesses and Serving Communities in Jefferson City

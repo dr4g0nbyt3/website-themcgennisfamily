@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Message Sent! - The McGennis Family"
+  description="Thanks for contacting the McGennis Family!"
+>
+  <section class="py-20 md:py-32 px-4">
+    <div class="container mx-auto text-center max-w-2xl">
+      {/* Success Icon */}
+      <div class="mb-8">
+        <svg class="w-20 h-20 text-mcgennis-navy mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"/>
+        </svg>
+      </div>
+
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-gray-900 leading-tight tracking-tight">
+        Message Sent Successfully!
+      </h1>
+
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+
+      <p class="text-xl text-gray-600 mb-8 leading-relaxed font-light">
+        Thank you for reaching out! We've received your message and will get back to you as soon as possible.
+      </p>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 mb-8">
+        <h2 class="text-2xl font-display font-bold text-gray-900 mb-4 tracking-tight">
+          What Happens Next?
+        </h2>
+        <ul class="text-left space-y-3 text-gray-700">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-navy mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="font-light">We'll review your message carefully</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-navy mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="font-light">You'll hear back from us within 2-3 business days</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-navy mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="font-light">Check your email (including spam folder) for our response</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-8">
+        <p class="text-gray-600 mb-4 font-light">
+          While you wait, explore more of our story:
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/blog"
+            class="inline-flex items-center px-6 py-3 bg-mcgennis-navy hover:bg-opacity-90 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            Read Our Blog
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a
+            href="/family"
+            class="inline-flex items-center px-6 py-3 bg-brass-button hover:brightness-100 brightness-110 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            Meet the Family
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <a href="/" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors font-medium">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </section>
+</BaseLayout>

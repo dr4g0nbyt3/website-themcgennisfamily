@@ -1,0 +1,517 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="The Magic Words: Getting AI to Build Exactly What You Need"
+  description="Learn how to use iterative questioning and structured prompting to get AI to build complete software products. A software engineer's guide to systematic AI-driven development."
+  type="article"
+  publishedTime="2025-12-21"
+  author="Caleb Michael McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        The Magic Words: Getting AI to Build Exactly What You Need
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb Michael McGennis</span>
+          <span>•</span>
+          <time datetime="2025-12-21">December 21, 2025</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/entrepreneur-ai/the-magic-words-ai-prompting" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/entrepreneur-ai/the-magic-words-ai-prompting&text=The%20Magic%20Words%3A%20Getting%20AI%20to%20Build%20Exactly%20What%20You%20Need" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Most people treat AI like a magic box—throw in a vague request, hope for the best. But as a software engineer who builds production systems with AI daily, I've discovered something better: there's a systematic approach to getting AI to build exactly what you need, down to the last detail.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Problem: Vague Requests → Incomplete Solutions</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I see this constantly in software development. Someone asks AI: "Build me an authentication system." AI generates 200 lines of code. The developer copies it, tries to integrate it, and discovers it's missing error handling, database migrations, password reset flow, rate limiting, and about 15 other critical features.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The problem isn't the AI. It's that you asked for "authentication" without defining what "complete" means for your specific use case.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        What if instead, AI asked YOU the right questions before writing a single line of code?
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Magic Formula: Inverting the Question Flow</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's the fundamental shift that changed how I use AI for development:
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Don't tell AI what to build. Tell AI to ask you every question needed to build it completely.</strong>
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">Instead of:</p>
+        <p class="text-gray-600 mb-4 font-mono text-sm">"Build me an authentication system"</p>
+        <p class="text-gray-700 font-medium mb-2">Try this:</p>
+        <p class="text-gray-600 font-mono text-sm">"I need you to build a complete authentication system for my application. Before writing any code, ask me every question you need to understand the requirements, architecture constraints, security considerations, and edge cases. Don't skip anything—I want this production-ready."</p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The AI will then generate 20-30 clarifying questions about your tech stack, database schema, session management approach, password requirements, OAuth providers, multi-factor auth, API design, error handling strategy, and more.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Answer those questions, and you'll get code that actually works in your specific context.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Iterative Requirements Framework</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is how I approach every non-trivial development task with AI:
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-bold mb-6">My Standard Prompt Template</h3>
+        <p class="mb-4 font-mono text-sm leading-relaxed">
+          I need you to [specific feature/system].<br/><br/>
+
+          Before writing any code, systematically ask me:<br/>
+          1. Technical requirements and constraints<br/>
+          2. Architecture and integration points<br/>
+          3. Data models and relationships<br/>
+          4. Error handling and edge cases<br/>
+          5. Performance and scalability needs<br/>
+          6. Security considerations<br/>
+          7. Testing and deployment requirements<br/><br/>
+
+          Ask as many questions as needed to fully understand the system. Be thorough. I want this production-ready, not a prototype.
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This shifts the conversation from "here's some code, good luck" to "let's systematically design this together."
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Real Example: Building a Task Queue System</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Let me show you how this works in practice. Last week I needed a background job processing system. Here's what I did:
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-bold mb-4">My Prompt:</p>
+        <p class="text-gray-700 mb-4 font-mono text-sm">
+          "I need to build a task queue system for processing background jobs in my Node.js application. Before suggesting any implementation, ask me every question you need to design this correctly. Consider architecture, failure handling, monitoring, scalability, and operational concerns."
+        </p>
+        <p class="text-gray-700 font-bold mb-4 mt-6">AI's Response (25 questions including):</p>
+        <ul class="text-gray-700 space-y-2 text-sm">
+          <li>• What's your current infrastructure? (Cloud provider, orchestration)</li>
+          <li>• What types of jobs will you process? (CPU-bound, I/O-bound, long-running)</li>
+          <li>• Expected volume? (jobs/second, jobs/day)</li>
+          <li>• Retry logic requirements? (max attempts, backoff strategy)</li>
+          <li>• Priority queues needed?</li>
+          <li>• Dead letter queue handling?</li>
+          <li>• Monitoring and alerting requirements?</li>
+          <li>• Idempotency requirements?</li>
+          <li>• Database for job persistence? (PostgreSQL, Redis, MongoDB)</li>
+          <li>• Deployment model? (containerized, serverless)</li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        After answering all 25 questions, the AI generated a complete, production-ready system with proper error handling, retry logic, monitoring hooks, graceful shutdown, and deployment configuration. Not a toy example—actual production code.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The first version? Maybe 5% bugs. Compare that to "build me a task queue" which would have been 70% incomplete.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Technique #1: The Specification Generator</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        For complex features, I don't go straight to code. I have AI generate a complete specification first.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-mono text-sm">
+          "Create a detailed technical specification for [feature]. Include:<br/>
+          - User stories and acceptance criteria<br/>
+          - API contract (request/response schemas)<br/>
+          - Database schema changes<br/>
+          - State machine or workflow diagram<br/>
+          - Error scenarios and handling<br/>
+          - Security considerations<br/>
+          - Performance requirements<br/>
+          - Testing strategy<br/><br/>
+
+          Ask me clarifying questions for any ambiguities before finalizing the spec."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Review the spec, iterate until it's right, then ask AI to implement it. This catches design flaws before they're in code.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Technique #2: The Architecture Interrogator</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Before making major architectural decisions, I use AI as a systematic questioner to ensure I've thought through all the implications.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-mono text-sm">
+          "I'm considering [architectural decision, e.g., 'moving from monolith to microservices' or 'switching to event-driven architecture']. <br/><br/>
+
+          Ask me probing questions to help me think through:<br/>
+          - Current pain points this solves<br/>
+          - New complexity this introduces<br/>
+          - Migration strategy and risks<br/>
+          - Team capability and learning curve<br/>
+          - Operational overhead<br/>
+          - Cost implications<br/>
+          - Performance trade-offs<br/><br/>
+
+          Challenge my assumptions. Help me see blind spots."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This prevents expensive mistakes. AI asks questions like "Have you considered how you'll handle distributed transactions?" that might not occur to you until you're knee-deep in implementation.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Technique #3: The Edge Case Finder</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Production bugs usually come from edge cases you didn't think about. AI is excellent at generating exhaustive edge case lists.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-mono text-sm">
+          "I'm implementing [feature description]. Generate a comprehensive list of edge cases, error scenarios, and failure modes I need to handle. Include:<br/>
+          - Input validation edge cases<br/>
+          - Race conditions and concurrency issues<br/>
+          - Network failures and timeouts<br/>
+          - Database constraints and transaction failures<br/>
+          - Authentication and authorization edge cases<br/>
+          - Resource exhaustion scenarios<br/>
+          - Data consistency issues<br/><br/>
+
+          For each edge case, suggest how to handle it."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I've caught numerous bugs before they hit production using this approach. AI will suggest scenarios like "What if the user deletes their account while an async job is processing their data?" that you might not think about until they happen.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Technique #4: The Incremental Builder</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        For complex systems, don't ask AI to build everything at once. Break it into stages and verify each one.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-mono text-sm">
+          "I need to build [complex system]. Let's implement this incrementally.<br/><br/>
+
+          First, break down the implementation into logical stages that build on each other. For each stage:<br/>
+          - Define what gets built<br/>
+          - List dependencies on previous stages<br/>
+          - Specify testing criteria<br/>
+          - Identify integration points<br/><br/>
+
+          Then we'll implement stage by stage, validating each before moving forward."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This prevents the "AI wrote 500 lines of code that doesn't compile" problem. You validate each increment, catch issues early, and maintain working software at every stage.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Technique #5: The Code Reviewer Interrogation</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Even when AI writes code, don't merge it blindly. Have it review its own work systematically.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-mono text-sm">
+          "Review the code you just wrote with the scrutiny of a senior engineer doing a production code review. Analyze:<br/>
+          - Security vulnerabilities (SQL injection, XSS, CSRF, etc.)<br/>
+          - Performance issues and N+1 queries<br/>
+          - Memory leaks and resource cleanup<br/>
+          - Error handling completeness<br/>
+          - Race conditions and thread safety<br/>
+          - Code maintainability and readability<br/>
+          - Missing tests or test coverage gaps<br/>
+          - Documentation gaps<br/><br/>
+
+          For each issue found, explain the problem and suggest a fix."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        AI is surprisingly good at finding its own mistakes when explicitly asked to review critically. I've caught SQL injection vulnerabilities, memory leaks, and race conditions this way.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Technique #6: The Test-First Approach</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Instead of asking AI to write code then tests, flip it: generate tests first based on requirements.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-mono text-sm">
+          "I need to implement [feature]. Before writing implementation code, create a comprehensive test suite that defines expected behavior. Include:<br/>
+          - Happy path tests<br/>
+          - Edge case tests<br/>
+          - Error condition tests<br/>
+          - Integration tests<br/>
+          - Performance tests if applicable<br/><br/>
+
+          Make tests specific and assertive. Then implement the code to pass these tests."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This gives you TDD (Test-Driven Development) benefits: tests define the contract, implementation must satisfy it, and you end up with better test coverage.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Complete Development Workflow</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's my end-to-end process for building features with AI:
+      </p>
+
+      <ol class="text-gray-600 leading-relaxed mb-6 space-y-4 list-decimal list-inside">
+        <li>
+          <strong>Requirements Gathering</strong><br/>
+          <span class="ml-6 block mt-1">"Ask me questions to fully understand [feature] requirements. Be thorough." (This approach is how we build <a href="/blog/entrepreneur-ai/best-website-services-jefferson-city" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">custom web solutions for Jefferson City businesses</a>.)</span>
+        </li>
+        <li>
+          <strong>Specification</strong><br/>
+          <span class="ml-6 block mt-1">"Generate a detailed technical spec based on our discussion. Include API contracts, data models, and workflows."</span>
+        </li>
+        <li>
+          <strong>Edge Case Analysis</strong><br/>
+          <span class="ml-6 block mt-1">"List all edge cases and error scenarios for this spec. How should each be handled?"</span>
+        </li>
+        <li>
+          <strong>Test Generation</strong><br/>
+          <span class="ml-6 block mt-1">"Create a comprehensive test suite that validates this specification."</span>
+        </li>
+        <li>
+          <strong>Incremental Implementation</strong><br/>
+          <span class="ml-6 block mt-1">"Break implementation into stages. Implement stage 1 first." (Repeat for each stage)</span>
+        </li>
+        <li>
+          <strong>Code Review</strong><br/>
+          <span class="ml-6 block mt-1">"Review this code for security, performance, and correctness issues."</span>
+        </li>
+        <li>
+          <strong>Documentation</strong><br/>
+          <span class="ml-6 block mt-1">"Generate documentation: API docs, inline comments, and integration guide."</span>
+        </li>
+      </ol>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This systematic approach consistently produces production-ready code that I can actually ship.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Common Mistakes to Avoid</h2>
+
+      <div class="bg-white p-6 my-8 rounded-xl">
+        <ul class="text-gray-700 space-y-4">
+          <li>
+            <strong>Mistake #1: Accepting the first code AI generates</strong><br/>
+            <span class="text-gray-600">Always review, test, and iterate. AI's first attempt is a draft, not a final product. Remember that AI can confidently state wrong information—learn more about <a href="/blog/entrepreneur-ai/ai-hallucinations-explained" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">AI hallucinations</a>.</span>
+          </li>
+          <li>
+            <strong>Mistake #2: Not providing enough context</strong><br/>
+            <span class="text-gray-600">AI doesn't know your codebase, architecture, or constraints. Be specific about your environment.</span>
+          </li>
+          <li>
+            <strong>Mistake #3: Asking for "simple" or "basic" implementations</strong><br/>
+            <span class="text-gray-600">You'll get toy code without error handling. Always ask for production-ready solutions.</span>
+          </li>
+          <li>
+            <strong>Mistake #4: Not asking about trade-offs</strong><br/>
+            <span class="text-gray-600">"What are the trade-offs of this approach?" often reveals important considerations.</span>
+          </li>
+          <li>
+            <strong>Mistake #5: Skipping the questions phase</strong><br/>
+            <span class="text-gray-600">Letting AI ask questions upfront saves hours of refactoring later.</span>
+          </li>
+          <li>
+            <strong>Mistake #6: Not verifying AI's assumptions</strong><br/>
+            <span class="text-gray-600">AI will make assumptions about your stack, database, and architecture. Verify them explicitly.</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Advanced: Building Complete Systems</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Want to build something complex like a SaaS application? Here's the meta-prompt I use:
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <p class="font-mono text-sm leading-relaxed">
+          I want to build [complete system description].<br/><br/>
+
+          Let's approach this systematically. For each major component:<br/>
+          1. Ask clarifying questions about requirements<br/>
+          2. Generate a technical specification<br/>
+          3. Identify dependencies and integration points<br/>
+          4. List potential issues and how to address them<br/>
+          5. Create implementation plan with stages<br/><br/>
+
+          Start with the core components, then move to supporting features. At each step, verify my requirements before proceeding. I want to build this right the first time.
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This turns AI into a systematic requirements analyst, architect, and implementation partner. You end up with a complete, thought-through system rather than a pile of disconnected code.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Real Magic: Systematic Thinking</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The "magic words" aren't really magic. They're prompts that force systematic thinking. To understand why this matters in the broader context of technological transformation, read about <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">the AI renaissance</a> we're living through.
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>"Ask me questions..." → Forces requirements gathering</li>
+        <li>"Before writing code..." → Prevents premature implementation</li>
+        <li>"List edge cases..." → Forces defensive programming</li>
+        <li>"Break into stages..." → Enables incremental validation</li>
+        <li>"Review this code..." → Catches bugs before production</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        These techniques work because they mirror how experienced engineers actually build software: gather requirements, design thoughtfully, implement incrementally, review critically.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        AI gives you a tireless partner who can execute this process at every level of detail without getting impatient or cutting corners.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Start Here</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Pick a feature you're planning to build. Before asking AI to write code, try this:
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-mono text-sm">
+          "I need to build [feature]. Before writing any code, ask me every question necessary to fully understand the requirements, technical constraints, edge cases, and integration points. I want this production-ready, not a prototype. Be thorough."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Answer the questions thoughtfully. You'll be surprised how much better the resulting code is.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Then iterate: review the code, ask for improvements, have AI critique its own work, add tests, consider edge cases.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed font-medium">
+        The magic isn't in AI writing code. It's in using AI to think through problems systematically, the way great engineers do.
+      </p>
+
+      <div class="bg-mcgennis-maroon text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4">Ship Better Code</h3>
+        <p class="mb-4">
+          These techniques have transformed how I build software. Instead of fighting with incomplete AI-generated code, I now ship production-ready features faster than ever.
+        </p>
+        <p class="text-sm italic mb-4">
+          The best developers don't just use AI—they systematically extract its full value.
+        </p>
+        <div class="mt-6 pt-6 border-t border-white border-opacity-20">
+          <p class="text-sm mb-3 font-medium">Further Reading on Prompt Engineering:</p>
+          <ul class="text-sm space-y-2">
+            <li>
+              <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener noreferrer" class="hover:text-mcgennis-gold transition-colors underline">OpenAI Prompt Engineering Guide</a>
+            </li>
+            <li>
+              <a href="https://docs.anthropic.com/claude/docs/prompt-engineering" target="_blank" rel="noopener noreferrer" class="hover:text-mcgennis-gold transition-colors underline">Anthropic Claude Prompt Engineering Documentation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from An Entrepreneur in a World of AI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            The AI Renaissance: When History Echoes Into Tomorrow
+          </h3>
+          <p class="text-gray-500 text-sm">Drawing parallels between the historical Renaissance and today's AI revolution</p>
+        </a>
+        <a href="/blog/entrepreneur-ai/ai-hallucinations-explained" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            AI Hallucinations Explained by a Software Engineer
+          </h3>
+          <p class="text-gray-500 text-sm">Understanding AI limitations through a family BBQ conversation</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>

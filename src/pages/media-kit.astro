@@ -42,11 +42,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             faith, and community service.
           </p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div class="bg-gray-50 p-6 rounded-xl">
+            <div class="bg-white p-6 rounded-xl">
               <h3 class="text-xl font-bold text-gray-900 mb-2">Est. 2020 • Forged 1150</h3>
               <p class="text-gray-600">Modern family business established in 2020, heritage dating to 1150</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-xl">
+            <div class="bg-white p-6 rounded-xl">
               <h3 class="text-xl font-bold text-gray-900 mb-2">Jefferson City, Missouri</h3>
               <p class="text-gray-600">Proudly serving our community in Central Missouri</p>
             </div>
@@ -57,81 +57,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Brand Colors -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-7xl">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Brand Colors</h2>
         <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-4"></div>
-        <p class="text-lg text-gray-600">Our official color palette reflects heritage, strength, and warmth</p>
+        <p class="text-lg text-gray-600 mb-4">Our official color palette reflects heritage, strength, and warmth</p>
+        <p class="text-base text-gray-500 max-w-3xl mx-auto">
+          These colors rotate throughout our home and brand materials, creating a cohesive visual identity that connects our physical space with our digital presence. From the walls in our house to the cards on our website, each color tells part of our family story.
+        </p>
       </div>
 
-      <!-- Accent Colors Row -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <!-- Navis Navy -->
+      <!-- Primary & Secondary Colors Row -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <!-- Soho White -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
-          <div class="bg-mcgennis-navy h-32"></div>
+          <div class="bg-white h-32 border-b border-gray-200"></div>
           <div class="p-6">
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Nobilis Navy</h3>
-            <p class="text-gray-600 mb-4">Primary brand color - strength and tradition</p>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Soho White</h3>
+            <p class="text-gray-600 mb-4">Primary - card backgrounds and clean spaces</p>
             <div class="space-y-2 text-sm">
-              <p class="font-mono"><strong>HEX:</strong> #1e3a5f</p>
-              <p class="font-mono"><strong>RGB:</strong> 30, 58, 95</p>
-              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-navy</p>
+              <p class="font-mono"><strong>HEX:</strong> #ffffff</p>
+              <p class="font-mono"><strong>RGB:</strong> 255, 255, 255</p>
+              <p class="font-mono"><strong>Tailwind:</strong> white</p>
             </div>
           </div>
         </div>
 
-        <!-- Magnus Maroon -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
-          <div class="bg-mcgennis-maroon h-32"></div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Magnus Maroon</h3>
-            <p class="text-gray-600 mb-4">Secondary - warmth and family</p>
-            <div class="space-y-2 text-sm">
-              <p class="font-mono"><strong>HEX:</strong> #7d2e2e</p>
-              <p class="font-mono"><strong>RGB:</strong> 125, 46, 46</p>
-              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-maroon</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fidelis Forest -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
-          <div class="bg-mcgennis-forest h-32"></div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Fidelis Forest</h3>
-            <p class="text-gray-600 mb-4">Heritage color - Irish roots</p>
-            <div class="space-y-2 text-sm">
-              <p class="font-mono"><strong>HEX:</strong> #2d5016</p>
-              <p class="font-mono"><strong>RGB:</strong> 45, 80, 22</p>
-              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-forest</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Potens Purple -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
-          <div style="background-color: #5b2c6f;" class="h-32"></div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Potens Purple</h3>
-            <p class="text-gray-600 mb-4">Accent color - nobility and legacy</p>
-            <div class="space-y-2 text-sm">
-              <p class="font-mono"><strong>HEX:</strong> #5b2c6f</p>
-              <p class="font-mono"><strong>RGB:</strong> 91, 44, 111</p>
-              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-purple</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gold/Brass Colors Row -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Gloria Gold -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
           <div class="bg-mcgennis-gold h-32"></div>
           <div class="p-6">
             <h3 class="text-2xl font-bold text-gray-900 mb-2">Gloria Gold</h3>
-            <p class="text-gray-600 mb-4">Accent color - heritage and excellence</p>
+            <p class="text-gray-600 mb-4">Secondary - heritage and excellence</p>
             <div class="space-y-2 text-sm">
               <p class="font-mono"><strong>HEX:</strong> #d4a24e</p>
               <p class="font-mono"><strong>RGB:</strong> 212, 162, 78</p>
@@ -145,11 +103,70 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="bg-brass-button h-32"></div>
           <div class="p-6">
             <h3 class="text-2xl font-bold text-gray-900 mb-2">Brushed Brass</h3>
-            <p class="text-gray-600 mb-4">Call-to-action elements</p>
+            <p class="text-gray-600 mb-4">Fancy Secondary - call-to-action elements</p>
             <div class="space-y-2 text-sm">
               <p class="font-mono"><strong>HEX:</strong> #8b7355</p>
               <p class="font-mono"><strong>RGB:</strong> 139, 115, 85</p>
               <p class="font-mono"><strong>Tailwind:</strong> brass-button</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accent Colors Row -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Nobilis Navy -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
+          <div class="bg-mcgennis-navy h-32"></div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Nobilis Navy</h3>
+            <p class="text-gray-600 mb-4">Accent 1 - strength and tradition</p>
+            <div class="space-y-2 text-sm">
+              <p class="font-mono"><strong>HEX:</strong> #1e3a5f</p>
+              <p class="font-mono"><strong>RGB:</strong> 30, 58, 95</p>
+              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-navy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Magnus Maroon -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
+          <div class="bg-mcgennis-maroon h-32"></div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Magnus Maroon</h3>
+            <p class="text-gray-600 mb-4">Accent 2 - warmth and family</p>
+            <div class="space-y-2 text-sm">
+              <p class="font-mono"><strong>HEX:</strong> #7d2e2e</p>
+              <p class="font-mono"><strong>RGB:</strong> 125, 46, 46</p>
+              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-maroon</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fidelis Forest -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
+          <div class="bg-mcgennis-forest h-32"></div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Fidelis Forest</h3>
+            <p class="text-gray-600 mb-4">Accent 3 - heritage and Irish roots</p>
+            <div class="space-y-2 text-sm">
+              <p class="font-mono"><strong>HEX:</strong> #2d5016</p>
+              <p class="font-mono"><strong>RGB:</strong> 45, 80, 22</p>
+              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-forest</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Potens Purple -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
+          <div style="background-color: #5b2c6f;" class="h-32"></div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Potens Purple</h3>
+            <p class="text-gray-600 mb-4">Accent 4 - nobility and legacy</p>
+            <div class="space-y-2 text-sm">
+              <p class="font-mono"><strong>HEX:</strong> #5b2c6f</p>
+              <p class="font-mono"><strong>RGB:</strong> 91, 44, 111</p>
+              <p class="font-mono"><strong>Tailwind:</strong> mcgennis-purple</p>
             </div>
           </div>
         </div>
@@ -215,7 +232,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Family Motto & Heritage -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-7xl">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Family Motto & Heritage</h2>
@@ -303,7 +320,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Family Members -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-7xl">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Family Members</h2>
@@ -327,7 +344,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Stephanie -->
         <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
           <h3 class="text-3xl font-display font-bold text-gray-900 mb-2">Stephanie Kay McGennis</h3>
-          <p class="text-xl text-mcgennis-maroon mb-4 font-medium">Co-Founder & Family Leader</p>
+          <p class="text-xl text-mcgennis-maroon mb-4 font-medium">Co-Founder & Homemaker</p>
           <p class="text-gray-700 leading-relaxed mb-4">
             The heart of the McGennis family. Dedicated mother to Leonardo and Raphael, key partner in family
             ventures, and community leader in Jefferson City.

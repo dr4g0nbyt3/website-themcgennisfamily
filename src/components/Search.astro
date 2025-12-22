@@ -1,0 +1,172 @@
+---
+// Search component using Pagefind
+---
+
+<div id="search-container" class="relative">
+  <button
+    id="search-button"
+    class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 hover:border-mcgennis-maroon transition-colors bg-white"
+    aria-label="Search site"
+  >
+    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+    </svg>
+    <span class="text-sm text-gray-600">Search...</span>
+  </button>
+</div>
+
+<!-- Search Modal -->
+<div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-3xl w-full mx-auto shadow-2xl relative" id="search-modal-content">
+    <!-- Close Button -->
+    <button
+      id="close-search"
+      class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
+      aria-label="Close search"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Search Content -->
+    <div class="p-6">
+      <div id="pagefind-search"></div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  /* Pagefind custom styling to match brand */
+  .pagefind-ui__search-input {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-mcgennis-maroon focus:ring-2 focus:ring-mcgennis-maroon focus:ring-opacity-20 transition-all outline-none text-lg;
+  }
+
+  .pagefind-ui__result {
+    @apply border-b border-gray-200 py-4;
+  }
+
+  .pagefind-ui__result-title {
+    @apply text-xl font-bold text-gray-900 hover:text-mcgennis-maroon transition-colors;
+  }
+
+  .pagefind-ui__result-excerpt {
+    @apply text-gray-600 mt-2 leading-relaxed;
+  }
+
+  .pagefind-ui__result-link {
+    @apply no-underline;
+  }
+
+  .pagefind-ui__message {
+    @apply text-gray-600 py-4;
+  }
+
+  .pagefind-ui__button {
+    @apply px-4 py-2 bg-mcgennis-maroon hover:bg-mcgennis-gold text-white rounded-lg transition-all duration-300 font-medium;
+  }
+</style>
+
+<script>
+  // Search modal functionality
+  (function() {
+    const searchButton = document.getElementById('search-button');
+    const searchModal = document.getElementById('search-modal');
+    const closeSearch = document.getElementById('close-search');
+    const searchModalContent = document.getElementById('search-modal-content');
+
+    let pagefindUI;
+
+    function openSearch() {
+      if (searchModal) {
+        searchModal.classList.remove('hidden');
+        searchModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+
+        // Lazy load Pagefind UI when search is opened
+        if (!pagefindUI) {
+          // Construct path dynamically to avoid Vite resolving it during dev
+          const pagefindPath = '/pagefind' + '/pagefind-ui.js';
+          import(/* @vite-ignore */ pagefindPath).then(module => {
+            const PagefindUI = module.default;
+            pagefindUI = new PagefindUI({
+              element: "#pagefind-search",
+              showSubResults: true,
+              showImages: false,
+              excerptLength: 15,
+              resetStyles: false
+            });
+
+            // Focus the search input
+            setTimeout(() => {
+              const input = document.querySelector('.pagefind-ui__search-input');
+              input?.focus();
+            }, 100);
+          }).catch(error => {
+            // Pagefind not built yet (dev mode)
+            const searchContainer = document.querySelector('#pagefind-search');
+            if (searchContainer) {
+              searchContainer.innerHTML = `
+                <div class="p-8 text-center">
+                  <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                  </svg>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Search Not Available in Dev Mode</h3>
+                  <p class="text-gray-600 mb-4">The search index is created when you build the site.</p>
+                  <p class="text-sm text-gray-500">Run <code class="bg-gray-100 px-2 py-1 rounded">npm run build</code> to enable search functionality.</p>
+                </div>
+              `;
+            }
+          });
+        } else {
+          // Focus the search input if UI already exists
+          const input = document.querySelector('.pagefind-ui__search-input');
+          input?.focus();
+        }
+      }
+    }
+
+    function closeSearchModal() {
+      if (searchModal) {
+        searchModal.classList.add('hidden');
+        searchModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Open search button
+    searchButton?.addEventListener('click', openSearch);
+
+    // Close button
+    closeSearch?.addEventListener('click', closeSearchModal);
+
+    // Click outside modal to close
+    searchModal?.addEventListener('click', (e) => {
+      if (e.target === searchModal) {
+        closeSearchModal();
+      }
+    });
+
+    // Prevent modal content clicks from closing
+    searchModalContent?.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // ESC key to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchModal && !searchModal.classList.contains('hidden')) {
+        closeSearchModal();
+      }
+
+      // Ctrl+K or Cmd+K to open search (common shortcut)
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        if (searchModal?.classList.contains('hidden')) {
+          openSearch();
+        } else {
+          closeSearchModal();
+        }
+      }
+    });
+  })();
+</script>

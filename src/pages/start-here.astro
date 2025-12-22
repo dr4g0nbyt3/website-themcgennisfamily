@@ -1,0 +1,276 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+---
+
+<BaseLayout
+  title="Start Here - The McGennis Family"
+  description="New to our family blog? Start here to discover our story, best content, and how we're building businesses and serving communities in Jefferson City, Missouri."
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Welcome to Our Family!
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-500 font-light leading-relaxed">
+        We're the McGennises - a faith-filled family building businesses, raising kids, and serving our community in Jefferson City, Missouri. Here's where to start.
+      </p>
+    </div>
+  </section>
+
+  <!-- Meet the Family -->
+  <section class="py-24 px-4 bg-white">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 text-center tracking-tight">Meet the McGennises</h2>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-12"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Caleb -->
+        <a href="/family/caleb" class="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
+          <h3 class="text-3xl font-display font-bold text-gray-900 mb-3 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            Caleb Michael McGennis
+          </h3>
+          <p class="text-mcgennis-navy font-medium mb-4">Entrepreneur, Developer & Ministry Leader</p>
+          <p class="text-gray-600 leading-relaxed mb-4 font-light">
+            Serial entrepreneur running multiple businesses (BXP, The Honey Homestead, and more), serving with Sports Crusaders, and passionate about using AI and technology to solve problems.
+          </p>
+          <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
+            Learn More About Caleb →
+          </div>
+        </a>
+
+        <!-- Stephanie -->
+        <a href="/family/stephanie" class="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-mcgennis-maroon hover:shadow-lg transition-all duration-300">
+          <h3 class="text-3xl font-display font-bold text-gray-900 mb-3 group-hover:text-mcgennis-maroon transition-colors tracking-tight">
+            Stephanie Kay McGennis
+          </h3>
+          <p class="text-mcgennis-maroon font-medium mb-4">Stay-at-Home Mom & Blogger</p>
+          <p class="text-gray-600 leading-relaxed mb-4 font-light">
+            Managing the chaos of motherhood with coffee, faith, and a whole latte to do! Sharing real stories about parenting, recipes, and finding God's grace in everyday moments.
+          </p>
+          <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+            Learn More About Stephanie →
+          </div>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Leonardo -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200">
+          <h4 class="text-2xl font-display font-bold text-gray-900 mb-2 tracking-tight">Leonardo ("Leo")</h4>
+          <p class="text-gray-600 font-light">Our energetic firstborn, bringing joy and keeping us on our toes!</p>
+        </div>
+
+        <!-- Raphael -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200">
+          <h4 class="text-2xl font-display font-bold text-gray-900 mb-2 tracking-tight">Raphael ("Raph")</h4>
+          <p class="text-gray-600 font-light">Our sweet youngest addition, completing our family of four!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Blogs -->
+  <section class="py-24 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 text-center tracking-tight">Explore Our Blogs</h2>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-12"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <!-- A Latte to Do Mama -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300">
+          <div class="bg-mcgennis-maroon p-6 text-white">
+            <h3 class="text-2xl font-display font-bold mb-2 tracking-tight">A Latte to Do Mama</h3>
+            <p class="text-white/90 text-sm">by Stephanie Kay McGennis</p>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed font-light">
+              Real stories about motherhood, faith, family life, and finding God's grace in the beautiful chaos. Plus, family-favorite recipes!
+            </p>
+            <h4 class="font-bold text-gray-900 mb-3">Popular Posts:</h4>
+            <ul class="space-y-2 mb-4">
+              <li>
+                <a href="/blog/alattetodomama/a-latte-to-do" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors text-sm">
+                  → A Latte to Do - Introduction
+                </a>
+              </li>
+              <li>
+                <a href="/blog/alattetodomama/fall-allergies-and-prayer" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors text-sm">
+                  → Fall Allergies and Prayer
+                </a>
+              </li>
+              <li>
+                <a href="/blog/alattetodomama/mops-morning" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors text-sm">
+                  → MOPS Morning
+                </a>
+              </li>
+              <li>
+                <a href="/blog/alattetodomama/recipes/pot-roast" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors text-sm">
+                  → Classic Sunday Pot Roast Recipe
+                </a>
+              </li>
+            </ul>
+            <a href="/blog/alattetodomama" class="inline-flex items-center px-4 py-2 bg-mcgennis-maroon hover:bg-mcgennis-gold text-white rounded-lg transition-all duration-300 text-sm font-medium">
+              Read More Posts →
+            </a>
+          </div>
+        </div>
+
+        <!-- Entrepreneur in AI -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300">
+          <div class="bg-mcgennis-navy p-6 text-white">
+            <h3 class="text-2xl font-display font-bold mb-2 tracking-tight">An Entrepreneur in a World of AI</h3>
+            <p class="text-white/90 text-sm">by Caleb Michael McGennis</p>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed font-light">
+              Entrepreneurship, AI, technology, and ministry insights from building multiple businesses while serving others.
+            </p>
+            <h4 class="font-bold text-gray-900 mb-3">Popular Posts:</h4>
+            <ul class="space-y-2 mb-4">
+              <li>
+                <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors text-sm">
+                  → Peaks and Valleys: A $9 Million Lesson in Faith
+                </a>
+              </li>
+              <li>
+                <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors text-sm">
+                  → The AI Renaissance
+                </a>
+              </li>
+              <li>
+                <a href="/blog/entrepreneur-ai/im-your-guy" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors text-sm">
+                  → I'm Your Guy: Finding My Calling
+                </a>
+              </li>
+              <li>
+                <a href="/blog/entrepreneur-ai/theres-no-place-like-home" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors text-sm">
+                  → There's No Place Like Home
+                </a>
+              </li>
+            </ul>
+            <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-4 py-2 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all duration-300 text-sm font-medium">
+              Read More Posts →
+            </a>
+          </div>
+        </div>
+
+        <!-- Family Heritage -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300">
+          <div class="bg-mcgennis-forest p-6 text-white">
+            <h3 class="text-2xl font-display font-bold mb-2 tracking-tight">McGennis Family Heritage</h3>
+            <p class="text-white/90 text-sm">by Caleb Michael McGennis</p>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed font-light">
+              Tracing our family lineage from 1150 AD Scotland to modern-day Jefferson City, with stories, artifacts, and travel guides.
+            </p>
+            <h4 class="font-bold text-gray-900 mb-3">Popular Posts:</h4>
+            <ul class="space-y-2 mb-4">
+              <li>
+                <a href="/blog/family-heritage/mcgennis-heritage-1150" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors text-sm">
+                  → McGennis Heritage: 1150 AD to Present
+                </a>
+              </li>
+              <li>
+                <a href="/blog/family-heritage/mcgennis-travel-guide" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors text-sm">
+                  → Scotland Travel Guide for McGennises
+                </a>
+              </li>
+              <li>
+                <a href="/blog/family-heritage/mcgennis-artifacts" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors text-sm">
+                  → Family Artifacts & Heirlooms
+                </a>
+              </li>
+            </ul>
+            <a href="/blog/family-heritage" class="inline-flex items-center px-4 py-2 bg-mcgennis-forest hover:bg-opacity-90 text-white rounded-lg transition-all duration-300 text-sm font-medium">
+              Read More Posts →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We're About -->
+  <section class="py-24 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 text-center tracking-tight">What We're About</h2>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-12"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center gap-2 tracking-tight">
+            <svg class="w-6 h-6 text-mcgennis-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            Faith-Filled Living
+          </h3>
+          <p class="text-gray-600 leading-relaxed font-light">
+            Our Christian faith is the foundation of everything we do - from raising our kids to running our businesses.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center gap-2 tracking-tight">
+            <svg class="w-6 h-6 text-mcgennis-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Entrepreneurship
+          </h3>
+          <p class="text-gray-600 leading-relaxed font-light">
+            Building multiple businesses in Jefferson City, from custom software (BXP) to homesteading ventures.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center gap-2 tracking-tight">
+            <svg class="w-6 h-6 text-mcgennis-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            Community Service
+          </h3>
+          <p class="text-gray-600 leading-relaxed font-light">
+            Active in Sports Crusaders ministry and committed to making Jefferson City a better place for families.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center gap-2 tracking-tight">
+            <svg class="w-6 h-6 text-mcgennis-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Real Family Life
+          </h3>
+          <p class="text-gray-600 leading-relaxed font-light">
+            Honest stories about the joys and challenges of raising kids, managing a household, and staying sane!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore More -->
+  <section class="py-24 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Ready to Dive Deeper?</h2>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+      <p class="text-xl text-gray-600 mb-12 font-light">
+        Check out our businesses, learn more about our family heritage, or get in touch!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/businesses" class="inline-flex items-center px-6 py-3 bg-mcgennis-navy hover:bg-opacity-90 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          Our Businesses →
+        </a>
+        <a href="/family" class="inline-flex items-center px-6 py-3 bg-brass-button hover:brightness-100 brightness-110 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          Meet the Family →
+        </a>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 border-2 border-mcgennis-maroon text-mcgennis-maroon hover:bg-mcgennis-maroon hover:text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          Get In Touch →
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

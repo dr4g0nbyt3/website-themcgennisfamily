@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
 ---
 
 <BaseLayout
@@ -37,7 +39,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
           <div class="space-y-6 text-gray-700 leading-relaxed">
             <p>
-              [Blog content to be added]
+              [Blog content to be added - but if you're like me and love making lists and setting goals only to have them completely derailed, you'll understand! Check out <a href="/blog/alattetodomama/a-latte-to-do" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">my intro post about goal-setting and planning</a> for more relatable chaos.]
             </p>
           </div>
         </div>
@@ -45,8 +47,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Comments Section -->
+  <Comments />
+
   <!-- Back to Blog List -->
-  <section class="py-16 px-4 bg-gray-50">
+  <section class="py-16 px-4 bg-white">
     <div class="container mx-auto text-center">
       <a href="/blog/alattetodomama" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-maroon hover:text-mcgennis-maroon transition-all duration-300">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

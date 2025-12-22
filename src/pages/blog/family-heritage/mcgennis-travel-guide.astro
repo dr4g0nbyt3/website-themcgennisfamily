@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
 ---
 
 <BaseLayout
@@ -130,7 +132,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               </li>
             </ul>
 
-            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+            <div class="bg-white p-4 rounded-lg mb-6">
               <h4 class="font-bold text-gray-900 mb-2">Personal Reflection Moment:</h4>
               <p class="text-sm text-gray-700 italic">
                 Stand at the inauguration stone and imagine the ceremony: drums, torches, the gathered clan, and your ancestor taking his seat as the rightful Lord of Iveagh. This stone has witnessed our family's power, pride, and purpose for centuries. Touch it. Feel the connection.
@@ -179,7 +181,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               </li>
             </ul>
 
-            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+            <div class="bg-white p-4 rounded-lg mb-6">
               <h4 class="font-bold text-gray-900 mb-2">Historical Context:</h4>
               <p class="text-sm text-gray-700">
                 For the Mag Aonghusa clan, Dundrum Castle represented the beginning of centuries of pressure from external powers. The Normans built it to intimidate and control; our ancestors would have seen it as a constant reminder that their traditional authority was being challenged. Standing in these ruins, you're at a pivot point in our family's history—the moment when the old Gaelic order began to face the reality of conquest.
@@ -229,7 +231,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               </li>
             </ul>
 
-            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+            <div class="bg-white p-4 rounded-lg mb-6">
               <h4 class="font-bold text-gray-900 mb-2">Personal Reflection Moment:</h4>
               <p class="text-sm text-gray-700 italic">
                 Bring a picnic to the summit of Knock Iveagh. Sit quietly and take in the 360-degree views. This is what the Lords of Iveagh surveyed—their domain, their responsibility, their legacy. You're looking at the same hills, the same valleys, under the same Irish sky. The connection across centuries is profound.
@@ -441,6 +443,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
     </div>
 
+    <!-- Comments Section -->
+    <Comments />
+
     <!-- Related Posts -->
     <aside class="mt-16 pt-8 border-t border-gray-200">
       <h3 class="text-2xl font-bold text-gray-900 mb-6">Continue the Heritage Journey</h3>
@@ -457,7 +462,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     </aside>
 
     <!-- Author Bio -->
-    <aside class="mt-12 p-8 bg-gray-50 rounded-2xl border border-gray-200">
+    <aside class="mt-12 p-8 bg-white rounded-2xl border border-gray-200">
       <div class="flex flex-col md:flex-row gap-6 items-start">
         <div class="flex-shrink-0">
           <div class="w-24 h-24 bg-mcgennis-navy rounded-full flex items-center justify-center text-white text-3xl font-bold">

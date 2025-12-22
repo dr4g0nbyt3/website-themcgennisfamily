@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
 ---
 
 <BaseLayout
@@ -26,6 +28,34 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Social Sharing -->
+  <section class="py-8 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-3xl">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/alattetodomama/fall-allergies-and-prayer" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/alattetodomama/fall-allergies-and-prayer&text=Fall%20Allergies%20and%20Prayer" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            Tweet
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Blog Content -->
   <section class="py-16 px-4">
     <div class="container mx-auto max-w-3xl">
@@ -37,7 +67,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
           <div class="space-y-6 text-gray-700 leading-relaxed">
             <p>
-              Fall allergies. The literal bane of my existence when I'm trying to live my best pumpkin spice life. I'm pretty sure Fall is my favorite season (this is coming from someone who doesn't pick favorite things but that's probably another blog). However pretty much every year I have some form of allergies.
+              Fall allergies. The literal bane of my existence when I'm trying to live my best pumpkin spice life. I'm pretty sure Fall is my favorite season (this is coming from someone who doesn't pick favorite things but that's probably another blog). However pretty much every year I have some form of allergies. (If you're dealing with allergy symptoms too, the <a href="https://www.mayoclinic.org/diseases-conditions/allergies/symptoms-causes/syc-20351497" target="_blank" rel="noopener noreferrer" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">Mayo Clinic has helpful information</a> about allergies and treatments.)
             </p>
 
             <p>
@@ -71,7 +101,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
             </p>
 
             <p>
-              All of this to say I have now used natural remedies, a good amount of over the counter meds, and finally prayer to try and thwart these allergy symptoms. And isn't that the key right there. "Finally prayer."
+              All of this to say I have now used natural remedies, a good amount of over the counter meds, and finally prayer to try and thwart these allergy symptoms. And isn't that the key right there. "Finally prayer." This reminds me of what I've learned about <a href="/blog/alattetodomama/coffee-shop-prayers" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">finding peace in the midst of chaos</a>—even when health challenges threaten to derail my pumpkin spice life.
             </p>
 
             <p>
@@ -82,7 +112,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               I'm sure you've heard this story a million times before and probably lived it a thousand yourself. That's true for me as well, but here I am. Stuck in the same human habits. But ya know I don't have to be, and neither do you. We can create reminders for ourselves to take everything to Jesus even if it feels small and like we can handle it ourselves.
             </p>
 
-            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-mcgennis-maroon mt-8 mb-8">
+            <div class="bg-white p-6 rounded-lg border-l-4 border-mcgennis-maroon mt-8 mb-8">
               <p class="italic text-gray-700 leading-relaxed">
                 What a friend we have in Jesus<br/>
                 All our sins and griefs to bear<br/>
@@ -106,8 +136,67 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold text-gray-900 mb-8 tracking-tight">More from A Latte to Do Mama</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/alattetodomama/mops-morning" class="group bg-white rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="/images/blog/mops-prep.png"
+              alt="MOPS Morning"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors mb-2">
+              MOPS Morning
+            </h3>
+            <p class="text-gray-600 mb-3 font-light">
+              The excitement and hope in my heart as I prepared for my first MOPS meeting of the Fall.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">September 12, 2023</span>
+              <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors text-sm">
+                Read More →
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="/blog/alattetodomama/a-latte-to-do" class="group bg-white rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="/images/blog/a-latte-to-do-notepad.png"
+              alt="A Latte to Do - Introduction"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors mb-2">
+              A Latte to Do - Introduction
+            </h3>
+            <p class="text-gray-600 mb-3 font-light">
+              Do people still blog? If they do, do other people still read it? I guess we'll see.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">September 5, 2023</span>
+              <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors text-sm">
+                Read More →
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Back to Blog List -->
-  <section class="py-16 px-4 bg-gray-50">
+  <section class="py-16 px-4 bg-white">
     <div class="container mx-auto text-center">
       <a href="/blog/alattetodomama" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-maroon hover:text-mcgennis-maroon transition-all duration-300">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

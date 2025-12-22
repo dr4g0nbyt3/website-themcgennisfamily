@@ -20,153 +20,512 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Blog Posts -->
-  <section class="py-24 px-4">
-    <div class="container mx-auto max-w-4xl">
-      <div class="space-y-8">
-        <!-- The AI Renaissance -->
-        <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="group block bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
-          <div class="flex items-start justify-between mb-4">
-            <h2 class="text-3xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
-              The AI Renaissance: When History Echoes Into Tomorrow
+  <!-- Category Filter -->
+  <section class="py-8 px-4 bg-white border-b border-gray-200">
+    <div class="container mx-auto max-w-7xl">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button class="category-filter px-6 py-2 rounded-full border-2 border-mcgennis-navy bg-mcgennis-navy text-white font-medium transition-all hover:shadow-md" data-category="all">
+          All Posts
+        </button>
+        <button class="category-filter px-6 py-2 rounded-full border-2 border-mcgennis-navy text-mcgennis-navy bg-white font-medium transition-all hover:bg-mcgennis-navy hover:text-white hover:shadow-md" data-category="business">
+          Business
+        </button>
+        <button class="category-filter px-6 py-2 rounded-full border-2 bg-white font-medium transition-all hover:text-white hover:shadow-md" style="border-color: #5b2c6f; color: #5b2c6f;" onmouseenter="this.style.backgroundColor='#5b2c6f'; this.style.color='white';" onmouseleave="if(!this.classList.contains('active')) { this.style.backgroundColor='white'; this.style.color='#5b2c6f'; }" data-category="ministry">
+          Ministry
+        </button>
+        <button class="category-filter px-6 py-2 rounded-full border-2 border-mcgennis-gold text-mcgennis-gold bg-white font-medium transition-all hover:bg-mcgennis-gold hover:text-white hover:shadow-md" data-category="technology">
+          Technology
+        </button>
+        <button class="category-filter px-6 py-2 rounded-full border-2 border-mcgennis-maroon text-mcgennis-maroon bg-white font-medium transition-all hover:bg-mcgennis-maroon hover:text-white hover:shadow-md" data-category="personal">
+          Personal
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post Hero -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-7xl">
+      <a href="/blog/entrepreneur-ai/thriving-businesses-jefferson-city-2025" class="group block bg-mcgennis-navy text-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300" data-category="business">
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="p-12 flex flex-col justify-center">
+            <div class="mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-gold text-mcgennis-navy text-xs font-bold rounded-full uppercase tracking-wide">Featured</span>
+              <span class="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full ml-2">Business</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 group-hover:text-mcgennis-gold transition-colors tracking-tight">
+              10 Thriving Businesses in Jefferson City MO You Need to Know About (2025)
             </h2>
-            <svg class="w-6 h-6 text-gray-400 group-hover:text-mcgennis-gold group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            <div class="flex items-center gap-4 text-white/80 text-sm mb-6">
+              <time datetime="2025-12-21">December 21, 2025</time>
+              <span>•</span>
+              <span>12 min read</span>
+            </div>
+            <p class="text-white/90 leading-relaxed mb-6 text-lg">
+              Discover the real businesses making waves in Jefferson City, Missouri in 2025. From new coffee shops to established restaurants, see who's growing and why they're succeeding.
+            </p>
+            <div class="flex items-center text-mcgennis-gold font-medium group-hover:translate-x-2 transition-transform">
+              Read the full story
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-mcgennis-navy h-80 md:h-auto flex items-center justify-center">
+            <svg class="w-32 h-32 text-white/20" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
             </svg>
           </div>
-          <p class="text-gray-500 text-sm mb-4">
-            <time datetime="2025-12-13">December 13, 2025</time>
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-4 font-light">
-            Drawing parallels between the historical Renaissance and today's AI revolution, and what it means for entrepreneurs, ministry leaders, and communities like Jefferson City.
-          </p>
-          <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
-            Read the full story
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-7xl">
+      <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Fastest Growing Businesses -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="business">
+          <div class="bg-mcgennis-navy h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"/>
             </svg>
           </div>
-        </a>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-navy/10 text-mcgennis-navy text-xs font-medium rounded">Business</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/fastest-growing-businesses-jefferson-city-2025" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                Top 10 Fastest Growing Business Categories in Jefferson City
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-20">Dec 20, 2025</time>
+                <span>•</span>
+                <span>10 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Discover which industries are booming in Central Missouri's capital city.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- Best Website Services -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="business">
+          <div class="bg-mcgennis-navy h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-navy/10 text-mcgennis-navy text-xs font-medium rounded">Business</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/best-website-services-jefferson-city" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                Best Website Design Services in Jefferson City MO
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-20">Dec 20, 2025</time>
+                <span>•</span>
+                <span>15 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Your comprehensive guide to finding the best web design and development services.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- Best Churches -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="ministry">
+          <div class="h-48 flex items-center justify-center" style="background-color: #5b2c6f;">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-maroon/10 text-mcgennis-maroon text-xs font-medium rounded">Ministry</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/best-churches-jefferson-city-missouri" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                Best Community Churches in Jefferson City Missouri
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-20">Dec 20, 2025</time>
+                <span>•</span>
+                <span>14 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Find your church home with this comprehensive guide from a ministry veteran.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- Brand Color Palette -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="business">
+          <div class="bg-mcgennis-navy h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-navy/10 text-mcgennis-navy text-xs font-medium rounded">Business</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/choosing-brand-color-palette" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                Choosing a Color Palette for Your Brand
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-20">Dec 20, 2025</time>
+                <span>•</span>
+                <span>18 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Color psychology, practical steps, and real examples for building your brand.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- Leveraging Relationships -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="business">
+          <div class="bg-mcgennis-navy h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-navy/10 text-mcgennis-navy text-xs font-medium rounded">Business</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/leveraging-relationships-business-growth" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                Leveraging Relationships to Excel Your Company's Growth
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-20">Dec 20, 2025</time>
+                <span>•</span>
+                <span>12 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Networking strategies that actually work for growing your business.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- Church and Business Overlap -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="ministry">
+          <div class="h-48 flex items-center justify-center" style="background-color: #5b2c6f;">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-maroon/10 text-mcgennis-maroon text-xs font-medium rounded">Ministry</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/church-and-business-overlap" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                Where Church and Business Overlap (and Where They Don't)
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-20">Dec 20, 2025</time>
+                <span>•</span>
+                <span>11 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Navigating faith and business with integrity and wisdom.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- When to Pull the Plug -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="business">
+          <div class="bg-mcgennis-navy h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-navy/10 text-mcgennis-navy text-xs font-medium rounded">Business</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/when-to-close-failing-business" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                When to Pull the Plug: Signs Your Business is Failing
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-20">Dec 20, 2025</time>
+                <span>•</span>
+                <span>13 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Honest advice on when to close and when to keep fighting.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- The AI Renaissance -->
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="technology">
+          <div class="bg-mcgennis-gold h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded">Technology</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                The AI Renaissance: When History Echoes Into Tomorrow
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-13">Dec 13, 2025</time>
+                <span>•</span>
+                <span>16 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Drawing parallels between the historical Renaissance and today's AI revolution.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </article>
 
         <!-- AI Hallucinations Explained -->
-        <a href="/blog/entrepreneur-ai/ai-hallucinations-explained" class="group block bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
-          <div class="flex items-start justify-between mb-4">
-            <h2 class="text-3xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
-              AI Hallucinations Explained by a Software Engineer at Google
-            </h2>
-            <svg class="w-6 h-6 text-gray-400 group-hover:text-mcgennis-gold group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        <article class="blog-post group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="technology">
+          <div class="bg-mcgennis-gold h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <p class="text-gray-500 text-sm mb-4">
-            <time datetime="2025-12-13">December 13, 2025</time>
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-4 font-light">
-            A Google Senior Developer explains AI hallucinations, LLM testing, and how to trust AI helpers in simple terms. Learn from a family BBQ conversation.
-          </p>
-          <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
-            Read the full story
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded">Technology</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/ai-hallucinations-explained" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                AI Hallucinations Explained by a Software Engineer at Google
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-13">Dec 13, 2025</time>
+                <span>•</span>
+                <span>14 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Understanding AI limitations through a family BBQ conversation.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
           </div>
-        </a>
+        </article>
 
         <!-- There's No Place Like Home -->
-        <a href="/blog/entrepreneur-ai/theres-no-place-like-home" class="group block bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
-          <div class="flex items-start justify-between mb-4">
-            <h2 class="text-3xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
-              There's No Place Like Home
-            </h2>
-            <svg class="w-6 h-6 text-gray-400 group-hover:text-mcgennis-gold group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        <article class="blog-post hidden group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="personal">
+          <div class="bg-mcgennis-maroon h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
             </svg>
           </div>
-          <p class="text-gray-500 text-sm mb-4">
-            <time datetime="2025-12-11">December 11, 2025</time>
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-4 font-light">
-            A story of loss, trauma, asphyxiation, and finding home again through the grace of God and the calling of ministry.
-          </p>
-          <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
-            Read the full story
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">Personal</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/theres-no-place-like-home" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                There's No Place Like Home
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-11">Dec 11, 2025</time>
+                <span>•</span>
+                <span>9 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                A story of loss, trauma, and finding home through faith.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
           </div>
-        </a>
+        </article>
 
         <!-- The Mountain Mover -->
-        <a href="/blog/entrepreneur-ai/the-mountain-mover" class="group block bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
-          <div class="flex items-start justify-between mb-4">
-            <h2 class="text-3xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
-              The Mountain Mover: When God Doesn't Just Move Mountains
-            </h2>
-            <svg class="w-6 h-6 text-gray-400 group-hover:text-mcgennis-gold group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        <article class="blog-post hidden group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="ministry">
+          <div class="h-48 flex items-center justify-center" style="background-color: #5b2c6f;">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <p class="text-gray-500 text-sm mb-4">
-            <time datetime="2025-12-11">December 11, 2025</time>
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-4 font-light">
-            The story of arriving at Concord Baptist Church, facing an impossible mountain, and discovering that God had been orchestrating divine connections all along.
-          </p>
-          <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
-            Read the full story
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-maroon/10 text-mcgennis-maroon text-xs font-medium rounded">Ministry</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/the-mountain-mover" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                The Mountain Mover: When God Doesn't Just Move Mountains
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-11">Dec 11, 2025</time>
+                <span>•</span>
+                <span>10 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Discovering divine connections at Concord Baptist Church.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
           </div>
-        </a>
+        </article>
 
         <!-- I'm Your Guy -->
-        <a href="/blog/entrepreneur-ai/im-your-guy" class="group block bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
-          <div class="flex items-start justify-between mb-4">
-            <h2 class="text-3xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
-              I'm Your Guy: How God Orchestrates Divine Appointments
-            </h2>
-            <svg class="w-6 h-6 text-gray-400 group-hover:text-mcgennis-gold group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
+        <article class="blog-post hidden group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="ministry">
+          <img
+            src="/images/caleb-mcgennis-sports-crusaders-jefferson-city.jpg"
+            alt="Caleb at Sports Crusaders"
+            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-mcgennis-maroon/10 text-mcgennis-maroon text-xs font-medium rounded">Ministry</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/im-your-guy" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                I'm Your Guy: How God Orchestrates Divine Appointments
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-11">Dec 11, 2025</time>
+                <span>•</span>
+                <span>8 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Launching an esports ministry through answered prayer.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
           </div>
-          <p class="text-gray-500 text-sm mb-4">
-            <time datetime="2025-12-11">December 11, 2025</time>
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-4 font-light">
-            The story of how a casual conversation, a bold declaration, and answered prayer led to launching an esports ministry with Sports Crusaders.
-          </p>
-          <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
-            Read the full story
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </div>
-        </a>
+        </article>
 
         <!-- Peaks and Valleys -->
-        <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="group block bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
-          <div class="flex items-start justify-between mb-4">
-            <h2 class="text-3xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
-              Peaks and Valleys: A $9 Million Lesson in Faith
-            </h2>
-            <svg class="w-6 h-6 text-gray-400 group-hover:text-mcgennis-gold group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        <article class="blog-post hidden group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy" data-category="personal">
+          <div class="bg-mcgennis-maroon h-48 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <p class="text-gray-500 text-sm mb-4">
-            <time datetime="2025-12-11">December 11, 2025</time>
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-4 font-light">
-            The story of how I made $9 million in crypto, lost it all to an exchange bankruptcy, and discovered God had a different path planned for my life.
-          </p>
-          <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
-            Read the full story
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
+          <div class="p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">Personal</span>
+            </div>
+            <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="block">
+              <h3 class="text-xl font-display font-bold text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight mb-3">
+                Peaks and Valleys: A $9 Million Lesson in Faith
+              </h3>
+              <div class="flex items-center gap-3 text-gray-500 text-xs mb-3">
+                <time datetime="2025-12-11">Dec 11, 2025</time>
+                <span>•</span>
+                <span>11 min read</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Crypto fortune, bankruptcy, and discovering God's different path.
+              </p>
+              <div class="flex items-center text-mcgennis-navy font-medium text-sm group-hover:text-mcgennis-gold transition-colors">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
           </div>
-        </a>
+        </article>
+
+      </div>
+
+      <!-- Load More Button -->
+      <div id="load-more-container" class="text-center mt-12">
+        <button id="load-more-btn" class="px-8 py-4 bg-mcgennis-navy text-white font-bold rounded-xl hover:bg-mcgennis-maroon transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          Load More Posts
+          <svg class="w-5 h-5 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
@@ -182,4 +541,109 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </a>
     </div>
   </section>
+
+  <!-- JavaScript for filtering and load more -->
+  <script>
+    // Category filtering
+    const filterButtons = document.querySelectorAll('.category-filter');
+    const blogPosts = document.querySelectorAll('.blog-post');
+    const featuredPost = document.querySelector('[data-category="business"]');
+
+    // Category color mapping
+    const categoryColors = {
+      'all': { bg: 'bg-mcgennis-navy', text: 'text-mcgennis-navy', border: 'border-mcgennis-navy' },
+      'business': { bg: 'bg-mcgennis-navy', text: 'text-mcgennis-navy', border: 'border-mcgennis-navy' },
+      'ministry': { bgStyle: '#5b2c6f', textStyle: '#5b2c6f', borderStyle: '#5b2c6f' },
+      'technology': { bg: 'bg-mcgennis-gold', text: 'text-mcgennis-gold', border: 'border-mcgennis-gold' },
+      'personal': { bg: 'bg-mcgennis-maroon', text: 'text-mcgennis-maroon', border: 'border-mcgennis-maroon' }
+    };
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.category;
+
+        // Reset all buttons to default state
+        filterButtons.forEach(btn => {
+          const btnCategory = btn.dataset.category;
+          const colors = categoryColors[btnCategory];
+
+          btn.classList.remove('active');
+          btn.classList.remove('bg-mcgennis-navy', 'bg-mcgennis-gold', 'bg-mcgennis-maroon');
+          btn.classList.add('bg-white');
+
+          // Apply category-specific colors for default state
+          if (colors.bg) {
+            btn.classList.remove('text-white');
+            btn.classList.add(colors.text);
+          } else if (colors.textStyle) {
+            btn.style.backgroundColor = 'white';
+            btn.style.color = colors.textStyle;
+          }
+        });
+
+        // Apply active state to clicked button
+        const activeColors = categoryColors[category];
+        button.classList.add('active');
+        button.classList.remove('bg-white');
+
+        if (activeColors.bg) {
+          button.classList.add(activeColors.bg, 'text-white');
+          button.classList.remove(activeColors.text);
+        } else if (activeColors.bgStyle) {
+          button.style.backgroundColor = activeColors.bgStyle;
+          button.style.color = 'white';
+        }
+
+        // Filter posts
+        blogPosts.forEach(post => {
+          if (category === 'all' || post.dataset.category === category) {
+            post.style.display = 'block';
+            // Remove hidden class if it was added
+            post.classList.remove('hidden');
+          } else {
+            post.style.display = 'none';
+          }
+        });
+
+        // Show featured post only if category matches or "all"
+        if (featuredPost) {
+          if (category === 'all' || featuredPost.dataset.category === category) {
+            featuredPost.closest('section').style.display = 'block';
+          } else {
+            featuredPost.closest('section').style.display = 'none';
+          }
+        }
+
+        // Reset load more
+        resetLoadMore();
+      });
+    });
+
+    // Load More functionality
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const hiddenPosts = document.querySelectorAll('.blog-post.hidden');
+
+    function resetLoadMore() {
+      // Hide the button if all posts are visible or filtered
+      const visiblePosts = Array.from(blogPosts).filter(post => post.style.display !== 'none');
+      const hiddenVisiblePosts = visiblePosts.filter(post => post.classList.contains('hidden'));
+
+      if (hiddenVisiblePosts.length === 0) {
+        document.getElementById('load-more-container').style.display = 'none';
+      } else {
+        document.getElementById('load-more-container').style.display = 'block';
+      }
+    }
+
+    if (loadMoreBtn && hiddenPosts.length > 0) {
+      loadMoreBtn.addEventListener('click', () => {
+        hiddenPosts.forEach(post => {
+          post.classList.remove('hidden');
+        });
+        document.getElementById('load-more-container').style.display = 'none';
+      });
+    } else if (hiddenPosts.length === 0) {
+      document.getElementById('load-more-container').style.display = 'none';
+    }
+  </script>
 </BaseLayout>

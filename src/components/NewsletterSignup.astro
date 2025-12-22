@@ -1,0 +1,82 @@
+---
+interface Props {
+  variant?: 'inline' | 'centered' | 'sidebar';
+  showDescription?: boolean;
+}
+
+const { variant = 'inline', showDescription = true } = Astro.props;
+---
+
+<div class={`newsletter-signup ${variant === 'centered' ? 'text-center' : ''} ${variant === 'sidebar' ? 'bg-white p-6 rounded-xl border border-gray-200' : ''}`}>
+  {variant === 'centered' && (
+    <svg class="w-12 h-12 text-mcgennis-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+    </svg>
+  )}
+
+  {/* Icon for inline variant too */}
+  {variant === 'inline' && (
+    <svg class="w-10 h-10 text-mcgennis-gold mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+    </svg>
+  )}
+
+  <h3 class={`font-display font-bold tracking-tight ${variant === 'centered' ? 'text-3xl text-white mb-4' : 'text-xl text-gray-900 mb-3'}`}>
+    Join the McGennis Family Newsletter
+  </h3>
+
+  {showDescription && (
+    <p class={`font-light leading-relaxed ${variant === 'centered' ? 'text-lg text-gray-300 mb-6 max-w-2xl mx-auto' : 'text-base text-gray-600 mb-4'}`}>
+      Get weekly encouragement, recipes, and practical wisdom from our family to yours. Faith, family, and coffee-fueled adventures delivered to your inbox.
+    </p>
+  )}
+
+  <form
+    name="newsletter-signup"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    action="/newsletter-success"
+    class="newsletter-form"
+  >
+    {/* Hidden fields for Netlify Forms */}
+    <input type="hidden" name="form-name" value="newsletter-signup" />
+
+    {/* Honeypot field for spam protection (hidden from users) */}
+    <p class="hidden">
+      <label>
+        Don't fill this out if you're human: <input name="bot-field" />
+      </label>
+    </p>
+
+    <div class={`flex flex-col sm:flex-row gap-3 ${variant === 'centered' ? 'max-w-xl mx-auto' : ''}`}>
+      <div class="flex-1">
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input
+          type="email"
+          id="newsletter-email"
+          name="email"
+          required
+          placeholder="Enter your email address"
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-mcgennis-maroon focus:ring-2 focus:ring-mcgennis-maroon focus:ring-opacity-20 transition-all outline-none text-gray-900"
+        />
+      </div>
+      <button
+        type="submit"
+        class="px-6 py-3 bg-brass-button brightness-110 hover:brightness-100 text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap"
+      >
+        Subscribe
+      </button>
+    </div>
+
+    <p class={`text-xs mt-3 font-light ${variant === 'centered' ? 'text-gray-400' : 'text-gray-500'}`}>
+      We respect your privacy. Unsubscribe anytime. No spam, just family updates and inspiration.
+    </p>
+  </form>
+</div>
+
+<style>
+  .newsletter-form input[type="email"]:focus {
+    outline: none;
+  }
+</style>

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
 ---
 
 <BaseLayout
@@ -68,7 +70,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
           Our original Gaelic name was <strong>Mag Aonghusa</strong>, which translates to "son of unique choice." In the ancient Irish naming tradition, this wasn't just a descriptor—it was a declaration of identity and purpose.
         </p>
 
-        <div class="bg-gray-50 border-l-4 border-mcgennis-navy p-6 my-8 rounded-r-xl">
+        <div class="bg-white border-l-4 border-mcgennis-navy p-6 my-8 rounded-r-xl">
           <p class="text-lg font-medium text-gray-900 mb-2">Etymology:</p>
           <ul class="space-y-2 text-gray-700">
             <li><strong>Mag</strong> = "son of" (Irish patronymic prefix)</li>
@@ -202,7 +204,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               <p class="text-gray-700 mb-3">
                 <strong>A dexter hand couped at the wrist gules (a right hand, severed at the wrist, in red)</strong> - This is the famous Red Hand of Ulster, one of Ireland's most ancient and powerful symbols.
               </p>
-              <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="bg-white p-4 rounded-lg">
                 <p class="text-sm text-gray-600 italic mb-2">The Legend of the Red Hand:</p>
                 <p class="text-sm text-gray-700">
                   According to Irish legend, two chieftains raced by boat to claim the lands of Ulster. The first to touch the shore would become the rightful lord. Seeing he would lose, one chieftain cut off his own hand and threw it to shore, thereby "touching" the land first. The Red Hand became the enduring symbol of Ulster's nobility and the lengths to which Irish lords would go to claim their rightful place.
@@ -334,6 +336,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
     </div>
 
+    <!-- Comments Section -->
+    <Comments />
+
     <!-- Related Posts -->
     <aside class="mt-16 pt-8 border-t border-gray-200">
       <h3 class="text-2xl font-bold text-gray-900 mb-6">Continue the Heritage Journey</h3>
@@ -350,7 +355,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     </aside>
 
     <!-- Author Bio -->
-    <aside class="mt-12 p-8 bg-gray-50 rounded-2xl border border-gray-200">
+    <aside class="mt-12 p-8 bg-white rounded-2xl border border-gray-200">
       <div class="flex flex-col md:flex-row gap-6 items-start">
         <div class="flex-shrink-0">
           <div class="w-24 h-24 bg-mcgennis-navy rounded-full flex items-center justify-center text-white text-3xl font-bold">

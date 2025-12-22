@@ -1,0 +1,524 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="Where Church and Business Overlap (and Where They Don't) - Christian Entrepreneur Guide"
+  description="Navigating faith and business as a Christian entrepreneur. Practical advice on ethics, decision-making, and boundaries from someone leading in both church and business."
+  type="article"
+  publishedTime="2025-12-20"
+  author="Caleb Michael McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Where Church and Business Overlap (and Where They Don't)
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb Michael McGennis</span>
+          <span>•</span>
+          <time datetime="2025-12-20">December 20, 2025</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/entrepreneur-ai/church-and-business-overlap" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/entrepreneur-ai/church-and-business-overlap&text=Where%20Church%20and%20Business%20Overlap%20%28and%20Where%20They%20Don%27t%29" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        I live at the intersection of church and business. After five years with the Missouri Baptist Convention, serving at Concord Baptist Church, leading Sports Crusaders ministry, and running multiple businesses in Jefferson City, I've learned valuable lessons about where faith and entrepreneurship connect—and where they absolutely should not.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Tension Between Church and Business</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Let's address the elephant in the room: church and business often feel at odds with each other.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The church talks about serving others, generosity, and sacrifice. Business talks about profit, competition, and growth. The church emphasizes humility and putting others first. Business rewards ambition and self-promotion. The church operates on faith and spiritual principles. Business operates on metrics, strategy, and ROI.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        How do you reconcile these seemingly contradictory worlds?
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The answer: you don't need to. Church and business aren't contradictory—they're complementary when approached with wisdom and proper boundaries.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4">My Unique Perspective</h3>
+        <p class="mb-4">
+          I'm not writing this as a pastor who dabbles in business or a businessman who occasionally goes to church. I'm deeply embedded in both worlds—actively serving in ministry while building and running multiple companies.
+        </p>
+        <p class="text-sm text-gray-200">
+          This dual perspective gives me insights that pure business people and pure ministry people might miss. And it's taught me hard lessons about integration and boundaries.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Where Church and Business DO Overlap</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        There are powerful, legitimate connections between faith and business. Here's where they beautifully intersect:
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">1. Character and Ethics</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Biblical principles shape how I do business. These aren't "nice-to-have" values—they're non-negotiables:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-3">
+        <li><strong>Honesty in all dealings:</strong> No bait-and-switch. No hidden fees. No misleading marketing. If I say something, I mean it.</li>
+        <li><strong>Treating people with dignity:</strong> Employees, customers, vendors, competitors—everyone deserves respect.</li>
+        <li><strong>Keeping commitments:</strong> My word matters. If I commit to a deadline, price, or deliverable, I honor it.</li>
+        <li><strong>Fair compensation:</strong> Paying people what they're worth, not just market minimum.</li>
+        <li><strong>Excellence in work:</strong> "Whatever you do, work at it with all your heart, as working for the Lord" (Colossians 3:23).</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        These values aren't unique to Christianity, but my faith is what grounds them as unshakable principles rather than situational preferences.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">2. Servant Leadership</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Jesus modeled servant leadership—leading by serving, not dominating. This translates directly to business.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        In my businesses, servant leadership means:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Hiring people smarter than me and empowering them</li>
+        <li>Prioritizing employee wellbeing over short-term profits</li>
+        <li>Asking "How can I help you succeed?" instead of "Why haven't you hit your numbers?"</li>
+        <li>Taking responsibility when things go wrong, giving credit when things go right</li>
+        <li>Viewing customers as people to serve, not transactions to extract value from</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Servant leadership isn't soft—it's the most effective form of leadership. People follow leaders who genuinely care about them.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">3. Stewardship Mindset</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The biblical concept of stewardship—managing resources that ultimately belong to God—transforms how I view business ownership.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I don't own my businesses in the ultimate sense. I'm stewarding resources, opportunities, and people that God has entrusted to me. This means:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Using profits wisely, not wastefully</li>
+        <li>Investing in people's development and growth</li>
+        <li>Being generous with resources beyond just profit maximization</li>
+        <li>Making decisions with long-term faithfulness in mind, not just short-term gains</li>
+      </ul>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">4. Purpose Beyond Profit</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Business can be ministry—not in the cheesy "everything we do is ministry" way, but in genuinely serving people and creating value.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Through BXP (my software company), I help Jefferson City businesses implement technology that makes them more effective. When a local nonprofit gets better software that helps them serve more people, that's kingdom impact. When a struggling business gets tools that help them survive and provide jobs, that matters. This is part of what I call <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">the AI Renaissance</a>—using technology to unlock new possibilities for faith-driven innovation.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Profit isn't evil—it's the fuel that allows businesses to continue creating value, providing jobs, and serving customers.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">5. Community Service and Generosity</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Faith compels generosity. Business provides resources for generosity.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        My businesses enable me to:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Support Sports Crusaders and other ministries financially</li>
+        <li>Provide pro-bono or discounted services to nonprofits and churches</li>
+        <li>Sponsor youth sports and community events in Jefferson City</li>
+        <li>Employ people and provide livelihoods for families</li>
+        <li>Give generously to church and missions</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Business success creates capacity for kingdom impact.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">6. Relationship-Building Skills</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Church teaches you to care about people genuinely. Business teaches you to build strategic relationships. The combination is powerful.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        In Jefferson City, many of my strongest business relationships started at church or through ministry. Not because I was networking—because we built genuine friendships around shared faith, then discovered opportunities to work together.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">Important Distinction</p>
+        <p class="text-gray-600">
+          There's a massive difference between "building genuine friendships at church that sometimes lead to business opportunities" and "going to church to network for business." The first is beautiful. The second is gross and manipulative.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Where Church and Business Should NOT Overlap</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Now here's the crucial part that many Christian entrepreneurs get wrong. There are clear boundaries between church and business that should not be crossed:
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">1. Don't Use Church as a Business Development Tool</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is the number one mistake I see Christian entrepreneurs make—treating church like a networking event.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Wrong approach:</strong>
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Joining a church small group primarily to find clients</li>
+        <li>Using prayer requests as subtle sales pitches</li>
+        <li>Targeting wealthy church members for business opportunities</li>
+        <li>Pitching your services during church fellowship time</li>
+        <li>Viewing church relationships transactionally</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Go to church to worship God, serve others, and grow spiritually. Period. If business relationships develop naturally over time through genuine friendship, that's a byproduct—not the goal.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">2. Don't Confuse Business Decisions with Spiritual Ones</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "God told me to start this business" is often code for "I have a business idea and I'm using spiritual language to avoid doing market research."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        God cares about your business, but He's probably not giving you specific direction on pricing strategy, marketing tactics, or which CRM to buy. You need to do the work—research, planning, testing—and make wise business decisions.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Pray for wisdom. Seek counsel. But don't spiritualize every business decision to avoid the hard work of strategic thinking.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">3. Don't Expect Christian Customers to Pay Less</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I've had Christian business owners tell me they expect discounts because "we're brothers in Christ." This is manipulation disguised as spiritual language.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Your faith doesn't entitle you to free or discounted services. If you want to support Christian businesses, pay them fairly for their work. If I choose to discount services for a church or ministry, that's my decision based on stewardship—not an obligation.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">4. Don't Use Faith to Avoid Accountability</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "Trust God" doesn't mean ignoring cash flow problems. "Have faith" doesn't mean skipping business planning. "God will provide" doesn't excuse poor financial management.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Faith and wisdom work together. Proverbs is full of business wisdom—planning, saving, diligence, accountability. Use your faith to trust God with outcomes you can't control, not as an excuse to avoid responsible business practices.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">5. Don't Hire Based on Faith Alone</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Being a Christian doesn't automatically make someone a good employee. I've made this mistake—hiring based on someone's church involvement instead of their qualifications and fit for the role.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Hire the most qualified person who aligns with your company values. Their faith might be one factor, but competence, work ethic, and cultural fit matter more for business success.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">6. Don't Mix Church Leadership with Business Promotion</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're in church leadership, be extremely careful about promoting your business to the congregation. This creates conflicts of interest and can damage both your witness and your church role.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        When I serve at church, I'm there to serve—not to generate leads for BXP. If someone asks what I do for work, I'll tell them. But I'm not using my platform or influence for business development.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4">The Clear Boundary Principle</h3>
+        <p class="mb-4">
+          Here's my rule: When I'm at church or in ministry contexts, I'm 100% focused on ministry. When I'm in business contexts, I'm 100% focused on business (while maintaining Christian ethics).
+        </p>
+        <p>
+          I don't blur the lines. I don't try to sneak business into ministry or use ministry as a business tool. Clear boundaries protect both roles and honor both callings.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Practical Wisdom for Christian Entrepreneurs</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's what I've learned about navigating faith and business effectively:
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">1. Your Work IS Ministry (But Not All Work Is Church)</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Everything you do can glorify God—including business. Running an ethical, excellent business that serves customers and provides jobs is kingdom work.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But that doesn't mean every business is a church or every transaction is evangelism. Sometimes business is just business—and that's okay.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">2. Make Decisions Based on Business Wisdom, Filtered Through Faith Values</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        When making business decisions:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Research the market</li>
+        <li>Analyze the numbers</li>
+        <li>Consider strategic implications</li>
+        <li>Seek wise counsel from business mentors</li>
+        <li>Then filter through biblical values: Is this honest? Does it serve people? Is it wise stewardship?</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Don't skip the business analysis and jump straight to "praying about it." Do both.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">3. Be Excellent, Not Just "Christian"</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The worst advertising for Christianity is mediocre work with a fish symbol on it.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Don't market yourself as a "Christian business" and then provide subpar service. Be so excellent at what you do that people want to work with you regardless of your faith—and then let your character and ethics reflect Christ.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">4. Profit Isn't Evil—But Greed Is</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        There's nothing wrong with making money. The Bible doesn't condemn wealth—it condemns loving money and trusting in riches instead of God.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Build profitable businesses. Pay yourself well. Accumulate wealth. And then steward it wisely—generous giving, wise investing, supporting kingdom work.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">5. Guard Your Integrity Ruthlessly</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Your reputation as a Christian in business matters deeply. One ethical compromise can damage both your business and your witness.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        In Jefferson City's tight-knit community, this is especially true. People watch how Christian business owners operate. Live up to the standards you profess.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">6. Remember Who You're Ultimately Working For</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters" (Colossians 3:23).
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This verse transforms business. You're not just building companies to get rich or gain status. You're stewarding opportunities God has given you, serving customers as an act of worship, and using business as a platform for kingdom impact.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Questions to Ask Yourself as a Christian Entrepreneur</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here are the questions I regularly ask myself to stay aligned:
+      </p>
+
+      <div class="bg-white p-6 my-8 rounded-xl">
+        <ul class="text-gray-700 space-y-4">
+          <li><strong>Am I treating people with dignity and fairness?</strong> Employees, customers, vendors, competitors—everyone deserves respect.</li>
+          <li><strong>Am I being completely honest in my marketing and sales?</strong> No exaggeration, no misleading promises, no manipulation.</li>
+          <li><strong>Would I be comfortable with Jesus reading my business emails?</strong> This is a surprisingly clarifying question.</li>
+          <li><strong>Am I using my profits wisely?</strong> Am I generous? Am I saving? Am I investing in kingdom work?</li>
+          <li><strong>Am I prioritizing people over profits when it matters?</strong> Sometimes the right decision costs money. Do it anyway.</li>
+          <li><strong>Is my work life sustainable, or am I sacrificing family and health for business?</strong> Workaholism isn't godly.</li>
+          <li><strong>Am I keeping church and business properly separated?</strong> Clear boundaries honor both callings.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Role of Sabbath Rest in Business</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        One area where church and business overlap in powerful ways: the concept of Sabbath rest.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Entrepreneurs are notorious for working 80-hour weeks and burning out. The biblical principle of Sabbath—one day a week set apart for rest and worship—is countercultural but essential.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I don't work on Sundays. Period. No emails, no business calls, no "quick" tasks. This isn't legalism—it's wisdom. Resting one day a week acknowledges that God is in control, not me. The business will survive without me for 24 hours.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This rhythm of work and rest makes me more effective the other six days and protects my family and spiritual health.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">When Business Success Becomes an Idol</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's the dangerous part that many Christian entrepreneurs face: success can become an idol.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        You start with good intentions—building a business to provide for your family and serve others. Then success comes. Revenue grows. Recognition increases. And subtly, your identity shifts from "follower of Christ who happens to be an entrepreneur" to "successful entrepreneur who happens to be Christian."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Warning signs that business is becoming an idol:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>You can't stop thinking about work, even during church or family time</li>
+        <li>Your worth feels tied to business performance</li>
+        <li>You're willing to compromise ethics for growth</li>
+        <li>You resent time spent in church or ministry because it takes away from business</li>
+        <li>Your prayer life is mostly about business success</li>
+        <li>You're neglecting family, health, or spiritual disciplines for work</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I've felt these temptations. The solution: regular heart-checks, accountability relationships, and remembering that business success is a tool, not the goal. (See also: <a href="/blog/entrepreneur-ai/the-mountain-mover" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">how God orchestrates divine appointments in business</a>.)
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Using Business Success for Kingdom Impact</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's the beautiful part: when business success is kept in proper perspective, it becomes a powerful tool for kingdom work.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Successful businesses can:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Fund missions and ministry generously</li>
+        <li>Provide jobs and livelihoods for families</li>
+        <li>Serve communities through products and services</li>
+        <li>Model ethical business practices in corrupt industries</li>
+        <li>Create platforms for sharing faith naturally</li>
+        <li>Support churches and nonprofits with expertise and resources</li>
+        <li>Demonstrate that Christianity is relevant in all areas of life, not just church</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is why I work hard to build successful businesses—not for wealth or status, but for the capacity to make kingdom impact at scale.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Final Thoughts: Integration Without Confusion</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        After years navigating both church ministry and business entrepreneurship, here's my conclusion:
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Your faith should inform every area of your life, including business. But church is church, and business is business. They overlap in values, ethics, and purpose—but they have different functions, different goals, and different boundaries.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Integration means:</strong> Letting biblical values shape how you do business, stewarding resources wisely, serving people excellently, and using success for kingdom purposes.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Confusion means:</strong> Using church as a networking tool, spiritualizing business decisions to avoid hard work, or making business success your ultimate identity and worth.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Be excellent in business. Be faithful in ministry. Keep clear boundaries between the two. And remember that you're ultimately working for an audience of One—not for wealth, status, or human approval.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed font-medium">
+        Build businesses that honor God by serving people excellently, operating ethically, and creating value in the world.
+      </p>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from An Entrepreneur in a World of AI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/entrepreneur-ai/best-churches-jefferson-city-missouri" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            Best Community Churches in Jefferson City Missouri
+          </h3>
+          <p class="text-gray-500 text-sm">Finding the right church home in Jefferson City and Central Missouri</p>
+        </a>
+        <a href="/blog/entrepreneur-ai/leveraging-relationships-business-growth" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            Leveraging Relationships to Excel Your Company's Growth
+          </h3>
+          <p class="text-gray-500 text-sm">How strategic networking drives business success</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>

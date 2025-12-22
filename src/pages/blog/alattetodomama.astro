@@ -3,28 +3,39 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const blogPosts = [
   {
+    title: "Coffee Shop Prayers: Finding God in the Drive-Thru Line",
+    slug: "coffee-shop-prayers",
+    date: "December 19, 2025",
+    excerpt: "Let me tell you something: this mama loves coffee. From Dutch Bros runs to Bible time, finding sacred moments in the everyday chaos.",
+    image: null,
+  },
+  {
     title: "Lists, Goals, and Changed Plans",
     slug: "lists-goals-changed-plans",
     date: "2024",
     excerpt: "That sound is my soul cringing at the phrase \"changed plans.\"",
+    image: null,
   },
   {
     title: "Fall Allergies and Prayer",
     slug: "fall-allergies-and-prayer",
     date: "October 6, 2023",
     excerpt: "The literal bane of my existence when I'm trying to live my best pumpkin spice life.",
+    image: "/images/blog/leo-yard.png",
   },
   {
     title: "MOPS Morning",
     slug: "mops-morning",
     date: "September 12, 2023",
     excerpt: "The excitement and hope in my heart as I prepared for my first MOPS meeting of the Fall.",
+    image: "/images/blog/mops-prep.png",
   },
   {
     title: "A Latte to Do - Introduction",
     slug: "a-latte-to-do",
     date: "September 5, 2023",
     excerpt: "Do people still blog? If they do, do other people still read it? I guess we'll see.",
+    image: "/images/blog/a-latte-to-do-notepad.png",
   },
 ];
 ---
@@ -52,21 +63,32 @@ const blogPosts = [
     <div class="container mx-auto max-w-4xl">
       <div class="space-y-8">
         {blogPosts.map((post) => (
-          <a href={`/blog/alattetodomama/${post.slug}`} class="group block bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
-            <div class="flex justify-between items-start mb-4">
-              <h2 class="text-3xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors">
-                {post.title}
-              </h2>
-              <span class="text-sm text-gray-400 font-light">{post.date}</span>
-            </div>
-            <p class="text-lg text-gray-500 mb-4 font-light leading-relaxed">
-              {post.excerpt}
-            </p>
-            <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
-              Read More
-              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
+          <a href={`/blog/alattetodomama/${post.slug}`} class="group block bg-white rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon overflow-hidden">
+            {post.image && (
+              <div class="h-64 overflow-hidden">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            )}
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <h2 class="text-3xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors">
+                  {post.title}
+                </h2>
+                <span class="text-sm text-gray-400 font-light">{post.date}</span>
+              </div>
+              <p class="text-lg text-gray-500 mb-4 font-light leading-relaxed">
+                {post.excerpt}
+              </p>
+              <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
             </div>
           </a>
         ))}
@@ -74,11 +96,53 @@ const blogPosts = [
     </div>
   </section>
 
+  <!-- Recipes Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">
+          alattetodo in the Kitch
+        </h2>
+        <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-4"></div>
+        <p class="text-lg text-gray-500 font-light">
+          Family-favorite recipes made with love (and coffee!)
+        </p>
+      </div>
+
+      <a href="/blog/alattetodomama/recipes" class="group block bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center">
+            <svg class="w-12 h-12 text-mcgennis-maroon mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <div>
+              <h3 class="text-3xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors">
+                Recipes
+              </h3>
+              <p class="text-gray-500 font-light">
+                Delicious meals from our family kitchen
+              </p>
+            </div>
+          </div>
+          <svg class="w-8 h-8 text-mcgennis-maroon group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Check out my collection of tried-and-true recipes! From comfort food classics to quick weeknight dinners,
+          these are the meals that keep our family fed and happy.
+        </p>
+      </a>
+    </div>
+  </section>
+
   <!-- Buy Me a Coffee -->
   <section class="py-16 px-4">
     <div class="container mx-auto max-w-2xl">
       <div class="bg-white border border-gray-200 rounded-2xl p-8 md:p-12 text-center hover:shadow-lg transition-all duration-300">
-        <div class="text-6xl mb-4">☕</div>
+        <svg class="w-16 h-16 text-mcgennis-maroon mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+        </svg>
         <h3 class="text-3xl font-display font-bold text-gray-900 mb-4 tracking-tight">Enjoying the Blog?</h3>
         <div class="h-1 w-16 bg-brass-horizontal rounded-full mx-auto mb-6"></div>
         <p class="text-lg text-gray-500 mb-6 leading-relaxed font-light">

@@ -1,0 +1,537 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="When to Pull the Plug: Signs Your Business is Failing and What to Do"
+  description="Honest, compassionate advice on when to close a failing business. Learn the clear signs it's time to quit versus keep fighting, and how to shut down gracefully if needed."
+  type="article"
+  publishedTime="2025-12-20"
+  author="Caleb Michael McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        When to Pull the Plug: Signs Your Business is Failing and What to Do
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb Michael McGennis</span>
+          <span>•</span>
+          <time datetime="2025-12-20">December 20, 2025</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/entrepreneur-ai/when-to-close-failing-business" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/entrepreneur-ai/when-to-close-failing-business&text=When%20to%20Pull%20the%20Plug%3A%20Signs%20Your%20Business%20is%20Failing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        This is the hardest article I'll ever write. Nobody talks about closing businesses—everyone celebrates launches and scale stories. But the truth is, most businesses fail. And knowing when to quit versus when to persevere is one of the most important decisions you'll ever make as an entrepreneur.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Why This Topic Matters</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Let me be honest: I've considered shutting down businesses. I've watched friends pour years and life savings into failing ventures that should have closed years earlier. I've seen entrepreneurs destroy their marriages, health, and finances by refusing to admit defeat.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The entrepreneurship culture glorifies persistence. "Never give up!" "Winners never quit!" "Just one more pivot!" This mindset saves some businesses—but it destroys others.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Sometimes the bravest, wisest decision is to close a failing business and move forward. This article will help you know when that time has come—and what to do if you're there.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4">A Word Before We Continue</h3>
+        <p class="mb-4">
+          If you're reading this while struggling with a failing business, know this: Your worth isn't tied to business success. You're not a failure if your business fails. Some of the most successful entrepreneurs I know had spectacular failures before their breakthroughs.
+        </p>
+        <p class="text-sm text-gray-200">
+          This article is written with compassion and respect for the courage it takes to even consider this question.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Clear Signs It's Time to Close Your Business</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here are the undeniable warning signs that it's time to seriously consider shutting down:
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">1. You're Burning Through Savings with No Path to Profitability</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>The situation:</strong> You've been funding the business from personal savings, credit cards, or loans for 12+ months. Revenue isn't growing significantly. You have no realistic plan to reach profitability.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Why this matters:</strong> Hope isn't a business strategy. If you've given it a fair shot (12-24 months depending on the business), tested different approaches, and still can't find product-market fit or a path to profit, you're not "building a business"—you're funding an expensive hobby.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>The tough question:</strong> If you knew everything you know now, would you start this business today? If the answer is no, why are you still running it?
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">2. The Business is Destroying Your Health or Family</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Warning signs:</strong>
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>You haven't taken a real day off in months</li>
+        <li>Your marriage is suffering because of business stress</li>
+        <li>Your kids barely see you</li>
+        <li>You're developing stress-related health problems</li>
+        <li>You're self-medicating with alcohol, food, or other unhealthy coping mechanisms</li>
+        <li>You dread waking up each morning</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>The reality:</strong> No business is worth destroying your health or family. I don't care how promising it looks on paper. If the cost of keeping the business alive is your wellbeing or your most important relationships, the cost is too high.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">Personal Story</p>
+        <p class="text-gray-600">
+          I've watched an entrepreneur friend sacrifice his marriage to "save" a business that eventually failed anyway. He got divorced, lost the business, and spent years recovering emotionally and financially. Closing the business a year earlier would have saved his marriage and prevented years of pain.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">3. There's No Real Market Demand</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>The situation:</strong> You've built something you think is amazing, but customers aren't buying. You've tried different marketing approaches. You've adjusted pricing. You've pivoted the offering. Still, crickets.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>The hard truth:</strong> You can't force people to want something they don't want. Sometimes you've built a solution looking for a problem. Sometimes the market isn't ready. Sometimes there are already better solutions.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>How to know:</strong> If after 12+ months of genuine effort, you can't get customers to buy at a price that makes the business viable, you don't have a business—you have an idea that doesn't work in the real world.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">4. The Market Has Fundamentally Changed</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Examples:</strong>
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>COVID killed your event-based business model</li>
+        <li>New regulations made your service obsolete or illegal</li>
+        <li>Technology disrupted your entire industry</li>
+        <li>A major competitor entered with unlimited resources</li>
+        <li>Economic conditions eliminated your target market</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>The decision:</strong> Can you realistically adapt? Or are you trying to save a buggy whip business in the automobile age? Persistence doesn't overcome fundamental market shifts.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">5. You've Lost Passion and Can't Get It Back</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Be honest:</strong> Do you still believe in this business? Do you wake up excited or filled with dread? When you think about the business, do you feel energy or exhaustion?
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Why this matters:</strong> Entrepreneurship is hard enough when you're passionate. Running a business you've stopped believing in is torture. And customers can sense when you don't care anymore.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Important distinction:</strong> Temporary burnout is normal and recoverable. Complete loss of passion after attempting recovery is different. If a real vacation, delegation, or pivot doesn't reignite the fire, it's gone.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">6. The Numbers Don't Work (And Can't Be Fixed)</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Run the math honestly:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li><strong>Customer Acquisition Cost (CAC):</strong> What does it cost to acquire a customer?</li>
+        <li><strong>Lifetime Value (LTV):</strong> How much revenue does each customer generate?</li>
+        <li><strong>Unit Economics:</strong> Do you make money on each sale, or lose money hoping to make it up in volume?</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>The reality:</strong> If your CAC is higher than your LTV, you're losing money on every customer. If your unit economics are negative, selling more just means losing money faster. If you can't fix these fundamentals, you don't have a viable business model.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">7. You're Facing Legal or Ethical Problems You Can't Resolve</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If your business model requires operating in ethical gray areas or skirting regulations, shut it down now. The short-term revenue isn't worth the long-term consequences—legal liability, damaged reputation, lost integrity.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're facing lawsuits or regulatory action that could bankrupt you personally (not just the business), get legal advice immediately about strategic closure.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Signs to Keep Fighting (Even When It's Hard)</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Not every struggling business should close. Here's when persistence makes sense:
+      </p>
+
+      <div class="bg-white p-6 my-8 rounded-xl">
+        <ul class="text-gray-700 space-y-4">
+          <li>
+            <strong>You Have Traction, Just Not Profitability Yet</strong><br/>
+            <span class="text-gray-600">Revenue is growing consistently, customer feedback is positive, you just need more time or funding to reach profitability. This is different from no traction at all.</span>
+          </li>
+          <li>
+            <strong>The Problem is Solvable and You Know How</strong><br/>
+            <span class="text-gray-600">You've identified specific, fixable issues. You have a clear plan. You have the resources to execute. This isn't wishful thinking—you have evidence the solution will work.</span>
+          </li>
+          <li>
+            <strong>You're Learning and Adapting Successfully</strong><br/>
+            <span class="text-gray-600">Each pivot brings you closer to product-market fit. Customers are responding better. Metrics are improving. You're making measurable progress, even if slow.</span>
+          </li>
+          <li>
+            <strong>You Still Have Runway and Belief</strong><br/>
+            <span class="text-gray-600">You have 6-12 months of operating capital. You genuinely believe in the vision. Your family is on board. Your health isn't suffering. You can afford to keep going.</span>
+          </li>
+          <li>
+            <strong>Trusted Advisors Believe in It</strong><br/>
+            <span class="text-gray-600">Not just friends who'll tell you what you want to hear—actual successful entrepreneurs and business advisors who've reviewed your model and see viable paths forward.</span>
+          </li>
+          <li>
+            <strong>The Market is Validating You</strong><br/>
+            <span class="text-gray-600">Customers are buying (even if not enough yet), investors are interested, competitors are watching you, the market is responding. You have evidence people want this.</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Decision Framework: Should I Close or Keep Going?</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's a practical framework for making this decision:
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">Step 1: Get Brutally Honest About Reality</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Write down answers to these questions (don't just think about them—write them):
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>What does the business look like today (revenue, customers, growth rate)?</li>
+        <li>What would it need to look like in 12 months to be viable?</li>
+        <li>What specific actions would bridge that gap?</li>
+        <li>Do I have the resources (time, money, energy) to execute those actions?</li>
+        <li>Is there evidence these actions will work, or am I hoping?</li>
+      </ul>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">Step 2: Calculate Your Real Costs</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        What is keeping this business alive actually costing you?
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li><strong>Financial:</strong> Monthly cash burn, total debt accumulated, opportunity cost of salary you could be earning elsewhere</li>
+        <li><strong>Time:</strong> Hours per week you're working, time away from family, lost opportunities</li>
+        <li><strong>Health:</strong> Stress level, sleep quality, physical health impacts</li>
+        <li><strong>Relationships:</strong> Strain on marriage, missed time with kids, neglected friendships</li>
+        <li><strong>Emotional:</strong> Anxiety, depression, loss of confidence</li>
+      </ul>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">Step 3: Set a Decision Deadline</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Don't let this drag on indefinitely. Set specific criteria and a deadline:
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Example:</strong> "If we haven't reached $15K monthly revenue and 30% month-over-month growth by June 30th, I'm closing the business."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Write it down. Tell someone who will hold you accountable. Commit to honoring the decision.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">Step 4: Seek Outside Perspective</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Talk to people who:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Have successfully built and sold businesses</li>
+        <li>Have closed failed businesses and recovered</li>
+        <li>Understand your market and business model</li>
+        <li>Will tell you hard truths, not just encouragement</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Not:</strong> Well-meaning friends who'll just say "Don't give up!" without understanding the situation.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4">The Sunk Cost Fallacy</h3>
+        <p class="mb-4">
+          Entrepreneurs often fall into the sunk cost fallacy: "I've already invested so much time and money—I can't quit now!"
+        </p>
+        <p class="mb-4">
+          This is backwards thinking. The time and money are gone regardless of what you do next. The only question that matters: Is continuing forward the best use of your next year (or two, or five)?
+        </p>
+        <p class="text-sm">
+          Don't throw good money after bad trying to justify past decisions. Make future decisions based on future potential, not past investment.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">How to Close a Business Gracefully</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you've decided it's time to close, here's how to do it with integrity:
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">1. Communicate Honestly with Stakeholders</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Customers:</strong> Give advance notice. Help them transition to alternatives. Honor existing commitments or refund prepayments. Protect your reputation.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Employees:</strong> Be honest and give as much notice as possible. Help them find new positions. Provide references. Pay final paychecks on time.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Vendors:</strong> Pay what you owe if at all possible. If you can't, communicate proactively about payment plans.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>Investors (if applicable):</strong> Transparent communication about the decision and reasons. Document everything properly.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">2. Handle Legal and Financial Obligations</h3>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>File final tax returns</li>
+        <li>Cancel business licenses and permits</li>
+        <li>Dissolve the legal entity properly</li>
+        <li>Close business bank accounts</li>
+        <li>Cancel subscriptions and recurring expenses</li>
+        <li>Archive important documents</li>
+        <li>Consult with an accountant and attorney about proper procedures</li>
+      </ul>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">3. Sell Assets if Possible</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Can you sell:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Customer list or contracts to a competitor?</li>
+        <li>Intellectual property, code, or content?</li>
+        <li>Equipment or inventory?</li>
+        <li>Domain names or social media accounts?</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Even small asset sales can help cover closing costs or pay down debt.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">4. Protect Your Personal Finances</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you have business debt:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Understand what you're personally liable for (vs. what dies with the business entity)</li>
+        <li>Consult with a bankruptcy attorney if debt is overwhelming</li>
+        <li>Negotiate payment plans with creditors before they send you to collections</li>
+        <li>Protect personal assets (talk to a lawyer about liability protection)</li>
+      </ul>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">5. Take Care of Your Mental Health</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Closing a business is grief. Allow yourself to feel it. Don't pretend you're fine when you're not.
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Talk to a therapist or counselor</li>
+        <li>Lean on friends and family</li>
+        <li>Join an entrepreneur support group</li>
+        <li>Take time to rest and recover before jumping into the next thing</li>
+        <li>Practice self-compassion—you tried, you learned, you're not a failure</li>
+      </ul>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What Comes After Closing</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Closing a business isn't the end of your entrepreneurial journey—unless you want it to be. Here's what typically happens next:
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">Option 1: Take a Job</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        There's zero shame in getting a job after a failed business. You need to recover financially and emotionally. A stable paycheck, healthcare, and defined hours can be exactly what you need.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Many successful entrepreneurs had "job intermissions" between ventures. You can always start another business later when you're ready.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">Option 2: Start Something New (Eventually)</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Most successful entrepreneurs failed multiple times before their breakthrough. The lessons from this failure will make your next venture stronger.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        <strong>But don't rush it.</strong> Take time to heal, learn from mistakes, and make sure you're starting the next thing for the right reasons—not just running from failure.
+      </p>
+
+      <h3 class="text-2xl font-display font-bold mt-8 mb-4 text-gray-900">Option 3: Consult or Freelance</h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Use skills from the failed business to consult or freelance. This generates income while giving you flexibility and keeping you in the game without the full weight of running a company.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Lessons I've Learned About Business Failure</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        After watching businesses struggle (including my own ventures hitting rough patches), here's what I know:
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-navy p-6 my-8 rounded-r-lg">
+        <ul class="text-gray-700 space-y-3">
+          <li><strong>Failure is Data, Not Identity:</strong> A failed business means you tried something that didn't work. It doesn't mean you're a failure as a person.</li>
+          <li><strong>Most "Overnight Successes" Had Prior Failures:</strong> People don't talk about the failures. They only share the wins. You're seeing everyone's highlight reel.</li>
+          <li><strong>Closing Quickly Beats Slow Death:</strong> Entrepreneurs who recognize failure early and pivot recover faster than those who cling to dying businesses for years.</li>
+          <li><strong>Your Family Matters More Than Your Business:</strong> At the end of your life, you won't regret closing a failing business. You will regret sacrificing your marriage or kids.</li>
+          <li><strong>Financial Recovery is Possible:</strong> Debt can be paid off. Credit can be rebuilt. Financial damage isn't permanent if you handle it responsibly.</li>
+          <li><strong>Lessons From Failure Are Invaluable:</strong> The painful lessons from this experience will make you a better entrepreneur, employee, or leader going forward.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">A Word to Jefferson City Entrepreneurs</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        In a tight-knit community like Jefferson City, Missouri, business failure feels extra scary. "What will people think?" "Everyone will know I failed."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's the truth: People respect entrepreneurs who try, fail, learn, and try again more than those who never try at all. Jefferson City's business community is supportive of those who handle failure with integrity.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Close honorably—pay your debts, take care of customers, be honest with people—and the Jefferson City community will support your next venture.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Questions to Ask Yourself Right Now</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're wrestling with this decision, sit down with a journal and honestly answer:
+      </p>
+
+      <ol class="text-gray-600 leading-relaxed mb-6 space-y-3 list-decimal list-inside">
+        <li>If I close this business today, what would I lose that truly matters?</li>
+        <li>If I keep going for another year, what am I sacrificing?</li>
+        <li>Do I still believe this business will succeed, or am I just avoiding admitting failure?</li>
+        <li>What would I tell my best friend if they were in this exact situation?</li>
+        <li>Five years from now, will I regret closing—or will I regret staying too long?</li>
+        <li>What's the best use of my next 12 months: fixing this business or pursuing something new?</li>
+        <li>Am I keeping this alive for the right reasons—or because I'm scared?</li>
+      </ol>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Final Thoughts: Courage Comes in Many Forms</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It takes courage to start a business. It takes courage to fight through hard times and keep going when things look bleak. And it takes courage to recognize when it's time to stop fighting and move forward differently.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Entrepreneurship culture glorifies the first two but stigmatizes the third. That's wrong. Sometimes the bravest thing you can do is admit a venture isn't working and close it with integrity.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're in this position right now, know this: You're not alone. You're not a failure. You tried something hard that most people are too scared to attempt. Whether you close or keep fighting, make the decision with clear eyes, sound counsel, and honesty about what really matters.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Your worth isn't measured by business success. Your next chapter—whatever it looks like—can be great.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed font-medium">
+        Choose courage. Choose honesty. Choose what's best for you and your family.
+      </p>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from An Entrepreneur in a World of AI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/entrepreneur-ai/leveraging-relationships-business-growth" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            Leveraging Relationships to Excel Your Company's Growth
+          </h3>
+          <p class="text-gray-500 text-sm">How strategic networking drives business success</p>
+        </a>
+        <a href="/blog/entrepreneur-ai/fastest-growing-businesses-jefferson-city-2025" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            Top 10 Fastest Growing Businesses in Jefferson City for 2025
+          </h3>
+          <p class="text-gray-500 text-sm">What's driving business growth in Central Missouri</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>

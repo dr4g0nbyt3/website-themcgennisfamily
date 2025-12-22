@@ -1,0 +1,235 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="Coffee Shop Prayers: Finding God in the Drive-Thru Line - A Latte to Do Mama"
+  description="A Jefferson City mama shares how coffee runs become prayer time, why Dutch Bros beats 7 Brew, and finding sacred moments in the everyday chaos of motherhood."
+  type="article"
+  publishedTime="2025-12-19"
+  author="Stephanie Kay McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/alattetodomama" class="inline-flex items-center text-mcgennis-maroon hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to A Latte to Do Mama
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Coffee Shop Prayers: Finding God in the Drive-Thru Line
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Stephanie Kay McGennis</span>
+          <span>•</span>
+          <time datetime="2025-12-19">December 19, 2025</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/alattetodomama/coffee-shop-prayers" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/alattetodomama/coffee-shop-prayers&text=Coffee%20Shop%20Prayers%3A%20Finding%20God%20in%20the%20Drive-Thru%20Line" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Let me tell you something: this mama loves coffee. Not just like it. Not just enjoy it. I LOVE coffee.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And you know what's even better than coffee? Coffee drive-throughs where I don't have to unbuckle two car seats,
+        wrangle two little boys through a parking lot, and then wrangle them back into said car seats while my coffee gets cold.
+        Girl, the drive-through was invented for moms like us.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Jefferson City's Newest Blessing: Dutch Bros</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        We just got a <a href="https://www.dutchbros.com" target="_blank" rel="noopener noreferrer" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">Dutch Bros</a> here in Jefferson City, and can I just say—it's a game changer. Don't get me wrong,
+        7brew and i have had an expensive love affair. But they started making their drinks too sweet. I love sweet AND strong coffee.
+        Dutch Bros gets it right. The perfect balance. The perfect sweetness.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And before you judge my coffee spending, let me introduce you to a little concept called "girl math." If I make
+        coffee at home four days a week, then treating myself to Dutch Bros on Friday is basically free. See? Free coffee.
+        You're welcome for the financial wisdom.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Coffee: My Daily Kickstart</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's the thing about coffee for me—it's not just caffeine (though let's be honest, with Leonardo and Raphael,
+        I need all the help I can get). Coffee is my ritual. My transition. My moment of "okay, Stephanie, time to do this thing."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Whether I'm pulling through Dutch Bros on the way to MOPS or making a cup at home before my Bible time, that first
+        sip is like a reset button. It's the moment when I shift from survival mode to actually being present. From "get
+        the kids dressed, where are the shoes, why is there yogurt on the ceiling" to "okay, God, I'm here. Let's do this day together."
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Drive-Thru as Sacred Space</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I know it sounds silly, but some of my best prayers happen in the drive-through line. While I'm waiting for my
+        Caramelizer (if you know, you know), I'm talking to God. Not the pretty prayers I'd say in church. The real ones.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 italic">
+          "God, I'm so tired. Give me patience for the tantrums today. Help me be kind to Caleb even though he worked
+          until midnight and I'm running on three hours of sleep. Remind me that these are the good old days, even when
+          Leonardo is asking 'why' for the 47th time before 9 AM."
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        There's something about being in the car, kids strapped in, music playing softly, waiting in line—it's like God
+        carved out this little pocket of space just for us to chat. No distractions. No phone. Just me, my steering wheel,
+        and the God who sees this tired mama and loves her anyway. (Even when dealing with <a href="/blog/alattetodomama/fall-allergies-and-prayer" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">health challenges and finding peace in chaos</a>.)
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Bible Time & Coffee: The Perfect Pairing</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        On the mornings when I make coffee at home—usually my trusty French press because it makes me feel fancy even in
+        my Target pajamas—it's the prelude to my Bible time. I've learned that if I don't spend time with God before the
+        chaos hits, I'm not the mom I want to be. Caleb's <a href="/blog/entrepreneur-ai/church-and-business-overlap" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">work in ministry and business</a> keeps us connected to <a href="/blog/entrepreneur-ai/best-churches-jefferson-city-missouri" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">Jefferson City's amazing faith community</a>, which reminds me daily of the importance of staying grounded in faith.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Coffee warms my hands. Scripture warms my heart. It's that simple and that profound.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Some days it's just one verse and three sips before someone needs me. Other days I get twenty minutes of peace,
+        my Bible app open, my coffee still hot, and the house still quiet. Those mornings? Those are the ones that carry
+        me through the hard afternoons.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Theology of Small Rewards</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I used to feel guilty about spending money on coffee. Like I should be more responsible, more frugal, more...
+        something. But you know what? God invented coffee beans. He created taste buds. He gave us the ability to enjoy
+        good things. And I think He smiles when we receive those gifts with gratitude.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        My Dutch Bros runs aren't frivolous. They're tiny acts of self-care that help me be a better mom, a better wife,
+        a better version of myself. And in a season of life where I'm touched out, talked out, and running on fumes more
+        often than I'd like to admit—that $6 iced coffee is worth every penny.
+      </p>
+
+      <div class="bg-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">My Coffee Philosophy (A Latte to Do Mama Style):</p>
+        <ul class="text-gray-600 space-y-2 list-disc list-inside">
+          <li>Coffee at home = quality time with God</li>
+          <li>Drive-through coffee = mobile prayer closet</li>
+          <li>Good coffee = God's gift to tired mamas</li>
+          <li>Girl math = legitimate financial strategy (don't @ me)</li>
+          <li>Dutch Bros > 7 Brew (I said what I said)</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Finding God in the Everyday</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's what I've learned: God doesn't just show up in the quiet, perfect moments. He shows up in the drive-through
+        line with two kids in the backseat arguing about who saw the fire truck first. He shows up in the early morning
+        darkness when I'm desperately making coffee before anyone else wakes up. He shows up in the mundane, the messy,
+        the ordinary.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Maybe your thing isn't coffee. Maybe it's tea, or a morning walk, or those five minutes in the shower before
+        everyone needs something. Whatever it is, I hope you give yourself permission to have it. To enjoy it. To let it
+        be the rhythm that helps you breathe. (If you're looking for more real, relatable encouragement, check out <a href="/blog/alattetodomama/a-latte-to-do" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">my intro post</a> about juggling motherhood and endless to-do lists.)
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And if you're in Jefferson City and you see a tired-looking mama in the Dutch Bros drive-through at 7:30 AM with
+        two little boys in the back, that's probably me. Wave if you want. Or better yet—say a quick prayer for me.
+        I promise I'll be doing the same for you.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed font-medium">
+        Because we're all just doing our best, one coffee at a time.
+      </p>
+
+      <div class="bg-mcgennis-maroon text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4">What's Your Coffee Story?</h3>
+        <p class="mb-4">
+          I'd love to hear from you! What's your daily ritual that helps you connect with God? Are you team Dutch Bros or
+          team something else? Drop a comment below and let's encourage each other in this beautiful, messy journey of motherhood.
+        </p>
+        <p class="text-sm italic">
+          With love and coffee-stained grace,<br/>
+          Stephanie ☕
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from A Latte to Do Mama</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/alattetodomama/fall-allergies-and-prayer" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-maroon">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-maroon transition-colors tracking-tight">
+            Fall Allergies and Prayer: When Your Toddler Can't Breathe
+          </h3>
+          <p class="text-gray-500 text-sm">Finding faith in the hard moments of motherhood</p>
+        </a>
+        <a href="/blog/alattetodomama/mops-morning" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-maroon">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-maroon transition-colors tracking-tight">
+            MOPS Morning: Finding My Village in Jefferson City
+          </h3>
+          <p class="text-gray-500 text-sm">Why every mom needs a community of other moms who get it</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/alattetodomama" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-maroon hover:text-mcgennis-maroon transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to A Latte to Do Mama
+      </a>
+    </div>
+  </section>
+</BaseLayout>

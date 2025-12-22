@@ -1,0 +1,306 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../../components/NewsletterSignup.astro';
+import Comments from '../../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="Classic Pot Roast Recipe - A Latte to Do Mama"
+  description="Stephanie's classic pot roast recipe with step-by-step photos. Tender beef roast with vegetables cooked to perfection."
+  type="article"
+  author="Stephanie Kay McGennis"
+>
+  <!-- Header -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl text-center">
+      <a href="/blog/alattetodomama/recipes" class="inline-block mb-6 text-mcgennis-maroon hover:text-mcgennis-gold transition-colors text-sm font-medium">
+        ← Back to Recipes
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-gray-900 leading-tight tracking-tight">
+        Classic Pot Roast
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-6"></div>
+      <p class="text-xl text-gray-500 font-light mb-4">
+        A comforting family dinner that's perfect for Sunday meals
+      </p>
+      <p class="text-sm text-gray-400 mt-2">December 18, 2024</p>
+      <p class="text-sm text-gray-500 mt-1">by <a href="/family/stephanie" class="hover:text-mcgennis-maroon transition-colors">Stephanie Kay McGennis</a></p>
+    </div>
+  </section>
+
+  <!-- Social Sharing -->
+  <section class="py-8 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <p class="text-sm text-gray-600 font-medium">Share this recipe:</p>
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Share
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast&text=Classic%20Pot%20Roast%20Recipe" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            Tweet
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            Copy
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-4xl">
+
+      <!-- Recipe Intro -->
+      <div class="prose prose-lg max-w-none mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This classic pot roast is one of our family's favorite Sunday dinners. The meat becomes incredibly tender,
+          and the vegetables soak up all the delicious flavors. It's the kind of meal that makes your house smell
+          amazing and brings everyone to the table!
+        </p>
+      </div>
+
+      <!-- Recipe Info Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <svg class="w-10 h-10 text-mcgennis-maroon mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h3 class="font-bold text-gray-900 mb-1">Prep Time</h3>
+          <p class="text-gray-600">Coming soon</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <svg class="w-10 h-10 text-mcgennis-maroon mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+          </svg>
+          <h3 class="font-bold text-gray-900 mb-1">Cook Time</h3>
+          <p class="text-gray-600">Coming soon</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <svg class="w-10 h-10 text-mcgennis-maroon mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          <h3 class="font-bold text-gray-900 mb-1">Servings</h3>
+          <p class="text-gray-600">Coming soon</p>
+        </div>
+      </div>
+
+      <!-- Ingredients Section -->
+      <div class="bg-white p-8 rounded-2xl border border-gray-200 mb-12">
+        <h2 class="text-3xl font-display font-bold text-gray-900 mb-6 tracking-tight">Ingredients</h2>
+        <div class="bg-white p-6 rounded-xl">
+          <p class="text-gray-600 italic">Ingredient list coming soon! Check back for the full recipe details.</p>
+          <p class="text-gray-500 text-sm mt-4">
+            In the meantime, you can see what went into this delicious pot roast in the step-by-step photos below!
+          </p>
+        </div>
+      </div>
+
+      <!-- Step-by-Step Instructions -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-display font-bold text-gray-900 mb-8 tracking-tight">Step-by-Step Instructions</h2>
+
+        <!-- Step 1 -->
+        <div class="mb-10">
+          <div class="flex items-center mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">1</span>
+            <h3 class="text-2xl font-bold text-gray-900">Season the Meat</h3>
+          </div>
+          <img src="/images/recipes/pot-roast/step1-meat-seasoned.png" alt="Seasoned pot roast" class="w-full rounded-xl shadow-md mb-4" />
+          <p class="text-gray-700 leading-relaxed">
+            Start by generously seasoning your roast with your favorite spices and seasonings.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="mb-10">
+          <div class="flex items-center mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">2</span>
+            <h3 class="text-2xl font-bold text-gray-900">Brown the Roast</h3>
+          </div>
+          <img src="/images/recipes/pot-roast/step2-meat-browned.png" alt="Browned pot roast" class="w-full rounded-xl shadow-md mb-4" />
+          <p class="text-gray-700 leading-relaxed">
+            Brown the roast on all sides in your Dutch oven to seal in the juices and create a beautiful crust.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="mb-10">
+          <div class="flex items-center mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">3</span>
+            <h3 class="text-2xl font-bold text-gray-900">Prep the Vegetables</h3>
+          </div>
+          <img src="/images/recipes/pot-roast/step3-veggies-prepped.png" alt="Chopped vegetables - potatoes, carrots, onions" class="w-full rounded-xl shadow-md mb-4" />
+          <p class="text-gray-700 leading-relaxed">
+            Chop your vegetables into hearty chunks. I used potatoes, carrots, and onions for this pot roast.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="mb-10">
+          <div class="flex items-center mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">4</span>
+            <h3 class="text-2xl font-bold text-gray-900">Start with Carrots and Onions</h3>
+          </div>
+          <img src="/images/recipes/pot-roast/step4-carrots-cooking.png" alt="Carrots and onions cooking in pot" class="w-full rounded-xl shadow-md mb-4" />
+          <p class="text-gray-700 leading-relaxed">
+            Add the carrots and onions to the pot first, letting them start to soften and release their flavors.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="mb-10">
+          <div class="flex items-center mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">5</span>
+            <h3 class="text-2xl font-bold text-gray-900">Add the Potatoes</h3>
+          </div>
+          <img src="/images/recipes/pot-roast/step5-potatoes-added.png" alt="Potatoes added to pot" class="w-full rounded-xl shadow-md mb-4" />
+          <p class="text-gray-700 leading-relaxed">
+            Layer in the potatoes to create a bed for the roast.
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="mb-10">
+          <div class="flex items-center mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">6</span>
+            <h3 class="text-2xl font-bold text-gray-900">Place the Meat on Top</h3>
+          </div>
+          <img src="/images/recipes/pot-roast/step6-meat-on-veggies.png" alt="Roast placed on top of vegetables" class="w-full rounded-xl shadow-md mb-4" />
+          <p class="text-gray-700 leading-relaxed">
+            Nestle the browned roast on top of the vegetables. This allows the meat juices to flavor everything as it cooks.
+          </p>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="mb-10">
+          <div class="flex items-center mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mcgennis-maroon text-white font-bold mr-4">7</span>
+            <h3 class="text-2xl font-bold text-gray-900">Into the Oven!</h3>
+          </div>
+          <img src="/images/recipes/pot-roast/step7-into-oven.png" alt="Dutch oven going into the oven" class="w-full rounded-xl shadow-md mb-4" />
+          <p class="text-gray-700 leading-relaxed">
+            Cover your Dutch oven and let it work its magic in the oven until the meat is fall-apart tender!
+          </p>
+        </div>
+
+        <!-- Cooking Video -->
+        <div class="mt-12 bg-white p-8 rounded-2xl border border-gray-200">
+          <div class="flex items-center mb-6">
+            <svg class="w-8 h-8 text-mcgennis-maroon mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <h3 class="text-2xl font-bold text-gray-900">Watch It Cook!</h3>
+          </div>
+          <div class="p-4 bg-brass-button brightness-110 rounded-2xl shadow-lg">
+            <video controls class="w-full rounded-xl">
+              <source src="/images/recipes/pot-roast/cooking-video.mov" type="video/quicktime" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Notes -->
+      <div class="bg-amber-50 border-l-4 border-mcgennis-maroon p-6 rounded-r-xl mb-12">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Stephanie's Tips</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Full cooking instructions, ingredient measurements, and cooking times coming soon!
+          This pot roast has been a family favorite for years, and I can't wait to share the complete recipe with you all.
+        </p>
+      </div>
+
+      <!-- Share Section -->
+      <div class="text-center py-12 border-t border-gray-200">
+        <p class="text-lg text-gray-600 mb-4">Made this recipe? Let me know on social media!</p>
+        <a href="https://www.facebook.com/stephanie.davis.900388" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center px-6 py-3 bg-mcgennis-maroon hover:bg-mcgennis-gold text-white font-medium rounded-xl transition-all duration-300">
+          Share on Facebook
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Content -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold text-gray-900 mb-8 tracking-tight">You Might Also Like</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/alattetodomama/fall-allergies-and-prayer" class="group bg-white rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="/images/blog/leo-yard.png"
+              alt="Fall Allergies and Prayer"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-mcgennis-maroon bg-opacity-10 text-mcgennis-maroon text-xs font-semibold rounded-full mb-3">
+              Blog Post
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors mb-2">
+              Fall Allergies and Prayer
+            </h3>
+            <p class="text-gray-600 mb-3 font-light">
+              Finding comfort in faith during the challenges of fall allergies.
+            </p>
+            <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors text-sm">
+              Read More →
+            </div>
+          </div>
+        </a>
+
+        <a href="/blog/alattetodomama/mops-morning" class="group bg-white rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="/images/blog/mops-prep.png"
+              alt="MOPS Morning"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-mcgennis-maroon bg-opacity-10 text-mcgennis-maroon text-xs font-semibold rounded-full mb-3">
+              Blog Post
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors mb-2">
+              MOPS Morning
+            </h3>
+            <p class="text-gray-600 mb-3 font-light">
+              The excitement of preparing for my first MOPS meeting of the Fall.
+            </p>
+            <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors text-sm">
+              Read More →
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Recipes -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto text-center">
+      <a href="/blog/alattetodomama/recipes" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-maroon hover:text-mcgennis-maroon transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to All Recipes
+      </a>
+    </div>
+  </section>
+</BaseLayout>

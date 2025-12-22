@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const recipes = [
+  {
+    title: "Classic Pot Roast",
+    slug: "pot-roast",
+    date: "December 18, 2024",
+    excerpt: "Tender beef roast with vegetables cooked to perfection in a Dutch oven. A comforting family dinner that's perfect for Sunday meals!",
+    image: "/images/recipes/pot-roast/step6-meat-on-veggies.png",
+    category: "Main Dishes"
+  },
+];
+---
+
+<BaseLayout
+  title="Recipes - A Latte to Do Mama"
+  description="Stephanie's collection of family-favorite recipes. From comfort food to quick weeknight meals, find delicious recipes perfect for busy moms."
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto text-center max-w-4xl">
+      <a href="/blog/alattetodomama" class="inline-block mb-6 text-mcgennis-maroon hover:text-mcgennis-gold transition-colors text-sm font-medium">
+        ← Back to A Latte to Do Mama
+      </a>
+      <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Recipes from My Kitchen
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-500 font-light">
+        Family-favorite recipes made with love (and usually with a toddler helping!)
+      </p>
+      <p class="text-lg mt-4 text-gray-400">by <a href="/family/stephanie" class="hover:text-mcgennis-maroon transition-colors">Stephanie Kay McGennis</a></p>
+    </div>
+  </section>
+
+  <!-- Recipe Grid -->
+  <section class="py-24 px-4">
+    <div class="container mx-auto max-w-6xl">
+
+      {recipes.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {recipes.map((recipe) => (
+            <a href={`/blog/alattetodomama/recipes/${recipe.slug}`} class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-mcgennis-maroon">
+              <div class="h-64 overflow-hidden">
+                <img
+                  src={recipe.image}
+                  alt={recipe.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="inline-block px-3 py-1 bg-mcgennis-maroon bg-opacity-10 text-mcgennis-maroon text-xs font-semibold rounded-full">
+                    {recipe.category}
+                  </span>
+                  <span class="text-sm text-gray-400 font-light">{recipe.date}</span>
+                </div>
+                <h2 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors mb-3">
+                  {recipe.title}
+                </h2>
+                <p class="text-gray-600 leading-relaxed font-light mb-4">
+                  {recipe.excerpt}
+                </p>
+                <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+                  View Recipe
+                  <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <svg class="w-20 h-20 text-mcgennis-maroon mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">No recipes yet!</h2>
+          <p class="text-gray-600">Check back soon for delicious family recipes.</p>
+        </div>
+      )}
+
+      <!-- Coming Soon Section -->
+      <div class="mt-16 bg-white p-8 md:p-12 rounded-2xl border-2 border-brass-button text-center">
+        <svg class="w-16 h-16 text-mcgennis-maroon mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        </svg>
+        <h2 class="text-3xl font-display font-bold text-gray-900 mb-4 tracking-tight">More Recipes Coming Soon!</h2>
+        <div class="h-1 w-16 bg-brass-horizontal rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto font-light">
+          I'm excited to share more of our family's favorite recipes with you. From quick weeknight dinners
+          to special occasion meals, there's so much deliciousness on the way!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recipe Categories -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 tracking-tight">What to Expect</h2>
+        <div class="h-1 w-16 bg-brass-horizontal rounded-full mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <svg class="w-10 h-10 text-mcgennis-maroon mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Comfort Food</h3>
+          <p class="text-gray-600">
+            Hearty, soul-warming meals that bring the family together
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <svg class="w-10 h-10 text-mcgennis-maroon mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Quick & Easy</h3>
+          <p class="text-gray-600">
+            Weeknight dinners that don't sacrifice flavor for speed
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <svg class="w-10 h-10 text-mcgennis-maroon mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Kid-Friendly</h3>
+          <p class="text-gray-600">
+            Recipes tested and approved by Leonardo and Raphael
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/alattetodomama" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-maroon hover:text-mcgennis-maroon transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to A Latte to Do Mama
+      </a>
+    </div>
+  </section>
+</BaseLayout>

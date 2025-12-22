@@ -1,0 +1,48 @@
+---
+// Giscus comments component for blog posts
+// Uses GitHub Discussions as backend (free, no ads)
+// Readers need GitHub account to comment
+---
+
+<div class="comments-section py-12 px-4">
+  <div class="container mx-auto max-w-3xl">
+    <h3 class="text-2xl font-display font-bold text-gray-900 mb-6">Join the Conversation</h3>
+    <div id="giscus-comments"></div>
+  </div>
+</div>
+
+<script>
+  // Load Giscus comments script
+  (function() {
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'dr4g0nbyt3/website-themcgennisfamily');
+    script.setAttribute('data-repo-id', 'R_kgDOQma-cA');
+    script.setAttribute('data-category', 'Announcements');
+    script.setAttribute('data-category-id', 'DIC_kwDOQma-cM4C0Icx');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', 'light');
+    script.setAttribute('data-lang', 'en');
+    script.crossOrigin = 'anonymous';
+    script.async = true;
+
+    const commentsContainer = document.getElementById('giscus-comments');
+    if (commentsContainer) {
+      commentsContainer.appendChild(script);
+    }
+  })();
+</script>
+
+<style>
+  .giscus {
+    @apply border-t border-gray-200 pt-8;
+  }
+
+  .giscus-frame {
+    @apply rounded-lg;
+  }
+</style>

@@ -1,0 +1,199 @@
+---
+// Exit-intent popup for newsletter signup
+---
+
+<!-- Popup Overlay (hidden by default) -->
+<div id="newsletter-popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-2xl w-full mx-auto shadow-2xl relative animate-slide-up" id="newsletter-popup">
+    <!-- Close Button -->
+    <button
+      id="close-popup"
+      class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+      aria-label="Close popup"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Popup Content -->
+    <div class="p-8 md:p-12">
+      <!-- Icon -->
+      <div class="text-center mb-6">
+        <svg class="w-16 h-16 text-mcgennis-maroon mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      </div>
+
+      <!-- Headline -->
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 text-center mb-4 tracking-tight">
+        Before You Go...
+      </h2>
+
+      <p class="text-lg text-gray-600 text-center mb-6 font-light leading-relaxed">
+        Join our family newsletter and get weekly encouragement, recipes, and faith-filled inspiration delivered to your inbox!
+      </p>
+
+      <!-- Newsletter Form -->
+      <form
+        name="newsletter-popup"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        action="/newsletter-success"
+        class="newsletter-popup-form"
+      >
+        {/* Hidden fields for Netlify Forms */}
+        <input type="hidden" name="form-name" value="newsletter-popup" />
+
+        {/* Honeypot field for spam protection */}
+        <p class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <div class="flex-1">
+            <label for="popup-email" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="popup-email"
+              name="email"
+              required
+              placeholder="Enter your email address"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-mcgennis-maroon focus:ring-2 focus:ring-mcgennis-maroon focus:ring-opacity-20 transition-all outline-none text-gray-900"
+            />
+          </div>
+          <button
+            type="submit"
+            class="px-6 py-3 bg-mcgennis-maroon hover:bg-mcgennis-gold text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap"
+          >
+            Subscribe Now
+          </button>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-3 text-center font-light">
+          No spam, just family updates and inspiration. Unsubscribe anytime.
+        </p>
+      </form>
+
+      <!-- Social Proof -->
+      <div class="mt-6 text-center">
+        <p class="text-sm text-gray-500">
+          <svg class="w-4 h-4 inline-block mr-1 text-mcgennis-gold" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          Join hundreds of Jefferson City families receiving our newsletter
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }
+</style>
+
+<script>
+  // Exit-intent popup functionality
+  (function() {
+    const overlay = document.getElementById('newsletter-popup-overlay');
+    const closeBtn = document.getElementById('close-popup');
+    const popup = document.getElementById('newsletter-popup');
+
+    // Check if popup has been shown before
+    const COOKIE_NAME = 'newsletter_popup_shown';
+    const COOKIE_DAYS = 7; // Don't show again for 7 days
+
+    function getCookie(name: string): string | null {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop()?.split(';').shift() || null;
+      return null;
+    }
+
+    function setCookie(name: string, value: string, days: number): void {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = `expires=${date.toUTCString()}`;
+      document.cookie = `${name}=${value};${expires};path=/`;
+    }
+
+    function showPopup(): void {
+      if (overlay) {
+        overlay.classList.remove('hidden');
+        overlay.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    }
+
+    function hidePopup(): void {
+      if (overlay) {
+        overlay.classList.add('hidden');
+        overlay.classList.remove('flex');
+        document.body.style.overflow = ''; // Restore scrolling
+        setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
+      }
+    }
+
+    // Exit intent detection
+    function handleMouseOut(e: MouseEvent): void {
+      // If mouse leaves from the top of the page
+      if (e.clientY <= 0 && !getCookie(COOKIE_NAME)) {
+        showPopup();
+        // Remove the event listener after showing once
+        document.removeEventListener('mouseout', handleMouseOut);
+      }
+    }
+
+    // Close button click
+    closeBtn?.addEventListener('click', hidePopup);
+
+    // Click outside popup to close
+    overlay?.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        hidePopup();
+      }
+    });
+
+    // Prevent popup from closing when clicking inside
+    popup?.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // ESC key to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay && !overlay.classList.contains('hidden')) {
+        hidePopup();
+      }
+    });
+
+    // Start listening for exit intent after 5 seconds (delay to avoid annoying immediate visitors)
+    setTimeout(() => {
+      if (!getCookie(COOKIE_NAME)) {
+        document.addEventListener('mouseout', handleMouseOut);
+      }
+    }, 5000);
+
+    // Alternative trigger: Show after 30 seconds of browsing if not shown yet
+    setTimeout(() => {
+      if (!getCookie(COOKIE_NAME) && overlay?.classList.contains('hidden')) {
+        showPopup();
+      }
+    }, 30000);
+  })();
+</script>

@@ -52,7 +52,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <!-- Businesses -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-4xl">
       <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Business Ventures</h2>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-12"></div>
@@ -248,7 +248,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <!-- Stories & Insights -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-4xl">
       <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Stories & Insights</h2>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
@@ -266,10 +266,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <p class="text-gray-500 mb-4 font-light">When God doesn't just move mountains - the story of arriving at Concord and discovering divine connections.</p>
           <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read Story →</span>
         </a>
-        <a href="/blog/entrepreneur-ai/im-your-guy" class="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
-          <h3 class="text-2xl font-display font-bold mb-3 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">I'm Your Guy</h3>
-          <p class="text-gray-500 mb-4 font-light">How a casual conversation, a bold declaration, and answered prayer led to launching an esports ministry.</p>
-          <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read Story →</span>
+        <a href="/blog/entrepreneur-ai/im-your-guy" class="group bg-white rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300 overflow-hidden">
+          <div class="overflow-hidden">
+            <img
+              src="/images/caleb-mcgennis-sports-crusaders-jefferson-city.jpg"
+              alt="Caleb Michael McGennis at Sports Crusaders"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-display font-bold mb-3 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">I'm Your Guy</h3>
+            <p class="text-gray-500 mb-4 font-light">How a casual conversation, a bold declaration, and answered prayer led to launching an esports ministry.</p>
+            <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read Story →</span>
+          </div>
         </a>
         <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
           <h3 class="text-2xl font-display font-bold mb-3 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">Peaks and Valleys</h3>
@@ -299,14 +308,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           and together they are raising two wonderful sons in Jefferson City, Missouri.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a href="/family/leonardo" class="group p-6 bg-gray-50 hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-forest hover:shadow-md">
+          <a href="/family/leonardo" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-forest hover:shadow-md">
             <h3 class="text-xl font-bold mb-2 text-gray-900 tracking-tight">Leonardo Bryton McGennis</h3>
             <p class="text-gray-500 mb-3 font-light">Eldest son</p>
             <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
               Learn more →
             </div>
           </a>
-          <a href="/family/raphael" class="group p-6 bg-gray-50 hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-gold hover:shadow-md">
+          <a href="/family/raphael" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-gold hover:shadow-md">
             <h3 class="text-xl font-bold mb-2 text-gray-900 tracking-tight">Raphael Corwyn McGennis</h3>
             <p class="text-gray-500 mb-3 font-light">Youngest son</p>
             <div class="flex items-center text-mcgennis-gold font-medium group-hover:text-mcgennis-navy transition-colors">

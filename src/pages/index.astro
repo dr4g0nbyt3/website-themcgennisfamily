@@ -64,7 +64,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Family Introduction -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-7xl">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">
@@ -271,8 +271,119 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Latest from the Blog -->
+  <section class="py-24 px-4 bg-white">
+    <div class="container mx-auto max-w-7xl">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">
+          Latest from the Blog
+        </h2>
+        <div class="h-1 w-24 bg-brass-horizontal rounded-full mx-auto mb-6 shadow-sm"></div>
+        <p class="text-xl text-gray-500 max-w-3xl mx-auto font-light">
+          Stories, insights, and reflections from the McGennis family
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Stephanie's Latest Post -->
+        <a href="/blog/alattetodomama/fall-allergies-and-prayer" class="group bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-maroon bg-opacity-10 text-mcgennis-maroon text-xs font-semibold rounded-full">
+                A Latte to Do Mama
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-maroon transition-colors mb-3">
+              Fall Allergies and Prayer
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              The literal bane of my existence when I'm trying to live my best pumpkin spice life.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">October 6, 2023</span>
+              <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Caleb's Latest Post -->
+        <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="group bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-navy bg-opacity-10 text-mcgennis-navy text-xs font-semibold rounded-full">
+                An Entrepreneur in a World of AI
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-navy transition-colors mb-3">
+              Peaks and Valleys: A $9 Million Lesson in Faith
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              The story of how a company I co-founded sold for $9 million—and I only made $11,000. A powerful lesson in faith and trust.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">September 2023</span>
+              <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Recipe Feature -->
+        <a href="/blog/alattetodomama/recipes/pot-roast" class="group bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-gold">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="/images/recipes/pot-roast/step6-meat-on-veggies.png"
+              alt="Classic Pot Roast"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-gold bg-opacity-10 text-mcgennis-gold text-xs font-semibold rounded-full">
+                Recipes
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-gold transition-colors mb-3">
+              Classic Pot Roast
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              A comforting family dinner that's perfect for Sunday meals. With step-by-step photos!
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">December 18, 2024</span>
+              <div class="flex items-center text-mcgennis-gold font-medium group-hover:text-mcgennis-maroon transition-colors">
+                View Recipe
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/blog" class="group inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-medium tracking-wide transition-all duration-300 hover:shadow-md rounded-xl">
+          Explore All Blog Posts
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Ministry & Community -->
-  <section class="py-24 px-4 bg-gray-50">
+  <section class="py-24 px-4 bg-white">
     <div class="container mx-auto max-w-7xl">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">

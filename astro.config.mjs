@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import pagefind from './pagefind.integration.js';
 
 export default defineConfig({
   site: 'https://themcgennisfamily.com',
@@ -14,7 +15,8 @@ export default defineConfig({
         'https://themcgennisfamily.com/businesses',
         'https://themcgennisfamily.com/blog'
       ]
-    })
+    }),
+    pagefind()
   ],
   output: 'static',
   compressHTML: true,

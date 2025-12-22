@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
 ---
 
 <BaseLayout
@@ -22,10 +24,32 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
         The Mountain Mover: When God Doesn't Just Move Mountains
       </h1>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
-      <div class="flex items-center gap-4 text-gray-500">
-        <span>By Caleb Michael McGennis</span>
-        <span>•</span>
-        <time datetime="2025-12-11">December 11, 2025</time>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb Michael McGennis</span>
+          <span>•</span>
+          <time datetime="2025-12-11">December 11, 2025</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/entrepreneur-ai/the-mountain-mover" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/entrepreneur-ai/the-mountain-mover&text=The%20Mountain%20Mover%3A%20When%20God%20Doesn%27t%20Just%20Move%20Mountains" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -68,7 +92,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
       <p class="text-gray-600 leading-relaxed mb-6">
         Later, Philip pulled me aside and told me something that I'll never forget. He said the only reason he stayed
-        at Concord was because he heard I was coming.
+        at Concord was because he heard I was coming. (Read more about <a href="/blog/entrepreneur-ai/im-your-guy" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">divine appointments and ministry connections</a>.)
       </p>
 
       <p class="text-gray-600 leading-relaxed mb-6">
@@ -267,7 +291,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
       <p class="text-gray-600 leading-relaxed mb-6 text-xl font-medium text-gray-900">
         So when you face your mountain, remember: God doesn't just move mountains. He's already been working on your
-        behalf in ways you won't see until you look back and realize it was never about the mountain at all.
+        behalf in ways you won't see until you look back and realize it was never about the mountain at all. If you're seeking a church community where God is actively moving, explore <a href="/blog/entrepreneur-ai/best-churches-jefferson-city-missouri" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Jefferson City's amazing churches</a>.
       </p>
 
       <p class="text-gray-600 leading-relaxed mb-6 text-xl font-medium text-gray-900">
@@ -281,7 +305,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
   </article>
 
   <!-- Author Bio -->
-  <section class="py-16 px-4 bg-gray-50">
+  <section class="py-16 px-4 bg-white">
     <div class="container mx-auto max-w-3xl">
       <div class="bg-white p-8 border border-gray-200 rounded-2xl">
         <h3 class="text-2xl font-display font-bold mb-4 text-gray-900 tracking-tight">About the Author</h3>
@@ -301,17 +325,29 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Comments Section -->
+  <Comments />
+
   <!-- Related Posts -->
   <section class="py-16 px-4 bg-white border-t border-gray-200">
     <div class="container mx-auto max-w-3xl">
       <h3 class="text-2xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">Related Stories</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="/blog/entrepreneur-ai/im-your-guy" class="group bg-gray-50 p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
-          <h4 class="text-xl font-display font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors">I'm Your Guy</h4>
-          <p class="text-gray-600 mb-4">How a casual conversation, a bold declaration, and answered prayer led to launching an esports ministry.</p>
-          <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read More →</span>
+        <a href="/blog/entrepreneur-ai/im-your-guy" class="group bg-white rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300 overflow-hidden">
+          <div class="overflow-hidden">
+            <img
+              src="/images/caleb-mcgennis-sports-crusaders-jefferson-city.jpg"
+              alt="Caleb Michael McGennis at Sports Crusaders"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-display font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors">I'm Your Guy</h4>
+            <p class="text-gray-600 mb-4">How a casual conversation, a bold declaration, and answered prayer led to launching an esports ministry.</p>
+            <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read More →</span>
+          </div>
         </a>
-        <a href="/blog/entrepreneur-ai/theres-no-place-like-home" class="group bg-gray-50 p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
+        <a href="/blog/entrepreneur-ai/theres-no-place-like-home" class="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
           <h4 class="text-xl font-display font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors">There's No Place Like Home</h4>
           <p class="text-gray-600 mb-4">A story of loss, trauma, and finding home again through the grace of God and the calling of ministry.</p>
           <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read More →</span>
