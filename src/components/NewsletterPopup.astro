@@ -4,7 +4,7 @@
 
 <!-- Popup Overlay (hidden by default) -->
 <div id="newsletter-popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
-  <div class="bg-white rounded-2xl max-w-2xl w-full mx-auto shadow-2xl relative animate-slide-up" id="newsletter-popup">
+  <div class="bg-soho-white rounded-2xl max-w-2xl w-full mx-auto shadow-2xl relative animate-slide-up" id="newsletter-popup">
     <!-- Close Button -->
     <button
       id="close-popup"
@@ -40,11 +40,11 @@
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        action="/newsletter-success"
         class="newsletter-popup-form"
       >
         {/* Hidden fields for Netlify Forms */}
         <input type="hidden" name="form-name" value="newsletter-popup" />
+        <input type="hidden" name="return-url" id="popup-return-url" value="" />
 
         {/* Honeypot field for spam protection */}
         <p class="hidden">
@@ -181,6 +181,70 @@
         hidePopup();
       }
     });
+
+    // Set the return URL when form is loaded
+    const returnUrlInput = document.getElementById('popup-return-url') as HTMLInputElement;
+    if (returnUrlInput) {
+      returnUrlInput.value = window.location.href;
+    }
+
+    // Handle form submission
+    const form = document.querySelector('.newsletter-popup-form') as HTMLFormElement;
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const currentUrl = window.location.href;
+        const scrollPosition = window.scrollY;
+
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData as any).toString()
+          });
+
+          // Store success state and scroll position
+          sessionStorage.setItem('newsletter_subscribed', 'true');
+          sessionStorage.setItem('newsletter_scroll', scrollPosition.toString());
+          sessionStorage.setItem('newsletter_return_url', currentUrl);
+
+          // Hide popup and show success message
+          hidePopup();
+          showSuccessMessage();
+
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('There was an error subscribing. Please try again.');
+        }
+      });
+    }
+
+    function showSuccessMessage(): void {
+      // Create success notification
+      const notification = document.createElement('div');
+      notification.className = 'fixed top-4 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg z-50 animate-slide-up';
+      notification.innerHTML = `
+        <div class="flex items-center gap-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <div>
+            <p class="font-semibold">Successfully subscribed!</p>
+            <p class="text-sm opacity-90">Check your email for confirmation.</p>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(notification);
+
+      // Remove notification after 5 seconds
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateY(-20px)';
+        setTimeout(() => notification.remove(), 300);
+      }, 5000);
+    }
 
     // Start listening for exit intent after 5 seconds (delay to avoid annoying immediate visitors)
     setTimeout(() => {

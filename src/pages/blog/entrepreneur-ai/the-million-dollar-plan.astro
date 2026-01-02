@@ -1,0 +1,341 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="The Million Dollar Plan: My 32nd Birthday Challenge - Caleb McGennis"
+  description="On May 14th, I'm hosting a 24-hour birthday party with one goal: make $1 million in a single day. My friends don't know they're getting a cut. Welcome to the wildest entrepreneurial experiment of my life."
+  type="article"
+  publishedTime="2026-01-02"
+  author="Caleb Michael McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        The Million Dollar Plan: My 32nd Birthday Challenge
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb Michael McGennis</span>
+          <span>•</span>
+          <time datetime="2026-01-02">January 2, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/entrepreneur-ai/the-million-dollar-plan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/entrepreneur-ai/the-million-dollar-plan&text=The%20Million%20Dollar%20Plan%3A%20My%2032nd%20Birthday%20Challenge" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Most people celebrate their birthday with cake and candles. I'm celebrating mine by trying to make a million dollars in 24 hours—and sharing it with friends who have no idea what they're walking into.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Concept</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        My name is Caleb McGennis. I run an AI integration agency and business consulting company here in Jefferson City, Missouri. I've spent years helping businesses leverage technology, close deals, and transform their operations using AI. I've worked with clients across industries, built multiple companies, and learned that sometimes the most valuable thing isn't what you know—it's who you're willing to collaborate with.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        On May 14th, 2026, I turn 32 years old. And instead of a normal birthday party, I'm hosting something completely different: a 24-hour entrepreneurial sprint with one audacious goal.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6 text-center text-3xl font-bold text-mcgennis-navy">
+        Make $1,000,000 in a single day.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Not through investments. Not through crypto. Not through selling assets I already own. By actually <em>earning</em> it—landing a new client, closing a contract, selling a service, or creating something of value that someone is willing to pay a million dollars for.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And here's the twist my friends don't know yet:
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6 text-xl font-medium text-mcgennis-navy">
+        If we hit the million-dollar goal, I'm splitting it equally among everyone who shows up to help.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Rules</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Every good challenge needs constraints. Otherwise it's not a challenge—it's just chaos. Here are the rules for the Million Dollar Plan:
+      </p>
+
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">The Ground Rules</h3>
+        <ol class="space-y-4 text-gray-600">
+          <li><strong class="text-gray-900">1. Start from zero.</strong> We can't use any money, assets, or resources we already have. Everything we deploy has to be earned during the 24 hours.</li>
+          <li><strong class="text-gray-900">2. Real value only.</strong> We have to provide genuine value—close a real deal, sign a legitimate contract, or deliver a product/service someone actually wants. No gimmicks, no shortcuts, no asking for handouts.</li>
+          <li><strong class="text-gray-900">3. The clock is ticking.</strong> We have exactly 24 hours, starting at midnight on May 14th and ending at 11:59 PM that same day.</li>
+          <li><strong class="text-gray-900">4. Collaboration over competition.</strong> This isn't about me proving I can do it alone. This is about what a motivated team can accomplish together.</li>
+          <li><strong class="text-gray-900">5. Document everything.</strong> Wins, losses, breakthroughs, breakdowns—it all gets captured. Transparency matters.</li>
+        </ol>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Why these rules? Because I don't want this to be a theoretical exercise. I want it to be real. I want us to actually build something, close something, create something that matters. And I want to prove that when the right people come together with the right motivation, extraordinary things can happen.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Secret</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's what my friends don't know yet: if we actually hit the million-dollar mark, I'm not keeping it.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Every person who shows up—everyone who contributes time, energy, expertise, creativity, connections—gets an equal share of the earnings. Not based on seniority. Not based on who brought in the deal. Not based on how long they've known me. Equal shares for everyone who participates.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Why keep it a secret? Because I want people to show up for the right reasons. I want them to come because they believe in the challenge, because they want to be part of something ambitious, because they're curious to see if it can actually be done. Not because they're chasing a payday.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And then, when we're exhausted, covered in dry-erase marker, fueled by too much coffee and not enough sleep—if we actually pull it off—I want to see their faces when they realize what just happened.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Why I'm Doing This</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        People are going to think I'm crazy. And maybe I am. But here's the thing: I've spent years watching entrepreneurs play it safe. Watching businesses settle for incremental growth. Watching people talk about what they <em>could</em> do instead of actually doing it.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I've had my own peaks and valleys. I've made <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">millions and lost millions</a>. I've launched businesses that thrived and businesses that failed. I've learned that the difference between success and failure often comes down to one thing: belief that something audacious is actually possible.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This isn't just about making money. It's about proving a point:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2">
+        <li>That collaboration creates exponential value</li>
+        <li>That AI can amplify human creativity and capability</li>
+        <li>That ordinary people can accomplish extraordinary things when they work together</li>
+        <li>That Jefferson City—our community—has untapped potential waiting to be unleashed</li>
+        <li>That relationships matter more than individual achievement</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I want to show my sons, Leonardo and Raphael, that their dad isn't just someone who talks about big ideas—he's someone who actually tries them. Even if we fail spectacularly, I want them to see that audacity matters. That trying is better than wondering.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Strategy (Or Lack Thereof)</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        You're probably wondering: "Caleb, how exactly do you plan to make a million dollars in 24 hours?"
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Honest answer? I don't have a master plan. And that's intentional.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I have capabilities. I run an AI integration agency. I have business consulting experience. I have relationships with businesses that need solutions. I have technical skills. I have a team of talented people willing to show up.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But the magic isn't going to come from a pre-scripted plan. It's going to come from what happens when we're in the room together, bouncing ideas off each other, making calls, sending emails, building prototypes, crafting proposals. Some ideas will fail in the first hour. Others might gain traction. We'll pivot. We'll adapt. We'll hustle.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here are a few possibilities I'm thinking about:
+      </p>
+
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">Potential Paths to a Million</h3>
+        <ul class="space-y-4 text-gray-600">
+          <li><strong class="text-gray-900">Land a major AI integration contract.</strong> Find a company that needs custom AI implementation and close the deal same-day. I've helped businesses transform their operations—maybe one of them is ready to take the leap.</li>
+          <li><strong class="text-gray-900">Create and sell a high-value digital product.</strong> Build a course, a software tool, or a comprehensive consulting package that solves a million-dollar problem for the right buyer.</li>
+          <li><strong class="text-gray-900">Broker a major deal.</strong> Connect two businesses that need each other, facilitate the transaction, and earn a commission that gets us to the goal.</li>
+          <li><strong class="text-gray-900">Launch a wildly successful crowdfunding campaign.</strong> Not asking for donations—offering real value in exchange for investment in a product or service we create during the 24 hours.</li>
+          <li><strong class="text-gray-900">Something we haven't thought of yet.</strong> The best ideas might be the ones we come up with at hour 8, when we're desperate and creative and willing to try anything.</li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The point is, we're not locked into one approach. We're going to be nimble, opportunistic, and relentless. Like <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">the AI Renaissance</a> we're living through, this challenge is about embracing new possibilities and moving fast.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What Happens If We Fail?</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Let's be honest: the odds of making a million dollars in 24 hours are not great. This is a moonshot. An experiment. A challenge that borders on absurd.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But here's the thing about moonshots: even if you don't reach the moon, you still get pretty far off the ground.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If we "only" make $100,000? That's still life-changing money split among the team. If we make $10,000? That's still a meaningful win. If we make $1,000? We'll have learned more in 24 hours than most people learn in a year.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And if we make nothing? We'll have one hell of a story. And proof that we were willing to try something audacious instead of settling for safe.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I've learned through my work in ministry—at <a href="https://sportscrusaders.org" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Sports Crusaders</a>, at <a href="https://mobaptist.org/" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Missouri Baptist Convention</a>, at <a href="https://www.concordjc.org" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Concord Baptist Church</a>—that God often uses our boldest attempts to teach us the most valuable lessons. Sometimes the goal isn't the point. The journey is.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Invitation</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're reading this before May 14th, 2026, consider this your invitation.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I'm looking for people who:
+      </p>
+
+      <ul class="text-gray-600 leading-relaxed mb-6 space-y-2">
+        <li>Believe impossible things are worth attempting</li>
+        <li>Aren't afraid to hustle for 24 hours straight</li>
+        <li>Have skills, connections, ideas, or energy to contribute</li>
+        <li>Want to be part of something bigger than themselves</li>
+        <li>Are willing to take a risk for a potentially massive reward</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're in Jefferson City or willing to travel here, reach out. Let's see what happens when we throw everything we've got at an impossible goal.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're reading this after May 14th, stick around. I'll be documenting the whole thing. Win or lose, it's going to be a story worth telling.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Point</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This isn't about ego. It's not about proving I'm smarter or more capable than anyone else. It's not about showing off.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It's about showing what's possible when you stop making excuses and start making moves.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It's about proving that collaboration creates more value than competition.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It's about demonstrating that Jefferson City isn't just a small town in Missouri—it's a place where ambitious people can do ambitious things.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And it's about creating a memory. A story. A moment that my friends and I will talk about for decades.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6 text-xl font-medium text-gray-900">
+        Because at the end of the day, life is too short for small dreams.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        So on May 14th, 2026, I'm turning 32. And instead of blowing out candles and making a wish, I'm going to spend 24 hours trying to make a million dollars with my friends.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Will it work? I have no idea.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But I can't wait to find out.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white rounded-xl p-8 my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">Want to Join the Challenge?</h3>
+        <p class="mb-4">
+          If you're interested in being part of the Million Dollar Plan on May 14th, 2026, or want to follow along as we document the journey, reach out through the <a href="/contact" class="text-mcgennis-gold hover:underline">contact page</a>. This is going to be one for the history books.
+        </p>
+        <p class="text-sm opacity-90">
+          Follow the updates, the preparation, and eventually the 24-hour sprint itself. Because whether we succeed or fail, it's going to be one hell of a birthday party.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Author Bio -->
+  <section class="py-16 px-4 bg-soho-white">
+    <div class="container mx-auto max-w-3xl">
+      <div class="bg-soho-white p-8 border border-gray-200 rounded-2xl">
+        <h3 class="text-2xl font-display font-bold mb-4 text-gray-900 tracking-tight">About the Author</h3>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          <strong class="text-gray-900">Caleb Michael McGennis</strong> is an entrepreneur, AI integration specialist, and business consultant based in Jefferson City, Missouri. He's the founder of multiple businesses and serves actively with <a href="https://sportscrusaders.org" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Sports Crusaders</a> ministry. When he's not helping businesses leverage AI or planning audacious birthday challenges, he's spending time with his wife Stephanie and their sons Leonardo and Raphael.
+        </p>
+        <a href="/family/caleb" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors font-medium">
+          Learn more about Caleb
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-soho-white border-t border-gray-200">
+    <div class="container mx-auto max-w-3xl">
+      <h3 class="text-2xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">Related Stories</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="group bg-soho-white p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
+          <h4 class="text-xl font-display font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors">Peaks and Valleys</h4>
+          <p class="text-gray-600 mb-4">A $9 million lesson in faith and how God's protection sometimes looks like loss.</p>
+          <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read More →</span>
+        </a>
+        <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="group bg-soho-white p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-navy hover:shadow-lg transition-all duration-300">
+          <h4 class="text-xl font-display font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors">The AI Renaissance</h4>
+          <p class="text-gray-600 mb-4">Drawing parallels between the historical Renaissance and today's AI revolution.</p>
+          <span class="text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">Read More →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to All Posts
+      </a>
+    </div>
+  </section>
+</BaseLayout>

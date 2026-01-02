@@ -7,7 +7,7 @@ interface Props {
 const { variant = 'inline', showDescription = true } = Astro.props;
 ---
 
-<div class={`newsletter-signup ${variant === 'centered' ? 'text-center' : ''} ${variant === 'sidebar' ? 'bg-white p-6 rounded-xl border border-gray-200' : ''}`}>
+<div class={`newsletter-signup ${variant === 'centered' ? 'text-center' : ''} ${variant === 'sidebar' ? 'bg-soho-white p-6 rounded-xl border border-gray-200' : ''}`}>
   {variant === 'centered' && (
     <svg class="w-12 h-12 text-mcgennis-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -36,11 +36,11 @@ const { variant = 'inline', showDescription = true } = Astro.props;
     method="POST"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    action="/newsletter-success"
     class="newsletter-form"
   >
     {/* Hidden fields for Netlify Forms */}
     <input type="hidden" name="form-name" value="newsletter-signup" />
+    <input type="hidden" name="return-url" class="signup-return-url" value="" />
 
     {/* Honeypot field for spam protection (hidden from users) */}
     <p class="hidden">
@@ -79,4 +79,89 @@ const { variant = 'inline', showDescription = true } = Astro.props;
   .newsletter-form input[type="email"]:focus {
     outline: none;
   }
+
+  .success-notification {
+    animation: slide-in 0.3s ease-out;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 </style>
+
+<script>
+  // Handle newsletter form submission
+  document.addEventListener('DOMContentLoaded', () => {
+    const forms = document.querySelectorAll('.newsletter-form');
+
+    forms.forEach(form => {
+      // Set return URL
+      const returnUrlInput = form.querySelector('.signup-return-url') as HTMLInputElement;
+      if (returnUrlInput) {
+        returnUrlInput.value = window.location.href;
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form as HTMLFormElement);
+        const currentUrl = window.location.href;
+        const scrollPosition = window.scrollY;
+
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData as any).toString()
+          });
+
+          // Store success state
+          sessionStorage.setItem('newsletter_subscribed', 'true');
+          sessionStorage.setItem('newsletter_scroll', scrollPosition.toString());
+          sessionStorage.setItem('newsletter_return_url', currentUrl);
+
+          // Clear form
+          (form as HTMLFormElement).reset();
+
+          // Show success notification
+          showSuccessNotification();
+
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('There was an error subscribing. Please try again.');
+        }
+      });
+    });
+
+    function showSuccessNotification(): void {
+      const notification = document.createElement('div');
+      notification.className = 'success-notification fixed top-4 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg z-50';
+      notification.innerHTML = `
+        <div class="flex items-center gap-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <div>
+            <p class="font-semibold">Successfully subscribed!</p>
+            <p class="text-sm opacity-90">Check your email for confirmation.</p>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(notification);
+
+      // Remove notification after 5 seconds
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => notification.remove(), 300);
+      }, 5000);
+    }
+  });
+</script>
