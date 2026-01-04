@@ -7,7 +7,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   description="Raphael Corwyn McGennis is the youngest son of Caleb and Stephanie McGennis, part of a Jefferson City family building businesses and serving communities."
   type="profile"
 >
-  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
     <div class="container mx-auto text-center max-w-4xl">
       <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
         Raphael Corwyn McGennis
@@ -36,22 +36,43 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="py-24 px-4 bg-white">
+  <!-- Photo Gallery -->
+  <section class="py-16 px-4 bg-soho-white">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 tracking-tight">Growing Up</h2>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300">
+          <img
+            src="/images/raphael-mcgennis-bath-time.png"
+            alt="Raphael Corwyn McGennis enjoying bath time"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+          <div class="p-4 bg-soho-white">
+            <p class="text-sm text-gray-600 font-light">Baby Raphael enjoying bath time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-4 bg-soho-white">
     <div class="container mx-auto max-w-4xl">
       <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Family</h2>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-12"></div>
       <div class="space-y-6">
-        <div class="bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
+        <div class="bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
           <h3 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">Parents</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="/family/caleb" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-navy hover:shadow-md">
+            <a href="/family/caleb" class="group p-6 bg-soho-white hover:bg-soho-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-navy hover:shadow-md">
               <p class="font-bold text-gray-900 tracking-tight mb-1">Caleb Michael McGennis</p>
               <p class="text-sm text-gray-500 mb-3 font-light">Father</p>
               <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
                 View Profile →
               </div>
             </a>
-            <a href="/family/stephanie" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-maroon hover:shadow-md">
+            <a href="/family/stephanie" class="group p-6 bg-soho-white hover:bg-soho-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-maroon hover:shadow-md">
               <p class="font-bold text-gray-900 tracking-tight mb-1">Stephanie Kay McGennis</p>
               <p class="text-sm text-gray-500 mb-3 font-light">Mother</p>
               <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
@@ -61,9 +82,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div class="bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
+        <div class="bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
           <h3 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">Brother</h3>
-          <a href="/family/leonardo" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-forest hover:shadow-md block">
+          <a href="/family/leonardo" class="group p-6 bg-soho-white hover:bg-soho-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-forest hover:shadow-md block">
             <p class="font-bold text-gray-900 tracking-tight mb-1">Leonardo Bryton McGennis</p>
             <p class="text-sm text-gray-500 mb-3 font-light">Older Brother</p>
             <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
@@ -75,7 +96,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="py-24 px-4 bg-white border-t border-gray-200">
+  <section class="py-24 px-4 bg-soho-white border-t border-gray-200">
     <div class="container mx-auto text-center max-w-3xl">
       <h2 class="text-5xl font-display font-bold mb-4 text-gray-900 tracking-tight">The McGennis Family</h2>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
