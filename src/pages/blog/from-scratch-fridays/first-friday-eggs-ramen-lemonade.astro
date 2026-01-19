@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="Our First From Scratch Friday: Perfect Eggs, Ramen & Homemade Lemonade - The McGennis Family"
+  description="Join the McGennis family for our inaugural From Scratch Friday featuring soft-boiled eggs using Dan-O's 10-5-10 method, homemade ramen, and fresh-squeezed lemonade made in Jefferson City."
+  type="article"
+  publishedTime="2026-01-16"
+  author="The McGennis Family"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center text-mcgennis-forest hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Our First From Scratch Friday: Perfect Eggs, Ramen & Homemade Lemonade
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By The McGennis Family</span>
+          <span>•</span>
+          <time datetime="2026-01-16">January 16, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/from-scratch-fridays/first-friday-eggs-ramen-lemonade" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/from-scratch-fridays/first-friday-eggs-ramen-lemonade&text=Our%20First%20From%20Scratch%20Friday" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Welcome to our very first From Scratch Friday! We're kicking things off with three simple but satisfying dishes: perfectly soft-boiled eggs, homemade ramen, and fresh-squeezed lemonade. And yes, we learned some lessons along the way.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Perfect Soft-Boiled Eggs: Dan-O's 10-5-10 Method</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        First up: eggs. We used <a href="https://danosseasoning.com/" target="_blank" rel="noopener noreferrer" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors underline">Dan-O's famous 10-5-10 method</a> for getting those perfectly soft-boiled eggs with jammy yolks.
+      </p>
+
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">The 10-5-10 Method</h3>
+        <ol class="space-y-3 text-gray-600">
+          <li><strong class="text-gray-900">10 minutes:</strong> Bring a pot of water to a rolling boil</li>
+          <li><strong class="text-gray-900">5 minutes:</strong> Gently lower eggs into boiling water and cook for exactly 5 minutes</li>
+          <li><strong class="text-gray-900">10 minutes:</strong> Transfer eggs to an ice bath and let sit for 10 minutes to stop the cooking</li>
+        </ol>
+        <p class="text-sm text-gray-500 mt-4 italic">
+          The result? Perfectly soft-boiled eggs with firm whites and creamy, jammy yolks. Every. Single. Time.
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're not familiar with <a href="https://danosseasoning.com/" target="_blank" rel="noopener noreferrer" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors underline">Dan-O's Seasoning</a>, they're known for their all-natural seasonings and cooking tips. We love their content and their approach to simple, delicious home cooking. The 10-5-10 method is foolproof—we'll definitely be using this technique again!
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Homemade Ramen</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Next, we made ramen from scratch. Not the instant packet kind—we're talking real <a href="https://www.seriouseats.com/easy-ramen-recipes" target="_blank" rel="noopener noreferrer" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors underline">homemade ramen</a> with fresh ingredients and a flavorful broth.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        We topped our bowls with those perfect soft-boiled eggs from the 10-5-10 method, and of course, we seasoned everything with Dan-O's. There's something incredibly satisfying about slurping noodles you made yourself, especially on a Friday evening with the family gathered around the table.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Making ramen from scratch takes a bit of time, but it's so worth it. The flavors are deeper, the noodles have the perfect texture, and you know exactly what's going into your bowl. Plus, the boys loved helping stir the broth!
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Fresh-Squeezed Lemonade: Trial and Error</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And finally, we made fresh-squeezed lemonade. This one came with a learning curve.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's what we did:
+      </p>
+
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">First Attempt (Too Sour!)</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li>3 lemons, freshly squeezed</li>
+          <li>1 orange, freshly squeezed</li>
+          <li>3/8 cup sugar</li>
+          <li>1 cup water (for dissolving sugar)</li>
+          <li>Half pitcher of ice</li>
+          <li>Filled 3/4 full with water</li>
+        </ul>
+        <p class="text-lg text-mcgennis-maroon font-medium mt-4">
+          Verdict: VERY sour!!
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        So we adjusted. Sometimes the best recipes come from fixing mistakes!
+      </p>
+
+      <div class="bg-mcgennis-forest bg-opacity-5 border border-mcgennis-forest rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">Final Recipe (Much Better!)</h3>
+        <p class="text-gray-600 mb-4">Added to the original batch:</p>
+        <ul class="space-y-2 text-gray-600 mb-4">
+          <li>5/8 cup additional sugar</li>
+          <li>1 cup additional water</li>
+        </ul>
+        <p class="text-lg text-mcgennis-forest font-medium">
+          Result: Perfect balance of sweet and tart!
+        </p>
+        <p class="text-sm text-gray-500 mt-4 italic">
+          Total sugar: 1 cup | Total added water: 2 cups (plus ice melt)
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The beauty of <a href="https://www.allrecipes.com/recipe/32385/best-lemonade-ever/" target="_blank" rel="noopener noreferrer" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors underline">homemade lemonade</a> is that you can adjust it to your taste. Too sour? Add more sugar. Too sweet? Add more lemon juice or water. We ended up with a refreshing, perfectly balanced lemonade that paired beautifully with our ramen and eggs.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Lessons Learned</h2>
+
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <ul class="space-y-4 text-gray-600">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-forest mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">Trust the method:</strong> The 10-5-10 egg technique works perfectly. No guessing, no overcooked yolks.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-forest mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">Season everything:</strong> Dan-O's seasoning took our ramen from good to restaurant-quality.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-forest mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">Taste as you go:</strong> Our lemonade was way too sour at first, but that's okay! Adjusting is part of cooking from scratch.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-forest mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">It's about the journey:</strong> Making mistakes and fixing them together is half the fun.</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Why This Matters</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is what From Scratch Fridays is all about. It's not about perfection—it's about taking the time to make real food, learn together, and create memories around the table. Sure, we could have grabbed takeout ramen or bought bottled lemonade. But where's the story in that?
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Our boys got to see how food actually comes together. They learned that sometimes recipes need adjusting. They discovered that the best meals involve a little trial and error. And we all got to sit down together and enjoy something we made with our own hands.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        That's the point. Not perfection. Not Instagram-worthy plating. Just real food, real effort, and real family time here in <a href="/about" class="text-mcgennis-forest hover:text-mcgennis-gold transition-colors underline">Jefferson City</a>.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6 text-xl font-medium text-gray-900">
+        Here's to many more From Scratch Fridays ahead!
+      </p>
+
+      <div class="bg-mcgennis-forest text-white rounded-xl p-8 my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">Want to Join Us?</h3>
+        <p class="mb-4">
+          Follow along with our From Scratch Fridays! We'll be sharing recipes, kitchen adventures, and honest stories about cooking with our family every week.
+        </p>
+        <p class="text-sm opacity-90">
+          Have questions about the 10-5-10 method or want to share your own lemonade recipe? Drop a comment below!
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-soho-white border-t border-gray-200">
+    <div class="container mx-auto max-w-3xl">
+      <h3 class="text-2xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">More From Our Family</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/alattetodomama/recipes" class="group bg-soho-white p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-maroon hover:shadow-lg transition-all duration-300">
+          <h4 class="text-xl font-display font-bold mb-2 text-gray-900 group-hover:text-mcgennis-maroon transition-colors">More Family Recipes</h4>
+          <p class="text-gray-600 mb-4">Check out Stephanie's recipe collection for more family-friendly meals and treats.</p>
+          <span class="text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">Explore Recipes →</span>
+        </a>
+        <a href="/blog/alattetodomama/a-latte-to-do" class="group bg-soho-white p-6 rounded-2xl border border-gray-200 hover:border-mcgennis-maroon hover:shadow-lg transition-all duration-300">
+          <h4 class="text-xl font-display font-bold mb-2 text-gray-900 group-hover:text-mcgennis-maroon transition-colors">A Latte to Do</h4>
+          <p class="text-gray-600 mb-4">Read about the chaos and joy of family life from Stephanie's perspective.</p>
+          <span class="text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">Read More →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to From Scratch Fridays -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-forest hover:text-mcgennis-forest transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+    </div>
+  </section>
+</BaseLayout>
