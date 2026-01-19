@@ -12,7 +12,7 @@ import Comments from '../../../components/Comments.astro';
   author="Caleb Michael McGennis"
 >
   <!-- Hero Section -->
-  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
     <div class="container mx-auto max-w-4xl">
       <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ import Comments from '../../../components/Comments.astro';
         <strong>Don't tell AI what to build. Tell AI to ask you every question needed to build it completely.</strong>
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-medium mb-2">Instead of:</p>
         <p class="text-gray-600 mb-4 font-mono text-sm">"Build me an authentication system"</p>
         <p class="text-gray-700 font-medium mb-2">Try this:</p>
@@ -134,7 +134,7 @@ import Comments from '../../../components/Comments.astro';
         Let me show you how this works in practice. Last week I needed a background job processing system. Here's what I did:
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-bold mb-4">My Prompt:</p>
         <p class="text-gray-700 mb-4 font-mono text-sm">
           "I need to build a task queue system for processing background jobs in my Node.js application. Before suggesting any implementation, ask me every question you need to design this correctly. Consider architecture, failure handling, monitoring, scalability, and operational concerns."
@@ -168,7 +168,7 @@ import Comments from '../../../components/Comments.astro';
         For complex features, I don't go straight to code. I have AI generate a complete specification first.
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-mono text-sm">
           "Create a detailed technical specification for [feature]. Include:<br/>
           - User stories and acceptance criteria<br/>
@@ -194,7 +194,7 @@ import Comments from '../../../components/Comments.astro';
         Before making major architectural decisions, I use AI as a systematic questioner to ensure I've thought through all the implications.
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-mono text-sm">
           "I'm considering [architectural decision, e.g., 'moving from monolith to microservices' or 'switching to event-driven architecture']. <br/><br/>
 
@@ -221,7 +221,7 @@ import Comments from '../../../components/Comments.astro';
         Production bugs usually come from edge cases you didn't think about. AI is excellent at generating exhaustive edge case lists.
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-mono text-sm">
           "I'm implementing [feature description]. Generate a comprehensive list of edge cases, error scenarios, and failure modes I need to handle. Include:<br/>
           - Input validation edge cases<br/>
@@ -246,7 +246,7 @@ import Comments from '../../../components/Comments.astro';
         For complex systems, don't ask AI to build everything at once. Break it into stages and verify each one.
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-mono text-sm">
           "I need to build [complex system]. Let's implement this incrementally.<br/><br/>
 
@@ -270,7 +270,7 @@ import Comments from '../../../components/Comments.astro';
         Even when AI writes code, don't merge it blindly. Have it review its own work systematically.
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-mono text-sm">
           "Review the code you just wrote with the scrutiny of a senior engineer doing a production code review. Analyze:<br/>
           - Security vulnerabilities (SQL injection, XSS, CSRF, etc.)<br/>
@@ -296,7 +296,7 @@ import Comments from '../../../components/Comments.astro';
         Instead of asking AI to write code then tests, flip it: generate tests first based on requirements.
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-mono text-sm">
           "I need to implement [feature]. Before writing implementation code, create a comprehensive test suite that defines expected behavior. Include:<br/>
           - Happy path tests<br/>
@@ -356,7 +356,7 @@ import Comments from '../../../components/Comments.astro';
 
       <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Common Mistakes to Avoid</h2>
 
-      <div class="bg-white p-6 my-8 rounded-xl">
+      <div class="bg-soho-white p-6 my-8 rounded-xl">
         <ul class="text-gray-700 space-y-4">
           <li>
             <strong>Mistake #1: Accepting the first code AI generates</strong><br/>
@@ -438,7 +438,7 @@ import Comments from '../../../components/Comments.astro';
         Pick a feature you're planning to build. Before asking AI to write code, try this:
       </p>
 
-      <div class="bg-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+      <div class="bg-soho-white border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 font-mono text-sm">
           "I need to build [feature]. Before writing any code, ask me every question necessary to fully understand the requirements, technical constraints, edge cases, and integration points. I want this production-ready, not a prototype. Be thorough."
         </p>
@@ -483,17 +483,17 @@ import Comments from '../../../components/Comments.astro';
   <Comments />
 
   <!-- Related Posts -->
-  <section class="py-16 px-4 bg-white border-t border-gray-200">
+  <section class="py-16 px-4 bg-soho-white border-t border-gray-200">
     <div class="container mx-auto max-w-4xl">
       <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from An Entrepreneur in a World of AI</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+        <a href="/blog/entrepreneur-ai/the-ai-renaissance" class="group bg-soho-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
           <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
             The AI Renaissance: When History Echoes Into Tomorrow
           </h3>
           <p class="text-gray-500 text-sm">Drawing parallels between the historical Renaissance and today's AI revolution</p>
         </a>
-        <a href="/blog/entrepreneur-ai/ai-hallucinations-explained" class="group bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+        <a href="/blog/entrepreneur-ai/ai-hallucinations-explained" class="group bg-soho-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
           <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
             AI Hallucinations Explained by a Software Engineer
           </h3>
@@ -504,7 +504,7 @@ import Comments from '../../../components/Comments.astro';
   </section>
 
   <!-- Back to Blog -->
-  <section class="py-16 px-4 bg-white">
+  <section class="py-16 px-4 bg-soho-white">
     <div class="container mx-auto text-center">
       <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

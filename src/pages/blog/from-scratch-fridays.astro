@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPosts = [
+  // Posts will be added here as you create them
+];
+---
+
+<BaseLayout
+  title="From Scratch Fridays - The McGennis Family"
+  description="Join the McGennis family every Friday as we make delicious meals and dishes completely from scratch. Real cooking, real family time, real food in Jefferson City, Missouri."
+  type="website"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        From Scratch Fridays
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+      <p class="text-xl md:text-2xl text-gray-600 mb-6 font-light leading-relaxed">
+        Real cooking, real family time, real food
+      </p>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto font-light">
+        Every Friday, the McGennis family puts down the takeout menus and makes something delicious completely from scratch. Join us in the kitchen for recipes, stories, and the joy of homemade meals.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-4xl">
+      {blogPosts.length > 0 ? (
+        <div class="space-y-8">
+          {blogPosts.map((post) => (
+            <a href={`/blog/from-scratch-fridays/${post.slug}`} class="group block bg-soho-white rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest overflow-hidden">
+              {post.image && (
+                <div class="h-64 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div class="p-8">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="inline-block px-3 py-1 bg-mcgennis-forest bg-opacity-10 text-mcgennis-forest text-xs font-semibold rounded-full">
+                    From Scratch Fridays
+                  </span>
+                  <span class="text-sm text-gray-400">{post.date}</span>
+                </div>
+                <h2 class="text-3xl font-display font-bold text-gray-900 mb-3 group-hover:text-mcgennis-forest transition-colors tracking-tight">
+                  {post.title}
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-4 font-light">
+                  {post.excerpt}
+                </p>
+                <span class="text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+                  Read More →
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <svg class="w-24 h-24 text-gray-300 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          <h3 class="text-2xl font-display font-bold text-gray-900 mb-4 tracking-tight">
+            Our First Friday is Coming Soon!
+          </h3>
+          <p class="text-lg text-gray-500 max-w-2xl mx-auto font-light">
+            We're getting ready to share our first From Scratch Friday adventure with you. Check back soon for homemade recipes, family stories, and kitchen fun!
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- About From Scratch Fridays -->
+  <section class="py-16 px-4 bg-soho-white">
+    <div class="container mx-auto max-w-3xl">
+      <div class="bg-soho-white border border-gray-200 rounded-2xl p-8 md:p-12">
+        <div class="flex items-center justify-center mb-6">
+          <svg class="w-16 h-16 text-mcgennis-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-display font-bold mb-6 text-gray-900 tracking-tight text-center">
+          Why From Scratch?
+        </h3>
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-600 leading-relaxed mb-4 font-light">
+            In a world of convenience foods and takeout, there's something special about making a meal completely from scratch. It's about more than just food—it's about slowing down, working together as a family, and creating something with our own hands.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4 font-light">
+            Every Friday, the McGennis family dedicates time to making something delicious from the ground up. Sometimes it's simple comfort food. Sometimes we try something new. But it's always made with love, laughter, and a little bit of flour on the counter.
+          </p>
+          <p class="text-gray-600 leading-relaxed font-light">
+            Join us as we share our recipes, our kitchen disasters, our successes, and everything in between. Because the best meals aren't just about what's on the plate—they're about who's around the table.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-2xl text-center">
+      <h3 class="text-3xl font-display font-bold mb-6 text-gray-900 tracking-tight">
+        Want to Cook Along?
+      </h3>
+      <p class="text-lg text-gray-600 mb-8 font-light">
+        Subscribe to our newsletter to get each Friday's recipe delivered to your inbox, along with tips, stories, and encouragement for your own from-scratch cooking journey.
+      </p>
+      <a href="/#newsletter" class="inline-flex items-center justify-center px-8 py-4 bg-brass-button brightness-110 text-white font-medium tracking-wide transition-all duration-300 shadow-md hover:shadow-lg rounded-xl">
+        Subscribe for Weekly Recipes
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-soho-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-forest hover:text-mcgennis-forest transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to All Blogs
+      </a>
+    </div>
+  </section>
+</BaseLayout>

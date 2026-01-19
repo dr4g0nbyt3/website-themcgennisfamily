@@ -9,6 +9,8 @@ export default {
         'mcgennis-maroon': '#800020',       // Dark red maroon accent
         'mcgennis-navy': '#1B2845',         // Dark navy accent
         'mcgennis-forest': '#2F4538',       // Forest green accent
+        'mcgennis-purple': '#5b2c6f',       // Potens purple accent
+        'soho-white': '#FAFAF9',            // Clean off-white background
         // Legacy (alias to new colors)
         'mcgennis-brass': '#C5A572',        // Same as gold
         'mcgennis-blue': '#1B2845',         // Same as navy

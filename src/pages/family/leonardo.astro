@@ -7,7 +7,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   description="Leonardo Bryton McGennis is the eldest son of Caleb and Stephanie McGennis, growing up with entrepreneurial values in Jefferson City, Missouri."
   type="profile"
 >
-  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
     <div class="container mx-auto text-center max-w-4xl">
       <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
         Leonardo Bryton McGennis
@@ -36,22 +36,80 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="py-24 px-4 bg-white">
+  <section class="py-24 px-4 bg-soho-white">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Interests & Fun Facts</h2>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-12"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Gymnastics -->
+        <div class="bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
+          <div class="flex items-start mb-4">
+            <svg class="w-12 h-12 text-mcgennis-gold mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/>
+            </svg>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 tracking-tight">Gymnastics Champion</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Leonardo has been doing gymnastics since he was 3 years old, developing strength, discipline, and determination from an early age.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Favorite Color -->
+        <div class="bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
+          <div class="flex items-start mb-4">
+            <div class="w-12 h-12 bg-red-600 rounded-full mr-4 flex-shrink-0 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 tracking-tight">Favorite Color</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Leonardo's favorite color is <span class="text-red-600 font-semibold">red</span> - bold, energetic, and full of life, just like him!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightning McQueen -->
+        <div class="bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl md:col-span-2">
+          <div class="flex items-start mb-4">
+            <svg class="w-12 h-12 text-mcgennis-maroon mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 tracking-tight">Lightning McQueen Superfan</h3>
+              <p class="text-gray-600 leading-relaxed mb-3">
+                Leonardo absolutely loves Lightning McQueen from Disney's Cars. His passion for the speedy race car runs so deep that when his family asked what he wanted to name his baby brother before Raphael was born, he would always say with excitement: <span class="italic font-medium text-mcgennis-maroon">"Lightning McQueen!"</span>
+              </p>
+              <p class="text-gray-500 text-sm italic">
+                While his brother ended up with the name Raphael Corwyn, Leonardo's enthusiasm for Lightning McQueen remains as strong as ever.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-4 bg-soho-white">
     <div class="container mx-auto max-w-4xl">
       <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">Family</h2>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-12"></div>
       <div class="space-y-6">
-        <div class="bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
+        <div class="bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
           <h3 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">Parents</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="/family/caleb" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-navy hover:shadow-md">
+            <a href="/family/caleb" class="group p-6 bg-soho-white hover:bg-soho-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-navy hover:shadow-md">
               <p class="font-bold text-gray-900 tracking-tight mb-1">Caleb Michael McGennis</p>
               <p class="text-sm text-gray-500 mb-3 font-light">Father</p>
               <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
                 View Profile →
               </div>
             </a>
-            <a href="/family/stephanie" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-maroon hover:shadow-md">
+            <a href="/family/stephanie" class="group p-6 bg-soho-white hover:bg-soho-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-maroon hover:shadow-md">
               <p class="font-bold text-gray-900 tracking-tight mb-1">Stephanie Kay McGennis</p>
               <p class="text-sm text-gray-500 mb-3 font-light">Mother</p>
               <div class="flex items-center text-mcgennis-maroon font-medium group-hover:text-mcgennis-gold transition-colors">
@@ -61,9 +119,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div class="bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
+        <div class="bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl">
           <h3 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">Brother</h3>
-          <a href="/family/raphael" class="group p-6 bg-white hover:bg-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-gold hover:shadow-md block">
+          <a href="/family/raphael" class="group p-6 bg-soho-white hover:bg-soho-white transition-all duration-300 border border-gray-200 rounded-xl hover:border-mcgennis-gold hover:shadow-md block">
             <p class="font-bold text-gray-900 tracking-tight mb-1">Raphael Corwyn McGennis</p>
             <p class="text-sm text-gray-500 mb-3 font-light">Younger Brother</p>
             <div class="flex items-center text-mcgennis-gold font-medium group-hover:text-mcgennis-navy transition-colors">
@@ -75,7 +133,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="py-24 px-4 bg-white border-t border-gray-200">
+  <section class="py-24 px-4 bg-soho-white border-t border-gray-200">
     <div class="container mx-auto text-center max-w-3xl">
       <h2 class="text-5xl font-display font-bold mb-4 text-gray-900 tracking-tight">The McGennis Family</h2>
       <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>

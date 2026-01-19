@@ -34,7 +34,8 @@
       "Bash(then echo \"   ✓ All newsletter sections removed\" else echo \"   ✗ Some newsletter sections remain\" fi echo \"\" echo \"2. Sample check - Related Posts sections now use bg-white:\" grep -A1 \"Related Posts\\|Related Content\" /Users/cmcgennis/dev/websites/astro/themcgennisfamily/src/pages/blog/entrepreneur-ai/best-website-services-jefferson-city.astro)",
       "Bash(lsof:*)",
       "Bash(xargs kill:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

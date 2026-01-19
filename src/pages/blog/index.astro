@@ -6,7 +6,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="McGennis Family Blog - Jefferson City, Missouri Stories & Updates"
   description="Read the latest from the McGennis family in Jefferson City, Missouri. Business insights, family updates, and stories from Caleb and Stephanie."
 >
-  <section class="bg-white py-20 md:py-32 px-4 border-b border-gray-200">
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
     <div class="container mx-auto text-center max-w-4xl">
       <h1 class="text-6xl md:text-7xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
         McGennis Family Blog
@@ -32,7 +32,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- First Row: Stephanie & Caleb's Blogs -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <!-- Stephanie's Blog -->
-          <a href="/blog/alattetodomama" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
+          <a href="/blog/alattetodomama" class="group bg-soho-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-maroon">
             <div class="h-64 overflow-hidden relative">
               <img
                 src="/images/stephanie-caleb-mcgennis-couple-jefferson-city.jpg"
@@ -60,7 +60,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </a>
 
           <!-- Caleb's Blog -->
-          <a href="/blog/entrepreneur-ai" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
+          <a href="/blog/entrepreneur-ai" class="group bg-soho-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
             <div class="h-64 overflow-hidden relative">
               <img
                 src="/images/caleb-blog-card.png"
@@ -88,8 +88,37 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </a>
         </div>
 
-        <!-- Second Row: Family Heritage Blog (Full Width) -->
-        <a href="/blog/family-heritage" class="group bg-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest block">
+        <!-- Second Row: From Scratch Fridays & Family Heritage -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- From Scratch Fridays -->
+          <a href="/blog/from-scratch-fridays" class="group bg-soho-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest">
+            <div class="h-64 overflow-hidden relative bg-mcgennis-forest flex items-center justify-center">
+              <div class="text-center text-white p-8">
+                <svg class="w-20 h-20 mx-auto mb-4 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <p class="text-2xl font-display font-bold">Every Friday</p>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">From Scratch Fridays</h3>
+                <p class="text-lg font-medium">The Whole McGennis Family</p>
+              </div>
+            </div>
+            <div class="p-8">
+              <p class="text-gray-500 mb-6 leading-relaxed font-light">
+                Join our family every Friday as we make delicious meals and dishes completely from scratch. Real cooking, real family time, real food.
+              </p>
+              <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+                See Our Recipes
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Family Heritage Blog -->
+          <a href="/blog/family-heritage" class="group bg-soho-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-gold">
           <div class="h-64 overflow-hidden relative bg-brass-button brightness-110 flex items-center justify-center">
             <div class="text-center text-white p-8">
               <p class="text-4xl font-display font-bold mb-2">Mag Aonghusa</p>
@@ -112,10 +141,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </div>
           </div>
         </a>
+        </div>
       </div>
 
       <!-- Newsletter Signup -->
-      <div class="mt-16 bg-white p-10 text-center border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300">
+      <div class="mt-16 bg-soho-white p-10 text-center border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300">
         <h3 class="text-3xl font-bold mb-4 text-gray-900 tracking-tight">Stay Updated!</h3>
         <p class="text-lg mb-8 text-gray-500 font-light">
           Want to be notified when we publish new blog posts? Follow us on social media!
@@ -133,7 +163,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <!-- Featured Topics -->
-  <section class="py-24 px-4 bg-white">
+  <section class="py-24 px-4 bg-soho-white">
     <div class="container mx-auto max-w-7xl">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">
@@ -142,7 +172,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-navy">
+        <div class="group bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-navy">
           <div class="flex justify-center mb-6">
             <svg class="w-14 h-14 text-mcgennis-navy group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -155,7 +185,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </p>
         </div>
 
-        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-gold">
+        <div class="group bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-gold">
           <div class="flex justify-center mb-6">
             <svg class="w-14 h-14 text-mcgennis-gold group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -168,7 +198,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </p>
         </div>
 
-        <div class="group bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-maroon">
+        <div class="group bg-soho-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-maroon">
           <div class="flex justify-center mb-6">
             <svg class="w-14 h-14 text-mcgennis-maroon group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
