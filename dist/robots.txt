@@ -1,4 +1,46 @@
+# robots.txt for The McGennis Family Website
+# https://www.themcgennisfamily.com
+
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
-Sitemap: https://themcgennisfamily.com/sitemap-index.xml
+# Block crawling of development/admin files if they exist
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /.well-known/
+
+# Block common bot patterns that consume bandwidth
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Allow all major search engines unrestricted access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.themcgennisfamily.com/sitemap.xml
