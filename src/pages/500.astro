@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Server Error - The McGennis Family"
+  description="Something went wrong on our end. We're working to fix it."
+>
+  <section class="min-h-screen bg-soho-white flex items-center justify-center px-4 py-20">
+    <div class="container mx-auto max-w-3xl text-center">
+      <!-- 500 Visual -->
+      <div class="mb-8">
+        <h1 class="text-9xl font-display font-bold text-mcgennis-maroon mb-4 tracking-tight">500</h1>
+        <div class="h-1 w-32 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+      </div>
+
+      <!-- Error Message -->
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6 tracking-tight">
+        Something Went Wrong
+      </h2>
+      <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+        We're experiencing technical difficulties on our end. Our team has been notified and we're working to fix it.
+      </p>
+
+      <!-- Error Icon -->
+      <div class="mb-12">
+        <svg class="w-24 h-24 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+      </div>
+
+      <!-- Actions -->
+      <div class="space-y-4 max-w-md mx-auto">
+        <p class="text-gray-600 mb-6">In the meantime, you can:</p>
+
+        <a href="/" class="block w-full px-8 py-4 bg-mcgennis-gold hover:bg-mcgennis-maroon text-white font-medium rounded-xl transition-all duration-300 shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-center gap-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Go Back Home
+          </div>
+        </a>
+
+        <button
+          onclick="window.location.reload()"
+          class="block w-full px-8 py-4 bg-white border-2 border-gray-300 hover:border-mcgennis-gold text-gray-700 font-medium rounded-xl transition-all duration-300 hover:shadow-md"
+        >
+          <div class="flex items-center justify-center gap-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            Try Again
+          </div>
+        </button>
+
+        <a href="/contact" class="block w-full px-8 py-4 bg-white border-2 border-gray-300 hover:border-mcgennis-navy text-gray-700 font-medium rounded-xl transition-all duration-300 hover:shadow-md">
+          <div class="flex items-center justify-center gap-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Contact Us
+          </div>
+        </a>
+      </div>
+
+      <!-- Additional Help -->
+      <div class="mt-12 p-6 bg-gray-100 rounded-xl max-w-xl mx-auto">
+        <p class="text-sm text-gray-600">
+          If this problem persists, please
+          <a href="/contact" class="text-mcgennis-navy font-semibold hover:text-mcgennis-gold transition">contact us</a>
+          and let us know what you were trying to access.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

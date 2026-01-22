@@ -35,7 +35,9 @@
       "Bash(lsof:*)",
       "Bash(xargs kill:*)",
       "Bash(git reset:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:themcgennisfamily.com)"
     ],
     "deny": [],
     "ask": []

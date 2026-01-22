@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found - The McGennis Family"
+  description="The page you're looking for doesn't exist. Let us help you find what you need."
+>
+  <section class="min-h-screen bg-soho-white flex items-center justify-center px-4 py-20">
+    <div class="container mx-auto max-w-3xl text-center">
+      <!-- 404 Visual -->
+      <div class="mb-8">
+        <h1 class="text-9xl font-display font-bold text-mcgennis-gold mb-4 tracking-tight">404</h1>
+        <div class="h-1 w-32 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-8"></div>
+      </div>
+
+      <!-- Error Message -->
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6 tracking-tight">
+        Oops! Page Not Found
+      </h2>
+      <p class="text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto">
+        The page you're looking for seems to have wandered off. Don't worry though - we can help you find your way!
+      </p>
+
+      <!-- Quick Links -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 max-w-2xl mx-auto">
+        <a href="/" class="group bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-mcgennis-gold transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <svg class="w-6 h-6 text-mcgennis-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-mcgennis-gold transition">Go Home</h3>
+          </div>
+          <p class="text-sm text-gray-600">Start fresh from our homepage</p>
+        </a>
+
+        <a href="/blog" class="group bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-mcgennis-maroon transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <svg class="w-6 h-6 text-mcgennis-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-mcgennis-maroon transition">Read Our Blog</h3>
+          </div>
+          <p class="text-sm text-gray-600">Explore our family stories</p>
+        </a>
+
+        <a href="/businesses" class="group bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-mcgennis-navy transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <svg class="w-6 h-6 text-mcgennis-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-mcgennis-navy transition">Our Businesses</h3>
+          </div>
+          <p class="text-sm text-gray-600">See what we're building</p>
+        </a>
+
+        <a href="/contact" class="group bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-mcgennis-forest transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <svg class="w-6 h-6 text-mcgennis-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-mcgennis-forest transition">Contact Us</h3>
+          </div>
+          <p class="text-sm text-gray-600">Get in touch with our family</p>
+        </a>
+      </div>
+
+      <!-- Search Box -->
+      <div class="max-w-xl mx-auto">
+        <p class="text-gray-600 mb-4">Or try searching for what you need:</p>
+        <button
+          onclick="document.getElementById('search-button')?.click()"
+          class="inline-flex items-center gap-3 px-8 py-4 bg-mcgennis-gold hover:bg-mcgennis-maroon text-white font-medium rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          Search Our Site
+        </button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

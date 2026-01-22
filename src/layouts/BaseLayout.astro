@@ -31,13 +31,13 @@ const currentPath = Astro.url.pathname;
       author={author}
     />
     <slot name="head" />
-    <!-- Google Analytics (Replace with your actual GA4 ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQF9S74CS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-XXQF9S74CS');
     </script>
   </head>
   <body class="bg-soho-white text-gray-900 font-sans">
@@ -117,6 +117,9 @@ const currentPath = Astro.url.pathname;
               <a href="/blog/entrepreneur-ai" class="block py-2 text-sm text-gray-600 hover:text-mcgennis-navy transition">
                 An Entrepreneur in a World of AI
               </a>
+              <a href="/blog/from-scratch-fridays" class="block py-2 text-sm text-gray-600 hover:text-mcgennis-forest transition">
+                From Scratch Fridays
+              </a>
               <a href="/blog/family-heritage" class="block py-2 text-sm text-gray-600 hover:text-mcgennis-forest transition">
                 McGennis Family Heritage
               </a>
@@ -130,7 +133,7 @@ const currentPath = Astro.url.pathname;
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main data-pagefind-body>
       <slot />
     </main>
 
