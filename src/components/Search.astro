@@ -47,7 +47,7 @@
 <style is:global>
   /* Pagefind custom styling to match brand */
   .pagefind-ui__search-input {
-    @apply w-full px-5 py-4 rounded-xl border-2 border-gray-300 focus:border-mcgennis-maroon focus:ring-2 focus:ring-mcgennis-maroon focus:ring-opacity-20 transition-all outline-none text-lg bg-white shadow-sm;
+    @apply w-full px-5 py-4 rounded-xl border-2 border-gray-300 focus:border-mcgennis-gold focus:ring-2 focus:ring-mcgennis-gold focus:ring-opacity-30 transition-all outline-none text-lg bg-white shadow-sm;
   }
 
   .pagefind-ui__search-clear {
@@ -55,47 +55,51 @@
   }
 
   .pagefind-ui__results {
-    @apply mt-6 space-y-1;
+    @apply mt-6 space-y-3;
   }
 
   .pagefind-ui__result {
-    @apply border border-gray-200 rounded-xl p-5 mb-3 bg-white hover:border-mcgennis-maroon hover:shadow-md transition-all duration-300;
-  }
-
-  .pagefind-ui__result-title {
-    @apply text-xl font-bold text-gray-900 hover:text-mcgennis-maroon transition-colors mb-2;
-  }
-
-  .pagefind-ui__result-excerpt {
-    @apply text-gray-600 mt-2 leading-relaxed text-base;
+    @apply bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-mcgennis-gold;
   }
 
   .pagefind-ui__result-link {
     @apply no-underline block;
   }
 
+  .pagefind-ui__result-title {
+    @apply text-xl font-display font-bold text-gray-900 hover:text-mcgennis-gold transition-colors mb-3 leading-tight;
+  }
+
+  .pagefind-ui__result-excerpt {
+    @apply text-gray-600 leading-relaxed text-base line-clamp-3;
+  }
+
   .pagefind-ui__result-excerpt mark {
-    @apply bg-mcgennis-gold bg-opacity-20 text-mcgennis-maroon font-medium px-1 rounded;
+    @apply bg-mcgennis-gold bg-opacity-25 text-mcgennis-maroon font-semibold px-1.5 py-0.5 rounded;
   }
 
   .pagefind-ui__message {
-    @apply text-gray-600 py-6 text-center text-lg;
+    @apply text-gray-500 py-8 text-center text-lg;
   }
 
   .pagefind-ui__button {
-    @apply px-6 py-3 bg-mcgennis-maroon hover:bg-mcgennis-navy text-white rounded-xl transition-all duration-300 font-medium shadow-sm hover:shadow-md;
+    @apply px-6 py-3 bg-mcgennis-gold hover:bg-mcgennis-maroon text-white rounded-xl transition-all duration-300 font-medium shadow-sm hover:shadow-md;
   }
 
   .pagefind-ui__result-nested {
-    @apply mt-3 pl-4 border-l-2 border-gray-200;
+    @apply mt-4 pl-5 border-l-2 border-gray-300 space-y-2;
   }
 
   .pagefind-ui__result-tags {
-    @apply flex gap-2 mt-3 flex-wrap;
+    @apply flex gap-2 mt-4 flex-wrap;
   }
 
   .pagefind-ui__result-tag {
-    @apply text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full;
+    @apply text-xs px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full font-medium;
+  }
+
+  .pagefind-ui__result-inner {
+    @apply space-y-2;
   }
 </style>
 
