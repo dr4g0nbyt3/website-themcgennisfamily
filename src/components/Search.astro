@@ -16,8 +16,8 @@
 </div>
 
 <!-- Search Modal -->
-<div id="search-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
-  <div class="bg-white rounded-2xl max-w-4xl w-full mx-auto shadow-2xl relative max-h-[85vh] overflow-hidden border-2 border-gray-200" id="search-modal-content">
+<div id="search-modal" class="fixed inset-0 z-50 hidden p-4" style="display: none;">
+  <div class="bg-white rounded-2xl max-w-4xl w-full mx-auto shadow-2xl relative max-h-[85vh] overflow-hidden border-2 border-gray-200 mt-8 md:mt-16" id="search-modal-content">
     <!-- Header -->
     <div class="bg-mcgennis-gold px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -116,8 +116,7 @@
 
     function openSearch() {
       if (searchModal) {
-        searchModal.classList.remove('hidden');
-        searchModal.classList.add('flex');
+        searchModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
 
         // Lazy load Pagefind UI when search is opened
@@ -175,8 +174,7 @@
 
     function closeSearchModal() {
       if (searchModal) {
-        searchModal.classList.add('hidden');
-        searchModal.classList.remove('flex');
+        searchModal.style.display = 'none';
         document.body.style.overflow = '';
       }
     }
@@ -201,14 +199,14 @@
 
     // ESC key to close
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && searchModal && !searchModal.classList.contains('hidden')) {
+      if (e.key === 'Escape' && searchModal && searchModal.style.display !== 'none') {
         closeSearchModal();
       }
 
       // Ctrl+K or Cmd+K to open search (common shortcut)
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
-        if (searchModal?.classList.contains('hidden')) {
+        if (searchModal?.style.display === 'none' || !searchModal?.style.display) {
           openSearch();
         } else {
           closeSearchModal();
