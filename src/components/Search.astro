@@ -16,8 +16,8 @@
 </div>
 
 <!-- Search Modal -->
-<div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
-  <div class="bg-soho-white rounded-2xl max-w-3xl w-full mx-auto shadow-2xl relative" id="search-modal-content">
+<div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4" style="backdrop-filter: blur(4px);">
+  <div class="bg-white rounded-2xl max-w-3xl w-full mx-auto shadow-2xl relative max-h-[80vh] overflow-hidden" id="search-modal-content">
     <!-- Close Button -->
     <button
       id="close-search"
@@ -30,7 +30,7 @@
     </button>
 
     <!-- Search Content -->
-    <div class="p-6">
+    <div class="p-6 overflow-y-auto" style="max-height: calc(80vh - 48px);">
       <div id="pagefind-search"></div>
     </div>
   </div>
@@ -85,25 +85,28 @@
 
         // Lazy load Pagefind UI when search is opened
         if (!pagefindUI) {
-          // Construct path dynamically to avoid Vite resolving it during dev
-          const pagefindPath = '/pagefind' + '/pagefind-ui.js';
-          import(/* @vite-ignore */ pagefindPath).then(module => {
-            const PagefindUI = module.default;
-            pagefindUI = new PagefindUI({
-              element: "#pagefind-search",
-              showSubResults: true,
-              showImages: false,
-              excerptLength: 15,
-              resetStyles: false
-            });
+          // Try to load Pagefind dynamically
+          const script = document.createElement('script');
+          script.src = '/pagefind/pagefind-ui.js';
+          script.onload = () => {
+            if (window.PagefindUI) {
+              pagefindUI = new window.PagefindUI({
+                element: "#pagefind-search",
+                showSubResults: true,
+                showImages: false,
+                excerptLength: 15,
+                resetStyles: false
+              });
 
-            // Focus the search input
-            setTimeout(() => {
-              const input = document.querySelector('.pagefind-ui__search-input');
-              input?.focus();
-            }, 100);
-          }).catch(error => {
-            // Pagefind not built yet (dev mode)
+              // Focus the search input
+              setTimeout(() => {
+                const input = document.querySelector('.pagefind-ui__search-input');
+                input?.focus();
+              }, 100);
+            }
+          };
+          script.onerror = () => {
+            // Pagefind not available (dev mode)
             const searchContainer = document.querySelector('#pagefind-search');
             if (searchContainer) {
               searchContainer.innerHTML = `
@@ -111,13 +114,20 @@
                   <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                   </svg>
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">Search Not Available in Dev Mode</h3>
-                  <p class="text-gray-600 mb-4">The search index is created when you build the site.</p>
-                  <p class="text-sm text-gray-500">Run <code class="bg-gray-100 px-2 py-1 rounded">npm run build</code> to enable search functionality.</p>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Search Not Available</h3>
+                  <p class="text-gray-600 mb-4">The search index is being loaded.</p>
+                  <p class="text-sm text-gray-500">Please try again in a moment.</p>
                 </div>
               `;
             }
-          });
+          };
+          document.head.appendChild(script);
+
+          // Also add CSS
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = '/pagefind/pagefind-ui.css';
+          document.head.appendChild(link);
         } else {
           // Focus the search input if UI already exists
           const input = document.querySelector('.pagefind-ui__search-input');
