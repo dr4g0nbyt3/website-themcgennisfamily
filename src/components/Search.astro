@@ -16,21 +16,29 @@
 </div>
 
 <!-- Search Modal -->
-<div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4" style="backdrop-filter: blur(4px);">
-  <div class="bg-white rounded-2xl max-w-3xl w-full mx-auto shadow-2xl relative max-h-[80vh] overflow-hidden" id="search-modal-content">
-    <!-- Close Button -->
-    <button
-      id="close-search"
-      class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
-      aria-label="Close search"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
-    </button>
+<div id="search-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-4xl w-full mx-auto shadow-2xl relative max-h-[85vh] overflow-hidden border-2 border-gray-200" id="search-modal-content">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-mcgennis-maroon to-mcgennis-navy px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <h2 class="text-xl font-bold text-white">Search Our Site</h2>
+      </div>
+      <button
+        id="close-search"
+        class="text-white hover:text-mcgennis-gold transition-colors"
+        aria-label="Close search"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
 
     <!-- Search Content -->
-    <div class="p-6 overflow-y-auto" style="max-height: calc(80vh - 48px);">
+    <div class="p-6 overflow-y-auto bg-soho-white" style="max-height: calc(85vh - 64px);">
       <div id="pagefind-search"></div>
     </div>
   </div>
@@ -39,31 +47,55 @@
 <style is:global>
   /* Pagefind custom styling to match brand */
   .pagefind-ui__search-input {
-    @apply w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-mcgennis-maroon focus:ring-2 focus:ring-mcgennis-maroon focus:ring-opacity-20 transition-all outline-none text-lg;
+    @apply w-full px-5 py-4 rounded-xl border-2 border-gray-300 focus:border-mcgennis-maroon focus:ring-2 focus:ring-mcgennis-maroon focus:ring-opacity-20 transition-all outline-none text-lg bg-white shadow-sm;
+  }
+
+  .pagefind-ui__search-clear {
+    @apply text-gray-400 hover:text-mcgennis-maroon transition-colors;
+  }
+
+  .pagefind-ui__results {
+    @apply mt-6 space-y-1;
   }
 
   .pagefind-ui__result {
-    @apply border-b border-gray-200 py-4;
+    @apply border border-gray-200 rounded-xl p-5 mb-3 bg-white hover:border-mcgennis-maroon hover:shadow-md transition-all duration-300;
   }
 
   .pagefind-ui__result-title {
-    @apply text-xl font-bold text-gray-900 hover:text-mcgennis-maroon transition-colors;
+    @apply text-xl font-bold text-gray-900 hover:text-mcgennis-maroon transition-colors mb-2;
   }
 
   .pagefind-ui__result-excerpt {
-    @apply text-gray-600 mt-2 leading-relaxed;
+    @apply text-gray-600 mt-2 leading-relaxed text-base;
   }
 
   .pagefind-ui__result-link {
-    @apply no-underline;
+    @apply no-underline block;
+  }
+
+  .pagefind-ui__result-excerpt mark {
+    @apply bg-mcgennis-gold bg-opacity-20 text-mcgennis-maroon font-medium px-1 rounded;
   }
 
   .pagefind-ui__message {
-    @apply text-gray-600 py-4;
+    @apply text-gray-600 py-6 text-center text-lg;
   }
 
   .pagefind-ui__button {
-    @apply px-4 py-2 bg-mcgennis-maroon hover:bg-mcgennis-gold text-white rounded-lg transition-all duration-300 font-medium;
+    @apply px-6 py-3 bg-mcgennis-maroon hover:bg-mcgennis-navy text-white rounded-xl transition-all duration-300 font-medium shadow-sm hover:shadow-md;
+  }
+
+  .pagefind-ui__result-nested {
+    @apply mt-3 pl-4 border-l-2 border-gray-200;
+  }
+
+  .pagefind-ui__result-tags {
+    @apply flex gap-2 mt-3 flex-wrap;
+  }
+
+  .pagefind-ui__result-tag {
+    @apply text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full;
   }
 </style>
 
