@@ -88,6 +88,7 @@ const currentPath = Astro.url.pathname;
             </div>
 
             <a href="/media-kit" class={`text-sm font-medium tracking-wide hover:text-mcgennis-gold transition-colors pb-1 ${currentPath.startsWith('/media-kit') ? 'text-mcgennis-gold border-b border-mcgennis-gold' : 'text-gray-600'}`}>Media Kit</a>
+            <a href="/socials" class={`text-sm font-medium tracking-wide hover:text-mcgennis-gold transition-colors pb-1 ${currentPath.startsWith('/socials') ? 'text-mcgennis-gold border-b border-mcgennis-gold' : 'text-gray-600'}`}>Socials</a>
             <a href="/contact" class={`text-sm font-medium tracking-wide hover:text-mcgennis-gold transition-colors pb-1 ${currentPath.startsWith('/contact') ? 'text-mcgennis-gold border-b border-mcgennis-gold' : 'text-gray-600'}`}>Contact</a>
             <Search />
           </div>
@@ -131,6 +132,7 @@ const currentPath = Astro.url.pathname;
           </div>
 
           <a href="/media-kit" class={`block py-2 hover:text-mcgennis-gold transition ${currentPath.startsWith('/media-kit') ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>Media Kit</a>
+          <a href="/socials" class={`block py-2 hover:text-mcgennis-gold transition ${currentPath.startsWith('/socials') ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>Socials</a>
           <a href="/contact" class={`block py-2 hover:text-mcgennis-gold transition ${currentPath.startsWith('/contact') ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>Contact</a>
         </div>
       </div>
