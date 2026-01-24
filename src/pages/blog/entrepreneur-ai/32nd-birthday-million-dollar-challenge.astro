@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsletterSignup from '../../../components/NewsletterSignup.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="My 32nd Birthday Challenge: Making $1 Million in 24 Hours - Caleb McGennis"
+  description="On May 14th, I'm turning 32 and attempting something crazy: gathering my friends to make $1 million in 24 hours. Here's what we're planning."
+  type="article"
+  publishedTime="2026-01-24"
+  author="Caleb Michael McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        My 32nd Birthday Challenge: Making $1 Million in 24 Hours
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb Michael McGennis</span>
+          <span>•</span>
+          <time datetime="2026-01-24">January 24, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/entrepreneur-ai/32nd-birthday-million-dollar-challenge" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/entrepreneur-ai/32nd-birthday-million-dollar-challenge&text=32nd%20Birthday%20Challenge%3A%20Making%20%241%20Million%20in%2024%20Hours" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        May 14, 2026. I turn 32. And I'm doing something that sounds absolutely insane.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Challenge</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I'm gathering my friends for a birthday party. But this isn't your typical cake-and-gifts situation.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The goal: Make $1 million in 24 hours.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Yeah. I know how that sounds.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">The Mission</h3>
+        <p class="mb-4 text-lg">
+          Starting midnight on May 14th, we have 24 hours to generate $1 million in revenue through sales, new clients, deals—whatever it takes.
+        </p>
+        <p class="text-sm opacity-90">
+          Not fundraising. Not loans. Not moving money around. Actual value creation. Real business.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Why 32?</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Look, birthdays are weird after 30. You stop caring about the party itself and start thinking about what you've actually built. What you're building. Where you're going.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I've been an entrepreneur in Jefferson City for years now. Multiple businesses. Wins and losses. Late nights and early mornings. I've learned what works and what doesn't.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But here's the thing: I've never pushed myself—or my network—like this before. I've never created a forcing function this intense. A deadline this tight. Stakes this high.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        32 feels like the right time to find out what we're actually capable of when we go all in.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Why Behind It</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This isn't about proving anything to anyone. It's not about flexing on social media or getting attention.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It's about seeing what's possible when you remove excuses. When you set an audacious goal and give yourself no room to back down. When you bring together a group of people who actually know how to execute.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Most people talk about what they're going to do "someday." Most entrepreneurs have ideas they'll get to "eventually." Most businesses have strategies they'll implement "when the timing is right."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        What happens when you compress all of that into 24 hours?
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What We're Actually Doing</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I'm still figuring out the details. But here's what I know:
+      </p>
+
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <ul class="space-y-4 text-gray-600">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-navy mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">Real revenue.</strong> No gimmicks. Actual sales, actual clients, actual business.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-navy mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">24-hour window.</strong> Midnight to midnight. Clock's ticking the whole time.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-navy mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">Team effort.</strong> This isn't a solo mission. I'm bringing in the people who know how to move fast and close deals.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-mcgennis-navy mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span><strong class="text-gray-900">Full transparency.</strong> I'll document the whole thing. What worked. What didn't. How we did it—or how we failed.</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Could We Actually Hit $1 Million?</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Honest answer? I don't know.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        $1 million in 24 hours is an absurd goal. It's supposed to be. That's the point.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But here's what I do know: I've closed big deals before. I know people who can move fast. I understand how to create urgency and deliver value. And I'm willing to work harder in one day than most people work in a month.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Will we hit exactly $1 million? Maybe not. But I guarantee we'll do something significant. We'll learn what's possible when you stop making excuses and start executing.
+      </p>
+
+      <div class="bg-mcgennis-gold bg-opacity-10 border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">The Real Goal</p>
+        <p class="text-gray-600">
+          It's not actually about hitting $1 million. It's about discovering what happens when you set an impossible deadline and refuse to back down. It's about finding out what you and your team are really capable of when everything is on the line.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What Happens Next</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Between now and May 14th, I'm planning. Strategizing. Reaching out. Building the team. Figuring out what we're selling, who we're selling to, and how we're going to move that fast.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        After May 14th? I'll write the follow-up. The real story. What actually happened when we tried to make $1 million in one day.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The wins. The losses. The chaos. The lessons. All of it.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6 text-xl font-medium text-gray-900">
+        Stay tuned. This is going to be interesting.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">Want Updates?</h3>
+        <p class="mb-6">
+          I'll be documenting this entire challenge—the prep, the execution, the results. Follow along to see how it all unfolds.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://www.facebook.com/calebmichaelmcgennis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-mcgennis-gold hover:bg-opacity-90 text-gray-900 font-medium rounded-xl transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Follow on Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-soho-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from An Entrepreneur in a World of AI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/entrepreneur-ai/im-your-guy" class="group bg-soho-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            I'm Your Guy: The Divine Appointment That Changed Everything
+          </h3>
+          <p class="text-gray-500 text-sm">How a casual conversation led to my role with Sports Crusaders</p>
+        </a>
+        <a href="/blog/entrepreneur-ai/church-and-business-overlap" class="group bg-soho-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-navy">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-navy transition-colors tracking-tight">
+            Where Church and Business Overlap (and Where They Don't)
+          </h3>
+          <p class="text-gray-500 text-sm">An entrepreneur and ministry leader's perspective on faith and business</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-soho-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>
