@@ -1,5 +1,6 @@
 ---
 import SEO from '../components/SEO.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import NewsletterPopup from '../components/NewsletterPopup.astro';
 import Search from '../components/Search.astro';
@@ -11,9 +12,11 @@ export interface Props {
   type?: 'website' | 'article' | 'profile';
   publishedTime?: string;
   author?: string;
+  breadcrumbs?: { name: string; url: string }[];
+  showBreadcrumbs?: boolean;
 }
 
-const { title, description, image, type, publishedTime, author} = Astro.props;
+const { title, description, image, type, publishedTime, author, breadcrumbs, showBreadcrumbs = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -29,6 +32,7 @@ const currentPath = Astro.url.pathname;
       type={type}
       publishedTime={publishedTime}
       author={author}
+      breadcrumbs={breadcrumbs}
     />
     <slot name="head" />
     <!-- Google tag (gtag.js) -->
@@ -132,6 +136,11 @@ const currentPath = Astro.url.pathname;
       </div>
     </nav>
 
+    <!-- Breadcrumbs -->
+    {showBreadcrumbs && breadcrumbs && (
+      <Breadcrumbs items={breadcrumbs.map(b => ({ label: b.name, href: b.url }))} />
+    )}
+
     <!-- Main Content -->
     <main data-pagefind-body>
       <slot />
@@ -175,9 +184,6 @@ const currentPath = Astro.url.pathname;
               <li>The Honey Homestead</li>
               <li><a href="https://bearded.digital" target="_blank" rel="noopener noreferrer" class="hover:text-mcgennis-gold transition">Bearded Digital</a></li>
               <li><a href="https://www.whatstheprocessfor.com/" target="_blank" rel="noopener noreferrer" class="hover:text-mcgennis-gold transition">What's the Process for</a></li>
-              <li>Toxic Tournaments</li>
-              <li>Nostalgia Nuke</li>
-              <li>LoHP</li>
             </ul>
           </div>
 
@@ -185,6 +191,12 @@ const currentPath = Astro.url.pathname;
           <div>
             <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
             <div class="space-y-3">
+              <a href="mailto:themcgennisfamily@gmail.com" class="flex items-center gap-2 text-gray-400 hover:text-mcgennis-gold transition" aria-label="Email The McGennis Family">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span class="text-sm">themcgennisfamily@gmail.com</span>
+              </a>
               <a href="https://www.facebook.com/calebmichaelmcgennis" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-400 hover:text-mcgennis-gold transition" aria-label="Caleb's Facebook">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
