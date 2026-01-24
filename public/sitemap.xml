@@ -4,71 +4,78 @@
   <!-- Main Pages (Highest Priority) -->
   <url>
     <loc>https://www.themcgennisfamily.com/</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/about</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/family</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/businesses</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/contact</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/socials</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Family Member Pages -->
   <url>
     <loc>https://www.themcgennisfamily.com/family/caleb</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/family/stephanie</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/family/leonardo</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/family/raphael</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -76,14 +83,21 @@
   <!-- Blog Category Pages -->
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/from-scratch-fridays</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -91,28 +105,28 @@
   <!-- Stephanie's Blog Posts (A Latte to Do Mama) -->
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama/a-latte-to-do</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama/mops-morning</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama/fall-allergies-and-prayer</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama/lists-goals-changed-plans</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -120,28 +134,28 @@
   <!-- Caleb's Blog Posts (An Entrepreneur in a World of AI) -->
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/theres-no-place-like-home</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/the-mountain-mover</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/im-your-guy</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/peaks-and-valleys</loc>
-    <lastmod>2024-12-11</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -149,98 +163,127 @@
   <!-- Additional Caleb's Blog Posts (An Entrepreneur in a World of AI) -->
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/when-to-close-failing-business</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/leveraging-relationships-business-growth</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/ai-hallucinations-explained</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/church-and-business-overlap</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/best-churches-jefferson-city-missouri</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/best-website-services-jefferson-city</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/thriving-businesses-jefferson-city-2025</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/theres-no-place-like-home</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/the-ai-renaissance</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/the-magic-words-ai-prompting</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/im-your-guy</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/the-mountain-mover</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/fastest-growing-businesses-jefferson-city-2025</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/choosing-brand-color-palette</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/32nd-birthday-million-dollar-challenge</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/entrepreneur-ai/the-million-dollar-plan</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- From Scratch Fridays Blog Posts -->
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/from-scratch-fridays/first-friday-eggs-ramen-lemonade</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.themcgennisfamily.com/blog/from-scratch-fridays/second-friday-cookies-dip-lemonade</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -248,14 +291,14 @@
   <!-- Additional Stephanie's Blog Posts (A Latte to Do Mama) -->
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama/coffee-shop-prayers</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama/recipes/pot-roast</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -263,28 +306,28 @@
   <!-- Family Heritage Blog Posts -->
   <url>
     <loc>https://www.themcgennisfamily.com/blog/family-heritage</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/family-heritage/mcgennis-heritage-1150</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/family-heritage/mcgennis-travel-guide</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/family-heritage/mcgennis-artifacts</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -292,21 +335,21 @@
   <!-- Additional Pages -->
   <url>
     <loc>https://www.themcgennisfamily.com/start-here</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/media-kit</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.themcgennisfamily.com/blog/alattetodomama/recipes</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
