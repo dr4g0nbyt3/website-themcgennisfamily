@@ -38,21 +38,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <!-- Photo Gallery -->
-  <section class="py-16 px-4 bg-soho-white">
-    <div class="container mx-auto max-w-4xl">
-      <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 tracking-tight">Growing Up</h2>
-      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300">
-          <img
-            src="/images/raphael-mcgennis-bath-time.webp"
-            alt="Raphael Corwyn McGennis enjoying bath time"
-            class="w-full h-auto"
-            loading="lazy"
-          />
-          <div class="p-4 bg-soho-white">
-            <p class="text-sm text-gray-600 font-light">Baby Raphael enjoying bath time</p>
-          </div>
+  <section class="py-24 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight text-center">Raphael's Gallery</h2>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mx-auto mb-12"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Photo 1 -->
+        <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <img src="/images/boys/raphael smiling.webp" alt="Raphael smiling" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <img src="/images/boys/raphael looking like who you talking to.webp" alt="Raphael with attitude" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <img src="/images/boys/raphael smoldering.webp" alt="Raphael looking cool" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Photo 4 - Bath Time -->
+        <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <img src="/images/raphael-mcgennis-bath-time.webp" alt="Raphael enjoying bath time" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Photo 5 - Brothers -->
+        <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 md:col-span-2">
+          <img src="/images/boys/leo looking at raphael while raph makes a poop face.webp" alt="Leo and Raphael being silly together" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>

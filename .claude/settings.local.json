@@ -1,13 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(for file in public/images/*.jpg public/images/*.jpeg public/images/*.png)",
-      "Bash(do:*)",
-      "Bash(echo:*)",
-      "Bash(cwebp:*)",
-      "Bash(done)",
-      "Bash(for file in public/images/blog/*.jpg public/images/blog/*.jpeg public/images/blog/*.png)",
-      "Bash(du:*)"
+      "Bash(for:*)"
     ],
     "deny": [],
     "ask": []
