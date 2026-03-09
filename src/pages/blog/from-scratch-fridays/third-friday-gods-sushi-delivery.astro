@@ -1,0 +1,397 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="From Scratch Friday Week 3: God's Sushi Delivery - Pho, Fresh Tuna Rolls & Boba Tea - The McGennis Family"
+  description="The McGennis family visits Hong Kong Market in Columbia, MO for pho and sushi ingredients - then gets a phone call that changes everything. Fresh-caught tuna, beef brisket pho, tempura rolls, and homemade boba tea."
+  type="article"
+  publishedTime="2026-02-08"
+  author="The McGennis Family"
+  image="/images/beef-brisket-pho-bowl.webp"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center text-mcgennis-forest hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        From Scratch Friday Week 3: God's Sushi Delivery - Pho, Fresh Tuna Rolls & Boba Tea
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By The McGennis Family</span>
+          <span>&bull;</span>
+          <time datetime="2026-02-08">February 8, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/from-scratch-fridays/third-friday-gods-sushi-delivery" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/from-scratch-fridays/third-friday-gods-sushi-delivery&text=From%20Scratch%20Friday%20Week%203%3A%20God%27s%20Sushi%20Delivery" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        This is the one. The From Scratch Friday that made us stop and say, "Okay, God is paying attention." We're talking beef brisket pho from scratch, fresh-caught tuna tempura rolls, homemade boba tea, and a trip to Hong Kong Market in Columbia, Missouri that turned into one of the best cooking days we've ever had. Here's how it all went down.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/beef-brisket-pho-bowl.webp" alt="Homemade beef brisket pho with rice noodles, bean sprouts, carrot ribbons, lime, and chopsticks" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Beef brisket pho from scratch - rice noodles, sliced brisket, bean sprouts, carrot ribbons, and a fresh lime wedge</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Trip to Hong Kong Market</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It started the way most of our best days start: with a plan and a car full of kids. Stephanie, Leo, Rapphy, Reiko, and I loaded up and drove to Columbia, Missouri to hit Hong Kong Market. If you've never been, it's one of those places where you can find everything you need for real Asian cooking&mdash;the kind of ingredients you won't find at your average grocery store. We were there picking up supplies for pho, sushi, boba tea, the works.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Leo was in his element, pointing at everything and asking what it was. Rapphy was along for the ride. Reiko was keeping everyone organized. And Stephanie and I were loading the cart with rice noodles, brisket, fresh herbs, nori sheets, tempura mix, tapioca pearls&mdash;basically everything we needed to turn our kitchen into an Asian restaurant for the night. And the best part? All of it came in under $200.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/hong-kong-market-haul-sauces.webp" alt="Hong Kong Market haul - soy sauce, tapioca pearls, nori sheets, green onions, and sauces" class="w-full h-48 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Sauces, nori, tapioca pearls, and fresh herbs</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/hong-kong-market-haul-ingredients.webp" alt="Hong Kong Market haul - panko, sushi mat, chili oil, sesame oil, and spices" class="w-full h-48 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Panko, sushi mat, chili oil, and more</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/hong-kong-market-haul-noodles.webp" alt="Hong Kong Market haul - tempura mix, bean sprouts, rice noodles, and rice flour" class="w-full h-48 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Tempura mix, bean sprouts, and rice noodles</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Phone Call That Changed Everything</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        So we're walking through the aisles at Hong Kong Market, cart full of sushi supplies, and my phone rings. It's my mom.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        She tells me that my step-dad&mdash;who's a pilot&mdash;had just flown some fishermen down to New Orleans to catch tuna. Well, they caught it. A lot of it. And on the flight back, the fishermen gave some of the fresh tuna to my step-dad as a thank-you.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Her question: "Do you guys want any?"
+      </p>
+
+      <div class="bg-mcgennis-gold bg-opacity-10 border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">Let that sink in for a second.</p>
+        <p class="text-gray-600">
+          We're literally standing in an Asian market, buying ingredients to make sushi, and we get a phone call offering us <em>fresh-caught tuna straight from New Orleans</em>. You can't make this stuff up. Would you like fresh tuna for your sushi? Yes. Yes please. A thousand times yes.
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Talk about a God moment. We were already planning to make sushi with whatever we could find at the store, and then out of nowhere, restaurant-quality, fresh-off-the-boat tuna just lands in our lap. The timing was unreal.
+      </p>
+
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Beef Brisket Pho</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Let's start with the pho, because this was a labor of love. Real pho takes time. You're building layers of flavor in that broth, and there's no shortcut that does it justice.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It starts with toasting the spices&mdash;star anise, cinnamon, cloves, coriander&mdash;until they're fragrant and smoking. Then you char the onions and ginger to get that deep, smoky sweetness that makes pho broth taste like pho broth.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/pho-toasting-spices.webp" alt="Toasting pho spices - star anise, cinnamon, cloves, and coriander in a pot" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Toasting the pho spices until fragrant</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/pho-charring-onions-ginger.webp" alt="Charred onions and ginger for pho broth" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Charring onions and ginger for the broth</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The brisket simmers low and slow in the broth until it's tender enough to slice thin. When it's done right, it practically falls apart.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/pho-cooked-brisket.webp" alt="Slow-cooked beef brisket sliced and resting in broth" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Brisket cooked low and slow, sliced and ready for the bowls</p>
+        </div>
+      </div>
+
+      <!-- TODO: Pho recipe box - will be filled in when user provides recipe -->
+      <!--
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">Beef Brisket Pho Recipe</h3>
+        <h4 class="text-lg font-bold text-gray-900 mb-3">Ingredients:</h4>
+        <ul class="space-y-2 text-gray-600 mb-6">
+          <li>TODO: Ingredients list</li>
+        </ul>
+        <h4 class="text-lg font-bold text-gray-900 mb-3">Steps:</h4>
+        <ol class="space-y-3 text-gray-600">
+          <li>TODO: Step-by-step instructions</li>
+        </ol>
+      </div>
+      -->
+
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Fresh Caught Tuna Tempura Rolls</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is where the night went from great to legendary. We're not just making sushi&mdash;we're making sushi with tuna that was swimming in the Gulf of Mexico that same day. Fresh-caught, flown in by a pilot who happens to be family. You can't buy that experience at a restaurant.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        First step: the sushi rice. You cook it, then season it with rice vinegar while it's still warm so it absorbs all that flavor. Get this wrong and the whole roll suffers, so we took our time.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/seasoning-sushi-rice.webp" alt="Seasoning sushi rice with rice vinegar" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Seasoning the sushi rice with rice vinegar while it's still warm</p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        While the rice cooled, we prepped the tuna. Strips of fresh-caught tuna went into tempura batter, then straight into grape seed oil for frying. Grape seed oil has a high smoke point and a clean flavor&mdash;perfect for tempura.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/tuna-in-tempura-batter.webp" alt="Fresh caught tuna strips in tempura batter" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Fresh-caught tuna strips coated in tempura batter</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/tuna-tempura-frying.webp" alt="Tuna tempura frying in grape seed oil" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Frying the tuna tempura in grape seed oil until golden</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Then it was time to roll. Nori on the bamboo mat, rice spread thin, tempura tuna and carrot in the center, roll it tight, slice it clean.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/nori-on-bamboo-mat.webp" alt="Nori sheet on bamboo rolling mat ready for sushi" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Nori sheet on the bamboo mat, ready to roll</p>
+        </div>
+      </div>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/fresh-tuna-tempura-rolls-plated.webp" alt="Fresh caught tuna tempura rolls arranged on a plate with spicy mayo dipping sauce and chopsticks" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">The finished product: fresh-caught tuna tempura rolls with spicy mayo</p>
+        </div>
+      </div>
+
+      <!-- TODO: Tuna tempura roll recipe box -->
+      <!--
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">Fresh Tuna Tempura Roll Recipe</h3>
+        <h4 class="text-lg font-bold text-gray-900 mb-3">Ingredients:</h4>
+        <ul class="space-y-2 text-gray-600 mb-6">
+          <li>TODO: Ingredients list</li>
+        </ul>
+        <h4 class="text-lg font-bold text-gray-900 mb-3">Steps:</h4>
+        <ol class="space-y-3 text-gray-600">
+          <li>TODO: Step-by-step instructions</li>
+        </ol>
+      </div>
+      -->
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Homemade Boba Tea</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        You can't do an Asian food night without boba. We picked up tapioca pearls at Hong Kong Market and made boba tea from scratch to round out the whole experience.
+      </p>
+
+      <!-- TODO: Boba tea recipe box - will be filled in when user provides recipe -->
+      <!--
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">Homemade Boba Tea Recipe</h3>
+        <h4 class="text-lg font-bold text-gray-900 mb-3">Ingredients:</h4>
+        <ul class="space-y-2 text-gray-600 mb-6">
+          <li>TODO: Ingredients list</li>
+        </ul>
+        <h4 class="text-lg font-bold text-gray-900 mb-3">Steps:</h4>
+        <ol class="space-y-3 text-gray-600">
+          <li>TODO: Step-by-step instructions</li>
+        </ol>
+      </div>
+      -->
+
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What We Learned This Week</h2>
+
+      <ul class="space-y-3 text-gray-600 mb-6">
+        <li><strong class="text-gray-900">God's timing is wild.</strong> We were literally shopping for sushi ingredients when fresh-caught tuna fell into our hands. You can plan all you want, but sometimes the best parts of the plan are the ones you didn't make.</li>
+        <li><strong class="text-gray-900">Hong Kong Market is the real deal.</strong> If you're anywhere near Columbia, Missouri and you're cooking Asian food, this is the spot. The selection is incredible and the prices are solid.</li>
+        <li><strong class="text-gray-900">Fresh tuna changes the game.</strong> There's a difference between store-bought and fresh-caught, and once you've had it, you know.</li>
+        <li><strong class="text-gray-900">This is what From Scratch Fridays are about.</strong> Family. Good food. Stories you'll tell for years. This one's going to be hard to top.</li>
+      </ul>
+
+      <div class="bg-mcgennis-forest text-white rounded-xl p-8 my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">This Might Be Our Best One Yet</h3>
+        <p class="mb-4">
+          Beef brisket pho, fresh-caught tuna tempura rolls, and homemade boba tea&mdash;all in one night. From Scratch Fridays keep getting better, and honestly, we don't know how we're going to top this one.
+        </p>
+        <p class="text-sm opacity-90">
+          Have you ever had a moment where everything just lined up perfectly? We'd love to hear about it. Drop a comment below!
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts Section -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">
+        More From Scratch Fridays
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Second Friday -->
+        <a href="/blog/from-scratch-fridays/second-friday-cookies-dip-lemonade" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-forest bg-opacity-10 text-mcgennis-forest text-xs font-semibold rounded-full">
+                From Scratch Fridays
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-forest transition-colors mb-3">
+              Week 2: Cookies, Spinach Artichoke Dip & Blueberry Lemonade
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              Homemade cookies, creamy spinach and artichoke dip with toasted baguette, and fresh blueberry lemonade.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">January 23, 2026</span>
+              <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- First Friday -->
+        <a href="/blog/from-scratch-fridays/first-friday-eggs-ramen-lemonade" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-forest bg-opacity-10 text-mcgennis-forest text-xs font-semibold rounded-full">
+                From Scratch Fridays
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-forest transition-colors mb-3">
+              Week 1: Perfect Eggs, Ramen & Homemade Lemonade
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              Our inaugural From Scratch Friday with Dan-O's 10-5-10 eggs, ramen, and fresh-squeezed lemonade.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">January 16, 2026</span>
+              <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to From Scratch Fridays -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-forest hover:text-mcgennis-forest transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "From Scratch Friday Week 3: God's Sushi Delivery - Pho, Fresh Tuna Rolls & Boba Tea",
+  "description": "The McGennis family visits Hong Kong Market in Columbia, MO for pho and sushi ingredients - then gets a phone call that changes everything. Fresh-caught tuna, beef brisket pho, tempura rolls, and homemade boba tea.",
+  "image": "https://themcgennisfamily.com/images/beef-brisket-pho-bowl.webp",
+  "datePublished": "2026-02-08",
+  "dateModified": "2026-02-08",
+  "author": {
+    "@type": "Person",
+    "name": "The McGennis Family"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The McGennis Family",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themcgennisfamily.com/images/mcgennis-family-logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://themcgennisfamily.com/blog/from-scratch-fridays/third-friday-gods-sushi-delivery"
+  }
+}
+</script>

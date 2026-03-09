@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="3 Ways I Actually Save Money - Caleb McGennis"
+  description="Real money-saving strategies that work for our family: cashback apps like Upside, using credit card rewards for Christmas gifts, and the $5 gift that means more than anything you'll find at the mall."
+  type="article"
+  publishedTime="2026-02-11"
+  author="Caleb McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        3 Ways I Actually Save Money
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb McGennis</span>
+          <span>&bull;</span>
+          <time datetime="2026-02-11">February 11, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/entrepreneur-ai/ways-i-save-money" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/entrepreneur-ai/ways-i-save-money&text=Ways%20I%20Actually%20Save%20Money" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        I'm not a financial advisor. I'm a dad with a family of five, a mortgage, and a deep hatred of paying full price for anything. These aren't theoretical strategies from a finance blog&mdash;these are things I actually do, every day, to keep more money in our pockets. None of them are complicated. All of them work.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Upside: Free Money Every Time You Get Gas</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This one is almost too easy. <a href="https://upside.app.link/MW4YT" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Upside</a> is a cashback app that gives you money back on gas, groceries, and dining out. Not coupons. Not points. Actual cash back that you can withdraw to your bank account.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's how it works: you open the app, claim an offer at a nearby gas station, grocery store, or restaurant, then pay like you normally would with any card. That's it. You earn up to 25&cent;/gallon back on gas, up to 45% back at restaurants, and up to 30% back on groceries. The app has over 100,000 participating locations, so chances are the places you already go are on there.
+      </p>
+
+      <div class="bg-soho-white border border-gray-200 rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 tracking-tight">How Upside Works</h3>
+        <ol class="space-y-3 text-gray-600">
+          <li><strong class="text-gray-900">Open the app</strong> when you need gas, groceries, or food</li>
+          <li><strong class="text-gray-900">Claim the offer</strong> before you make your purchase</li>
+          <li><strong class="text-gray-900">Pay like normal</strong> with any credit or debit card</li>
+          <li><strong class="text-gray-900">Cash back hits your account</strong> after verification&mdash;withdraw anytime to your bank or grab a gift card</li>
+        </ol>
+        <p class="text-sm text-gray-500 mt-4 italic">
+          Frequent users earn an average of $290 per year just by adding Upside to their normal routine.
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The key is you have to claim the offer <em>before</em> you make the purchase&mdash;you can't do it after the fact. And you've got a four-hour window to use it once claimed. But honestly, it takes about 10 seconds. I open it every time I pull into a gas station. It's become muscle memory at this point.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <a href="https://upside.app.link/MW4YT" target="_blank" rel="noopener noreferrer">
+          <img src="/images/upside-app-logo.webp" alt="Upside cashback app logo" class="w-full" />
+        </a>
+      </div>
+
+      <div class="bg-mcgennis-navy text-white rounded-xl p-8 my-8">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">Want to Try Upside?</h3>
+        <p class="mb-4">
+          Use my referral code <strong>MW4YT</strong> or <a href="https://upside.app.link/MW4YT" target="_blank" rel="noopener noreferrer" class="text-mcgennis-gold hover:text-white transition-colors underline">click here to join</a>. We both get bonus cash back when you sign up and use it&mdash;so we're both winning.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Credit Card Cashback = Christmas Budget</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is one of my favorite moves because it's invisible. You don't feel it at all during the year, but it shows up big when December rolls around.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        We use a cashback credit card for our regular spending&mdash;groceries, gas, bills, subscriptions, everything we'd be buying anyway. Throughout the year, that cashback quietly accumulates. We don't touch it. We don't think about it. We just let it build.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Then when it's time to buy Christmas presents for family and friends, we use the cashback as our gift budget. No extra money out of pocket. No stress about holiday spending blowing up our finances. The gifts are essentially paid for by the cashback we earned all year just living our normal lives.
+      </p>
+
+      <div class="bg-mcgennis-gold bg-opacity-10 border-l-4 border-mcgennis-gold p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">The beauty of this system:</p>
+        <p class="text-gray-600">
+          You're not spending extra money to earn rewards. You're spending money you were already going to spend, and the rewards become a gift budget that didn't exist before. Christmas shopping goes from stressful to stress-free.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Comic Books: The $5 Gift That Means Everything</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This one's for my friends and family who are nerds&mdash;and I say that with love, because I'm one of them. When someone's birthday comes around, I don't stress about finding the perfect $50 gift. I get them a comic book of their favorite character.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        A comic book costs $1 to $5. That's it. But here's why it works: it shows you actually know the person. You know they're into Spider-Man, or Batman, or whatever their thing is. You took the time to pick something specific to them. That $3 comic book says "I know you and I thought about you" way more than a $40 gift card to Target ever could.
+      </p>
+
+      <div class="grid grid-cols-3 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/comic-book-moon-knight.webp" alt="What If Dark Moon Knight #1 comic book" class="w-full" />
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/comic-book-venom.webp" alt="What If Venom #2 comic book" class="w-full" />
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/comic-book-tmnt.webp" alt="Teenage Mutant Ninja Turtles #150 comic book" class="w-full" />
+        </div>
+      </div>
+      <p class="text-sm text-gray-500 text-center -mt-4 mb-6 italic">Moon Knight, Venom, and TMNT #150 &mdash; all under $5 each</p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And people love them. Every single time, the reaction is genuine surprise and excitement. Not the polite "oh thanks" you get with a generic gift, but the "wait, you got me this?!" kind of reaction. The best gifts aren't the most expensive ones&mdash;they're the most thoughtful ones.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Point</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        None of these are get-rich-quick schemes. They're small, consistent habits that add up over time. Saving a few cents per gallon on gas. Letting cashback pile up quietly. Choosing thoughtful gifts over expensive ones. Individually, they're nothing. Together, they change how you think about money.
+      </p>
+
+      <ul class="space-y-3 text-gray-600 mb-6">
+        <li><strong class="text-gray-900">Upside</strong> turns every gas station and grocery run into cashback. Free money for doing what you already do.</li>
+        <li><strong class="text-gray-900">Credit card cashback</strong> makes Christmas presents feel free. No budget panic in December.</li>
+        <li><strong class="text-gray-900">Comic books</strong> prove that the best gifts cost less than a coffee. It's about knowing someone, not spending on them.</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Saving money isn't about deprivation. It's about being intentional. These are the strategies that work for us, and I hope they give you some ideas for your own family.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white rounded-xl p-8 my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">Start Saving Today</h3>
+        <p class="mb-4">
+          If you want to start with Upside, use my referral code <strong>MW4YT</strong> or <a href="https://upside.app.link/MW4YT" target="_blank" rel="noopener noreferrer" class="text-mcgennis-gold hover:text-white transition-colors underline">join through this link</a>. We both earn bonus cashback when you sign up. Got your own money-saving strategies? Drop them in the comments&mdash;I'm always looking for new ones.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts Section -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">
+        More from Caleb
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="/blog/entrepreneur-ai/peaks-and-valleys" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-navy bg-opacity-10 text-mcgennis-navy text-xs font-semibold rounded-full">
+                Personal
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-navy transition-colors mb-3">
+              Peaks and Valleys: A $9 Million Lesson in Faith
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              Crypto fortune, bankruptcy, and discovering God's different path.
+            </p>
+            <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
+              Read More
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="/blog/entrepreneur-ai/the-million-dollar-plan" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-navy">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-navy bg-opacity-10 text-mcgennis-navy text-xs font-semibold rounded-full">
+                Business
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-navy transition-colors mb-3">
+              The Million Dollar Plan: Building Value, Not Just Revenue
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              Strategic thinking for entrepreneurs who want to build something that lasts.
+            </p>
+            <div class="flex items-center text-mcgennis-navy font-medium group-hover:text-mcgennis-gold transition-colors">
+              Read More
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "3 Ways I Actually Save Money",
+  "description": "Real money-saving strategies that work for our family: cashback apps like Upside, using credit card rewards for Christmas gifts, and the $5 gift that means more than anything you'll find at the mall.",
+  "datePublished": "2026-02-11",
+  "dateModified": "2026-02-11",
+  "author": {
+    "@type": "Person",
+    "name": "Caleb McGennis"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The McGennis Family",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themcgennisfamily.com/images/mcgennis-family-logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://themcgennisfamily.com/blog/entrepreneur-ai/ways-i-save-money"
+  }
+}
+</script>

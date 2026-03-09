@@ -52,7 +52,7 @@ const currentPath = Astro.url.pathname;
           <a href="/" class="text-2xl font-display font-bold text-gray-900 hover:text-mcgennis-gold transition-colors tracking-tight">
             The McGennis Family
           </a>
-          <div class="hidden md:flex space-x-8 items-center">
+          <div class="hidden lg:flex space-x-8 items-center">
             <a href="/" class={`text-sm font-medium tracking-wide hover:text-mcgennis-gold transition-colors pb-1 ${currentPath === '/' ? 'text-mcgennis-gold border-b border-mcgennis-gold' : 'text-gray-600'}`}>Home</a>
             <a href="/start-here" class={`text-sm font-medium tracking-wide hover:text-mcgennis-gold transition-colors pb-1 ${currentPath.startsWith('/start-here') ? 'text-mcgennis-gold border-b border-mcgennis-gold' : 'text-gray-600'}`}>Start Here</a>
             <a href="/about" class={`text-sm font-medium tracking-wide hover:text-mcgennis-gold transition-colors pb-1 ${currentPath.startsWith('/about') ? 'text-mcgennis-gold border-b border-mcgennis-gold' : 'text-gray-600'}`}>About</a>
@@ -93,14 +93,14 @@ const currentPath = Astro.url.pathname;
             <Search />
           </div>
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+          <button id="mobile-menu-btn" class="lg:hidden text-gray-700">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
           <a href="/" class={`block py-2 hover:text-mcgennis-gold transition ${currentPath === '/' ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>Home</a>
           <a href="/start-here" class={`block py-2 hover:text-mcgennis-gold transition ${currentPath.startsWith('/start-here') ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>Start Here</a>
           <a href="/about" class={`block py-2 hover:text-mcgennis-gold transition ${currentPath.startsWith('/about') ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>About</a>
