@@ -43,4 +43,4 @@ User-agent: YandexBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.themcgennisfamily.com/sitemap.xml
+Sitemap: https://www.themcgennisfamily.com/sitemap-index.xml

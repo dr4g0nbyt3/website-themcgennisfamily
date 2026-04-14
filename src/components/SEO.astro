@@ -13,7 +13,7 @@ export interface Props {
 const {
   title,
   description,
-  image = '/images/mcgennis-family-og.jpg',
+  image = '/images/mcgennis-family-stephanie-caleb-leonardo-jefferson-city.jpg',
   type = 'website',
   publishedTime,
   author,
@@ -21,7 +21,7 @@ const {
   breadcrumbs
 } = Astro.props;
 
-const siteUrl = 'https://themcgennisfamily.com';
+const siteUrl = 'https://www.themcgennisfamily.com';
 const fullTitle = title.includes('McGennis') ? title : `${title} | The McGennis Family`;
 const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl).toString();
@@ -63,9 +63,6 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
 <meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:creator" content="@dr4g0nbyt3" />
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,21 +73,21 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "The McGennis Family",
-  "url": "https://themcgennisfamily.com",
+  "url": "https://www.themcgennisfamily.com",
   "description": "Family website featuring entrepreneurship, ministry, and family heritage. Based in Jefferson City, Missouri.",
   "publisher": {
     "@type": "Organization",
     "name": "The McGennis Family",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://themcgennisfamily.com/images/mcgennis-logo.webp"
+      "url": "https://www.themcgennisfamily.com/images/mcgennis-family-photo-circle.webp"
     }
   },
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://themcgennisfamily.com/search?q={search_term_string}"
+      "urlTemplate": "https://www.themcgennisfamily.com/search?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   },
@@ -109,7 +106,7 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
   "name": "The McGennis Family",
   "description": description,
   "url": siteUrl,
-  "logo": `${siteUrl}/images/mcgennis-logo.png`,
+  "logo": `${siteUrl}/images/mcgennis-family-photo-circle.png`,
   "image": imageUrl,
   "address": {
     "@type": "PostalAddress",
@@ -143,7 +140,7 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
   "@type": "Organization",
   "name": "The McGennis Family",
   "url": siteUrl,
-  "logo": `${siteUrl}/images/mcgennis-logo.png`,
+  "logo": `${siteUrl}/images/mcgennis-family-photo-circle.png`,
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "General Inquiry",
@@ -166,14 +163,14 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
     "author": {
       "@type": "Person",
       "name": author || 'Caleb Michael McGennis',
-      "url": `https://themcgennisfamily.com/family/${author === 'Stephanie Kay McGennis' ? 'stephanie' : 'caleb'}`
+      "url": `https://www.themcgennisfamily.com/family/${author === 'Stephanie Kay McGennis' ? 'stephanie' : 'caleb'}`
     },
     "publisher": {
       "@type": "Organization",
       "name": "The McGennis Family",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://themcgennisfamily.com/images/mcgennis-logo.webp"
+        "url": "https://www.themcgennisfamily.com/images/mcgennis-family-photo-circle.webp"
       }
     },
     "datePublished": publishedTime,
@@ -193,7 +190,7 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
   "name": "Caleb Michael McGennis",
   "alternateName": "dr4g0nbyt3",
   "url": `${siteUrl}/family/caleb`,
-  "image": `${siteUrl}/images/caleb-mcgennis.jpg`,
+  "image": `${siteUrl}/images/caleb-mcgennis-sports-crusaders-jefferson-city.jpg`,
   "jobTitle": "Entrepreneur, Developer & Ministry Leader",
   "worksFor": [
     {
@@ -241,8 +238,8 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Stephanie Kay McGennis",
-  "url": "https://themcgennisfamily.com/family/stephanie",
-  "image": "https://themcgennisfamily.com/images/stephanie-mcgennis.webp",
+  "url": "https://www.themcgennisfamily.com/family/stephanie",
+  "image": "https://www.themcgennisfamily.com/images/stephanie-caleb-mcgennis-couple-jefferson-city.webp",
   "jobTitle": "Co-Founder & Family Leader",
   "worksFor": [
     {
@@ -268,7 +265,7 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
   "spouse": {
     "@type": "Person",
     "name": "Caleb Michael McGennis",
-    "url": "https://themcgennisfamily.com/family/caleb"
+    "url": "https://www.themcgennisfamily.com/family/caleb"
   },
   "children": [
     {

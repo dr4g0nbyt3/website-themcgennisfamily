@@ -4,16 +4,16 @@ import sitemap from '@astrojs/sitemap';
 import pagefind from './pagefind.integration.js';
 
 export default defineConfig({
-  site: 'https://themcgennisfamily.com',
+  site: 'https://www.themcgennisfamily.com',
   integrations: [
     tailwind(),
     sitemap({
       customPages: [
-        'https://themcgennisfamily.com',
-        'https://themcgennisfamily.com/about',
-        'https://themcgennisfamily.com/family',
-        'https://themcgennisfamily.com/businesses',
-        'https://themcgennisfamily.com/blog'
+        'https://www.themcgennisfamily.com',
+        'https://www.themcgennisfamily.com/about',
+        'https://www.themcgennisfamily.com/family',
+        'https://www.themcgennisfamily.com/businesses',
+        'https://www.themcgennisfamily.com/blog'
       ]
     }),
     pagefind()
