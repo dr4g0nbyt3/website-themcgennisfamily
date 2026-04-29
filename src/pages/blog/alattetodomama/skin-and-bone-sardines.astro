@@ -1,0 +1,286 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="Skin and Bone Sardines Review: An Honest Take From a Sardine Skeptic - A Latte to Do Mama"
+  description="A Jefferson City mama's honest review of Skin and Bone sardines. Why a girl who hated sardines now keeps a stack of these tins in her pantry — and whether they're worth the price."
+  type="article"
+  publishedTime="2026-04-28"
+  author="Stephanie Kay McGennis"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/alattetodomama" class="inline-flex items-center text-mcgennis-maroon hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to A Latte to Do Mama
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Skin and Bone Sardines: An Honest Review From a Recovering Sardine Skeptic
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Stephanie Kay McGennis</span>
+          <span>&bull;</span>
+          <time datetime="2026-04-28">April 28, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/alattetodomama/skin-and-bone-sardines" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/alattetodomama/skin-and-bone-sardines&text=Skin%20and%20Bone%20Sardines%20Review" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Image -->
+  <section class="px-4 -mt-8 mb-8">
+    <div class="container mx-auto max-w-4xl">
+      <img src="/images/skin-and-bone/plated-meal.webp" alt="A box of Skin and Bone wild caught sardines beside a torn piece of crusty bread and an oval white dish holding three sardine fillets in golden olive oil" class="w-full rounded-2xl shadow-lg" loading="eager" />
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6 text-sm text-gray-600">
+        <strong class="text-gray-900">Quick disclosure, mama-to-mama:</strong> the links to Skin and Bone in this post are affiliate links. If you order through them I get a tiny commission at no extra cost to you. I bought my first tins myself, full price, before becoming an affiliate &mdash; and I'd be writing this review either way. Cross my heart.
+      </div>
+
+      <div class="bg-mcgennis-maroon/10 border-2 border-mcgennis-maroon rounded-lg p-5 mb-8 flex items-center gap-4">
+        <div class="flex-shrink-0 w-14 h-14 bg-mcgennis-maroon rounded-full flex items-center justify-center text-white font-bold text-lg">10%</div>
+        <div class="flex-1">
+          <p class="text-gray-900 font-semibold mb-1">Use code <span class="font-mono bg-white border border-mcgennis-maroon px-2 py-0.5 rounded">CALEB</span> for 10% off your order</p>
+          <p class="text-sm text-gray-600">At checkout on <a href="https://skinandboneus.com/?ref=vdgoldmb" target="_blank" rel="noopener noreferrer sponsored" class="text-mcgennis-maroon hover:text-mcgennis-gold underline">skinandboneus.com</a> &mdash; works on any pack, including The Tin Club subscription.</p>
+        </div>
+      </div>
+
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Okay, so. If you're here, I'm guessing you Googled something like "are Skin and Bone sardines worth it" or "Skin and Bone sardines honest review" and you're trying to figure out if this is just another fancy-pantry-thing or actually a real product worth your grocery money. I get it. I do that for everything. So let me save you the deep-dive.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Full Confession: I Hated Sardines</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Like, I really, really hated them. The grocery-store kind that come in a stack for $1.50, smell like a bait shop the moment you peel back the lid, and somehow taste both fishy and metallic at the same time? No thank you. I tried sardines exactly twice in my adult life and threw most of both tins in the trash. I told Caleb sardines were not happening in this house.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And then a friend (the kind of friend who is way more into food than I am) handed me a tin of <a href="https://skinandboneus.com/?ref=vdgoldmb" target="_blank" rel="noopener noreferrer sponsored" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">Skin and Bone</a> at a get-together and was like "Steph, just trust me." Reader, I trusted her. And I am here to tell on myself.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What Skin and Bone Actually Is</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        It's a small US-based company sourcing Portuguese hand-packed sardines and selling them direct from <a href="https://skinandboneus.com/?ref=vdgoldmb" target="_blank" rel="noopener noreferrer sponsored" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline">their website</a>. There are two kinds: one in extra virgin olive oil, one in water. The ingredient list on the back is &mdash; ready for this? &mdash; sardines, olive oil, salt. That is it. No preservatives, no fillers, no list of things I have to Google to figure out if they're safe.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        As a mom who reads every label on every box of every snack at HyVee like I'm preparing for a quiz, that ingredient list alone made me pay attention.
+      </p>
+
+      <figure class="my-10">
+        <img src="/images/skin-and-bone/three-ingredients.webp" alt="An infographic showing the open tin of Skin and Bone sardines with the words Only 3 Ingredients above and the ingredient list below: Wild Caught Sardines, Extra Virgin Olive Oil, Salt, plus a nutrition facts panel" class="w-full rounded-2xl shadow-md" loading="lazy" />
+        <figcaption class="text-sm text-gray-400 italic text-center mt-3">This label is genuinely shorter than my grocery list.</figcaption>
+      </figure>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Honest Taste Review</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Mild. Clean. Actually good. I know. <em>I know.</em>
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The fillets are intact &mdash; like, you can see they were placed in the tin by hand and not power-blasted in by a machine. There's no fishy aftertaste hanging around your kitchen for the next four hours. The olive oil is rich, not greasy. The water variety is so clean I'd put it on a salad and not think twice. If your only sardine reference is the bait-shop tin, you genuinely need to recalibrate. These are a different food.
+      </p>
+
+      <div class="bg-soho-white border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 italic">
+          "Steph, what about the bones?" Listen. They're tiny, soft, and you don't notice them. I was bracing myself the first bite. There was nothing to brace for. Moving on.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Why This is a Mom Pantry Win</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Here's the thing nobody tells you about being a mom: by 1pm you have fed everybody else four times and you have not fed yourself once. You're standing at the pantry with a toddler attached to your leg trying to figure out what counts as lunch when you have eight minutes before nap time. Granola bar? Half of Leo's leftover sandwich? Coffee, again?
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Skin and Bone has genuinely become my answer to that. Pop the tin. Squeeze a lemon. Onto a couple of crackers or a piece of toast. <strong class="text-gray-900">18 grams of protein</strong> in about ninety seconds. No cooking. No dishes. No reheating. I'm not exaggerating when I say this has changed my afternoons. I am a more patient mama on protein.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Let's Talk About the Price</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Okay, this is the part where I have to be straight with you. These are not grocery-store sardines and they aren't priced like grocery-store sardines. The 6-pack is going to cost you more than a stack of the bait-shop kind. The 12-pack is around $48 and there's a subscription called "The Tin Club" that drops the per-tin price.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        But hear me out. Per-tin you're spending less than a Dutch Bros. (Yes, I'm comparing things to Dutch Bros. We've been over this.) And unlike a $14 fast-casual lunch where you can't pronounce half the menu, you know exactly what's in this tin. Three things. So when I do my girl-math, this checks out. Lunch I'd actually want to eat, that I know is real food, in under two minutes? That's a yes.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Honest Negatives</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I'd be lying if I said it's perfect. Two real things I'd want a friend to know:
+      </p>
+
+      <ul class="space-y-3 text-gray-600 mb-6 list-disc pl-6">
+        <li><strong class="text-gray-900">It's online-only.</strong> You can't grab a tin at HyVee on the way home. So when you're out, you're out, and you have to plan for the next order. I've started keeping the subscription on so I never run dry.</li>
+        <li><strong class="text-gray-900">The kids are not on board.</strong> Leonardo gave it the slow-blink "no thank you mama" face. Which is honestly fine because more for me. But if you're hoping this becomes a kid-snack staple, manage expectations.</li>
+      </ul>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">My Verdict, Mama-to-Mama</h2>
+
+      <div class="bg-mcgennis-maroon bg-opacity-10 border-l-4 border-mcgennis-maroon p-6 my-8 rounded-r-lg">
+        <p class="text-gray-700 font-medium mb-2">Would I tell a friend to buy these?</p>
+        <p class="text-gray-600">
+          I literally already have. Four times. They have earned permanent shelf space in this pantry, and I am the same mama who thirty seconds ago just confessed she hated sardines. If I was wrong about this, I might be wrong about a lot of things.
+        </p>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're a mom looking for an actual real-food, fast, no-cooking source of protein for the days when your hair is in a bun and the toddler is melting down and you have not eaten lunch &mdash; this is a yes from me. Start with the EVOO 6-pack. Try one. If you hate it, you can yell at me in the comments.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Ready to try? <a href="https://skinandboneus.com/?ref=vdgoldmb" target="_blank" rel="noopener noreferrer sponsored" class="text-mcgennis-maroon hover:text-mcgennis-gold transition-colors underline font-medium">Order them right here from skinandboneus.com</a> and don't forget to use code <strong class="font-mono bg-mcgennis-maroon/10 border border-mcgennis-maroon text-mcgennis-maroon px-2 py-0.5 rounded">CALEB</strong> at checkout for 10% off. (That's our affiliate link, which means a tiny piece of your tin goes to keeping this blog caffeinated. Thank you in advance.)
+      </p>
+
+      <div class="bg-mcgennis-maroon text-white p-8 rounded-xl my-12">
+        <h3 class="text-2xl font-display font-bold mb-4">Tell Me Your Pantry Wins</h3>
+        <p class="mb-4">
+          What's <em>your</em> "I would never have guessed" pantry hero? The thing you bought on a hunch and now reorder without thinking? Drop it in the comments &mdash; I'm always looking for the next one. And if you try Skin and Bone because of this post, please tell me what you thought.
+        </p>
+        <p class="text-sm italic">
+          With love and lemon-on-everything,<br/>
+          Stephanie &#9774;
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts -->
+  <section class="py-16 px-4 bg-soho-white border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight">More from A Latte to Do Mama</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/blog/favorites/skin-and-bone-sardines" class="group bg-soho-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-gold">
+          <span class="inline-block px-2 py-1 bg-mcgennis-gold/10 text-mcgennis-gold text-xs font-medium rounded mb-3">Favorites</span>
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-gold transition-colors tracking-tight">
+            The Family Review of Skin and Bone Sardines
+          </h3>
+          <p class="text-gray-500 text-sm">Our joint take, including how Caleb and I have been eating them</p>
+        </a>
+        <a href="/blog/alattetodomama/coffee-shop-prayers" class="group bg-soho-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-mcgennis-maroon">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-mcgennis-maroon transition-colors tracking-tight">
+            Coffee Shop Prayers: Finding God in the Drive-Thru Line
+          </h3>
+          <p class="text-gray-500 text-sm">Why every mama needs a daily ritual that resets her heart</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Blog -->
+  <section class="py-16 px-4 bg-soho-white">
+    <div class="container mx-auto text-center">
+      <a href="/blog/alattetodomama" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-maroon hover:text-mcgennis-maroon transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to A Latte to Do Mama
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "headline": "Skin and Bone Sardines: An Honest Review From a Recovering Sardine Skeptic",
+  "description": "A Jefferson City mama's honest review of Skin and Bone Portuguese hand-packed sardines, written for moms who hate sardines.",
+  "datePublished": "2026-04-28",
+  "author": {
+    "@type": "Person",
+    "name": "Stephanie Kay McGennis"
+  },
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "Skin and Bone Wild Caught Sardines",
+    "brand": {
+      "@type": "Brand",
+      "name": "Skin and Bone"
+    },
+    "url": "https://skinandboneus.com/?ref=vdgoldmb",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://skinandboneus.com/?ref=vdgoldmb",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The McGennis Family",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themcgennisfamily.com/images/mcgennis-family-logo.webp"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscountOffer",
+  "name": "10% off Skin and Bone Sardines with code CALEB",
+  "description": "Use coupon code CALEB at checkout on skinandboneus.com to get 10% off any pack of Skin and Bone wild-caught Portuguese sardines, including The Tin Club subscription.",
+  "couponCode": "CALEB",
+  "discount": "10%",
+  "url": "https://skinandboneus.com/?ref=vdgoldmb",
+  "validFrom": "2026-04-28",
+  "category": "Food & Beverage",
+  "seller": {
+    "@type": "Organization",
+    "name": "Skin and Bone",
+    "url": "https://skinandboneus.com"
+  },
+  "offeredBy": {
+    "@type": "Person",
+    "name": "Caleb Michael McGennis",
+    "url": "https://www.themcgennisfamily.com/family/caleb"
+  }
+}
+</script>

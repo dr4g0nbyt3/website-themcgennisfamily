@@ -1,0 +1,394 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="From Scratch Friday Week 4: Chinese Steamed Dumplings - The McGennis Family"
+  description="The McGennis family makes Chinese steamed pork and chive dumplings completely from scratch. Pork filling, hand-folded wrappers, bamboo steamer, and a homemade chili oil dipping sauce."
+  type="article"
+  publishedTime="2026-04-24"
+  author="The McGennis Family"
+  image="/images/chinese-steamed-dumplings-final-plating.webp"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center text-mcgennis-forest hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        From Scratch Friday Week 4: Chinese Steamed Dumplings
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By The McGennis Family</span>
+          <span>&bull;</span>
+          <time datetime="2026-04-24">April 24, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/from-scratch-fridays/fourth-friday-chinese-steamed-dumplings" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/from-scratch-fridays/fourth-friday-chinese-steamed-dumplings&text=From%20Scratch%20Friday%20Week%204%3A%20Chinese%20Steamed%20Dumplings" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Pork and chive dumplings, hand-folded one at a time, steamed in a bamboo basket and dipped in homemade chili oil. This week's From Scratch Friday took us back to Hong Kong Market for fresh chives and dumpling wrappers, then turned our kitchen counter into a tiny dumpling factory with Leo, Rapphy, Stephanie, and me all pinching pleats together.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/chinese-steamed-dumplings-final-plating.webp" alt="A bamboo steamer full of finished Chinese steamed pork and chive dumplings" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Steamed pork and chive dumplings, fresh out of the bamboo basket</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Back to Hong Kong Market</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        After Week 3's pho-and-sushi run, Hong Kong Market in Columbia, Missouri has officially become our go-to. This time we were after Chinese chives (the flat, garlic-scented kind), good dumpling wrappers, fresh ginger, and a jar of chili crisp for the dipping sauce. Stephanie loaded up the cart, Leo asked questions about every single thing on every single shelf, and Rapphy hung out for the ride.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/hong-kong-market-storefront.webp" alt="Hong Kong Market storefront in Columbia, Missouri" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Hong Kong Market in Columbia, Missouri &mdash; our happy place for from-scratch Asian cooking</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Prepping the Chives (Don't Skip This)</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If there's one place beginners go wrong with dumplings, it's the chives. The rule: wash them, dry them <em>completely</em>, and don't add salt anywhere near them until the very end. Salt pulls water out, and watery filling means broken dumplings.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        We washed a big bunch, blotted them dry on paper towels, then chopped them into pieces about half a centimeter long. That's it. Set them aside and forget about them until the pork is ready.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/chinese-chives-washed-drained.webp" alt="Fresh Chinese garlic chives washed and drying on paper towels" class="w-full h-48 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Washed and fully drained &mdash; the most important step</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/chopping-chinese-chives.webp" alt="Chinese chives being chopped on a cutting board" class="w-full h-48 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Chopping into half-centimeter pieces</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/chopped-chinese-chives.webp" alt="Finely chopped Chinese chives ready to mix into dumpling filling" class="w-full h-48 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Ready to fold into the pork at the last second</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Ginger, Soy, and the Pork Filling</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Fresh ginger gets peeled with the edge of a spoon (way easier than a knife), then minced as fine as we could get it. A teaspoon is plenty &mdash; the goal is warmth, not a ginger punch in the mouth.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/fresh-ginger-peeled.webp" alt="Fresh ginger root peeled and ready to mince" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Peeled fresh ginger</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/minced-ginger.webp" alt="Finely minced fresh ginger on a wooden cutting board" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Minced fine for the pork filling</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Then the pork. We used 70/30 ground pork &mdash; you want the fat. Lean pork makes dry, tough dumplings every time. Into the bowl: light soy sauce, a touch of dark soy for color, oyster sauce, white pepper, and the minced ginger. Then the part that actually changes the dumpling: the water.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Stir the pork in <em>one direction</em> until it's combined, then add water (or scallion-ginger water) a tablespoon at a time, stirring after each addition. Keep going until the meat looks sticky, glossy, and almost springy. That's what gives steamed dumplings their juicy bite. Sesame oil goes in last. Salt does <em>not</em> go in yet.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/pork-filling-mixing-stand-mixer.webp" alt="Ground pork being mixed in a stand mixer until sticky and springy" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Pork beaten in one direction with water added a tablespoon at a time</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/dumpling-pork-filling-with-chives.webp" alt="Finished pork dumpling filling with chopped Chinese chives mixed in" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Chives folded in at the very end &mdash; salt added right before wrapping</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Once the pork is glossy and sticky, fold in the chopped chives, salt to taste, mix gently &mdash; and then start wrapping. The longer mixed filling sits, the more water the chives release, so we move fast.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Wrapping with the Boys</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is where it stopped being cooking and started being family time. Stephanie laid out the wrappers, I worked the pleating, and Leo took the very serious job of spooning filling into the centers. He took it seriously. <em>Very</em> seriously.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/dumpling-wrappers-laid-out.webp" alt="Round dumpling wrappers laid out on a cutting board ready to be filled" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Store-bought wrappers, laid out and ready to fill</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/dumpling-wrappers-with-pork-filling.webp" alt="Dumpling wrappers with spoonfuls of seasoned pork filling in the center" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">A spoonful in the middle &mdash; don't overfill</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/leo-helping-wrap-dumplings.webp" alt="Leo McGennis spooning pork filling onto dumpling wrappers in the kitchen" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Leo on filling duty &mdash; the most important job in the kitchen</p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The technique is simple: a spoon of filling in the middle, dab water around the edge of the wrapper with a finger, fold in half, and pinch the edges to seal. For a beginner, the half-moon is perfect. If you want to get fancy, pleat one side as you pinch &mdash; we ended up with a mix of both.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/wrapping-dumplings-half-moon.webp" alt="Hands wrapping dumplings into half-moon shapes on a cutting board" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Half-moon fold &mdash; the beginner-friendly shape</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/family-wrapping-dumplings-together.webp" alt="The McGennis family wrapping dumplings together at the kitchen table" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Everybody on dumpling duty</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/pleated-dumplings-ready-to-steam.webp" alt="Hand-pleated raw dumplings on a floured surface ready for the steamer" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">A row of pleated dumplings &mdash; somewhere between rustic and respectable</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Into the Bamboo Steamer</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Bamboo steamer over a pot of boiling water. Line the basket with parchment (or a cabbage leaf in a pinch), arrange the dumplings so they don't touch, lid on, and steam for about ten minutes. The wrappers go from cloudy white to glossy and translucent &mdash; that's how you know they're done.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/raw-dumplings-in-bamboo-steamer.webp" alt="Raw half-moon dumplings arranged in a bamboo steamer basket" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Loaded up and ready for the steam</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Chili Oil Dipping Sauce</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is the part that takes a good dumpling and makes it a great one. We mixed chili crisp, a splash of black vinegar, a little soy, and a few drops of sesame oil right in the jar. That's it. No measuring, just taste as you go.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/chili-oil-dipping-sauce.webp" alt="Homemade chili oil dipping sauce mixed in a glass jar" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Chili crisp, black vinegar, soy, and sesame oil &mdash; the dumpling's best friend</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Eating</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        First bite is always a careful one &mdash; pork dumplings hold their heat. We piled them on a plate, dunked them in chili oil, and that was the rest of the night. Leo ate his with a fork (and a lot of supervision). Stephanie and I went straight chopsticks. Rapphy mostly cheered from his bouncer.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/steamed-dumplings-plated.webp" alt="Three steamed pork and chive dumplings plated on a paper plate" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Steamed and plated</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/chinese-steamed-dumplings-closeup.webp" alt="Close-up of pleated Chinese steamed dumplings in a bamboo basket" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Glossy wrappers &mdash; that's how you know they're done</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/chinese-steamed-dumplings-bamboo-steamer.webp" alt="Hand-folded Chinese steamed pork and chive dumplings in a bamboo steamer basket" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">A whole steamer of dumplings, gone in about fifteen minutes</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What We Learned This Week</h2>
+
+      <ul class="space-y-3 text-gray-600 mb-6">
+        <li><strong class="text-gray-900">Dry chives, dry chives, dry chives.</strong> Most dumpling problems start with watery filling. Drain them completely and don't salt them early.</li>
+        <li><strong class="text-gray-900">Stir the pork in one direction.</strong> It feels weird, but it's what builds the springy, juicy texture. Don't switch directions and don't rush the water.</li>
+        <li><strong class="text-gray-900">Salt goes in last.</strong> Salt early and you'll pull water out of the meat and chives both. Add it right before wrapping.</li>
+        <li><strong class="text-gray-900">Wrapping is a family activity.</strong> One person filling, one person folding, one person on the steamer &mdash; this is exactly the kind of meal that gets better the more hands are in it.</li>
+      </ul>
+
+      <div class="bg-mcgennis-forest text-white rounded-xl p-8 my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">From Scratch Friday Week 4 in the Books</h3>
+        <p class="mb-4">
+          Steamed pork and chive dumplings, hand-folded by the four of us, dipped in homemade chili oil. Cheap, fun, and probably the most kid-involved Friday we've done yet.
+        </p>
+        <p class="text-sm opacity-90">
+          Got a dumpling shape you love or a dipping sauce we should try? Drop it in the comments &mdash; we're always looking for the next one.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts Section -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">
+        More From Scratch Fridays
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Third Friday -->
+        <a href="/blog/from-scratch-fridays/third-friday-gods-sushi-delivery" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-forest bg-opacity-10 text-mcgennis-forest text-xs font-semibold rounded-full">
+                From Scratch Fridays
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-forest transition-colors mb-3">
+              Week 3: God's Sushi Delivery - Pho, Fresh Tuna Rolls &amp; Boba Tea
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              Beef brisket pho, fresh-caught tuna tempura rolls, and homemade boba tea after a Hong Kong Market run.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">February 8, 2026</span>
+              <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- From Scratch Fridays Hub -->
+        <a href="/blog/from-scratch-fridays" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-gold">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-gold bg-opacity-10 text-mcgennis-gold text-xs font-semibold rounded-full">
+                Blog Series
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-gold transition-colors mb-3">
+              View All From Scratch Fridays
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              See all our From Scratch Friday adventures as we cook, create, and learn together as a family.
+            </p>
+            <div class="flex items-center text-mcgennis-gold font-medium group-hover:text-mcgennis-maroon transition-colors">
+              See All Posts
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to From Scratch Fridays -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-forest hover:text-mcgennis-forest transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "From Scratch Friday Week 4: Chinese Steamed Dumplings",
+  "description": "The McGennis family makes Chinese steamed pork and chive dumplings completely from scratch. Pork filling, hand-folded wrappers, bamboo steamer, and a homemade chili oil dipping sauce.",
+  "image": "https://themcgennisfamily.com/images/chinese-steamed-dumplings-final-plating.webp",
+  "datePublished": "2026-04-24",
+  "dateModified": "2026-04-24",
+  "author": {
+    "@type": "Person",
+    "name": "The McGennis Family"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The McGennis Family",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themcgennisfamily.com/images/mcgennis-family-logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://themcgennisfamily.com/blog/from-scratch-fridays/fourth-friday-chinese-steamed-dumplings"
+  }
+}
+</script>

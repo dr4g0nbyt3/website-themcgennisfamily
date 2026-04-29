@@ -88,8 +88,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </a>
         </div>
 
-        <!-- Second Row: From Scratch Fridays & Family Heritage -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- Second Row: From Scratch Fridays, Favorites & Family Heritage -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <!-- From Scratch Fridays -->
           <a href="/blog/from-scratch-fridays" class="group bg-soho-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest">
             <div class="h-64 overflow-hidden relative bg-mcgennis-forest flex items-center justify-center">
@@ -107,6 +107,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               </p>
               <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
                 See Our Recipes
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Favorites -->
+          <a href="/blog/favorites" class="group bg-soho-white overflow-hidden rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-gold">
+            <div class="h-64 overflow-hidden relative bg-mcgennis-gold flex items-center justify-center">
+              <svg class="w-32 h-32 text-white opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-3xl font-display font-bold mb-2 tracking-tight">Favorites</h3>
+                <p class="text-lg font-medium">Honest McGennis Reviews</p>
+              </div>
+            </div>
+            <div class="p-8">
+              <p class="text-gray-500 mb-6 leading-relaxed font-light">
+                Honest reviews of products, brands, and small businesses we actually buy and love. Pantry finds, kitchen tools, kid gear &mdash; no sponsorships, no fake hype.
+              </p>
+              <div class="flex items-center text-mcgennis-gold font-medium group-hover:text-mcgennis-maroon transition-colors">
+                See What We Love
                 <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
