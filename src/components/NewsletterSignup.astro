@@ -1,10 +1,13 @@
 ---
+import { LEAD_MAGNET } from '../data/leadMagnet';
+
 interface Props {
   variant?: 'inline' | 'centered' | 'sidebar';
   showDescription?: boolean;
 }
 
 const { variant = 'inline', showDescription = true } = Astro.props;
+const useLeadMagnet = LEAD_MAGNET.enabled;
 ---
 
 <div class={`newsletter-signup ${variant === 'centered' ? 'text-center' : ''} ${variant === 'sidebar' ? 'bg-soho-white p-6 rounded-xl border border-gray-200' : ''}`}>
@@ -21,14 +24,45 @@ const { variant = 'inline', showDescription = true } = Astro.props;
     </svg>
   )}
 
-  <h3 class={`font-display font-bold tracking-tight ${variant === 'centered' ? 'text-3xl text-white mb-4' : 'text-xl text-gray-900 mb-3'}`}>
-    Join the McGennis Family Newsletter
-  </h3>
+  {useLeadMagnet ? (
+    <>
+      <p class={`uppercase tracking-widest text-xs font-semibold mb-2 ${variant === 'centered' ? 'text-mcgennis-gold' : 'text-mcgennis-maroon'}`}>
+        Free Download
+      </p>
+      <h3 class={`font-display font-bold tracking-tight ${variant === 'centered' ? 'text-3xl text-white mb-4' : 'text-xl text-gray-900 mb-3'}`}>
+        {LEAD_MAGNET.title}
+      </h3>
 
-  {showDescription && (
-    <p class={`font-light leading-relaxed ${variant === 'centered' ? 'text-lg text-gray-300 mb-6 max-w-2xl mx-auto' : 'text-base text-gray-600 mb-4'}`}>
-      Get weekly encouragement, recipes, and practical wisdom from our family to yours. Faith, family, and coffee-fueled adventures delivered to your inbox.
-    </p>
+      {showDescription && (
+        <>
+          <p class={`font-light leading-relaxed ${variant === 'centered' ? 'text-lg text-gray-300 mb-4 max-w-2xl mx-auto' : 'text-base text-gray-600 mb-4'}`}>
+            {LEAD_MAGNET.hook}
+          </p>
+          <ul class={`text-sm space-y-2 mb-6 ${variant === 'centered' ? 'text-gray-300 max-w-xl mx-auto text-left' : 'text-gray-600'}`}>
+            {LEAD_MAGNET.bullets.map((item) => (
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-mcgennis-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </>
+  ) : (
+    <>
+      <h3 class={`font-display font-bold tracking-tight ${variant === 'centered' ? 'text-3xl text-white mb-4' : 'text-xl text-gray-900 mb-3'}`}>
+        Join the McGennis Family Newsletter
+      </h3>
+
+      {showDescription && (
+        <p class={`font-light leading-relaxed ${variant === 'centered' ? 'text-lg text-gray-300 mb-6 max-w-2xl mx-auto' : 'text-base text-gray-600 mb-4'}`}>
+          Get weekly encouragement, recipes, and practical wisdom from our family to yours. Faith, family, and coffee-fueled adventures delivered to your inbox.
+        </p>
+      )}
+    </>
   )}
 
   <form
@@ -65,7 +99,7 @@ const { variant = 'inline', showDescription = true } = Astro.props;
         type="submit"
         class="px-6 py-3 bg-brass-button brightness-110 hover:brightness-100 text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap"
       >
-        Subscribe
+        {useLeadMagnet ? LEAD_MAGNET.ctaText : 'Subscribe'}
       </button>
     </div>
 
@@ -127,11 +161,9 @@ const { variant = 'inline', showDescription = true } = Astro.props;
           sessionStorage.setItem('newsletter_scroll', scrollPosition.toString());
           sessionStorage.setItem('newsletter_return_url', currentUrl);
 
-          // Clear form
-          (form as HTMLFormElement).reset();
-
-          // Show success notification
-          showSuccessNotification();
+          // Send the user to the success page so they can grab the lead-magnet
+          // PDF. If lead magnet ever gets disabled, the page just thanks them.
+          window.location.href = '/newsletter-success';
 
         } catch (error) {
           console.error('Form submission error:', error);

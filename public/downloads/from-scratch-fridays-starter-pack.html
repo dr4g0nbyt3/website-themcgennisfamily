@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>From Scratch Fridays Starter Pack — The McGennis Family</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: Letter;
+      margin: 0;
+    }
+
+    @media print {
+      html, body { width: 8.5in; }
+      .page { page-break-after: always; }
+      .page:last-child { page-break-after: auto; }
+      .no-print { display: none !important; }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #B89968;
+      --gold-deep: #9D8555;
+      --gold-light: #C4A876;
+      --maroon: #800020;
+      --navy: #1B2845;
+      --forest: #2F4538;
+      --cream: #FAFAF9;
+      --paper: #F8F5EE;
+      --ink: #2A2A2A;
+      --ink-soft: #555;
+      --rule: rgba(42, 42, 42, 0.12);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      padding: 0.85in 0.85in 0.7in;
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .page--cover { background: var(--cream); padding: 0; }
+    .page--maroon { background: var(--maroon); color: #fff; }
+    .page--forest { background: var(--forest); color: #fff; }
+
+    /* Brass linear gradient utility */
+    .brass-bar {
+      height: 4px;
+      background: linear-gradient(to right, var(--gold-deep) 0%, var(--gold-light) 50%, var(--gold-deep) 100%);
+      width: 100%;
+    }
+    .brass-rule {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold) 50%, transparent);
+      margin: 24px 0;
+      width: 100%;
+    }
+
+    /* Typography ---------------------------------------------------------- */
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--maroon);
+    }
+    .page--maroon .eyebrow,
+    .page--forest .eyebrow { color: var(--gold-light); }
+
+    .lead {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--ink-soft);
+      max-width: 6in;
+      margin-bottom: 22px;
+    }
+    .page--maroon .lead, .page--forest .lead { color: rgba(255, 255, 255, 0.88); }
+
+    p.body {
+      font-size: 13px;
+      line-height: 1.75;
+      max-width: 6.2in;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+      font-weight: 400;
+    }
+    .page--maroon p.body, .page--forest p.body { color: rgba(255, 255, 255, 0.88); }
+    p.body strong { color: var(--ink); font-weight: 600; }
+    .page--maroon p.body strong, .page--forest p.body strong { color: #fff; }
+
+    /* COVER --------------------------------------------------------------- */
+
+    .cover-inner {
+      width: 100%;
+      height: 100%;
+      padding: 0.85in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .cover-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0.5in;
+      border: 1px solid var(--gold);
+      pointer-events: none;
+    }
+    .cover-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      padding-top: 12px;
+    }
+    .crest {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--maroon);
+    }
+    .crest-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--gold-deep);
+    }
+    .cover-center {
+      text-align: center;
+      margin-top: 1.2in;
+    }
+    .cover-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+      margin-bottom: 36px;
+    }
+    .cover-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 86px;
+      line-height: 0.95;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .cover-title .it {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--maroon);
+    }
+    .cover-tag {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--ink-soft);
+      max-width: 5in;
+      margin: 18px auto 0;
+      line-height: 1.45;
+    }
+    .cover-divider {
+      width: 80px;
+      height: 1px;
+      background: var(--gold);
+      margin: 38px auto;
+    }
+    .cover-volume {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+    }
+    .cover-bottom {
+      text-align: center;
+      z-index: 2;
+    }
+    .cover-from {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink-soft);
+      margin-bottom: 6px;
+    }
+    .cover-family {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      font-weight: 600;
+    }
+
+    /* Page header / footer ----------------------------------------------- */
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 36px;
+    }
+    .page--maroon .page-header,
+    .page--forest .page-header { border-bottom-color: rgba(255,255,255,0.25); }
+
+    .page-header .lockup {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .page-header .pg {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+    .page--maroon .page-header .pg, .page--forest .page-header .pg { color: rgba(255,255,255,0.7); }
+
+    .page-footer {
+      position: absolute;
+      bottom: 0.45in;
+      left: 0.85in;
+      right: 0.85in;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      opacity: 0.7;
+      padding-top: 10px;
+      border-top: 1px solid var(--rule);
+    }
+    .page--maroon .page-footer, .page--forest .page-footer { color: rgba(255,255,255,0.7); border-top-color: rgba(255,255,255,0.2); }
+
+    /* Section heading */
+    h2.section-title {
+      font-size: 48px;
+      line-height: 1.05;
+      margin-bottom: 22px;
+      max-width: 6.5in;
+    }
+    h2.section-title .it { font-style: italic; font-weight: 400; color: var(--maroon); }
+    .page--maroon h2.section-title { color: #fff; }
+    .page--maroon h2.section-title .it { color: var(--gold-light); }
+    .page--forest h2.section-title { color: #fff; }
+    .page--forest h2.section-title .it { color: var(--gold-light); }
+
+    h3.sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      line-height: 1.2;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .page--maroon h3.sub, .page--forest h3.sub { color: #fff; }
+
+    /* Welcome cards */
+    .welcome-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .welcome-card {
+      padding: 20px;
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--gold);
+    }
+    .welcome-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .welcome-card p {
+      font-size: 12px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    /* Recipe page -------------------------------------------------------- */
+    .recipe-num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 80px;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 0.85;
+      position: absolute;
+      top: 0.85in;
+      right: 0.85in;
+      opacity: 0.5;
+    }
+    .recipe-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      margin-bottom: 8px;
+      padding-top: 6px;
+    }
+    .recipe-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 700;
+      max-width: 5.5in;
+      margin-bottom: 8px;
+    }
+    .recipe-tag {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink-soft);
+      max-width: 5.5in;
+      margin-bottom: 24px;
+    }
+    .recipe-meta {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 24px;
+      padding: 14px 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .recipe-meta div { line-height: 1.2; }
+    .recipe-meta .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .recipe-meta .value {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .recipe-body {
+      display: grid;
+      grid-template-columns: 1.7fr 2.3fr;
+      gap: 36px;
+      margin-top: 8px;
+    }
+    .recipe-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: var(--maroon);
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--gold);
+    }
+    .recipe-body ul {
+      list-style: none;
+      padding: 0;
+    }
+    .recipe-body ul li {
+      font-size: 12px;
+      line-height: 1.7;
+      padding-left: 16px;
+      position: relative;
+      color: var(--ink);
+    }
+    .recipe-body ul li::before {
+      content: '·';
+      position: absolute;
+      left: 4px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .recipe-body ol {
+      list-style: none;
+      counter-reset: step;
+      padding: 0;
+    }
+    .recipe-body ol li {
+      counter-increment: step;
+      padding-left: 28px;
+      position: relative;
+      font-size: 12px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+    .recipe-body ol li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--maroon);
+    }
+
+    .recipe-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      background: rgba(184, 153, 104, 0.1);
+      border-left: 3px solid var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+    .recipe-note strong {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 10px;
+      color: var(--maroon);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Meal plan grid ----------------------------------------------------- */
+    .planner {
+      border: 1px solid rgba(255,255,255,0.25);
+      margin-top: 20px;
+    }
+    .planner .row {
+      display: grid;
+      grid-template-columns: 1.1in 1fr 1fr 1fr;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      min-height: 0.62in;
+    }
+    .planner .row:last-child { border-bottom: none; }
+    .planner .cell {
+      padding: 12px 14px;
+      border-right: 1px solid rgba(255,255,255,0.18);
+      font-size: 11px;
+      color: rgba(255,255,255,0.75);
+    }
+    .planner .cell:last-child { border-right: none; }
+    .planner .cell.day {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+    }
+    .planner .head {
+      background: rgba(0,0,0,0.18);
+    }
+    .planner .head .cell {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    /* Pantry checklist --------------------------------------------------- */
+    .pantry {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 40px;
+      margin-top: 22px;
+    }
+    .pantry h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--maroon);
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--gold);
+      margin-bottom: 12px;
+    }
+    .pantry ul {
+      list-style: none;
+      padding: 0;
+    }
+    .pantry li {
+      font-size: 12px;
+      line-height: 1.85;
+      padding-left: 24px;
+      position: relative;
+      color: var(--ink);
+    }
+    .pantry li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border: 1px solid var(--gold-deep);
+      border-radius: 2px;
+    }
+
+    /* Pull quote --------------------------------------------------------- */
+    .pullquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.35;
+      color: var(--maroon);
+      max-width: 5.8in;
+      border-left: 3px solid var(--gold);
+      padding-left: 22px;
+      margin: 26px 0;
+    }
+    .page--maroon .pullquote, .page--forest .pullquote {
+      color: var(--gold-light);
+      border-left-color: var(--gold-light);
+    }
+    .pullquote-attr {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-top: 10px;
+    }
+    .page--maroon .pullquote-attr, .page--forest .pullquote-attr { color: rgba(255,255,255,0.65); }
+
+    /* CTA ---------------------------------------------------------------- */
+    .cta-block {
+      background: var(--cream);
+      padding: 32px 36px;
+      margin-top: 32px;
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--gold);
+      color: var(--ink);
+    }
+    .cta-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+    .cta-block p { color: var(--ink-soft); }
+    .cta-block .url {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--maroon);
+      font-weight: 600;
+      margin-top: 14px;
+    }
+
+    /* Print helper button ------------------------------------------------ */
+    .print-bar {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 100;
+      background: var(--maroon);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-bar no-print" onclick="window.print()">Save as PDF — ⌘P</button>
+
+<!-- ============================================================================
+     PAGE 1 — COVER
+     ============================================================================ -->
+<section class="page page--cover">
+  <div class="cover-inner">
+    <div class="cover-top">
+      <div class="crest">The McGennis Family</div>
+      <div class="crest-mark">· EST. 2020 ·</div>
+    </div>
+
+    <div class="cover-center">
+      <div class="cover-eyebrow">A Free Family Cookbook</div>
+
+      <h1 class="cover-title">
+        From Scratch<br/>
+        <span class="it">Fridays</span>
+      </h1>
+
+      <p class="cover-tag">
+        Five family-tested recipes, a printable weekly meal plan, and a guide to building the slow-Friday kitchen habit.
+      </p>
+
+      <div class="cover-divider"></div>
+
+      <div class="cover-volume">Starter Pack · Volume One</div>
+    </div>
+
+    <div class="cover-bottom">
+      <p class="cover-from">From the family table of</p>
+      <p class="cover-family">Caleb &amp; Stephanie McGennis</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+     PAGE 2 — A NOTE FROM THE FAMILY
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">02 / 14 · Welcome</span>
+  </header>
+
+  <p class="eyebrow">A Note from Stephanie</p>
+  <h2 class="section-title">A Friday <span class="it">our family looks forward to.</span></h2>
+
+  <p class="lead">
+    Friday used to be the night we were too tired to cook. Now it's the one we plan around. Welcome to the rhythm we've found.
+  </p>
+
+  <p class="body">
+    A few years into raising boys and running businesses, our weeknights had quietly turned into a blur of takeout and "we'll figure it out tomorrow." It worked, but it didn't feel like us. We grew up around grandmothers who could feed a houseful with whatever the pantry held — and we were drifting away from that.
+  </p>
+
+  <p class="body">
+    From Scratch Fridays started as a small commitment: one night a week, the meal comes from the kitchen — not a bag, not a box. It didn't have to be fancy. It just had to be ours. Six months in, our boys were asking what we were making before they even said hello on Friday afternoons.
+  </p>
+
+  <p class="body">
+    This Starter Pack is everything we wish we'd had when we began. Five recipes that stretch a single afternoon into a real Friday family table, a meal plan you can pin to the fridge, and the pantry checklist that keeps us out of the grocery store on Friday mornings.
+  </p>
+
+  <p class="body">
+    Print it, mark it up, lose it under a bag of flour. That's what cookbooks are for.
+  </p>
+
+  <div class="brass-rule"></div>
+
+  <p class="body" style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: var(--maroon);">
+    With love from Jefferson City,<br/>
+    <span style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px;">Stephanie Kay McGennis</span>
+  </p>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · Volume One</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 3 — THE FRIDAY HABIT
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">03 / 14 · The Habit</span>
+  </header>
+
+  <p class="eyebrow">The Friday Habit</p>
+  <h2 class="section-title">Three rules that <span class="it">make it stick.</span></h2>
+
+  <p class="body" style="max-width: 6.4in;">
+    The reason a Friday family meal habit fails is almost never the recipe — it's the friction around it. These three small rules removed the friction in our house. They might in yours.
+  </p>
+
+  <div class="welcome-cards">
+    <div class="welcome-card">
+      <h4>Rule 1 · Decide on Sunday</h4>
+      <p>Friday's recipe is chosen by Sunday night. Not "we'll see what looks good." A specific recipe, picked in advance, kills the Friday-evening "what are we making" spiral that ends in pizza.</p>
+    </div>
+    <div class="welcome-card">
+      <h4>Rule 2 · Shop Wednesday</h4>
+      <p>Whatever the recipe needs that isn't pantry-staple, it gets bought by Wednesday. Friday should never be a grocery-store day. Mid-week shopping kept us from arriving home Friday at 5 p.m. realizing we needed buttermilk.</p>
+    </div>
+    <div class="welcome-card">
+      <h4>Rule 3 · Start at 4 p.m.</h4>
+      <p>The kitchen opens early. Slow recipes — stews, roasts, breads — work because they're forgiving. Starting at 4 means dinner is ready when everyone is hungry, not an hour after.</p>
+    </div>
+    <div class="welcome-card">
+      <h4>Rule 4 · Bonus · Hand someone a job</h4>
+      <p>The boys have learned to peel, stir, knead, set the table. Cooking with kids is messier and slower — and exactly why we do it. The recipes in this pack all have a "kid task" suggestion built in.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    "The recipe matters less than the rhythm. Get the rhythm, and the recipes write themselves."
+    <div class="pullquote-attr">— Stephanie</div>
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · § The Habit</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 4 — RECIPE 1 · CHICKEN POT PIE
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">04 / 14 · Recipe One</span>
+  </header>
+
+  <span class="recipe-num">01</span>
+  <p class="recipe-eyebrow">Recipe One · The Anchor</p>
+  <h2 class="recipe-title">Sunday Chicken Pot Pie</h2>
+  <p class="recipe-tag">The recipe we make when the week was long. Buttery crust, real cream, and a filling that turns leftover roast chicken into something that justifies its own afternoon.</p>
+
+  <div class="recipe-meta">
+    <div><div class="label">Serves</div><div class="value">6</div></div>
+    <div><div class="label">Prep</div><div class="value">25 min</div></div>
+    <div><div class="label">Cook</div><div class="value">45 min</div></div>
+    <div><div class="label">Total</div><div class="value">1 hr 10</div></div>
+  </div>
+
+  <div class="recipe-body">
+    <div>
+      <h3>Ingredients</h3>
+      <ul>
+        <li>3 cups cooked chicken, shredded (rotisserie works)</li>
+        <li>4 tbsp unsalted butter</li>
+        <li>1 medium yellow onion, diced</li>
+        <li>2 carrots, peeled and diced</li>
+        <li>2 celery ribs, diced</li>
+        <li>3 garlic cloves, minced</li>
+        <li>1/3 cup all-purpose flour</li>
+        <li>2 cups chicken stock</li>
+        <li>3/4 cup whole milk or half-and-half</li>
+        <li>1 cup frozen peas</li>
+        <li>1 tsp fresh thyme (or 1/2 tsp dried)</li>
+        <li>Salt &amp; black pepper, to taste</li>
+        <li>1 sheet store-bought puff pastry, thawed (or homemade pie crust)</li>
+        <li>1 egg, beaten (for wash)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Method</h3>
+      <ol>
+        <li>Heat oven to 400°F. Melt butter in a large skillet over medium heat.</li>
+        <li>Add onion, carrots, and celery. Cook 6–8 minutes until soft. Add garlic and cook 1 minute more.</li>
+        <li>Sprinkle flour over the vegetables and stir for 90 seconds — it should look like a paste.</li>
+        <li>Whisk in stock and milk. Bring to a simmer; the sauce will thicken in 3–4 minutes.</li>
+        <li>Stir in chicken, peas, and thyme. Season generously — pot pie filling should taste a touch over-salted; the pastry dilutes it.</li>
+        <li>Transfer filling to a 9-inch pie dish. Lay puff pastry over the top, trim the edges, and brush with beaten egg.</li>
+        <li>Cut three slits in the top to vent. Bake 35–40 minutes, until pastry is deep golden and the filling bubbles at the edges.</li>
+        <li>Rest 10 minutes before serving — this matters; the filling needs to set.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="recipe-note">
+    <strong>Kid Task</strong>
+    Brushing on the egg wash. Slow, satisfying, and impossible to mess up. Older kids can also handle the pastry-trimming with kitchen shears.
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · Recipe 01</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 5 — RECIPE 2 · BEEF STEW
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">05 / 14 · Recipe Two</span>
+  </header>
+
+  <span class="recipe-num">02</span>
+  <p class="recipe-eyebrow">Recipe Two · The Slow One</p>
+  <h2 class="recipe-title">Sunday-Night Beef Stew</h2>
+  <p class="recipe-tag">A Dutch-oven stew that braises while you do anything else. The forgiving recipe — start it at 4, eat at 7, and the longer it sits, the better it gets.</p>
+
+  <div class="recipe-meta">
+    <div><div class="label">Serves</div><div class="value">6–8</div></div>
+    <div><div class="label">Prep</div><div class="value">20 min</div></div>
+    <div><div class="label">Cook</div><div class="value">2 hr 30</div></div>
+    <div><div class="label">Total</div><div class="value">2 hr 50</div></div>
+  </div>
+
+  <div class="recipe-body">
+    <div>
+      <h3>Ingredients</h3>
+      <ul>
+        <li>2 lbs beef chuck, cut into 1.5-inch cubes</li>
+        <li>3 tbsp all-purpose flour</li>
+        <li>2 tbsp olive oil</li>
+        <li>1 large yellow onion, diced</li>
+        <li>4 garlic cloves, smashed</li>
+        <li>2 tbsp tomato paste</li>
+        <li>1 cup dry red wine (or beef stock)</li>
+        <li>4 cups beef stock</li>
+        <li>2 bay leaves, 4 sprigs fresh thyme</li>
+        <li>4 carrots, peeled and chunked</li>
+        <li>3 large yukon gold potatoes, cubed</li>
+        <li>8 oz cremini mushrooms, halved</li>
+        <li>1 tbsp Worcestershire sauce</li>
+        <li>Salt &amp; black pepper</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Method</h3>
+      <ol>
+        <li>Heat oven to 325°F. Pat beef dry, season heavily with salt and pepper, and toss in flour.</li>
+        <li>Heat oil in a Dutch oven over medium-high. Brown beef in two batches — 3–4 minutes per side. Don't crowd the pan; you need real color.</li>
+        <li>Remove beef. Reduce heat, add onion, cook 5 minutes. Add garlic and tomato paste, cook 90 seconds.</li>
+        <li>Pour in wine, scraping the bottom. Reduce by half (about 5 minutes).</li>
+        <li>Return beef. Add stock, bay leaves, thyme, Worcestershire. Bring to a simmer.</li>
+        <li>Cover and transfer to oven. Braise 90 minutes.</li>
+        <li>Add carrots, potatoes, and mushrooms. Re-cover and continue braising 45–60 minutes, until vegetables are fork-tender.</li>
+        <li>Taste and adjust salt. Discard bay leaves and thyme stems before serving with crusty bread.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="recipe-note">
+    <strong>Make-Ahead</strong>
+    This stew is genuinely better the next day. Make it Friday morning if you can — the flavors deepen overnight and reheating is just a gentle simmer.
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · Recipe 02</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 6 — RECIPE 3 · SOURDOUGH
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">06 / 14 · Recipe Three</span>
+  </header>
+
+  <span class="recipe-num">03</span>
+  <p class="recipe-eyebrow">Recipe Three · The Showstopper</p>
+  <h2 class="recipe-title">No-Knead Family Bread</h2>
+  <p class="recipe-tag">A bakery-quality loaf with one stretch, one fold, and almost no skill required. The recipe that taught our boys you can make bread without a mixer, a stand, or any prior expertise.</p>
+
+  <div class="recipe-meta">
+    <div><div class="label">Yield</div><div class="value">1 loaf</div></div>
+    <div><div class="label">Active</div><div class="value">15 min</div></div>
+    <div><div class="label">Rest</div><div class="value">12–18 hr</div></div>
+    <div><div class="label">Bake</div><div class="value">45 min</div></div>
+  </div>
+
+  <div class="recipe-body">
+    <div>
+      <h3>Ingredients</h3>
+      <ul>
+        <li>3 cups bread flour (or all-purpose), plus more for dusting</li>
+        <li>1 1/2 tsp fine sea salt</li>
+        <li>1/2 tsp instant yeast</li>
+        <li>1 1/3 cups cool water (around 70°F)</li>
+        <li>Cornmeal or extra flour, for the bottom</li>
+      </ul>
+
+      <h3 style="margin-top: 20px;">You'll Also Need</h3>
+      <ul>
+        <li>A large mixing bowl with a lid or plastic wrap</li>
+        <li>A 5–6 quart Dutch oven with a lid</li>
+        <li>Parchment paper</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Method</h3>
+      <ol>
+        <li>Whisk flour, salt, and yeast in a large bowl. Add water and stir with a wooden spoon until a shaggy, sticky dough forms — about a minute. There will be no kneading.</li>
+        <li>Cover bowl tightly. Let rise at room temperature 12–18 hours, until the surface is bubbly and the dough has nearly tripled. Overnight is ideal.</li>
+        <li>Generously flour your hands. Turn the dough out onto a floured surface and shape into a rough ball with two folds — fold the dough over itself, rotate 90°, fold again.</li>
+        <li>Place dough seam-side-down on a parchment square. Cover with a tea towel; rest 90 minutes.</li>
+        <li>30 minutes before baking, place the Dutch oven (with lid) in the oven and heat to 475°F.</li>
+        <li>Carefully lift the parchment with the dough into the screaming-hot Dutch oven. Score the top with a sharp knife.</li>
+        <li>Cover, bake 30 minutes. Remove the lid and bake 12–15 more minutes, until the crust is deep mahogany.</li>
+        <li>Cool on a rack at least 30 minutes before slicing — patience here keeps the crumb from being gummy.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="recipe-note">
+    <strong>Kid Task</strong>
+    Scoring the dough with a knife (with help). It's the only step that feels like art, and they'll remember it.
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · Recipe 03</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 7 — RECIPE 4 · CHILI
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">07 / 14 · Recipe Four</span>
+  </header>
+
+  <span class="recipe-num">04</span>
+  <p class="recipe-eyebrow">Recipe Four · The Crowd-Feeder</p>
+  <h2 class="recipe-title">Three-Bean Family Chili</h2>
+  <p class="recipe-tag">The recipe we make when there are extra people. Doubles or triples without complaint, freezes well, and gets better every day in the fridge.</p>
+
+  <div class="recipe-meta">
+    <div><div class="label">Serves</div><div class="value">8</div></div>
+    <div><div class="label">Prep</div><div class="value">15 min</div></div>
+    <div><div class="label">Cook</div><div class="value">1 hr 15</div></div>
+    <div><div class="label">Total</div><div class="value">1 hr 30</div></div>
+  </div>
+
+  <div class="recipe-body">
+    <div>
+      <h3>Ingredients</h3>
+      <ul>
+        <li>2 lbs ground beef (85/15)</li>
+        <li>1 large yellow onion, diced</li>
+        <li>1 green bell pepper, diced</li>
+        <li>4 garlic cloves, minced</li>
+        <li>3 tbsp chili powder</li>
+        <li>2 tsp ground cumin</li>
+        <li>1 tsp smoked paprika</li>
+        <li>1 tsp dried oregano</li>
+        <li>1/2 tsp cayenne (or to taste)</li>
+        <li>2 tbsp tomato paste</li>
+        <li>28 oz can crushed tomatoes</li>
+        <li>15 oz can kidney beans, drained</li>
+        <li>15 oz can black beans, drained</li>
+        <li>15 oz can pinto beans, drained</li>
+        <li>2 cups beef stock</li>
+        <li>1 tbsp cocoa powder (trust us)</li>
+        <li>Salt &amp; pepper to taste</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Method</h3>
+      <ol>
+        <li>Heat a large heavy-bottomed pot over medium-high. Brown the beef in two batches, breaking it into small pieces, until well browned. Drain off most of the fat.</li>
+        <li>Reduce heat to medium. Add onion and bell pepper to the beef; cook 6 minutes. Add garlic and cook 90 seconds.</li>
+        <li>Add chili powder, cumin, paprika, oregano, and cayenne. Stir for 30 seconds — you want the spices to bloom in the warm fat.</li>
+        <li>Stir in tomato paste; cook 1 minute until it darkens.</li>
+        <li>Add crushed tomatoes, all the beans, beef stock, and cocoa powder. Stir well, taste, and season with salt and pepper.</li>
+        <li>Bring to a simmer, then reduce heat to low. Cook uncovered, stirring occasionally, for 45–60 minutes — the chili should reduce and thicken.</li>
+        <li>Taste again before serving — you'll usually want another big pinch of salt at the end. Serve with cornbread, sharp cheese, sour cream, and chopped onion.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="recipe-note">
+    <strong>The Cocoa Trick</strong>
+    A single tablespoon of unsweetened cocoa adds depth without a single hint of "chocolate." This is the single biggest secret-weapon move in any chili — every grandmother in our family quietly does this.
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · Recipe 04</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 8 — RECIPE 5 · APPLE CRISP
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">08 / 14 · Recipe Five</span>
+  </header>
+
+  <span class="recipe-num">05</span>
+  <p class="recipe-eyebrow">Recipe Five · The Sweet Finish</p>
+  <h2 class="recipe-title">Brown-Butter Apple Crisp</h2>
+  <p class="recipe-tag">The Friday dessert that tastes like Sunday. Browning the butter for the topping is the single move that turns a fine apple crisp into one your kids will request the next week.</p>
+
+  <div class="recipe-meta">
+    <div><div class="label">Serves</div><div class="value">8</div></div>
+    <div><div class="label">Prep</div><div class="value">20 min</div></div>
+    <div><div class="label">Bake</div><div class="value">40 min</div></div>
+    <div><div class="label">Total</div><div class="value">1 hour</div></div>
+  </div>
+
+  <div class="recipe-body">
+    <div>
+      <h3>Filling</h3>
+      <ul>
+        <li>6 large baking apples (Granny Smith / Honeycrisp mix)</li>
+        <li>1/3 cup light brown sugar</li>
+        <li>2 tbsp all-purpose flour</li>
+        <li>1 tbsp lemon juice</li>
+        <li>1 1/2 tsp cinnamon</li>
+        <li>1/4 tsp nutmeg, pinch of salt</li>
+      </ul>
+
+      <h3 style="margin-top: 20px;">Brown-Butter Topping</h3>
+      <ul>
+        <li>3/4 cup unsalted butter (1.5 sticks)</li>
+        <li>1 cup old-fashioned rolled oats</li>
+        <li>3/4 cup all-purpose flour</li>
+        <li>2/3 cup light brown sugar</li>
+        <li>1/2 tsp cinnamon</li>
+        <li>1/2 tsp salt</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Method</h3>
+      <ol>
+        <li>Heat oven to 350°F. Butter a 9×9 baking dish.</li>
+        <li>Brown the butter: melt in a light-colored saucepan over medium. Swirl frequently. After foaming subsides (4–5 min), the butter will smell nutty and golden flecks will form. Pour immediately into a heat-proof bowl. Cool 10 minutes.</li>
+        <li>Peel, core, and slice apples 1/4-inch thick. Toss with brown sugar, flour, lemon juice, cinnamon, nutmeg, and salt. Pile into the baking dish.</li>
+        <li>For topping: stir oats, flour, sugar, cinnamon, and salt into the cooled brown butter. Mix until clumps form.</li>
+        <li>Scatter topping evenly over apples — don't pat it down; you want a craggy top.</li>
+        <li>Bake 35–45 minutes, until the topping is deep golden and apples are bubbling thickly at the edges.</li>
+        <li>Rest at least 15 minutes before serving. Vanilla ice cream isn't optional.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="recipe-note">
+    <strong>Kid Task</strong>
+    Mixing the topping. They get to watch butter foam, smell it transform, and feel the topping clump under their hands.
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · Recipe 05</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 9 — INTERLUDE / QUOTE
+     ============================================================================ -->
+<section class="page page--maroon">
+  <header class="page-header">
+    <span class="lockup" style="color: #fff;">The McGennis Family</span>
+    <span class="pg">09 / 14 · Interlude</span>
+  </header>
+
+  <p class="eyebrow">An Interlude</p>
+  <h2 class="section-title">A meal isn't <span class="it">just a meal.</span></h2>
+
+  <p class="lead">
+    The food is the excuse. The conversation is the meal.
+  </p>
+
+  <p class="body">
+    Six months into our Friday habit, we noticed something unexpected. The kids weren't just eating better. They were <em>talking</em> more. The longer prep time, the open kitchen, the unhurried pace — it all created space for the kind of conversation that doesn't happen in a takeout box on the couch.
+  </p>
+
+  <p class="body">
+    We started a tradition we call "The Friday Round." After we sit down, we go around the table — one good thing from the week, one hard thing from the week. The boys started small ("I lost a pencil") and grew into real reflection ("a kid was mean to my friend and I didn't know what to do").
+  </p>
+
+  <p class="body">
+    The recipes are the structure. The conversation is what fills it.
+  </p>
+
+  <div class="pullquote">
+    "The dinner table is the longest schoolroom in our family. The lessons there outlast anything we'd plan."
+    <div class="pullquote-attr">— Caleb</div>
+  </div>
+
+  <p class="body">
+    The next page is a printable weekly meal plan you can pin to your fridge. The Friday slot is the one we mark in advance. The rest is forgivable.
+  </p>
+
+  <footer class="page-footer" style="color: rgba(255,255,255,0.7);">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · § Interlude</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 10 — WEEKLY MEAL PLAN
+     ============================================================================ -->
+<section class="page page--forest">
+  <header class="page-header">
+    <span class="lockup" style="color: #fff;">The McGennis Family</span>
+    <span class="pg">10 / 14 · Meal Plan</span>
+  </header>
+
+  <p class="eyebrow">The Printable Plan</p>
+  <h2 class="section-title">Weekly meal plan <span class="it">— pin it.</span></h2>
+
+  <p class="lead">
+    Print this page, fill it in on Sunday, hang it on the fridge. The Friday box is the one we always start with.
+  </p>
+
+  <div class="planner">
+    <div class="row head">
+      <div class="cell"></div>
+      <div class="cell">Main</div>
+      <div class="cell">Side</div>
+      <div class="cell">Notes / Prep</div>
+    </div>
+    <div class="row"><div class="cell day">Mon</div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+    <div class="row"><div class="cell day">Tue</div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+    <div class="row"><div class="cell day">Wed</div><div class="cell"></div><div class="cell"></div><div class="cell">Grocery day</div></div>
+    <div class="row"><div class="cell day">Thu</div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+    <div class="row" style="background: rgba(184, 153, 104, 0.12);"><div class="cell day" style="color: #fff;">★ Fri</div><div class="cell" style="color: #fff;">From Scratch</div><div class="cell"></div><div class="cell">Start cooking ~ 4 PM</div></div>
+    <div class="row"><div class="cell day">Sat</div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+    <div class="row"><div class="cell day">Sun</div><div class="cell"></div><div class="cell"></div><div class="cell">Plan next week</div></div>
+  </div>
+
+  <p class="body" style="margin-top: 22px; color: rgba(255,255,255,0.85);">
+    <strong style="color: #fff;">A note on the empty boxes.</strong> The other days don't need to be from-scratch. Leftovers, sandwiches, "fend for yourself" night — totally fair. The point of the plan isn't perfection. It's that Friday's recipe is decided, the groceries are bought, and the rest of the week is forgivable.
+  </p>
+
+  <footer class="page-footer" style="color: rgba(255,255,255,0.7);">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · § Meal Plan</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 11 — PANTRY CHECKLIST
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">11 / 14 · Pantry</span>
+  </header>
+
+  <p class="eyebrow">The Pantry Checklist</p>
+  <h2 class="section-title">If you have <span class="it">these on hand —</span> you can cook.</h2>
+
+  <p class="body" style="max-width: 6.4in;">
+    A from-scratch kitchen lives or dies on its pantry. Below is the running list we keep — anything missing goes onto Wednesday's grocery run. None of this is fancy. All of it shows up across the recipes in this pack.
+  </p>
+
+  <div class="pantry">
+    <div>
+      <h3>Baking &amp; Dry</h3>
+      <ul>
+        <li>All-purpose flour</li>
+        <li>Bread flour</li>
+        <li>Granulated sugar</li>
+        <li>Light brown sugar</li>
+        <li>Old-fashioned rolled oats</li>
+        <li>Baking soda · baking powder</li>
+        <li>Instant yeast</li>
+        <li>Cornmeal</li>
+        <li>Cocoa powder (unsweetened)</li>
+        <li>Vanilla extract</li>
+        <li>Cornstarch</li>
+      </ul>
+
+      <h3 style="margin-top: 24px;">Spices &amp; Seasonings</h3>
+      <ul>
+        <li>Kosher salt · fine sea salt</li>
+        <li>Black peppercorns (whole)</li>
+        <li>Chili powder · cumin · paprika</li>
+        <li>Smoked paprika</li>
+        <li>Dried oregano · dried thyme</li>
+        <li>Cinnamon · nutmeg</li>
+        <li>Bay leaves</li>
+        <li>Cayenne or red pepper flakes</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Wet &amp; Cold</h3>
+      <ul>
+        <li>Olive oil · neutral oil</li>
+        <li>Unsalted butter (always have a pound)</li>
+        <li>Whole milk · half-and-half</li>
+        <li>Eggs</li>
+        <li>Lemons</li>
+        <li>Yellow onions · garlic</li>
+        <li>Worcestershire sauce</li>
+        <li>Soy sauce</li>
+        <li>Apple cider vinegar</li>
+      </ul>
+
+      <h3 style="margin-top: 24px;">Cans &amp; Long-Life</h3>
+      <ul>
+        <li>Crushed tomatoes (28 oz)</li>
+        <li>Tomato paste (small cans)</li>
+        <li>Chicken stock · beef stock</li>
+        <li>Black beans · kidney beans · pintos</li>
+        <li>Frozen peas</li>
+        <li>Frozen puff pastry (always)</li>
+        <li>Pasta (long &amp; short shapes)</li>
+        <li>Rice (long-grain white)</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · § Pantry</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 12 — A FAMILY TABLE GUIDE
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">12 / 14 · The Table</span>
+  </header>
+
+  <p class="eyebrow">A Bonus Page</p>
+  <h2 class="section-title">Build a <span class="it">Friday family table.</span></h2>
+
+  <p class="lead">
+    The recipes work without this. But the recipes work better with this.
+  </p>
+
+  <h3 class="sub">1 · Set the table for guests, even if it's just family</h3>
+  <p class="body">
+    Cloth napkins. The good plates. The candles you only light "for company." You are the company. Once a week is permission to make Friday feel like the weekend.
+  </p>
+
+  <h3 class="sub">2 · One question, every Friday</h3>
+  <p class="body">
+    We rotate three: <em>What was a good thing this week? What was a hard thing? What's something you learned?</em> Three minutes of structured conversation does more for a family than three hours of unstructured screen time. Children rise to the level of the questions you ask them.
+  </p>
+
+  <h3 class="sub">3 · No phones at the table — including yours</h3>
+  <p class="body">
+    Especially yours. The single fastest way to teach a child that their words don't matter is to glance at a phone while they speak. Charge it on the counter for an hour. The world will manage.
+  </p>
+
+  <h3 class="sub">4 · End with thanks, not screens</h3>
+  <p class="body">
+    The dishes are part of the meal. Hand someone a towel. Let the conversation wind down naturally instead of jumping to a movie. Some of our boys' best stories have come during the dishwashing afterglow.
+  </p>
+
+  <div class="pullquote">
+    "We're not trying to teach our boys to cook. We're trying to teach them what a home is for."
+    <div class="pullquote-attr">— Stephanie &amp; Caleb</div>
+  </div>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Starter Pack · § The Table</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 13 — WHERE TO GO NEXT
+     ============================================================================ -->
+<section class="page">
+  <header class="page-header">
+    <span class="lockup">The McGennis Family</span>
+    <span class="pg">13 / 14 · Next</span>
+  </header>
+
+  <p class="eyebrow">Thank You</p>
+  <h2 class="section-title">From our family <span class="it">to yours.</span></h2>
+
+  <p class="lead">
+    The newsletter is where this continues. Every other week, a new recipe, a story from our table, and the small things we're learning along the way.
+  </p>
+
+  <p class="body">
+    If a recipe in this pack ends up on your Friday table, we'd genuinely love to hear about it. Reply to any newsletter — every one comes from our actual inbox.
+  </p>
+
+  <div class="cta-block">
+    <h3>Where to find more.</h3>
+    <p>Our blogs cover four corners of family life — Stephanie's writing on motherhood and faith, our family-recipe series, business and AI from Caleb, and the McGennis family heritage project we've been building for our boys.</p>
+    <span class="url">→ themcgennisfamily.com/blog/from-scratch-fridays</span>
+    <span class="url" style="color: var(--ink-soft);">→ themcgennisfamily.com/blog/alattetodomama</span>
+    <span class="url" style="color: var(--ink-soft);">→ themcgennisfamily.com/family</span>
+  </div>
+
+  <p class="body" style="margin-top: 28px; font-size: 11px; color: var(--ink-soft);">
+    <strong>Disclosure:</strong> The McGennis Family website may contain affiliate links to products we use and recommend. If you click through and purchase, we may earn a small commission — at no cost to you. We only ever link to things we'd hand to a friend.
+  </p>
+
+  <footer class="page-footer">
+    <span>The McGennis Family · themcgennisfamily.com</span>
+    <span>Jefferson City, Missouri</span>
+  </footer>
+</section>
+
+<!-- ============================================================================
+     PAGE 14 — BACK COVER
+     ============================================================================ -->
+<section class="page page--cover">
+  <div class="cover-inner">
+    <div class="cover-top">
+      <div class="crest">The McGennis Family</div>
+      <div class="crest-mark">· FIN ·</div>
+    </div>
+
+    <div class="cover-center" style="margin-top: 1.6in;">
+      <div class="cover-eyebrow">Until next Friday</div>
+
+      <h1 class="cover-title" style="font-size: 64px;">
+        Save a seat <span class="it">for us.</span>
+      </h1>
+
+      <p class="cover-tag" style="max-width: 4.6in; margin-top: 28px;">
+        Pin the meal plan. Stock the pantry. Pick a recipe. The first Friday is always the hardest — and it's also the one your family will remember.
+      </p>
+
+      <div class="cover-divider"></div>
+
+      <div class="cover-volume">themcgennisfamily.com</div>
+    </div>
+
+    <div class="cover-bottom" style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: var(--ink-soft);">
+      © 2026 The McGennis Family · Jefferson City, Missouri
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

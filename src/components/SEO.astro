@@ -25,6 +25,10 @@ const siteUrl = 'https://www.themcgennisfamily.com';
 const fullTitle = title.includes('McGennis') ? title : `${title} | The McGennis Family`;
 const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl).toString();
+
+// Google Search Console "HTML tag" verification code.
+// Set PUBLIC_GOOGLE_SITE_VERIFICATION in Netlify env vars (no code change needed).
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? '';
 ---
 
 <!-- Primary Meta Tags -->
@@ -32,6 +36,10 @@ const canonicalURL = canonical ? canonical : new URL(Astro.url.pathname, siteUrl
 <meta name="title" content={fullTitle} />
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
+
+{googleSiteVerification && (
+  <meta name="google-site-verification" content={googleSiteVerification} />
+)}
 
 <!-- SEO Keywords -->
 <meta name="keywords" content="McGennis Family, Jefferson City Missouri, Caleb McGennis, dr4g0nbyt3, BXP, Honey Homestead, Sports Crusaders, Jefferson City families, Missouri families, Jefferson City business" />
