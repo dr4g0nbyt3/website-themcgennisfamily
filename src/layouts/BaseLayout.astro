@@ -14,9 +14,10 @@ export interface Props {
   author?: string;
   breadcrumbs?: { name: string; url: string }[];
   showBreadcrumbs?: boolean;
+  hideNewsletterPopup?: boolean;
 }
 
-const { title, description, image, type, publishedTime, author, breadcrumbs, showBreadcrumbs = false } = Astro.props;
+const { title, description, image, type, publishedTime, author, breadcrumbs, showBreadcrumbs = false, hideNewsletterPopup = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -262,6 +263,6 @@ const currentPath = Astro.url.pathname;
     </script>
 
     <!-- Newsletter Popup (Exit Intent) -->
-    <NewsletterPopup />
+    {!hideNewsletterPopup && <NewsletterPopup />}
   </body>
 </html>

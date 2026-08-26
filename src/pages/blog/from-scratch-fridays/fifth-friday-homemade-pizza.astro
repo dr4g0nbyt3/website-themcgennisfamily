@@ -1,0 +1,322 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+---
+
+<BaseLayout
+  title="From Scratch Friday Week 5: Homemade Pizza - The McGennis Family"
+  description="Homemade pizza from scratch: proofed dough, seasoned sauce, hand-grated mozzarella off the block, and a half-pepperoni half-supreme pie out of a home oven."
+  type="article"
+  publishedTime="2026-08-21"
+  author="The McGennis Family"
+  image="/images/social/homemade-pizza-og-card.jpg"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center text-mcgennis-forest hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        From Scratch Friday Week 5: Homemade Pizza
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By The McGennis Family</span>
+          <span>&bull;</span>
+          <time datetime="2026-08-21">August 21, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/from-scratch-fridays/fifth-friday-homemade-pizza" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/from-scratch-fridays/fifth-friday-homemade-pizza&text=From%20Scratch%20Friday%20Week%205%3A%20Homemade%20Pizza" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        Pizza night is the easiest sell in this house. Nobody has to be talked into it, nobody asks what's for dinner, and everyone finds a job. This week we did the whole thing ourselves &mdash; dough proofed on the stovetop, sauce seasoned in a container, cheese grated off a block, and two pies built side by side so nobody had to negotiate toppings.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/homemade-pizza-half-pepperoni-half-supreme.webp" alt="A finished homemade pizza, half pepperoni and half supreme with ground beef, mushrooms, green peppers, and black olives" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Half pepperoni, half supreme &mdash; the McGennis peace treaty</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Start With the Dough, Because the Dough Needs Time</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Everything else on pizza night takes twenty minutes. The dough takes an hour and it does not care about your schedule. So it goes first, always. We portioned it into rounds, dropped each one into a lightly oiled pan, and set them on the warm stovetop to rest while the oven came up to temperature.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        A little oil in the pan is not optional. It keeps the skin from drying out and, more importantly, it means the round lifts out in one piece instead of tearing when you go to stretch it. Cover them loosely if your kitchen runs dry.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/homemade-pizza-dough-balls-proofing.webp" alt="Rounds of pizza dough resting in lightly oiled pans on the stovetop" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Portioned, oiled, and left alone &mdash; the hardest step is waiting</p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        You want the rounds relaxed, not cold and not hot. A tight, cold ball fights you the whole way and springs back every time you stretch it. Give it the full rest and it will open up under your hands with almost no effort.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Browning the Beef</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Ground beef goes on the pizza cooked, never raw. Raw meat on a pie either finishes gray and steamed or leaves grease pooling on top of your cheese. Neither is what you want. Into a hot skillet it went, broken up as it cooked.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/browning-ground-beef-pizza-topping.webp" alt="Ground beef starting to cook in a skillet before being broken up" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Straight into the pan</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/ground-beef-browned-for-pizza.webp" alt="Ground beef broken up and browned in a skillet, ready to top a pizza" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Broken up small &mdash; pizza wants crumbles, not clumps</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Break it up smaller than feels necessary. Big clumps of beef roll off the slice on the way to your mouth, and they hog the space where the cheese should be. Then drain it. Drain it well. Every bit of grease you leave in the pan is grease that does not end up sitting on top of the pizza.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Sauce Is the Easy Part</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Pizza sauce is one of the few sauces that gets worse when you cook it. It is going into a screaming hot oven on top of the dough &mdash; that is the cooking. Simmer it beforehand and by the time it comes out of the oven it has gone flat and slightly bitter.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/homemade-pizza-sauce-seasoned.webp" alt="Seasoned pizza sauce stirred in a stainless steel container, flecked with dried herbs" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Stirred, seasoned, not cooked &mdash; the oven does that part</p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        So we stirred it together cold and let it sit while everything else came along. Taste it before it goes on the pie. If it tastes flat in the container it will taste flat on the pizza, and there is no fixing it once the cheese is on.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Grate Your Own Cheese. Seriously.</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is the one thing on this whole list that will change your pizza the most, and it costs nothing but five minutes. Pre-shredded cheese is coated in starch so the bag does not clump. That coating is exactly what stops it from melting into a sheet. It goes greasy and separated instead of stretchy.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/hand-grating-mozzarella-rotary-grater.webp" alt="A block of mozzarella being fed through a hand-crank rotary grater into a metal bowl" class="w-full h-80 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">A hand-crank rotary grater and a block of cheese</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/freshly-grated-mozzarella-bowl.webp" alt="A stainless steel bowl full of freshly grated mozzarella cheese" class="w-full h-80 object-cover" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Worth every one of the five minutes</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The rotary grater is the trick that makes this painless. No knuckles, no box grater, and a kid can run the crank while you do something else. Leo will grate cheese for as long as you let him.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Building Two Pies at Once</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Order matters: sauce, then cheese, then toppings. Cheese under the toppings does two things &mdash; it keeps the crust from going soggy under the sauce, and it gives the toppings something to grip so they do not slide off the first slice.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        We stretched two rounds out on pans and split each one down the middle. Pepperoni on one half, the works on the other: browned beef, mushrooms, green peppers, black olives. Nobody had to compromise and nobody had to pick anything off.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/two-homemade-pizzas-in-oven.webp" alt="Two homemade pizzas on pans in the oven, one already golden and one still raw and freshly topped" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">One coming out, one going in &mdash; the pizza night assembly line</p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Run the oven as hot as it will go and put the pizza low in it. Home ovens do not get anywhere near pizzeria temperature, so all the heat you can get from underneath is heat that goes into crisping the bottom of the crust instead of just melting the top.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Eating</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Let it sit two or three minutes before you cut it. Cheese straight out of the oven is molten and it will slide off the slice in one sheet and take every topping with it. Two minutes of patience and it sets up just enough to hold together.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/homemade-pizza-half-pepperoni-half-supreme.webp" alt="Finished homemade pizza cooling on the stovetop, half pepperoni and half supreme" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Out of the oven and about to disappear</p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Then it was gone. That is the whole review. Pizza night does not need a verdict.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What We Learned This Week</h2>
+
+      <ul class="space-y-3 text-gray-600 mb-6">
+        <li><strong class="text-gray-900">Dough first, everything else second.</strong> It is the only component with a clock on it. Start it and the rest of the night is relaxed.</li>
+        <li><strong class="text-gray-900">Grate the cheese yourself.</strong> The anti-caking starch on pre-shredded cheese is the single biggest reason home pizza does not melt like pizzeria pizza.</li>
+        <li><strong class="text-gray-900">Cook and drain the meat.</strong> Raw beef steams on the pie and leaves grease on top of your cheese. Cook it, break it small, drain it.</li>
+        <li><strong class="text-gray-900">Don't cook the sauce.</strong> The oven cooks it. Simmering first just takes the brightness out of it.</li>
+        <li><strong class="text-gray-900">Cheese goes under the toppings.</strong> It waterproofs the crust and glues everything down.</li>
+        <li><strong class="text-gray-900">Split the pie.</strong> Half and half ends the topping argument before it starts.</li>
+      </ul>
+
+      <div class="bg-mcgennis-forest text-white rounded-xl p-8 my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">From Scratch Friday Week 5 in the Books</h3>
+        <p class="mb-4">
+          Homemade pizza, start to finish, in our own kitchen. Cheaper than delivery, better than delivery, and everybody got a job.
+        </p>
+        <p class="text-sm opacity-90">
+          Got a topping combination we need to try, or a crust trick that works in a regular home oven? Leave it in the comments &mdash; pizza night comes back around fast.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts Section -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">
+        More From Scratch Fridays
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Fourth Friday -->
+        <a href="/blog/from-scratch-fridays/fourth-friday-chinese-steamed-dumplings" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-forest bg-opacity-10 text-mcgennis-forest text-xs font-semibold rounded-full">
+                From Scratch Fridays
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-forest transition-colors mb-3">
+              Week 4: Chinese Steamed Dumplings
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              Hand-folded pork and chive dumplings, steamed in a bamboo basket and dipped in homemade chili oil.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">April 24, 2026</span>
+              <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- From Scratch Fridays Hub -->
+        <a href="/blog/from-scratch-fridays" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-gold">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-gold bg-opacity-10 text-mcgennis-gold text-xs font-semibold rounded-full">
+                Blog Series
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-gold transition-colors mb-3">
+              View All From Scratch Fridays
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              See all our From Scratch Friday adventures as we cook, create, and learn together as a family.
+            </p>
+            <div class="flex items-center text-mcgennis-gold font-medium group-hover:text-mcgennis-maroon transition-colors">
+              See All Posts
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to From Scratch Fridays -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-forest hover:text-mcgennis-forest transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "From Scratch Friday Week 5: Homemade Pizza",
+  "description": "The McGennis family makes homemade pizza from scratch. Proofed dough, seasoned sauce, hand-grated mozzarella off the block, and a half-pepperoni half-supreme pie straight out of the home oven.",
+  "image": "https://themcgennisfamily.com/images/social/homemade-pizza-og-card.jpg",
+  "datePublished": "2026-08-21",
+  "dateModified": "2026-08-21",
+  "author": {
+    "@type": "Person",
+    "name": "The McGennis Family"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The McGennis Family",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themcgennisfamily.com/images/mcgennis-family-logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://themcgennisfamily.com/blog/from-scratch-fridays/fifth-friday-homemade-pizza"
+  }
+}
+</script>

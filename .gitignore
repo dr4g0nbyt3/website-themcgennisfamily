@@ -50,3 +50,9 @@ Thumbs.db
 
 # SOP files (internal documentation)
 sop-*.md
+
+# Unpublished drafts (underscore-prefixed pages are excluded from the Astro build)
+src/pages/**/_*.astro
+
+# Mission trip media — pending subject permission, must not reach the public repo
+public/images/trip/

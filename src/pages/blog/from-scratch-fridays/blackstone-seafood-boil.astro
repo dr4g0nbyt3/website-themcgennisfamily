@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+
+const gospelRub = 'https://www.amazon.com/Gospel-All-Purpose-BBQ-shaker/dp/B01MU7B6P1?tag=themcgennisfa-20';
+---
+
+<BaseLayout
+  title="Blackstone Griddle Seafood Boil | The McGennis Family"
+  description="Snow crab, lobster tails, shrimp, salmon and andouille cooked on a Blackstone griddle with Meat Church's The Gospel rub, charred lemons and a pan of butter."
+  type="article"
+  publishedTime="2026-07-11"
+  author="Caleb Michael McGennis"
+  image="/images/social/blackstone-seafood-boil-og-card.jpg"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center text-mcgennis-forest hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+      <div class="mb-6">
+        <span class="inline-block px-3 py-1 bg-mcgennis-forest bg-opacity-10 text-mcgennis-forest text-xs font-semibold rounded-full">
+          From Scratch Fridays &middot; Special Edition
+        </span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        The Blackstone Seafood Boil
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <p class="text-2xl text-gray-500 font-light mb-8">A seafood boil that never touched water.</p>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-4 text-gray-500">
+          <span>By Caleb Michael McGennis</span>
+          <span>&bull;</span>
+          <time datetime="2026-07-11">July 11, 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://themcgennisfamily.com/blog/from-scratch-fridays/blackstone-seafood-boil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-navy hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="hidden sm:inline">Share</span>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://themcgennisfamily.com/blog/from-scratch-fridays/blackstone-seafood-boil&text=The%20Blackstone%20Seafood%20Boil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-mcgennis-maroon hover:bg-opacity-90 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Share on Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            <span class="hidden sm:inline">Tweet</span>
+          </a>
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-all text-xs font-medium shadow-sm hover:shadow-md" aria-label="Copy link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="hidden sm:inline">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        A traditional seafood boil goes in a pot. Everything gets dumped in water, everything comes out at once, and everything tastes like the same seasoned water. I love a boil. But I wanted the flavor of a boil with the crust you only get off a hot flat surface &mdash; so the whole thing went on the Blackstone instead. Snow crab, lobster tails, salmon, shrimp, andouille, whole garlic, and more lemon than anyone thought was reasonable.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/blackstone-seafood-boil-everything-cooking.webp" alt="A Blackstone griddle covered with shrimp, snow crab clusters, sausage, charred lemons, and a foil pan of lobster tails and salmon in butter" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">The whole griddle going at once &mdash; this is the moment it stops being a plan and starts being dinner</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Who We Were Feeding</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This one was for Stephanie's family. Missy, Jake, Christina, and Mom and Pop all came over. That's the real reason a griddle beat a pot &mdash; with a boil you serve everyone at the same moment or you serve nobody, and with a full table of people arriving on their own schedules, I wanted to be able to hand out food continuously instead of staging one dramatic dump onto butcher paper.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Stephanie ran prep. Everything portioned, everything seasoned, everything sitting in a tray in the order it needed to hit the griddle. I got to do the fun half, which is the only reason this looked calm from the outside. Leo was out there with me helping cook &mdash; genuinely helping, not just watching &mdash; and Rapphie supervised the entire operation from his little play car, which he did not leave once.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Seasoning: Meat Church "The Gospel"</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        One seasoning on the entire cook. <a href={gospelRub} target="_blank" rel="noopener noreferrer sponsored" class="text-mcgennis-gold hover:text-mcgennis-maroon underline">Meat Church's The Gospel</a> &mdash; their all-purpose rub. It's the coarse black pepper you can see on every single piece of this cook, and it's the reason everything tastes like it belongs on the same plate even though crab, salmon, and andouille have nothing else in common.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        There's a real reason to go one-rub on a cook like this. When you're running six proteins across a griddle, they're all sharing the same butter, and that butter is carrying flavor everywhere. Use four different seasonings and the whole surface turns into a muddle. Use one and the butter reinforces it instead of fighting it.
+      </p>
+
+      <div class="bg-mcgennis-gold/10 border-2 border-mcgennis-gold rounded-lg p-5 my-8">
+        <p class="text-gray-900 font-semibold mb-2">The rub I used: Meat Church &mdash; The Gospel (All-Purpose)</p>
+        <p class="text-sm text-gray-600">
+          Grab it on <a href={gospelRub} target="_blank" rel="noopener noreferrer sponsored" class="text-mcgennis-gold hover:text-mcgennis-maroon underline font-medium">Amazon here</a>.
+          That's our affiliate link &mdash; we earn a small commission at no extra cost to you, and it goes straight back into the family.
+          Read more about <a href="/blog/entrepreneur-ai/support-our-family-on-amazon" class="text-mcgennis-navy hover:text-mcgennis-gold underline">how our Amazon tag works</a> if you want the honest version.
+        </p>
+      </div>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/seafood-boil-shrimp-gospel-rub-crust.webp" alt="Close-up of shrimp on the griddle showing the coarse black pepper crust from The Gospel rub" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">That black pepper crust is the whole point &mdash; you don't get that in a pot of water</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Order of Operations</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is the part that matters most, and it's where a griddle boil goes wrong. Everything on that flat top cooks at a completely different speed, and shrimp is the fastest thing on it. If you start with the shrimp you will be eating rubber bands.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        So: sausage first. It takes the longest, it doesn't overcook, and rendering it early lays down a base of fat that everything after it gets to cook in. Then the crab, which is already cooked when you buy it and just needs to heat through and pick up color. Then the lemons and the whole garlic cloves, which need real time on the surface to sweeten and char. Shrimp dead last, and only once everything else is close to done.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/seafood-boil-andouille-sausage-griddle.webp" alt="Andouille sausage links searing on the Blackstone griddle" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Sausage first &mdash; it renders the fat everything else cooks in</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/seafood-boil-snow-crab-clusters-griddle.webp" alt="Snow crab clusters heating on the griddle" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Snow crab &mdash; already cooked, so this is about color and heat</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Foil Pan Trick</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Lobster tails and salmon do not want a screaming flat top. They want gentle heat and fat. So they went into a foil pan with a serious amount of butter, and the pan went right on the griddle next to everything else.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The pan turns one zone of your griddle into a butter poacher without giving up the space. The salmon gets a hard seared face on the flat top first, then goes into the pan to finish. The lobster just lives in the butter the whole time. And when everything's done you have a pan of seafood butter that has salmon fond, lobster, garlic, and Gospel rub in it, which you then spoon over literally everything else on the table.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/seafood-boil-lobster-tails-salmon-butter-pan.webp" alt="Four lobster tails and two seared salmon fillets bubbling in a foil pan of butter" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Do not throw this butter away. This butter is the best thing on the table.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Lemons and Garlic, Face Down</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Charred lemon is not a garnish. Putting a lemon cut-side down on a hot griddle cooks off the raw sharpness and caramelizes the sugar in it, so when you squeeze it over the crab it reads as sweet and round instead of sour. Raw lemon fights rich food. Charred lemon agrees with it.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Same logic for the garlic. Whole cloves, skins on, left alone in a corner of the griddle until they go soft and nutty. People pick at them all night.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/seafood-boil-charred-lemons-garlic.webp" alt="Lemon slices and whole garlic cloves charring on the griddle beside shrimp and sausage" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Cut side down and left alone</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/seafood-boil-crab-lemon-searing.webp" alt="Crab legs and a charred lemon slice on the griddle surface" class="w-full" />
+          <div class="p-3 bg-soho-white">
+            <p class="text-xs text-gray-600 font-light">Sweet, round, and nothing like a raw wedge</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div class="my-12">
+        <div class="flex items-center gap-3 mb-4">
+          <svg class="w-8 h-8 text-mcgennis-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+          </svg>
+          <h2 class="text-3xl font-display font-bold text-gray-900 tracking-tight">Watch It Cook</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <video controls preload="metadata" class="w-full rounded-2xl border border-gray-200 shadow-sm" poster="/images/seafood-boil-shrimp-searing-blackstone.webp">
+            <source src="/videos/seafood-boil-clip-1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <video controls preload="metadata" class="w-full rounded-2xl border border-gray-200 shadow-sm" poster="/images/blackstone-seafood-boil-griddle-full.webp">
+            <source src="/videos/seafood-boil-clip-2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Serving a Griddle Boil</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The best part of doing it this way: nothing has to be ready at the same time. Sausage and crab came off early and went straight to the table for people to start on. Shrimp came off in waves. Lobster and salmon landed last, still in their butter.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <img src="/images/blackstone-seafood-boil-griddle-full.webp" alt="Overhead view of the Blackstone griddle loaded with shrimp, sausage, crab, and a foil pan, with tongs plating into a tray" class="w-full" />
+        <div class="p-4 bg-soho-white">
+          <p class="text-sm text-gray-600 font-light">Plating straight off the griddle into trays &mdash; food kept moving all night</p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Nobody stood around waiting. Nobody's crab went cold while the shrimp finished. And I got to actually talk to people between batches instead of standing over a pot watching a timer.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What I'd Tell You Before You Try It</h2>
+
+      <ul class="space-y-3 text-gray-600 mb-6">
+        <li><strong class="text-gray-900">One seasoning across the whole cook.</strong> The butter carries flavor between everything on that griddle. Multiple rubs turn into mud. Pick one all-purpose rub and commit.</li>
+        <li><strong class="text-gray-900">Shrimp goes last.</strong> It's the fastest thing on the griddle by a wide margin. Cook it first out of enthusiasm and you'll regret it.</li>
+        <li><strong class="text-gray-900">Sausage first, for the fat.</strong> Rendering it early gives everything after it something better than plain oil to cook in.</li>
+        <li><strong class="text-gray-900">Use a foil pan for the delicate stuff.</strong> Lobster and salmon get punished by direct flat-top heat. A pan of butter on the griddle solves it without costing you space.</li>
+        <li><strong class="text-gray-900">Char the lemons.</strong> Cut side down. It's a thirty-second decision that changes how the whole plate tastes.</li>
+        <li><strong class="text-gray-900">Save the butter.</strong> The foil pan is the sauce. Spoon it over everything.</li>
+      </ul>
+
+      <div class="bg-mcgennis-forest text-white rounded-xl p-8 my-12">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">Worth Every Bit of the Cleanup</h3>
+        <p class="mb-4">
+          Stephanie's whole family around the table, Leo working the griddle next to me, Rapphie holding down the fort in his push play car, and a pile of crab legs disappearing faster than I could plate them. This is the kind of cooking that's actually about the people.
+        </p>
+        <p class="text-sm opacity-90">
+          Got a griddle boil combination we should try, or a rub you swear by for seafood? Drop it in the comments.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <Comments />
+
+  <!-- Related Posts Section -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900 tracking-tight text-center">
+        More From Scratch Fridays
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="/blog/from-scratch-fridays/fifth-friday-homemade-pizza" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-forest">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-forest bg-opacity-10 text-mcgennis-forest text-xs font-semibold rounded-full">
+                From Scratch Fridays
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-forest transition-colors mb-3">
+              Week 5: Homemade Pizza
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              Proofed dough, hand-grated mozzarella, and two pies built half-pepperoni half-supreme.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-400">August 21, 2026</span>
+              <div class="flex items-center text-mcgennis-forest font-medium group-hover:text-mcgennis-gold transition-colors">
+                Read More
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="/blog/from-scratch-fridays" class="group bg-soho-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-mcgennis-gold">
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-block px-3 py-1 bg-mcgennis-gold bg-opacity-10 text-mcgennis-gold text-xs font-semibold rounded-full">
+                Blog Series
+              </span>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-gold transition-colors mb-3">
+              View All From Scratch Fridays
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4 font-light">
+              See all our From Scratch Friday adventures as we cook, create, and learn together as a family.
+            </p>
+            <div class="flex items-center text-mcgennis-gold font-medium group-hover:text-mcgennis-maroon transition-colors">
+              See All Posts
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to From Scratch Fridays -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/from-scratch-fridays" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-forest hover:text-mcgennis-forest transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to From Scratch Fridays
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Blackstone Seafood Boil",
+  "description": "Snow crab, lobster tails, shrimp, salmon and andouille cooked on a Blackstone griddle with Meat Church's The Gospel rub, charred lemons and a pan of butter.",
+  "image": "https://themcgennisfamily.com/images/social/blackstone-seafood-boil-og-card.jpg",
+  "datePublished": "2026-07-11",
+  "dateModified": "2026-07-11",
+  "author": {
+    "@type": "Person",
+    "name": "Caleb Michael McGennis",
+    "url": "https://www.themcgennisfamily.com/family/caleb"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The McGennis Family",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themcgennisfamily.com/images/mcgennis-family-logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://themcgennisfamily.com/blog/from-scratch-fridays/blackstone-seafood-boil"
+  }
+}
+</script>
