@@ -69,7 +69,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="max-w-xl mx-auto">
         <p class="text-gray-600 mb-4">Or try searching for what you need:</p>
         <button
-          onclick="document.getElementById('search-button')?.click()"
+          type="button"
+          data-search-open
           class="inline-flex items-center gap-3 px-8 py-4 bg-mcgennis-gold hover:bg-mcgennis-maroon text-white font-medium rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

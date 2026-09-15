@@ -1,0 +1,379 @@
+---
+import { CATEGORIES } from '../data/posts';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const isActive = (href: string) => (href === '/' ? currentPath === '/' : currentPath.startsWith(href));
+
+const blogs = Object.values(CATEGORIES);
+
+const aboutLinks = [
+  { href: '/about', label: 'Our Story', note: 'Who we are and what we are building' },
+  { href: '/media-kit', label: 'Media Kit', note: 'Partnerships, audience, and press' },
+  { href: '/socials', label: 'Socials', note: 'Follow along everywhere we post' },
+];
+
+const primaryLinks = [
+  { href: '/start-here', label: 'Start Here' },
+  { href: '/family', label: 'Family' },
+  { href: '/blog', label: 'Blog', menu: 'blog' },
+  { href: '/businesses', label: 'Businesses' },
+  { href: '/about', label: 'About', menu: 'about', match: ['/about', '/media-kit', '/socials'] },
+];
+
+const linkActive = (link: (typeof primaryLinks)[number]) =>
+  (link.match ?? [link.href]).some((href) => isActive(href));
+---
+
+<header id="site-header" class="site-header sticky top-0 z-50">
+  <!-- Background lives on its own layer: backdrop-filter on the header itself would trap the fixed mobile panel inside it -->
+  <div class="header-bg absolute inset-0 bg-soho-white/90 backdrop-blur-md border-b border-gray-200 transition-shadow duration-300" aria-hidden="true"></div>
+
+  <nav class="relative container mx-auto px-4 sm:px-6 h-16 lg:h-20 flex items-center justify-between gap-4" aria-label="Main">
+    <!-- Logo -->
+    <a href="/" class="group flex items-center gap-2.5 shrink-0" aria-label="The McGennis Family home">
+      <svg class="w-8 h-8 lg:w-9 lg:h-9 rounded-[10px] shadow-sm" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="nav-brass" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#C4A876" /><stop offset="0.5" stop-color="#B89968" /><stop offset="1" stop-color="#9D8555" />
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="14" fill="#1B2845" />
+        <text x="32" y="46" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="40" fill="url(#nav-brass)">M</text>
+      </svg>
+      <span class="text-xl lg:text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-navy transition-colors">
+        The McGennis Family
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden lg:flex items-center gap-1">
+      {primaryLinks.map((link) => (
+        <li class={link.menu ? 'nav-dropdown relative' : ''} data-dropdown={link.menu}>
+          {link.menu ? (
+            <button
+              type="button"
+              class={`nav-link ${linkActive(link) ? 'is-active' : ''}`}
+              aria-expanded="false"
+              aria-controls={`nav-panel-${link.menu}`}
+              aria-current={linkActive(link) ? 'page' : undefined}
+            >
+              {link.label}
+              <svg class="nav-chevron w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          ) : (
+            <a href={link.href} class={`nav-link ${linkActive(link) ? 'is-active' : ''}`} aria-current={linkActive(link) ? 'page' : undefined}>
+              {link.label}
+            </a>
+          )}
+
+          {link.menu === 'blog' && (
+            <div id="nav-panel-blog" class="nav-panel absolute left-1/2 top-full pt-3">
+              <div class="w-[23rem] rounded-2xl border border-gray-200 bg-white shadow-xl p-2">
+                {blogs.map((blog) => (
+                  <a href={blog.href} class={`flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-soho-white transition-colors ${isActive(blog.href) ? 'bg-soho-white' : ''}`}>
+                    <span class={`mt-1.5 w-2.5 h-2.5 rounded-full shrink-0 ${blog.cover}`} aria-hidden="true"></span>
+                    <span>
+                      <span class="block text-sm font-semibold text-gray-900">{blog.name}</span>
+                      <span class="block text-xs text-gray-500">{blog.author === 'The McGennis Family' ? 'The whole family' : `by ${blog.author}`}</span>
+                    </span>
+                  </a>
+                ))}
+                <a href="/blog#all-posts" class="mt-1 flex items-center justify-between rounded-xl px-3 py-2.5 border-t border-gray-100 text-sm font-semibold text-mcgennis-navy hover:bg-soho-white transition-colors">
+                  Browse every post
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </a>
+              </div>
+            </div>
+          )}
+
+          {link.menu === 'about' && (
+            <div id="nav-panel-about" class="nav-panel absolute left-1/2 top-full pt-3">
+              <div class="w-72 rounded-2xl border border-gray-200 bg-white shadow-xl p-2">
+                {aboutLinks.map((item) => (
+                  <a href={item.href} class={`block rounded-xl px-3 py-2.5 hover:bg-soho-white transition-colors ${isActive(item.href) ? 'bg-soho-white' : ''}`}>
+                    <span class="block text-sm font-semibold text-gray-900">{item.label}</span>
+                    <span class="block text-xs text-gray-500">{item.note}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-1.5 lg:gap-3">
+      <button
+        type="button"
+        id="search-button"
+        data-search-open
+        class="w-10 h-10 inline-flex items-center justify-center rounded-full text-gray-700 hover:bg-gray-100 hover:text-mcgennis-navy transition-colors"
+        aria-label="Search the site"
+        title="Search (⌘K)"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      <a href="/contact" class="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl bg-brass-button brightness-110 text-white text-sm font-semibold tracking-wide shadow-sm hover:shadow-md transition-shadow">
+        Contact
+      </a>
+
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        class="menu-toggle lg:hidden w-10 h-10 -mr-2 inline-flex items-center justify-center rounded-full text-gray-900 hover:bg-gray-100 transition-colors"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="relative block w-5 h-3.5" aria-hidden="true">
+          <span class="menu-bar top-0"></span>
+          <span class="menu-bar top-1/2 -translate-y-1/2"></span>
+          <span class="menu-bar bottom-0"></span>
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-panel lg:hidden fixed inset-x-0 top-16 bottom-0 bg-soho-white overflow-y-auto overscroll-contain">
+    <div class="px-6 pt-4 pb-10 max-w-lg mx-auto">
+      <ul class="divide-y divide-gray-200 border-b border-gray-200">
+        {[{ href: '/', label: 'Home' }, ...primaryLinks.filter((l) => !l.menu), { href: '/about', label: 'Our Story' }].map((link) => (
+          <li>
+            <a href={link.href} class={`flex items-center justify-between py-4 text-2xl font-display font-bold tracking-tight ${isActive(link.href) ? 'text-mcgennis-gold-deep' : 'text-gray-900'}`} aria-current={isActive(link.href) ? 'page' : undefined}>
+              {link.label}
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <p class="mt-8 mb-2 text-xs font-semibold uppercase tracking-widest text-gray-500">The Blogs</p>
+      <ul>
+        {blogs.map((blog) => (
+          <li>
+            <a href={blog.href} class={`flex items-center gap-3 -mx-3 px-3 py-3 rounded-xl ${isActive(blog.href) ? 'bg-white shadow-sm' : 'active:bg-white'}`}>
+              <span class={`w-2.5 h-2.5 rounded-full shrink-0 ${blog.cover}`} aria-hidden="true"></span>
+              <span class="flex-1">
+                <span class="block font-semibold text-gray-900">{blog.name}</span>
+                <span class="block text-sm text-gray-500">{blog.author === 'The McGennis Family' ? 'The whole family' : `by ${blog.author}`}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href="/blog#all-posts" class="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-mcgennis-navy py-2">
+        Browse every post
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+
+      <p class="mt-8 mb-3 text-xs font-semibold uppercase tracking-widest text-gray-500">More</p>
+      <div class="flex flex-wrap gap-2">
+        {aboutLinks.slice(1).map((item) => (
+          <a href={item.href} class={`px-4 py-2 rounded-full border text-sm font-medium ${isActive(item.href) ? 'border-mcgennis-navy bg-mcgennis-navy text-white' : 'border-gray-300 text-gray-700'}`}>
+            {item.label}
+          </a>
+        ))}
+        <button type="button" data-search-open data-menu-close class="px-4 py-2 rounded-full border border-gray-300 text-sm font-medium text-gray-700 inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+          Search
+        </button>
+      </div>
+
+      <a href="/contact" class="mt-10 flex items-center justify-center w-full px-6 py-4 rounded-xl bg-brass-button brightness-110 text-white font-semibold tracking-wide shadow-md">
+        Get in Touch
+      </a>
+      <p class="mt-4 text-center text-sm text-gray-500">Jefferson City, Missouri</p>
+    </div>
+  </div>
+</header>
+
+<style>
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #374151;
+    transition: color 0.2s;
+  }
+  .nav-link:hover,
+  .nav-link.is-active,
+  .nav-dropdown[data-open] > .nav-link {
+    color: #1B2845;
+  }
+  /* brass underline grows in on hover; stays for the current section */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.125rem;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #9D8555, #C4A876, #9D8555);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+  }
+  .nav-link:hover::after,
+  .nav-link.is-active::after {
+    transform: scaleX(1);
+  }
+
+  .nav-chevron {
+    transition: transform 0.2s;
+  }
+  .nav-dropdown[data-open] .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-panel {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0.25rem);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  }
+  .nav-dropdown[data-open] > .nav-panel {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  @media (hover: hover) {
+    .nav-dropdown:hover > .nav-panel {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    .nav-dropdown:hover .nav-chevron {
+      transform: rotate(180deg);
+    }
+  }
+
+  .site-header[data-scrolled] .header-bg {
+    box-shadow: 0 6px 20px -12px rgb(17 24 39 / 0.25);
+  }
+
+  /* Hamburger → X */
+  .menu-bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 9999px;
+    background: currentColor;
+    transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease, bottom 0.25s ease;
+  }
+  .site-header[data-menu-open] .menu-bar:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .site-header[data-menu-open] .menu-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .site-header[data-menu-open] .menu-bar:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+
+  .mobile-panel {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+  .site-header[data-menu-open] .mobile-panel {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-link::after, .nav-chevron, .nav-panel, .menu-bar, .mobile-panel {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header')!;
+  const menuButton = document.getElementById('mobile-menu-btn') as HTMLButtonElement;
+  const menu = document.getElementById('mobile-menu')!;
+  const dropdowns = [...header.querySelectorAll<HTMLElement>('[data-dropdown]')];
+
+  // --- Mobile menu ---
+  function setMenu(open: boolean, { restoreFocus = true } = {}) {
+    header.toggleAttribute('data-menu-open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    if (open) menu.querySelector<HTMLElement>('a')?.focus({ preventScroll: true });
+    else if (restoreFocus && menu.contains(document.activeElement)) menuButton.focus();
+  }
+
+  menuButton.addEventListener('click', () => setMenu(!header.hasAttribute('data-menu-open')));
+  menu.querySelectorAll('a, [data-menu-close]').forEach((el) =>
+    el.addEventListener('click', () => setMenu(false, { restoreFocus: false }))
+  );
+  matchMedia('(min-width: 1024px)').addEventListener('change', (e) => e.matches && setMenu(false));
+
+  // --- Desktop dropdowns (hover opens them via CSS; this handles click, keyboard, and touch) ---
+  function setDropdown(dropdown: HTMLElement, open: boolean) {
+    dropdown.toggleAttribute('data-open', open);
+    dropdown.querySelector('button')?.setAttribute('aria-expanded', String(open));
+  }
+
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector('button')!;
+    button.addEventListener('click', () => {
+      const open = !dropdown.hasAttribute('data-open');
+      dropdowns.forEach((d) => setDropdown(d, d === dropdown && open));
+    });
+    button.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        setDropdown(dropdown, true);
+        dropdown.querySelector<HTMLElement>('.nav-panel a')?.focus();
+      }
+    });
+    // keep aria-expanded honest for mouse users too
+    dropdown.addEventListener('mouseenter', () => matchMedia('(hover: hover)').matches && button.setAttribute('aria-expanded', 'true'));
+    dropdown.addEventListener('mouseleave', () => !dropdown.hasAttribute('data-open') && button.setAttribute('aria-expanded', 'false'));
+    dropdown.addEventListener('focusout', (e) => {
+      if (!dropdown.contains(e.relatedTarget as Node)) setDropdown(dropdown, false);
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    dropdowns.forEach((d) => !d.contains(e.target as Node) && setDropdown(d, false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const open = dropdowns.find((d) => d.hasAttribute('data-open'));
+    if (open) {
+      setDropdown(open, false);
+      open.querySelector('button')?.focus();
+    } else if (header.hasAttribute('data-menu-open')) {
+      setMenu(false);
+    }
+  });
+
+  // --- Shadow once the page scrolls under the header ---
+  const onScroll = () => header.toggleAttribute('data-scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
