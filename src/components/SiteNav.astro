@@ -35,16 +35,7 @@ const linkActive = (link: (typeof primaryLinks)[number]) =>
 
   <nav class="relative container mx-auto px-4 sm:px-6 h-16 lg:h-20 flex items-center justify-between gap-4" aria-label="Main">
     <!-- Logo -->
-    <a href="/" class="group flex items-center gap-2.5 shrink-0" aria-label="The McGennis Family home">
-      <svg class="w-8 h-8 lg:w-9 lg:h-9 rounded-[10px] shadow-sm" viewBox="0 0 64 64" aria-hidden="true">
-        <defs>
-          <linearGradient id="nav-brass" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#C4A876" /><stop offset="0.5" stop-color="#B89968" /><stop offset="1" stop-color="#9D8555" />
-          </linearGradient>
-        </defs>
-        <rect width="64" height="64" rx="14" fill="#1B2845" />
-        <text x="32" y="46" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="40" fill="url(#nav-brass)">M</text>
-      </svg>
+    <a href="/" class="group shrink-0" aria-label="The McGennis Family home">
       <span class="text-xl lg:text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-navy transition-colors">
         The McGennis Family
       </span>
