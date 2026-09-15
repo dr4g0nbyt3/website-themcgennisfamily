@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const hero = '/images/mcgennis-family-stephanie-caleb-leonardo-jefferson-city';
+const heroSrcset = `${hero}-640w.webp 640w, ${hero}-960w.webp 960w, ${hero}.webp 1365w`;
+const heroSizes = '(min-width: 1280px) 600px, (min-width: 1024px) 45vw, calc(100vw - 2rem)';
 ---
 
 <BaseLayout
   title="The McGennis Family - Building Businesses and Serving Communities in Jefferson City"
   description="Meet the McGennis family - entrepreneurs and ministry leaders making an impact in Jefferson City, Missouri. Led by Caleb & Stephanie McGennis."
 >
+  <link slot="head" rel="preload" as="image" href={`${hero}-960w.webp`} imagesrcset={heroSrcset} imagesizes={heroSizes} fetchpriority="high" />
   <!-- Hero Section with Real Photo -->
   <section class="relative bg-soho-white py-20 md:py-32 px-4">
     <div class="container mx-auto max-w-7xl">
@@ -41,11 +46,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <!-- Metallic brass border -->
             <div class="p-5 rounded-3xl bg-brass-metal brightness-110 shadow-2xl">
               <img
-                src="/images/mcgennis-family-stephanie-caleb-leonardo-jefferson-city.webp"
+                src="/images/mcgennis-family-stephanie-caleb-leonardo-jefferson-city-960w.webp"
+                srcset={heroSrcset}
+                sizes={heroSizes}
                 alt="The McGennis Family - Stephanie, Caleb, and Leonardo McGennis in Jefferson City, Missouri"
                 class="w-full h-auto rounded-2xl"
-                width="800"
-                height="1000"
+                width="1365"
+                height="2048"
+                fetchpriority="high"
               />
             </div>
             <!-- Decorative accent with brass effect -->
@@ -89,7 +97,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-sm text-gray-500 mb-1 font-medium">Founder & Entrepreneur</p>
             <p class="text-xs text-gray-400 mb-4">Also known as dr4g0nbyt3</p>
             <a href="/family/caleb" class="inline-flex items-center text-sm font-medium text-mcgennis-navy hover:text-mcgennis-gold transition-colors">
-              Learn More
+              Meet Caleb
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -113,7 +121,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-sm text-gray-500 mb-1 font-medium">Co-Founder</p>
             <p class="text-xs text-gray-400 mb-4">Family & Business Partner</p>
             <a href="/family/stephanie" class="inline-flex items-center text-sm font-medium text-mcgennis-maroon hover:text-mcgennis-gold transition-colors">
-              Learn More
+              Meet Stephanie
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -137,7 +145,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-sm text-gray-500 mb-1 font-medium">McGennis Son</p>
             <p class="text-xs text-gray-400 mb-4">Future Leader</p>
             <a href="/family/leonardo" class="inline-flex items-center text-sm font-medium text-mcgennis-forest hover:text-mcgennis-gold transition-colors">
-              Learn More
+              Meet Leonardo
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -161,7 +169,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-sm text-gray-500 mb-1 font-medium">McGennis Son</p>
             <p class="text-xs text-gray-400 mb-4">Future Leader</p>
             <a href="/family/raphael" class="inline-flex items-center text-sm font-medium text-mcgennis-navy hover:text-mcgennis-gold transition-colors">
-              Learn More
+              Meet Raphael
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -425,23 +433,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- SEO Content Section (hidden but crawlable) -->
-  <section class="sr-only">
-    <h2>About The McGennis Family in Jefferson City, Missouri</h2>
-    <p>
-      The McGennis family, led by Caleb Michael McGennis (also known online as dr4g0nbyt3) and Stephanie Kay McGennis,
-      is making waves in Jefferson City, Missouri through entrepreneurship and community service. With two sons,
-      Leonardo Bryton McGennis and Raphael Corwyn McGennis, the family is building a legacy in Central Missouri.
-    </p>
-    <p>
-      Caleb McGennis owns multiple businesses including BXP, The Honey Homestead, Bearded Digital, and What's the Process for.
-      He is also an active member of Sports Crusaders ministry and has extensive experience with the Missouri Baptist Convention
-      and Concord Baptist Church.
-    </p>
-    <p>
-      Keywords: McGennis family Jefferson City, Caleb McGennis entrepreneur, dr4g0nbyt3, Jefferson City Missouri families,
-      BXP Jefferson City, The Honey Homestead, Sports Crusaders Missouri, Jefferson City business owners,
-      Missouri Baptist Convention, Jefferson City entrepreneurship and ministry
-    </p>
-  </section>
 </BaseLayout>

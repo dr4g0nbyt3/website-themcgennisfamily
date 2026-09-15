@@ -4,6 +4,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import NewsletterPopup from '../components/NewsletterPopup.astro';
 import Search from '../components/Search.astro';
+import '../styles/fonts.css';
 
 export interface Props {
   title: string;
@@ -36,13 +37,26 @@ const currentPath = Astro.url.pathname;
       breadcrumbs={breadcrumbs}
     />
     <slot name="head" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQF9S74CS"></script>
-    <script>
+    <!-- Google tag (gtag.js): stub runs now so events queue; the library loads after page load / first interaction to stay off the LCP path -->
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-XXQF9S74CS');
+      (function () {
+        var loaded = false;
+        function loadTags() {
+          if (loaded) return; loaded = true;
+          var g = document.createElement('script'); g.async = true;
+          g.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXQF9S74CS';
+          document.head.appendChild(g);
+        }
+        if (document.readyState === 'complete') setTimeout(loadTags, 1200);
+        else window.addEventListener('load', function () { setTimeout(loadTags, 1200); });
+        ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (e) {
+          window.addEventListener(e, loadTags, { once: true, passive: true });
+        });
+      })();
     </script>
   </head>
   <body class="bg-soho-white text-gray-900 font-sans">
@@ -98,8 +112,8 @@ const currentPath = Astro.url.pathname;
             <Search />
           </div>
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="lg:hidden text-gray-700">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="mobile-menu-btn" class="lg:hidden text-gray-700 p-2 -mr-2" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
@@ -114,7 +128,7 @@ const currentPath = Astro.url.pathname;
 
           <!-- Mobile Blog Dropdown -->
           <div>
-            <button id="mobile-blog-dropdown-btn" class={`w-full text-left py-2 hover:text-mcgennis-gold transition flex items-center justify-between ${currentPath.startsWith('/blog') ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>
+            <button id="mobile-blog-dropdown-btn" aria-controls="mobile-blog-dropdown-menu" aria-expanded="false" class={`w-full text-left py-2 hover:text-mcgennis-gold transition flex items-center justify-between ${currentPath.startsWith('/blog') ? 'text-mcgennis-gold font-medium' : 'text-gray-700'}`}>
               Blogs
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -250,7 +264,9 @@ const currentPath = Astro.url.pathname;
       const mobileMenu = document.getElementById('mobile-menu');
 
       mobileMenuBtn?.addEventListener('click', () => {
-        mobileMenu?.classList.toggle('hidden');
+        const open = !mobileMenu?.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        mobileMenuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       });
 
       // Mobile blog dropdown
@@ -258,7 +274,8 @@ const currentPath = Astro.url.pathname;
       const mobileBlogDropdownMenu = document.getElementById('mobile-blog-dropdown-menu');
 
       mobileBlogDropdownBtn?.addEventListener('click', () => {
-        mobileBlogDropdownMenu?.classList.toggle('hidden');
+        const open = !mobileBlogDropdownMenu?.classList.toggle('hidden');
+        mobileBlogDropdownBtn.setAttribute('aria-expanded', String(open));
       });
     </script>
 
