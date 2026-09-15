@@ -57,6 +57,13 @@ const currentPath = Astro.url.pathname;
           window.addEventListener(e, loadTags, { once: true, passive: true });
         });
       })();
+      // Conversion tracking: every Netlify form (contact + newsletter) reports a GA4 lead on submit
+      document.addEventListener('submit', function (e) {
+        var form = e.target;
+        if (form && form.hasAttribute && form.hasAttribute('data-netlify')) {
+          gtag('event', 'generate_lead', { form_name: form.getAttribute('name') || 'form' });
+        }
+      }, true);
     </script>
   </head>
   <body class="bg-soho-white text-gray-900 font-sans">
@@ -247,7 +254,8 @@ const currentPath = Astro.url.pathname;
         </div>
 
         <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} The McGennis Family. All rights reserved.</p>
+          <p>&copy; <span id="footer-year">{new Date().getFullYear()}</span> The McGennis Family. All rights reserved.</p>
+          <script is:inline>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
           <p class="mt-2 text-sm">Proudly serving Jefferson City, Missouri</p>
           <p class="mt-2 text-sm">
             <a href="/privacy-policy" class="hover:text-mcgennis-gold transition">Privacy Policy</a>
