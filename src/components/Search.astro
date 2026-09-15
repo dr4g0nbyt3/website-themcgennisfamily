@@ -1,22 +1,10 @@
 ---
-// Search component using Pagefind
+// Pagefind search modal. Render once, outside the header; any element with
+// `data-search-open` opens it (header icon, mobile menu, 404 page).
 ---
 
-<div id="search-container" class="relative">
-  <button
-    id="search-button"
-    class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 hover:border-mcgennis-maroon transition-colors bg-soho-white"
-    aria-label="Search site"
-  >
-    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-    </svg>
-    <span class="text-sm text-gray-600">Search...</span>
-  </button>
-</div>
-
 <!-- Search Modal -->
-<div id="search-modal" class="fixed inset-0 z-50 hidden p-4" style="display: none;">
+<div id="search-modal" class="fixed inset-0 z-[60] p-4 bg-gray-900/40 backdrop-blur-sm" style="display: none;" role="dialog" aria-modal="true" aria-label="Search the site">
   <div class="bg-white rounded-2xl max-w-4xl w-full mx-auto shadow-2xl relative max-h-[85vh] overflow-hidden border-2 border-gray-200 mt-8 md:mt-16" id="search-modal-content">
     <!-- Header -->
     <div class="bg-mcgennis-gold px-6 py-4 flex items-center justify-between">
@@ -107,7 +95,6 @@
 <script>
   // Search modal functionality
   (function() {
-    const searchButton = document.getElementById('search-button');
     const searchModal = document.getElementById('search-modal');
     const closeSearch = document.getElementById('close-search');
     const searchModalContent = document.getElementById('search-modal-content');
@@ -179,8 +166,8 @@
       }
     }
 
-    // Open search button
-    searchButton?.addEventListener('click', openSearch);
+    // Open from any trigger
+    document.querySelectorAll('[data-search-open]').forEach((el) => el.addEventListener('click', openSearch));
 
     // Close button
     closeSearch?.addEventListener('click', closeSearchModal);
