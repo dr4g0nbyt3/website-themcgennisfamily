@@ -56,3 +56,7 @@ src/pages/**/_*.astro
 
 # Mission trip media — pending subject permission, must not reach the public repo
 public/images/trip/
+
+# Mission trip draft — protected in BOTH prefixed and unprefixed states.
+# Un-prefixing it makes it buildable/deployable; this keeps it out of the public repo regardless.
+src/pages/blog/entrepreneur-ai/first-mission-trip-guadalajara-esports.astro
