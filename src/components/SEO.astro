@@ -71,10 +71,14 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?
 <meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:creator" content="@dr4g0nbyt3" />
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+<!-- Fonts: self-hosted in src/styles/fonts.css; preload the headline face so the hero title doesn't swap late -->
+<link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+<link rel="alternate" type="application/rss+xml" title="The McGennis Family Blog" href="/rss.xml" />
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <!-- WebSite Schema with Search Action -->
 <script type="application/ld+json" set:html={JSON.stringify({

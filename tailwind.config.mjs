@@ -6,6 +6,7 @@ export default {
       colors: {
         // Main color palette - elegant accents only
         'mcgennis-gold': '#B89968',         // Satin brushed brass accent
+        'mcgennis-gold-deep': '#806540',    // Darker brass for small text on light backgrounds (5.2:1 contrast)
         'mcgennis-maroon': '#800020',       // Dark red maroon accent
         'mcgennis-navy': '#1B2845',         // Dark navy accent
         'mcgennis-forest': '#2F4538',       // Forest green accent
