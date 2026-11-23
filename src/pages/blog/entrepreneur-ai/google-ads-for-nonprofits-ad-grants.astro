@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+
+---
+
+<BaseLayout
+  title="Google Ads for Nonprofits: Using the $10,000 Ad Grant - Caleb McGennis"
+  description="Google gives eligible nonprofits up to $10,000 a month in search ads. Who qualifies, the rules that keep the account active, and what to do if you'd rather hand it off."
+  type="article"
+  publishedTime="2026-11-23"
+  author="Caleb Michael McGennis"
+  image="/images/social/google-ads-for-nonprofits-ad-grants-og.jpg"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        Google Ads for Nonprofits: Using the $10,000 Ad Grant
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <p class="text-2xl text-gray-500 font-light mb-8">Who qualifies, the rules that keep it running, and how to get people to your mission.</p>
+      <div class="flex items-center gap-4 text-gray-500">
+        <span>By Caleb Michael McGennis</span>
+        <span>&bull;</span>
+        <time datetime="2026-11-23">November 23, 2026</time>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        If you run a nonprofit, Google will give you up to $10,000 a month in search ads. It isn't a discount or a trial. It's in-kind advertising through a program called <a href="https://www.google.com/grants/" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Google Ad Grants</a>, and it's easy to miss.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is the plain-English version of how it works: who qualifies, the rules Google enforces, and what to do if you'd rather someone else ran it.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What You Get</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        In Google's words, the program gives you &ldquo;up to $10,000 USD per month in text-based ads on Google Search.&rdquo; These are the text ads that show up at the top of search results when someone looks for something your organization offers: a food pantry near them, a recovery program, a place to volunteer, a way to give.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The grant is for text ads on Google Search.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Who Qualifies</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        In the United States, Google's <a href="https://support.google.com/nonprofits/answer/3215869" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">eligibility guidelines</a> say the organization has to be registered with the IRS as a 501(c)(3). You also need a Google for Nonprofits account, which means getting verified as a nonprofit through Goodstack, and a website that meets Google's <a href="https://support.google.com/nonprofits/answer/1657899" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">website policy</a>, including running on HTTPS and clearly reflecting your mission.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Some organizations are not eligible:
+      </p>
+
+      <ul class="list-disc pl-6 mb-6 text-gray-600 space-y-2">
+        <li>Government entities and organizations</li>
+        <li>Hospitals and health care organizations (their charitable arms and foundations can be eligible)</li>
+        <li>Schools, academic institutions, and universities (their philanthropic arms can be eligible)</li>
+        <li>Fiscally sponsored organizations that don't have their own 501(c)(3) status</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you're a church or ministry, Google's pages don't single you out either way. What matters is the 501(c)(3) registration and getting through Goodstack's verification, so start there.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">The Rules That Keep It Running</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Getting approved is only the start. Keeping the account active takes ongoing attention, because Google says accounts that violate the program policies are subject to automatic suspension without notification. Per Google's <a href="https://support.google.com/nonprofits/answer/9314402" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">account compliance requirements</a>:
+      </p>
+
+      <ul class="list-disc pl-6 mb-6 text-gray-600 space-y-2">
+        <li><strong>Keep a 5% click-through rate every month.</strong> If you miss it two months in a row, the account is temporarily deactivated. (Accounts using only Smart campaigns are exempt.)</li>
+        <li><strong>Track conversions and report at least one a month.</strong> A conversion is something meaningful, like a donation, a volunteer sign-up, or a contact form. Newer accounts have to use conversion-based Smart bidding.</li>
+        <li><strong>Pause or remove keywords with a quality score of 1 or 2.</strong></li>
+        <li><strong>No single-word keywords</strong>, with a few exceptions like &ldquo;donate,&rdquo; &ldquo;volunteer,&rdquo; &ldquo;nonprofit,&rdquo; and your own brand name.</li>
+        <li><strong>No overly generic keywords</strong>, like &ldquo;free videos&rdquo; or &ldquo;today's news.&rdquo;</li>
+        <li><strong>At least 2 ad groups per campaign and at least 2 sitelinks.</strong></li>
+        <li><strong>Set location targeting on every campaign.</strong> Without it, your ads can run worldwide.</li>
+        <li><strong>Complete Google's annual program survey.</strong></li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If your account does get suspended, you fix the issues and then submit Google's reactivation request form. Their FAQ says to audit the account first, including making sure each search campaign has at least two active ad groups and specific location targeting.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Point the Ads at Your Mission</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The grant isn't really about clicks. It's about getting the right person to the right page: the one who needs help, wants to serve, or is ready to give. That means your website matters as much as the ads. If the page they land on is slow, confusing, or doesn't tell them what to do next, the click is wasted, and your click-through and conversion numbers suffer too.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        One more thing to watch: in September 2026, Google started automatically upgrading many Search campaigns to AI Max, which can write ad text from your own website and show ads on searches you never picked. Ad Grant accounts run ordinary Search campaigns, so it's worth checking those settings. We wrote about it on the Bearded Digital site: <a href="https://bearded.digital/resources/why-did-my-google-ads-switch-to-ai-max" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Why Did My Google Ads Switch to AI Max?</a>
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">If You'd Rather Hand It Off</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Full disclosure: I co-own <a href="https://bearded.digital" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">Bearded Digital</a>, and Google Ads management is one of the add-ons we offer on any plan. We charge 10% of ad spend, and that includes Ad Grant spend, so a grant account using the full $10,000 in a month would be $1,000 for that month. Like everything else we do, the idea is to get you back to your calling. We run the campaigns and track every call and form, so you see real leads instead of a dashboard.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        If you'd rather run it yourself, everything above comes straight from Google's own pages, and you can absolutely do it. Just put the monthly checks on someone's calendar.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white rounded-xl p-8 my-12 not-prose">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">Sources</h3>
+        <ul class="space-y-2 list-none pl-0 text-white/90">
+          <li><a href="https://www.google.com/grants/" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">Google Ad Grants</a></li>
+          <li><a href="https://support.google.com/nonprofits/answer/3215869" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">Google for Nonprofits eligibility guidelines (US)</a></li>
+          <li><a href="https://support.google.com/nonprofits/answer/1657899" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">Ad Grants website policy</a></li>
+          <li><a href="https://support.google.com/nonprofits/answer/9314402" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">Ad Grants account compliance requirements</a></li>
+          <li><a href="https://support.google.com/nonprofits/answer/117827" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">Managing your Ad Grants account</a></li>
+          <li><a href="https://www.google.com/nonprofits/about/faq" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">Google for Nonprofits FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <Comments />
+
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>
