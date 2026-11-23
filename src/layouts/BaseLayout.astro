@@ -5,6 +5,7 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
 import NewsletterPopup from '../components/NewsletterPopup.astro';
 import Search from '../components/Search.astro';
 import SiteNav from '../components/SiteNav.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
 import '../styles/fonts.css';
 
 export interface Props {
@@ -82,9 +83,9 @@ const currentPath = Astro.url.pathname;
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
+    <footer id="site-footer" class="bg-gray-900 text-white">
       <!-- Newsletter Section -->
-      <div class="border-b border-gray-800">
+      <div id="site-footer-newsletter" class="border-b border-gray-800 scroll-mt-20">
         <div class="container mx-auto px-4 py-12">
           <NewsletterSignup variant="centered" />
         </div>
@@ -168,6 +169,8 @@ const currentPath = Astro.url.pathname;
         </div>
       </div>
     </footer>
+
+    <MobileCTABar isPost={type === 'article'} />
 
     <!-- Newsletter Popup (Exit Intent) -->
     {!hideNewsletterPopup && <NewsletterPopup />}
