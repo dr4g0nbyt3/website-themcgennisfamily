@@ -1,0 +1,100 @@
+---
+// Sticky call-to-action bar for phones. Posts get Share + Subscribe;
+// every other page gets Follow (socials) + Sign up.
+export interface Props {
+  isPost: boolean;
+}
+const { isPost } = Astro.props;
+
+const socials = [
+  { label: 'Family TikTok', href: 'https://www.tiktok.com/@themcgennisfamily' },
+  { label: "Caleb's Facebook", href: 'https://www.facebook.com/calebmichaelmcgennis' },
+  { label: "Stephanie's Facebook", href: 'https://www.facebook.com/stephanie.davis.900388' },
+];
+---
+
+<div id="mobile-cta" class="md:hidden fixed inset-x-0 bottom-0 z-40 transition-transform duration-300" data-is-post={isPost ? 'true' : 'false'}>
+  {!isPost && (
+    <div id="mobile-cta-socials" class="hidden mx-4 mb-2 rounded-2xl bg-white border border-gray-200 shadow-lg overflow-hidden">
+      {socials.map((s) => (
+        <a href={s.href} target="_blank" rel="noopener noreferrer" class="block px-5 py-3.5 text-gray-800 font-medium border-b last:border-b-0 border-gray-100 active:bg-soho-white">
+          {s.label}
+        </a>
+      ))}
+    </div>
+  )}
+  <div class="bg-soho-white/95 backdrop-blur border-t border-gray-200 px-4 pt-3" style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom));">
+    <div class="grid grid-cols-2 gap-3">
+      {isPost ? (
+        <button type="button" id="mobile-cta-share" class="inline-flex items-center justify-center gap-2 h-12 rounded-xl border border-mcgennis-navy text-mcgennis-navy font-semibold">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12v7a2 2 0 002 2h12a2 2 0 002-2v-7M16 6l-4-4-4 4M12 2v14"/></svg>
+          <span id="mobile-cta-share-label">Share</span>
+        </button>
+      ) : (
+        <button type="button" id="mobile-cta-follow" aria-expanded="false" aria-controls="mobile-cta-socials" class="inline-flex items-center justify-center gap-2 h-12 rounded-xl border border-mcgennis-navy text-mcgennis-navy font-semibold">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-5-3.87M9 20H4v-2a4 4 0 015-3.87m6-4.13a4 4 0 11-8 0 4 4 0 018 0zm6 2a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Follow
+        </button>
+      )}
+      <button type="button" id="mobile-cta-subscribe" class="inline-flex items-center justify-center gap-2 h-12 rounded-xl bg-mcgennis-navy text-white font-semibold">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        {isPost ? 'Subscribe' : 'Sign up'}
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const bar = document.getElementById('mobile-cta');
+  const footer = document.getElementById('site-footer-newsletter');
+  const siteFooter = document.getElementById('site-footer');
+
+  // Subscribe / Sign up: jump to the footer signup and focus the email field.
+  document.getElementById('mobile-cta-subscribe')?.addEventListener('click', () => {
+    if (!footer) return;
+    footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const input = footer.querySelector<HTMLInputElement>('input[type="email"]');
+    setTimeout(() => input?.focus({ preventScroll: true }), 600);
+  });
+
+  // Share: native share sheet, falling back to copying the link.
+  const shareBtn = document.getElementById('mobile-cta-share');
+  const shareLabel = document.getElementById('mobile-cta-share-label');
+  shareBtn?.addEventListener('click', async () => {
+    const data = { title: document.title, url: location.href };
+    if (navigator.share) {
+      try { await navigator.share(data); } catch { /* dismissed */ }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(location.href);
+      if (shareLabel) {
+        shareLabel.textContent = 'Link copied';
+        setTimeout(() => { shareLabel.textContent = 'Share'; }, 2000);
+      }
+    } catch { /* clipboard blocked */ }
+  });
+
+  // Follow: toggle the socials sheet.
+  const followBtn = document.getElementById('mobile-cta-follow');
+  const socials = document.getElementById('mobile-cta-socials');
+  followBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = socials?.classList.toggle('hidden') === false;
+    followBtn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', (e) => {
+    if (socials && !socials.contains(e.target as Node) && !socials.classList.contains('hidden')) {
+      socials.classList.add('hidden');
+      followBtn?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Slide the bar away once the footer signup is on screen so it never covers it.
+  if (bar && siteFooter && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      bar.style.transform = entry.isIntersecting ? 'translateY(110%)' : '';
+      if (entry.isIntersecting) socials?.classList.add('hidden');
+    }).observe(siteFooter);
+  }
+</script>
