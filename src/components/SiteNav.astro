@@ -33,16 +33,25 @@ const linkActive = (link: (typeof primaryLinks)[number]) =>
   <!-- Background lives on its own layer: backdrop-filter on the header itself would trap the fixed mobile panel inside it -->
   <div class="header-bg absolute inset-0 bg-soho-white/90 backdrop-blur-md border-b border-gray-200 transition-shadow duration-300" aria-hidden="true"></div>
 
-  <nav class="relative container mx-auto px-4 sm:px-6 h-16 lg:h-20 flex items-center justify-between gap-4" aria-label="Main">
-    <!-- Logo -->
-    <a href="/" class="group shrink-0" aria-label="The McGennis Family home">
-      <span class="text-xl lg:text-2xl font-display font-bold text-gray-900 tracking-tight group-hover:text-mcgennis-navy transition-colors">
-        The McGennis Family
-      </span>
-    </a>
-
+  <nav class="relative container mx-auto px-4 sm:px-6 h-20 lg:h-24 grid grid-cols-[1fr_auto_1fr] items-center gap-4" aria-label="Main">
+    <!-- Left: menu -->
+    <div class="justify-self-start flex items-center">
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        class="menu-toggle xl:hidden w-10 h-10 -ml-2 inline-flex items-center justify-center rounded-full text-gray-900 hover:bg-gray-100 transition-colors"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="relative block w-5 h-3.5" aria-hidden="true">
+          <span class="menu-bar top-0"></span>
+          <span class="menu-bar top-1/2 -translate-y-1/2"></span>
+          <span class="menu-bar bottom-0"></span>
+        </span>
+      </button>
     <!-- Desktop links -->
-    <ul class="hidden lg:flex items-center gap-1">
+    <ul class="hidden xl:flex items-center gap-1 -ml-3">
       {primaryLinks.map((link) => (
         <li class={link.menu ? 'nav-dropdown relative' : ''} data-dropdown={link.menu}>
           {link.menu ? (
@@ -99,9 +108,15 @@ const linkActive = (link: (typeof primaryLinks)[number]) =>
         </li>
       ))}
     </ul>
+    </div>
 
-    <!-- Actions -->
-    <div class="flex items-center gap-1.5 lg:gap-3">
+    <!-- Logo (center) -->
+    <a href="/" class="justify-self-center shrink-0" aria-label="The McGennis Family home">
+      <img src="/images/brand/mcgennis-crest-nav.webp" alt="The McGennis Family crest" width="285" height="208" class="h-16 lg:h-20 w-auto -translate-y-[4%] transition-transform duration-300 hover:-translate-y-[4%] hover:scale-105" fetchpriority="high" decoding="async" />
+    </a>
+
+    <!-- Right: actions -->
+    <div class="justify-self-end flex items-center gap-1.5 lg:gap-3">
       <button
         type="button"
         id="search-button"
@@ -115,29 +130,15 @@ const linkActive = (link: (typeof primaryLinks)[number]) =>
         </svg>
       </button>
 
-      <a href="/contact" class="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl bg-brass-button brightness-110 text-white text-sm font-semibold tracking-wide shadow-sm hover:shadow-md transition-shadow">
+      <a href="/contact" class="hidden xl:inline-flex items-center px-5 py-2.5 rounded-xl bg-brass-button brightness-110 text-white text-sm font-semibold tracking-wide shadow-sm hover:shadow-md transition-shadow">
         Contact
       </a>
 
-      <button
-        type="button"
-        id="mobile-menu-btn"
-        class="menu-toggle lg:hidden w-10 h-10 -mr-2 inline-flex items-center justify-center rounded-full text-gray-900 hover:bg-gray-100 transition-colors"
-        aria-label="Open menu"
-        aria-controls="mobile-menu"
-        aria-expanded="false"
-      >
-        <span class="relative block w-5 h-3.5" aria-hidden="true">
-          <span class="menu-bar top-0"></span>
-          <span class="menu-bar top-1/2 -translate-y-1/2"></span>
-          <span class="menu-bar bottom-0"></span>
-        </span>
-      </button>
     </div>
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="mobile-panel lg:hidden fixed inset-x-0 top-16 bottom-0 bg-soho-white overflow-y-auto overscroll-contain">
+  <div id="mobile-menu" class="mobile-panel xl:hidden fixed inset-x-0 top-20 lg:top-24 bottom-0 bg-soho-white overflow-y-auto overscroll-contain">
     <div class="px-6 pt-4 pb-10 max-w-lg mx-auto">
       <ul class="divide-y divide-gray-200 border-b border-gray-200">
         {[{ href: '/', label: 'Home' }, ...primaryLinks.filter((l) => !l.menu), { href: '/about', label: 'Our Story' }].map((link) => (
@@ -196,6 +197,7 @@ const linkActive = (link: (typeof primaryLinks)[number]) =>
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 0.75rem;
+    white-space: nowrap;
     border-radius: 0.5rem;
     font-size: 0.9375rem;
     font-weight: 500;
@@ -319,7 +321,7 @@ const linkActive = (link: (typeof primaryLinks)[number]) =>
   menu.querySelectorAll('a, [data-menu-close]').forEach((el) =>
     el.addEventListener('click', () => setMenu(false, { restoreFocus: false }))
   );
-  matchMedia('(min-width: 1024px)').addEventListener('change', (e) => e.matches && setMenu(false));
+  matchMedia('(min-width: 1280px)').addEventListener('change', (e) => e.matches && setMenu(false));
 
   // --- Desktop dropdowns (hover opens them via CSS; this handles click, keyboard, and touch) ---
   function setDropdown(dropdown: HTMLElement, open: boolean) {
