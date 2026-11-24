@@ -14,41 +14,56 @@ const heroSizes = '(min-width: 1280px) 600px, (min-width: 1024px) 45vw, calc(100
   title="The McGennis Family - Building Businesses and Serving Communities in Jefferson City"
   description="Meet the McGennis family - entrepreneurs and ministry leaders making an impact in Jefferson City, Missouri. Led by Caleb & Stephanie McGennis."
 >
-  <link slot="head" rel="preload" as="image" href={`${hero}-960w.webp`} imagesrcset={heroSrcset} imagesizes={heroSizes} fetchpriority="high" />
+  <link slot="head" rel="preload" as="image" href={`${hero}-960w.webp`} imagesrcset={heroSrcset} imagesizes={heroSizes} media="(min-width: 1024px)" fetchpriority="high" />
   <!-- Hero Section with Real Photo -->
-  <section class="relative bg-soho-white py-20 md:py-32 px-4 overflow-x-clip">
+  <section class="relative bg-soho-white py-16 md:py-24 px-4 overflow-x-clip">
     <div class="container mx-auto max-w-7xl">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <!-- Text Content -->
-        <div class="order-2 lg:order-1 lg:pt-16">
-          <p class="text-sm tracking-widest text-mcgennis-gold font-light mb-4 uppercase">Est. 2020 • Forged 1150</p>
-          <h1 class="text-6xl md:text-7xl font-display font-bold mb-6 text-gray-900 leading-tight tracking-tight">
-            The McGennis<br/>Family
+        <div class="lg:order-1 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+          <img
+            src="/images/brand/mcgennis-crest-480.webp"
+            srcset="/images/brand/mcgennis-crest-480.webp 480w, /images/brand/mcgennis-crest-720.webp 720w"
+            sizes="(min-width: 768px) 300px, 240px"
+            alt="The McGennis Family crest"
+            width="480"
+            height="350"
+            class="w-[240px] md:w-[300px] h-auto mb-8 mx-auto lg:mx-0 lg:-ml-1"
+            decoding="async"
+          />
+          <p class="text-xs md:text-sm font-semibold tracking-[0.25em] text-mcgennis-gold uppercase mb-4">Est. 2020 &bull; Forged 1150</p>
+          <h1 class="text-5xl md:text-6xl font-display font-bold text-gray-900 leading-[1.05] tracking-tight mb-5">
+            The McGennis Family
           </h1>
-          <p class="text-lg md:text-xl italic text-mcgennis-gold font-light mb-8 tracking-wide">
-            Sola Salus Servire Deo <span class="text-base opacity-75">— In the Service of God</span>
+          <p class="text-base md:text-lg text-gray-500 mb-8">
+            <span class="italic font-display text-mcgennis-gold">Sola Salus Servire Deo</span>
+            <span class="mx-2 text-gray-300" aria-hidden="true">|</span>
+            In the Service of God
           </p>
-          <p class="text-xl md:text-2xl mb-10 text-gray-600 font-light leading-relaxed">
-            Entrepreneurs, Ministry Leaders & Community Builders making a lasting impact in Central Missouri
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
+            Entrepreneurs, ministry leaders, and community builders making a lasting impact in Central Missouri.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/family" class="group inline-flex items-center justify-center px-8 py-4 bg-brass-button brightness-110 text-white font-medium tracking-wide transition-all duration-300 shadow-md hover:shadow-lg rounded-xl">
+          <div class="flex flex-col sm:flex-row gap-4 sm:justify-center lg:justify-start">
+            <a href="/family" class="group inline-flex items-center justify-center px-8 py-4 bg-brass-button brightness-110 text-white font-semibold tracking-wide transition-all duration-300 shadow-md hover:shadow-lg rounded-xl">
               Meet Our Family
               <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
             </a>
-            <a href="/businesses" class="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide transition-all duration-300 hover:shadow-md">
+            <a href="/businesses" class="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-gray-300 text-gray-700 font-semibold tracking-wide transition-all duration-300 hover:shadow-md hover:border-mcgennis-navy hover:text-mcgennis-navy">
               Our Businesses
             </a>
           </div>
         </div>
 
-        <!-- Family Photo -->
-        <div class="order-1 lg:order-2">
+        <!-- Family Photo (desktop only) -->
+        <div class="hidden lg:block lg:order-2">
           <div class="relative">
             <!-- Metallic brass border -->
             <div class="p-5 rounded-3xl bg-brass-metal brightness-110 shadow-2xl">
+              <picture>
+                <!-- Phones skip the download: the photo is hidden below lg -->
+                <source media="(max-width: 1023px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
               <img
                 src="/images/mcgennis-family-stephanie-caleb-leonardo-jefferson-city-960w.webp"
                 srcset={heroSrcset}
@@ -59,6 +74,7 @@ const heroSizes = '(min-width: 1280px) 600px, (min-width: 1024px) 45vw, calc(100
                 height="2048"
                 fetchpriority="high"
               />
+              </picture>
             </div>
             <!-- Decorative accent with brass effect -->
             <div class="absolute -bottom-6 -right-6 w-full h-full rounded-3xl bg-brass-metal opacity-30 -z-10"></div>
@@ -299,7 +315,7 @@ const heroSizes = '(min-width: 1280px) 600px, (min-width: 1024px) 45vw, calc(100
         <div class="group bg-soho-white p-8 text-center hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-2xl hover:border-mcgennis-maroon rounded-2xl">
           <div class="flex justify-center mb-6">
             <svg class="w-14 h-14 text-mcgennis-maroon group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.5v11M8.5 10h7M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
           <h3 class="text-xl font-bold mb-2 text-gray-900 tracking-tight">Sports Crusaders</h3>
