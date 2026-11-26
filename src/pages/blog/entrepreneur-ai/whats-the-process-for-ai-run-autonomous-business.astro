@@ -1,0 +1,355 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Comments from '../../../components/Comments.astro';
+
+---
+
+<BaseLayout
+  title="What's the Process For: A Business Run by AI Agents - Caleb McGennis"
+  description="What's the Process For is run by a team of AI agents: a virtual C-suite that holds stand-ups, writes briefs, ships code, and learns from its own mistakes. Here's how it works, and what I still do myself."
+  type="article"
+  publishedTime="2026-11-26"
+  author="Caleb Michael McGennis"
+  image="/images/social/whats-the-process-for-ai-run-autonomous-business-og.jpg"
+>
+  <!-- Hero Section -->
+  <section class="bg-soho-white py-20 md:py-32 px-4 border-b border-gray-200">
+    <div class="container mx-auto max-w-4xl">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center text-mcgennis-navy hover:text-mcgennis-gold transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+      <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 text-gray-900 leading-tight tracking-tight">
+        My Business Is Run by AI Agents. Here's How It Works.
+      </h1>
+      <div class="h-1 w-24 bg-brass-horizontal rounded-full shadow-sm mb-8"></div>
+      <p class="text-2xl text-gray-500 font-light mb-8">Stand-ups, briefs, and a virtual C-suite behind What's the Process For.</p>
+      <div class="flex items-center gap-4 text-gray-500">
+        <span>By Caleb Michael McGennis</span>
+        <span>&bull;</span>
+        <time datetime="2026-11-26">November 26, 2026</time>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 px-4">
+    <div class="container mx-auto max-w-3xl prose prose-lg">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+        <a href="https://www.whatstheprocessfor.com/" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">What's the Process For</a> helps small businesses write down how they do things and train their people on it. It's also an experiment. Day to day, the business is run by a team of AI agents. They plan the work, write the content, ship the code, and report back to me.
+      </p>
+
+      <figure class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm not-prose">
+        <img loading="eager" decoding="async" fetchpriority="high" src="/images/whatstheprocessfor/wtpf-home.webp" width="1440" height="900" alt="The What's the Process For home page with the headline Document any SOP in 60 seconds. Your team trains itself." class="w-full" />
+        <figcaption class="p-4 bg-soho-white text-sm text-gray-600 font-light">The What's the Process For home page at whatstheprocessfor.com</figcaption>
+      </figure>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Full disclosure: I'm the founder. This isn't a pitch for the product. I want to show you what it looks like to run a company where most of the "employees" are AI, because I think a lot of small business owners are about to be doing some version of this.
+      </p>
+
+      <div class="flex items-center gap-4 mt-12 mb-6 not-prose">
+        <img src="/images/whatstheprocessfor/wtpf-logo.webp" width="256" height="256" alt="The What's the Process For logo, a gear made of four colored pieces" class="w-14 h-14 shrink-0" loading="lazy" />
+        <h2 class="text-3xl font-display font-bold text-gray-900 tracking-tight">What the Business Does</h2>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        What's the Process For is software for SOPs (standard operating procedures). A business owner writes down a process once: opening the shop, onboarding a new hire, cleaning a dental operatory. New team members then walk through it step by step, and the owner can see who has finished what. It's built for small teams like clinics, cleaning companies, trucking outfits, restaurants, and <a href="/blog/entrepreneur-ai/training-church-volunteers-coffee-ministry-sop" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">churches</a>, at a <a href="https://www.whatstheprocessfor.com/pricing" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">flat price</a> with no per-seat fees.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        There's also a <a href="https://www.whatstheprocessfor.com/explore" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">free public library</a> of hundreds of step-by-step process guides that anyone can read, plus a set of <a href="https://www.whatstheprocessfor.com/sop-templates" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">free SOP templates</a>. Most of the work of keeping that library and the <a href="https://www.whatstheprocessfor.com/blog" target="_blank" rel="noopener noreferrer" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">blog</a> growing is done by the agents.
+      </p>
+
+      <figure class="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm not-prose">
+        <img loading="lazy" decoding="async" src="/images/whatstheprocessfor/wtpf-process-library.webp" width="1440" height="900" alt="The free process library page, showing a search bar, industry filters, and process cards" class="w-full" />
+        <figcaption class="p-4 bg-soho-white text-sm text-gray-600 font-light">The free process library. The agents keep adding to it and improving what's already there.</figcaption>
+      </figure>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Meet the Virtual C-Suite</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Instead of one do-everything AI, the business is split into roles, the same way a real company would be. Each agent has a job description, a lane it owns, and rules about what it's allowed to touch:
+      </p>
+
+      <figure class="my-10 not-prose" aria-label="Org chart of the AI agent team">
+        <div class="bg-soho-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+          <!-- Founder -->
+          <div class="flex justify-center">
+            <div class="rounded-xl border-2 border-mcgennis-gold bg-white px-5 py-3 text-center">
+              <div class="text-xs uppercase tracking-widest text-mcgennis-gold-deep font-semibold">Founder</div>
+              <div class="font-display font-bold text-gray-900">Me</div>
+              <div class="text-xs text-gray-500">Sets priorities, approves the big calls</div>
+            </div>
+          </div>
+          <div class="mx-auto h-6 w-px bg-gray-300"></div>
+          <!-- Chief of Staff -->
+          <div class="flex justify-center">
+            <div class="rounded-xl bg-mcgennis-navy text-white px-5 py-3 text-center shadow-md max-w-xs">
+              <div class="text-xs uppercase tracking-widest text-mcgennis-gold font-semibold">Agent</div>
+              <div class="font-display font-bold">Chief of Staff</div>
+              <div class="text-xs text-white/80">Runs the meetings. The only agent that can call on the others.</div>
+            </div>
+          </div>
+          <div class="mx-auto h-6 w-px bg-gray-300"></div>
+          <!-- Builders -->
+          <div class="text-xs uppercase tracking-widest text-gray-500 font-semibold text-center mb-3">Builders: they change things</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="rounded-xl bg-white border border-gray-200 p-4">
+              <div class="font-bold text-gray-900 text-sm">Chief Marketing Officer</div>
+              <div class="text-xs text-gray-600 mt-1">Writes blog posts for specific industries and the processes they struggle with.</div>
+            </div>
+            <div class="rounded-xl bg-white border border-gray-200 p-4">
+              <div class="font-bold text-gray-900 text-sm">Social Media Manager</div>
+              <div class="text-xs text-gray-600 mt-1">Drafts the week's posts. Never publishes anything itself.</div>
+            </div>
+            <div class="rounded-xl bg-white border border-gray-200 p-4">
+              <div class="font-bold text-gray-900 text-sm">Head of SEO</div>
+              <div class="text-xs text-gray-600 mt-1">Watches how the site shows up in search and fixes what's in the way.</div>
+            </div>
+            <div class="rounded-xl bg-white border border-gray-200 p-4">
+              <div class="font-bold text-gray-900 text-sm">Chief Revenue Officer</div>
+              <div class="text-xs text-gray-600 mt-1">Runs small, reversible experiments to turn visitors into customers.</div>
+            </div>
+            <div class="rounded-xl bg-white border border-gray-200 p-4">
+              <div class="font-bold text-gray-900 text-sm">Chief Strategy Officer</div>
+              <div class="text-xs text-gray-600 mt-1">Keeps an eye on competitors and how the market is moving.</div>
+            </div>
+            <div class="rounded-xl bg-white border border-gray-200 p-4">
+              <div class="font-bold text-gray-900 text-sm">Chief Process Officer</div>
+              <div class="text-xs text-gray-600 mt-1">Improves the published process guides, one at a time.</div>
+            </div>
+          </div>
+          <!-- Observers -->
+          <div class="text-xs uppercase tracking-widest text-gray-500 font-semibold text-center mt-6 mb-3">Observers: read-only</div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="rounded-xl border border-dashed border-gray-300 p-4">
+              <div class="font-bold text-gray-900 text-sm">Data Officer</div>
+              <div class="text-xs text-gray-600 mt-1">Reports on the funnel.</div>
+            </div>
+            <div class="rounded-xl border border-dashed border-gray-300 p-4">
+              <div class="font-bold text-gray-900 text-sm">Customer Officer</div>
+              <div class="text-xs text-gray-600 mt-1">Reports on retention and churn.</div>
+            </div>
+            <div class="rounded-xl border border-dashed border-gray-300 p-4">
+              <div class="font-bold text-gray-900 text-sm">Finance Officer</div>
+              <div class="text-xs text-gray-600 mt-1">Reconciles revenue.</div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mt-3 text-sm text-gray-500 font-light text-center">The agent team. Every role has a lane, and nobody edits another agent's work.</figcaption>
+      </figure>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The read-only roles matter. The agents that study the numbers aren't the same agents that change the product, so nobody grades their own homework.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Yes, They Have Stand-Ups</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        This is the part people laugh at, and then they think about it. Every agent writes a short brief in the same format:
+      </p>
+
+      <figure class="my-10 not-prose" aria-label="How a stand-up works">
+        <div class="grid md:grid-cols-[1fr_auto_1fr] gap-4 items-center">
+          <!-- Brief template -->
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+            <div class="bg-soho-white border-b border-gray-200 px-5 py-3 flex items-center justify-between">
+              <span class="font-mono text-xs text-gray-500">each agent's brief</span>
+              <span class="text-xs text-mcgennis-gold-deep font-semibold">1 per agent</span>
+            </div>
+            <dl class="p-5 space-y-3 text-sm">
+              <div><dt class="font-bold text-gray-900">Headline</dt><dd class="text-gray-600">The one thing that matters most right now.</dd></div>
+              <div><dt class="font-bold text-gray-900">Findings</dt><dd class="text-gray-600">What it saw.</dd></div>
+              <div><dt class="font-bold text-gray-900">Data gaps</dt><dd class="text-gray-600">What it couldn't see, said out loud.</dd></div>
+              <div>
+                <dt class="font-bold text-gray-900">Recommended next action</dt>
+                <dd class="flex flex-wrap gap-2 mt-1">
+                  <span class="px-2 py-0.5 rounded bg-mcgennis-gold/20 text-mcgennis-gold-deep text-xs font-semibold">$ / month</span>
+                  <span class="px-2 py-0.5 rounded bg-mcgennis-navy/10 text-mcgennis-navy text-xs font-semibold">confidence</span>
+                  <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 text-xs font-semibold">S / M / L effort</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <!-- Arrow -->
+          <div class="flex md:flex-col items-center justify-center text-mcgennis-gold" aria-hidden="true">
+            <svg class="w-10 h-10 rotate-90 md:rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            <span class="text-xs text-gray-500 md:mt-1 ml-2 md:ml-0">Chief of Staff</span>
+          </div>
+          <!-- Synthesis -->
+          <div class="bg-mcgennis-navy text-white rounded-2xl shadow-md p-5">
+            <div class="text-xs uppercase tracking-widest text-mcgennis-gold font-semibold mb-3">Stand-up summary</div>
+            <ol class="space-y-2 text-sm">
+              <li class="flex gap-2"><span class="text-mcgennis-gold font-bold">1</span>Decisions the team made</li>
+              <li class="flex gap-2"><span class="text-mcgennis-gold font-bold">2</span>In flight</li>
+              <li class="flex gap-2"><span class="text-mcgennis-gold font-bold">3</span>Next 7 days, ranked by impact vs. effort</li>
+              <li class="flex gap-2"><span class="text-mcgennis-gold font-bold">4</span>Stop list</li>
+              <li class="flex gap-2 rounded-lg bg-white/10 -mx-2 px-2 py-1"><span class="text-mcgennis-gold font-bold">5</span><strong>What only Caleb can do</strong></li>
+            </ol>
+          </div>
+        </div>
+        <figcaption class="mt-3 text-sm text-gray-500 font-light text-center">Every agent files a brief in the same format. The Chief of Staff turns them into one plan.</figcaption>
+      </figure>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The Chief of Staff reads every brief and writes the stand-up summary. It ranks the work by impact against effort, adds a stop list of things to quit doing, and ends with a ranked list called "What only Caleb can do."
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        That last list is my favorite thing in the whole system. Instead of me managing the agents, the agents hand me a short to-do list of the things they can't do themselves: flip a setting in a dashboard, reply to a customer, approve a price.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">A Week in the Life</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Most of this runs on a schedule, with nobody at the keyboard:
+      </p>
+
+      <figure class="my-10 not-prose" aria-label="The agents' weekly schedule">
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-2">
+          <div class="rounded-xl overflow-hidden border border-gray-200 bg-white">
+            <div class="bg-mcgennis-navy text-white text-center text-sm font-bold py-2">Mon</div>
+            <ul class="p-3 space-y-2 text-xs text-gray-700">
+              <li class="rounded bg-mcgennis-gold/20 px-2 py-1 font-semibold text-mcgennis-gold-deep">Weekly stand-up</li>
+              <li class="rounded bg-gray-100 px-2 py-1">Funnel report</li>
+            </ul>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-gray-200 bg-white">
+            <div class="bg-mcgennis-navy text-white text-center text-sm font-bold py-2">Tue</div>
+            <ul class="p-3 space-y-2 text-xs text-gray-700">
+              <li class="rounded bg-gray-100 px-2 py-1">Experiment review</li>
+              <li class="rounded bg-gray-100 px-2 py-1">Blog post</li>
+            </ul>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-gray-200 bg-white">
+            <div class="bg-mcgennis-navy text-white text-center text-sm font-bold py-2">Wed</div>
+            <ul class="p-3 space-y-2 text-xs text-gray-700">
+              <li class="rounded bg-gray-100 px-2 py-1">SEO + linking audit</li>
+            </ul>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-gray-200 bg-white">
+            <div class="bg-mcgennis-navy text-white text-center text-sm font-bold py-2">Thu</div>
+            <ul class="p-3 space-y-2 text-xs text-gray-700">
+              <li class="rounded bg-gray-100 px-2 py-1">Blog post</li>
+            </ul>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-gray-200 bg-white">
+            <div class="bg-mcgennis-navy text-white text-center text-sm font-bold py-2">Fri</div>
+            <ul class="p-3 space-y-2 text-xs text-gray-700">
+              <li class="rounded bg-gray-100 px-2 py-1">Next week's social drafts</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-2 grid sm:grid-cols-2 gap-2 text-xs">
+          <div class="rounded-xl border border-dashed border-gray-300 px-4 py-3 text-gray-600"><strong class="text-gray-900">Twice a month:</strong> revenue, competitor, and retention reviews</div>
+          <div class="rounded-xl border border-dashed border-gray-300 px-4 py-3 text-gray-600"><strong class="text-gray-900">Every day:</strong> data snapshots, indexing checks, signup follow-ups</div>
+        </div>
+        <figcaption class="mt-3 text-sm text-gray-500 font-light text-center">A normal week for the agent team.</figcaption>
+      </figure>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The daily jobs include one of my favorites: a check on how AI assistants answer questions about our space. When I want to push on something, I call an extra stand-up myself. Some days there are two.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Rules That Keep It Honest</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The first version of this had a problem every manager will recognize: the same blockers showed up in every meeting and nothing moved. AI agents are very good at sounding productive. So we added rules:
+      </p>
+
+      <ul class="list-disc pl-6 mb-6 text-gray-600 space-y-2">
+        <li><strong>"Briefs lie; commits don't."</strong> The Chief of Staff checks every recommendation against what actually shipped, and marks it shipped, skipped, blocked, or untraceable.</li>
+        <li><strong>Three strikes.</strong> If a recommendation has gone three briefs without anyone acting on it, an agent can't just repeat it. It has to change the approach or drop it.</li>
+        <li><strong>Unblock yourself.</strong> If an agent can't see the data it needs, it doesn't just complain. It proposes the fix.</li>
+        <li><strong>Label your data.</strong> Before reporting, agents check whether each data source is fresh, stale, or missing. Old data stated with confidence is the most expensive mistake an agent can make. (I wrote more about <a href="/blog/entrepreneur-ai/ai-hallucinations-explained" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">why AI sounds confident when it's wrong</a>.)</li>
+        <li><strong>One change at a time.</strong> Each run produces one brief or one small, reviewable code change, and the tests have to pass before it ships.</li>
+      </ul>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">They Learn From Their Mistakes</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Each agent keeps two notebooks. One is a raw log of lessons: what worked, what didn't, and what surprised it. The other is a short list of principles it has earned. When the same lesson shows up enough times, it gets promoted to a rule the agent follows from then on.
+      </p>
+
+      <figure class="my-10 not-prose" aria-label="How a lesson becomes a principle">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 items-stretch">
+          <div class="rounded-2xl bg-white border border-gray-200 p-5 text-center">
+            <div class="text-3xl font-display font-bold text-gray-400">1&times;</div>
+            <div class="font-bold text-gray-900 mt-1">Lesson</div>
+            <div class="text-xs text-gray-600 mt-1">Logged after something works, breaks, or surprises it.</div>
+          </div>
+          <div class="rounded-2xl bg-mcgennis-gold/15 border border-mcgennis-gold/40 p-5 text-center">
+            <div class="text-3xl font-display font-bold text-mcgennis-gold-deep">3&times;</div>
+            <div class="font-bold text-gray-900 mt-1">Candidate</div>
+            <div class="text-xs text-gray-600 mt-1">The same lesson keeps showing up.</div>
+          </div>
+          <div class="rounded-2xl bg-mcgennis-navy text-white p-5 text-center shadow-md">
+            <div class="text-3xl font-display font-bold text-mcgennis-gold">5&times;</div>
+            <div class="font-bold mt-1">Principle</div>
+            <div class="text-xs text-white/80 mt-1">Now it's a rule the agent follows from then on.</div>
+          </div>
+        </div>
+        <figcaption class="mt-3 text-sm text-gray-500 font-light text-center">How an agent's lesson turns into a principle it has earned.</figcaption>
+      </figure>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The agents also lean on the classics. They'll cite business books next to their own hard-won principles when they make a call. Every couple of weeks the Chief of Staff runs a retro and proposes changes to how the agents themselves are set up. I approve those changes before they go in.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        One night I let the team run on its own while I slept, with guardrails: small changes only, nothing touching billing or logins, and every test green. I woke up to a stack of finished improvements already live. One agent bit off more than it could chew and timed out, and that became a lesson too: scope smaller and cap the budget.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">What I Still Do</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        "Fully autonomous" doesn't mean nobody's home. The agents run the day-to-day, but some calls stay with a person:
+      </p>
+
+      <ul class="list-disc pl-6 mb-6 text-gray-600 space-y-2">
+        <li>Pricing, positioning, and anything legal or financial.</li>
+        <li>Every social post. The agents draft, and I approve before anything goes out.</li>
+        <li>Changes to how the agents themselves are instructed.</li>
+        <li>Setting the priorities. When I post a memo to the team's broadcast board, every agent reads it before it writes anything.</li>
+        <li>Talking to real customers.</li>
+      </ul>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        At one point I posted a note to that board that boiled down to: I believe in you, now prove it with revenue. They took it seriously, and every recommendation they make now comes with a dollar figure attached.
+      </p>
+
+      <h2 class="text-3xl font-display font-bold mt-12 mb-6 text-gray-900 tracking-tight">Why I'm Doing It This Way</h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        I've built What's the Process For a few times over the years, with different tools and a lot of late nights. What's different now isn't that AI can write code or blog posts. It's that AI can work inside a structure: roles, meetings, accountability, and a memory of what went wrong last time. That's the same structure that makes a small human team work. Giving AI clear roles and rules is really just <a href="/blog/entrepreneur-ai/the-magic-words-ai-prompting" class="text-mcgennis-navy hover:text-mcgennis-gold transition-colors underline">good prompting</a> at the scale of a whole company.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        And there's a fun irony in it. What's the Process For exists because businesses run better when their processes are written down. It turns out AI agents do too.
+      </p>
+
+      <div class="bg-mcgennis-navy text-white rounded-xl p-8 my-12 not-prose">
+        <h3 class="text-2xl font-display font-bold mb-4 tracking-tight">See What the Agents Built</h3>
+        <p class="text-white/90 leading-relaxed">
+          Browse the <a href="https://www.whatstheprocessfor.com/explore" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">free process library</a> or try the product at <a href="https://www.whatstheprocessfor.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-mcgennis-gold">whatstheprocessfor.com</a>. And if you want to know more about how the agent team is set up, ask in the comments below.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <Comments />
+
+  <section class="py-16 px-4">
+    <div class="container mx-auto text-center">
+      <a href="/blog/entrepreneur-ai" class="inline-flex items-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium tracking-wide hover:border-mcgennis-navy hover:text-mcgennis-navy transition-all duration-300">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to An Entrepreneur in a World of AI
+      </a>
+    </div>
+  </section>
+</BaseLayout>
